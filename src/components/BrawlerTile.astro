@@ -3,6 +3,7 @@
 // client-side draft script needs to index, clone, filter and disable tiles
 // without ever re-typing a name or re-fetching an image in JS.
 import type { CollectionEntry } from 'astro:content';
+import { stripAccents } from '@/lib/text';
 
 interface Props {
   brawler: CollectionEntry<'brawlers'>;
@@ -10,7 +11,9 @@ interface Props {
 
 const { brawler } = Astro.props;
 const { name, image, rarityColor, aliases, hasCounters } = brawler.data;
-const search = [name, ...aliases].join(' ').toLowerCase();
+// Accent-stripped so an accent-insensitive query (draftBoard.ts's
+// filterCards) can match aliases like "Pérola" against a typed "perola".
+const search = stripAccents([name, ...aliases].join(' ')).toLowerCase();
 ---
 
 <img

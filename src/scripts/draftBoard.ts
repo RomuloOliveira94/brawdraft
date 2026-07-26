@@ -6,6 +6,7 @@
 // counter-pick rows) by cloning nodes — no name or image is re-typed here.
 import { rankPicks, type CountersIndex, type MapBonus, type Pick } from '@/lib/rank';
 import { analyzeComposition, type BrawlerClassName } from '@/lib/composition';
+import { stripAccents } from '@/lib/text';
 import countersJson from '@/data/counters-index.json';
 import mapIndexJson from '@/data/map-index.json';
 
@@ -179,7 +180,9 @@ export function initDraftBoard(): void {
   }
 
   function filterCards(query: string): void {
-    const q = query.trim().toLowerCase();
+    // `data-search` (BrawlerTile.astro) is already accent-stripped, so the
+    // query needs the same normalization for e.g. "perola" to match "Pérola".
+    const q = stripAccents(query.trim()).toLowerCase();
     let anyVisible = false;
     for (const card of cards) {
       const img = tileImg(card);
