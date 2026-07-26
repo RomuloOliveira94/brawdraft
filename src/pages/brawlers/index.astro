@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BrawlerGrid from '@/components/BrawlerGrid.astro';
+import { allBrawlers } from '@/lib/brawlers';
+import { CLASS_ORDER, classNameLabel } from '@/lib/labels';
+
+const brawlers = await allBrawlers();
+
+const groups = CLASS_ORDER.map((className) => ({
+  className,
+  brawlers: brawlers.filter((b) => b.data.className === className).sort((a, b) => a.data.name.localeCompare(b.data.name)),
+})).filter((group) => group.brawlers.length > 0);
+---
+
+<BaseLayout title="Brawlers — BrawDraft" description="Todos os brawlers de Brawl Stars, agrupados por classe.">
+  <section class="mx-auto flex max-w-6xl flex-col gap-8 px-4 pt-6 pb-16">
+    <h1 class="title-brawl text-center text-3xl sm:text-4xl">Brawlers</h1>
+    <p class="text-center text-white/70">{brawlers.length} brawlers no total.</p>
+
+    {
+      groups.map((group) => (
+        <div class="panel">
+          <h2 class="panel__header text-left">{classNameLabel(group.className)}</h2>
+          <div class="panel__body">
+            <BrawlerGrid brawlers={group.brawlers} as="link" />
+          </div>
+        </div>
+      ))
+    }
+  </section>
+</BaseLayout>

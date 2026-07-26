@@ -1,0 +1,42 @@
+---
+// Static (server-rendered) list of counters for a brawler detail page.
+// Uses lookup() rather than a soft `.get()` so a stale/typo'd slug in the
+// data fails the build loudly instead of silently dropping a row.
+import BrawlerTile from '@/components/BrawlerTile.astro';
+import { lookup, type Brawler } from '@/lib/brawlers';
+
+interface CounterEntry {
+  slug: string;
+  rank: number;
+  note?: string;
+}
+
+interface Props {
+  counters: CounterEntry[];
+  index: Map<string, Brawler>;
+}
+
+const { counters, index } = Astro.props;
+// Resolved here (not inline in the template) — Astro's template expression
+// parser reads `<'brawlers'>` generics as JSX and chokes on them.
+const rows = [...counters]
+  .sort((a, b) => a.rank - b.rank)
+  .map((entry) => ({ ...entry, brawler: lookup(index, entry.slug) }));
+---
+
+<ol class="flex flex-col gap-3">
+  {
+    rows.map(({ rank, note, brawler }) => (
+      <li class="flex items-start gap-3 rounded-xl bg-white/5 p-3">
+        <span class="rounded-full bg-brawl-navy-deep px-2 py-0.5 text-xs font-black text-brawl-yellow">#{rank}</span>
+        <a href={`/brawlers/${brawler.id}/`} class="flex items-center gap-3 hover:opacity-80">
+          <span class="w-14 shrink-0">
+            <BrawlerTile brawler={brawler} />
+          </span>
+          <span class="font-bold text-white">{brawler.data.name}</span>
+        </a>
+        {note && <p class="text-sm text-white/60 italic">{note}</p>}
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BrawlerTile from '@/components/BrawlerTile.astro';
+import BrawlerGrid from '@/components/BrawlerGrid.astro';
+import CounterList from '@/components/CounterList.astro';
+import { allBrawlers, brawlerIndex, lookup } from '@/lib/brawlers';
+import { classNameLabel, rarityLabel } from '@/lib/labels';
+
+export async function getStaticPaths() {
+  const brawlers = await allBrawlers();
+  return brawlers.map((brawler) => ({ params: { slug: brawler.id }, props: { brawler } }));
+}
+
+const { brawler } = Astro.props;
+const { name, className, rarity, rarityColor, released, counters, hasCounters, counterFor, maps } = brawler.data;
+
+const index = await brawlerIndex();
+const mapEntries = await getCollection('maps');
+const mapById = new Map(mapEntries.map((m) => [m.id, m]));
+
+/** Same fail-fast contract as lookup() in lib/brawlers.ts, for the maps collection. */
+function lookupMap(mapId: string) {
+  const map = mapById.get(mapId);
+  if (!map) throw new Error(`lookupMap: unknown map id "${mapId}"`);
+  return map;
+}
+
+const counterForBrawlers = counterFor.map((slug) => lookup(index, slug));
+
+const appearances = maps.map((entry) => ({
+  ...entry,
+  map: lookupMap(entry.mapId),
+}));
+---
+
+<BaseLayout
+  title={`${name} — BrawDraft`}
+  description={`Counters, composição e mapas favoráveis para ${name} em Brawl Stars.`}
+>
+  <article class="mx-auto flex max-w-4xl flex-col gap-6 px-4 pt-6 pb-16">
+    <div class="panel">
+      <div class="panel__body flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+        <div class="w-40 shrink-0 rounded-2xl p-3" style={{ backgroundColor: rarityColor }}>
+          <BrawlerTile brawler={brawler} />
+        </div>
+        <div class="flex flex-col items-center gap-2 sm:items-start">
+          <h1 class="title-brawl text-3xl sm:text-4xl">{name}</h1>
+          <div class="flex flex-wrap justify-center gap-2 sm:justify-start">
+            <span class="chip">{classNameLabel(className)}</span>
+            <span class="chip" style={{ color: rarityColor }}>
+              {rarityLabel(rarity)}
+            </span>
+            {!released && <span class="chip bg-brawl-red/80">Não lançado</span>}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 class="panel__header text-left">Counters</h2>
+      <div class="panel__body">
+        {
+          hasCounters ? (
+            <CounterList counters={counters} index={index} />
+          ) : (
+            <p class="text-sm text-white/60">
+              Sem dados de counters para {name} — não influencia as sugestões do assistente de draft.
+            </p>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 class="panel__header text-left">Bom contra</h2>
+      <div class="panel__body">
+        {
+          counterForBrawlers.length > 0 ? (
+            <BrawlerGrid brawlers={counterForBrawlers} as="link" />
+          ) : (
+            <p class="text-sm text-white/60">Nenhum registro de counter para outros brawlers ainda.</p>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 class="panel__header text-left">Aparece em</h2>
+      <div class="panel__body">
+        {
+          appearances.length > 0 ? (
+            <ul class="flex flex-col gap-2">
+              {appearances.map(({ map, category }) => (
+                <li class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-2">
+                  <a href={`/mapas/${map.id}/`} class="flex items-center gap-3 hover:opacity-80">
+                    <img src={map.data.image} alt={map.data.namePt} width="40" height="40" class="rounded-lg" />
+                    <span class="font-bold text-white">
+                      {map.data.namePt} <span class="font-normal text-white/50">({map.data.name})</span>
+                    </span>
+                  </a>
+                  <span class="chip">{category}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-sm text-white/60">Nenhum mapa registrado para {name} ainda.</p>
+          )
+        }
+      </div>
+    </div>
+  </article>
+</BaseLayout>
