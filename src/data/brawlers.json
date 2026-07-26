@@ -1,0 +1,7811 @@
+[
+  {
+    "id": "wendy",
+    "brawlerId": 16000108,
+    "name": "Wendy",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/wendy.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3,
+        "note": "sendo uma lançadora/suporte"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "nori",
+    "brawlerId": 16000107,
+    "name": "Nori",
+    "className": "Unknown",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/nori.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1,
+        "note": "para empurrar o salto"
+      },
+      {
+        "slug": "otis",
+        "rank": 2,
+        "note": "silencia a vara"
+      },
+      {
+        "slug": "bull",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "bolt",
+    "brawlerId": 16000106,
+    "name": "Bolt",
+    "className": "Unknown",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/bolt.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "otis",
+        "rank": 2
+      },
+      {
+        "slug": "surge",
+        "rank": 3,
+        "note": "para parar a Hipercarga dele"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "starr-nova",
+    "brawlerId": 16000105,
+    "name": "Starr Nova",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/starr-nova.png",
+    "counters": [
+      {
+        "slug": "clancy",
+        "rank": 1
+      },
+      {
+        "slug": "colette",
+        "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3,
+        "note": "sofre contra alto DPS"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": [
+      "star nova"
+    ]
+  },
+  {
+    "id": "damian",
+    "brawlerId": 16000104,
+    "name": "Damian",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/damian.png",
+    "counters": [
+      {
+        "slug": "surge",
+        "rank": 1
+      },
+      {
+        "slug": "edgar",
+        "rank": 2
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": [
+      "Damian lou"
+    ]
+  },
+  {
+    "id": "najia",
+    "brawlerId": 16000103,
+    "name": "Najia",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/najia.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "crow",
+        "rank": 2
+      },
+      {
+        "slug": "surge",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "sirius",
+    "brawlerId": 16000102,
+    "name": "Sirius",
+    "className": "Unknown",
+    "rarity": "Ultra Legendary",
+    "rarityColor": "#e1fb2a",
+    "released": true,
+    "image": "/brawlers/sirius.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "glowy",
+    "brawlerId": 16000101,
+    "name": "Glowy",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/glowy.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "hideout",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "gigi",
+    "brawlerId": 16000100,
+    "name": "Gigi",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/gigi.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "pierce",
+    "brawlerId": 16000099,
+    "name": "Pierce",
+    "className": "Unknown",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/pierce.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "mandy",
+        "rank": 2
+      },
+      {
+        "slug": "angelo",
+        "rank": 3,
+        "note": "sofre com o longo alcance"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "8-bit"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": [
+      "Pearce"
+    ]
+  },
+  {
+    "id": "ziggy",
+    "brawlerId": 16000098,
+    "name": "Ziggy",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/ziggy.png",
+    "counters": [
+      {
+        "slug": "edgar",
+        "rank": 1
+      },
+      {
+        "slug": "mortis",
+        "rank": 2
+      },
+      {
+        "slug": "kenji",
+        "rank": 3,
+        "note": "sofre contra assassinos agressivos"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "parallel-plays",
+        "category": "6ª Escolha"
+      }
+    ],
+    "aliases": [
+      "Zyggy"
+    ]
+  },
+  {
+    "id": "mina",
+    "brawlerId": 16000097,
+    "name": "Mina",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/mina.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "trunk",
+    "brawlerId": 16000096,
+    "name": "Trunk",
+    "className": "Unknown",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/trunk.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      }
+    ],
+    "aliases": [
+      "Chunk"
+    ]
+  },
+  {
+    "id": "alli",
+    "brawlerId": 16000095,
+    "name": "Alli",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/alli.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": [
+      "ali"
+    ]
+  },
+  {
+    "id": "kaze",
+    "brawlerId": 16000094,
+    "name": "Kaze",
+    "className": "Unknown",
+    "rarity": "Ultra Legendary",
+    "rarityColor": "#e1fb2a",
+    "released": true,
+    "image": "/brawlers/kaze.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Outros Picks"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "jae-yong",
+    "brawlerId": 16000093,
+    "name": "Jae-Yong",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/jae-yong.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": [
+      "Jae Young"
+    ]
+  },
+  {
+    "id": "finx",
+    "brawlerId": 16000092,
+    "name": "Finx",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/finx.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "lumi",
+    "brawlerId": 16000091,
+    "name": "Lumi",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/lumi.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3,
+        "note": "brawlers de controle à distância"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "ollie",
+    "brawlerId": 16000090,
+    "name": "Ollie",
+    "className": "Unknown",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/ollie.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": [
+      "Odie"
+    ]
+  },
+  {
+    "id": "meeple",
+    "brawlerId": 16000089,
+    "name": "Meeple",
+    "className": "Unknown",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/meeple.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "mandy",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3,
+        "note": "franco-atiradores longos"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "8-bit",
+      "meg"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": [
+      "Miple"
+    ]
+  },
+  {
+    "id": "buzz-lightyear",
+    "brawlerId": 16000088,
+    "name": "Buzz Lightyear",
+    "className": "Unknown",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": false,
+    "image": "/brawlers/buzz-lightyear.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "juju",
+    "brawlerId": 16000087,
+    "name": "Juju",
+    "className": "Artillery",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/juju.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "shade",
+    "brawlerId": 16000086,
+    "name": "Shade",
+    "className": "Assassin",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/shade.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "kenji",
+    "brawlerId": 16000085,
+    "name": "Kenji",
+    "className": "Assassin",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/kenji.png",
+    "counters": [
+      {
+        "slug": "griff",
+        "rank": 1
+      },
+      {
+        "slug": "cordelius",
+        "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "ziggy"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "moe",
+    "brawlerId": 16000084,
+    "name": "Moe",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/moe.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      }
+    ],
+    "aliases": [
+      "Mo"
+    ]
+  },
+  {
+    "id": "clancy",
+    "brawlerId": 16000083,
+    "name": "Clancy",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/clancy.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "ash",
+      "bibi",
+      "bonnie",
+      "bull",
+      "el-primo",
+      "jacky",
+      "pam",
+      "rosa",
+      "sam",
+      "starr-nova"
+    ],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "berry",
+    "brawlerId": 16000082,
+    "name": "Berry",
+    "className": "Support",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/berry.png",
+    "counters": [
+      {
+        "slug": "melodie",
+        "rank": 1
+      },
+      {
+        "slug": "mortis",
+        "rank": 2
+      },
+      {
+        "slug": "gray",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "lily",
+    "brawlerId": 16000081,
+    "name": "Lily",
+    "className": "Assassin",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/lily.png",
+    "counters": [
+      {
+        "slug": "bull",
+        "rank": 1
+      },
+      {
+        "slug": "frank",
+        "rank": 2
+      },
+      {
+        "slug": "otis",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "draco",
+    "brawlerId": 16000080,
+    "name": "Draco",
+    "className": "Tank",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/draco.png",
+    "counters": [
+      {
+        "slug": "otis",
+        "rank": 1
+      },
+      {
+        "slug": "colette",
+        "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "angelo",
+    "brawlerId": 16000079,
+    "name": "Angelo",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/angelo.png",
+    "counters": [
+      {
+        "slug": "nani",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "leon",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "pierce"
+    ],
+    "maps": [
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "melodie",
+    "brawlerId": 16000078,
+    "name": "Melodie",
+    "className": "Assassin",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/melodie.png",
+    "counters": [
+      {
+        "slug": "ruffs",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "cordelius",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "berry"
+    ],
+    "maps": [
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      }
+    ],
+    "aliases": [
+      "Melody"
+    ]
+  },
+  {
+    "id": "larry-lawrie",
+    "brawlerId": 16000077,
+    "name": "Larry & Lawrie",
+    "className": "Artillery",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/larry-lawrie.png",
+    "counters": [
+      {
+        "slug": "edgar",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "kit",
+    "brawlerId": 16000076,
+    "name": "Kit",
+    "className": "Support",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/kit.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "bull",
+        "rank": 2
+      },
+      {
+        "slug": "cordelius",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "mico",
+    "brawlerId": 16000075,
+    "name": "Mico",
+    "className": "Assassin",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/mico.png",
+    "counters": [
+      {
+        "slug": "ruffs",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "bull",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "barley",
+      "dynamike",
+      "grom",
+      "juju",
+      "larry-lawrie",
+      "sprout",
+      "tick",
+      "wendy",
+      "willow"
+    ],
+    "maps": [
+      {
+        "mapId": "bridge-too-far",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "charlie",
+    "brawlerId": 16000074,
+    "name": "Charlie",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/charlie.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "brock",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "max"
+    ],
+    "maps": [
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "chuck",
+    "brawlerId": 16000073,
+    "name": "Chuck",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/chuck.png",
+    "counters": [
+      {
+        "slug": "cordelius",
+        "rank": 1
+      },
+      {
+        "slug": "r-t",
+        "rank": 2
+      },
+      {
+        "slug": "colette",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "pearl",
+    "brawlerId": 16000072,
+    "name": "Pearl",
+    "className": "Damage Dealer",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/pearl.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "hideout",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": [
+      "Pérola"
+    ]
+  },
+  {
+    "id": "doug",
+    "brawlerId": 16000071,
+    "name": "Doug",
+    "className": "Support",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/doug.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "cordelius",
+    "brawlerId": 16000070,
+    "name": "Cordelius",
+    "className": "Assassin",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/cordelius.png",
+    "counters": [
+      {
+        "slug": "stu",
+        "rank": 1
+      },
+      {
+        "slug": "r-t",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "buster",
+      "chuck",
+      "fang",
+      "kenji",
+      "kit",
+      "melodie"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "hank",
+    "brawlerId": 16000069,
+    "name": "Hank",
+    "className": "Tank",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/hank.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "el-primo",
+        "rank": 2
+      },
+      {
+        "slug": "maisie",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "maisie",
+    "brawlerId": 16000068,
+    "name": "Maisie",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/maisie.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "buster",
+      "hank",
+      "leon"
+    ],
+    "maps": [
+      {
+        "mapId": "parallel-plays",
+        "category": "Outros Picks"
+      }
+    ],
+    "aliases": [
+      "Maise"
+    ]
+  },
+  {
+    "id": "willow",
+    "brawlerId": 16000067,
+    "name": "Willow",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/willow.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "r-t",
+    "brawlerId": 16000066,
+    "name": "R-T",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/r-t.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "buster",
+      "chuck",
+      "cordelius"
+    ],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "mandy",
+    "brawlerId": 16000065,
+    "name": "Mandy",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/mandy.png",
+    "counters": [
+      {
+        "slug": "nani",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "leon",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "belle",
+      "brock",
+      "clancy",
+      "gale",
+      "griff",
+      "lumi",
+      "maisie",
+      "meeple",
+      "nani",
+      "ollie",
+      "pearl",
+      "pierce",
+      "r-t",
+      "spike"
+    ],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "gray",
+    "brawlerId": 16000064,
+    "name": "Gray",
+    "className": "Support",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/gray.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "leon",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "berry"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "chester",
+    "brawlerId": 16000063,
+    "name": "Chester",
+    "className": "Damage Dealer",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/chester.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "belle",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "carl",
+      "frank"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "buster",
+    "brawlerId": 16000062,
+    "name": "Buster",
+    "className": "Tank",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/buster.png",
+    "counters": [
+      {
+        "slug": "cordelius",
+        "rank": 1
+      },
+      {
+        "slug": "r-t",
+        "rank": 2
+      },
+      {
+        "slug": "maisie",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "gus",
+    "brawlerId": 16000061,
+    "name": "Gus",
+    "className": "Support",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/gus.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "leon",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "sam",
+    "brawlerId": 16000060,
+    "name": "Sam",
+    "className": "Assassin",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/sam.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "otis",
+    "brawlerId": 16000059,
+    "name": "Otis",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/otis.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "belle",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "bolt",
+      "buzz",
+      "draco",
+      "lily",
+      "nori"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "bonnie",
+    "brawlerId": 16000058,
+    "name": "Bonnie",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/bonnie.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "janet",
+    "brawlerId": 16000057,
+    "name": "Janet",
+    "className": "Marksman",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/janet.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "brock",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "eve",
+    "brawlerId": 16000056,
+    "name": "Eve",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/eve.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "belle",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "tara"
+    ],
+    "maps": [
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "fang",
+    "brawlerId": 16000054,
+    "name": "Fang",
+    "className": "Assassin",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/fang.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "gene",
+        "rank": 2
+      },
+      {
+        "slug": "cordelius",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "lola",
+    "brawlerId": 16000053,
+    "name": "Lola",
+    "className": "Damage Dealer",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/lola.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "meg",
+    "brawlerId": 16000052,
+    "name": "Meg",
+    "className": "Tank",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/meg.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "meeple",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "bo",
+      "shelly"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "ash",
+    "brawlerId": 16000051,
+    "name": "Ash",
+    "className": "Tank",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/ash.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "griff",
+    "brawlerId": 16000050,
+    "name": "Griff",
+    "className": "Controller",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/griff.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "kenji",
+      "mr-p",
+      "poco",
+      "rico"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "buzz",
+    "brawlerId": 16000049,
+    "name": "Buzz",
+    "className": "Assassin",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/buzz.png",
+    "counters": [
+      {
+        "slug": "otis",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "surge",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "6ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "grom",
+    "brawlerId": 16000048,
+    "name": "Grom",
+    "className": "Artillery",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/grom.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "squeak",
+    "brawlerId": 16000047,
+    "name": "Squeak",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/squeak.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mortis",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "belle",
+    "brawlerId": 16000046,
+    "name": "Belle",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/belle.png",
+    "counters": [
+      {
+        "slug": "nani",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "amber",
+      "chester",
+      "colette",
+      "eve",
+      "lou",
+      "otis",
+      "stu",
+      "surge"
+    ],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "stu",
+    "brawlerId": 16000045,
+    "name": "Stu",
+    "className": "Assassin",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/stu.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "belle",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "cordelius"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "ruffs",
+    "brawlerId": 16000044,
+    "name": "Ruffs",
+    "className": "Support",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/ruffs.png",
+    "counters": [
+      {
+        "slug": "colt",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "melodie",
+      "mico"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "open-business",
+        "category": "Longo Alcance / Suporte"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": [
+      "Ruff"
+    ]
+  },
+  {
+    "id": "edgar",
+    "brawlerId": 16000043,
+    "name": "Edgar",
+    "className": "Assassin",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/edgar.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "surge",
+        "rank": 2
+      },
+      {
+        "slug": "bull",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "barley",
+      "damian",
+      "dynamike",
+      "emz",
+      "grom",
+      "gus",
+      "juju",
+      "larry-lawrie",
+      "sprout",
+      "tick",
+      "wendy",
+      "willow",
+      "ziggy"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "byron",
+    "brawlerId": 16000042,
+    "name": "Byron",
+    "className": "Support",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/byron.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "leon",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Longo Alcance / Suporte"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": [
+      "Byro"
+    ]
+  },
+  {
+    "id": "lou",
+    "brawlerId": 16000041,
+    "name": "Lou",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/lou.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "belle",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": [
+      "Damian lou"
+    ]
+  },
+  {
+    "id": "amber",
+    "brawlerId": 16000040,
+    "name": "Amber",
+    "className": "Controller",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/amber.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "belle",
+        "rank": 2
+      },
+      {
+        "slug": "brock",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "bo",
+      "jessie",
+      "nita"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "colette",
+    "brawlerId": 16000039,
+    "name": "Colette",
+    "className": "Damage Dealer",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/colette.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "belle",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "ash",
+      "bibi",
+      "bo",
+      "bonnie",
+      "bull",
+      "carl",
+      "chuck",
+      "draco",
+      "el-primo",
+      "frank",
+      "hank",
+      "jacky",
+      "meg",
+      "pam",
+      "poco",
+      "rosa",
+      "sam",
+      "starr-nova"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": [
+      "Colete"
+    ]
+  },
+  {
+    "id": "surge",
+    "brawlerId": 16000038,
+    "name": "Surge",
+    "className": "Damage Dealer",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/surge.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "belle",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "bolt",
+      "buzz",
+      "damian",
+      "edgar",
+      "mortis",
+      "najia"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "sprout",
+    "brawlerId": 16000037,
+    "name": "Sprout",
+    "className": "Artillery",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/sprout.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "nani",
+    "brawlerId": 16000036,
+    "name": "Nani",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/nani.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "mandy",
+        "rank": 2
+      },
+      {
+        "slug": "leon",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "angelo",
+      "bea",
+      "belle",
+      "brock",
+      "charlie",
+      "chester",
+      "clancy",
+      "colette",
+      "colt",
+      "crow",
+      "gale",
+      "gray",
+      "griff",
+      "janet",
+      "lou",
+      "lumi",
+      "maisie",
+      "mandy",
+      "meeple",
+      "moe",
+      "ollie",
+      "otis",
+      "pearl",
+      "piper",
+      "r-t",
+      "sandy",
+      "squeak",
+      "stu",
+      "surge"
+    ],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "gale",
+    "brawlerId": 16000035,
+    "name": "Gale",
+    "className": "Controller",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/gale.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "ash",
+      "bibi",
+      "bolt",
+      "bonnie",
+      "bull",
+      "buzz",
+      "carl",
+      "darryl",
+      "draco",
+      "edgar",
+      "el-primo",
+      "fang",
+      "jacky",
+      "kenji",
+      "kit",
+      "meg",
+      "melodie",
+      "mico",
+      "mortis",
+      "najia",
+      "nori",
+      "pam",
+      "rosa",
+      "sam",
+      "starr-nova"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Defensor"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Defensor"
+      }
+    ],
+    "aliases": [
+      "Gail"
+    ]
+  },
+  {
+    "id": "jacky",
+    "brawlerId": 16000034,
+    "name": "Jacky",
+    "className": "Tank",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/jacky.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "max",
+    "brawlerId": 16000032,
+    "name": "Max",
+    "className": "Support",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/max.png",
+    "counters": [
+      {
+        "slug": "crow",
+        "rank": 1
+      },
+      {
+        "slug": "spike",
+        "rank": 2
+      },
+      {
+        "slug": "charlie",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "piper"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "open-business",
+        "category": "Longo Alcance / Suporte"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "mr-p",
+    "brawlerId": 16000031,
+    "name": "Mr. P",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/mr-p.png",
+    "counters": [
+      {
+        "slug": "colt",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "griff",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "spike",
+      "tara"
+    ],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "emz",
+    "brawlerId": 16000030,
+    "name": "Emz",
+    "className": "Controller",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/emz.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "mortis",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Defensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "bea",
+    "brawlerId": 16000029,
+    "name": "Bea",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/bea.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mortis",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "sandy",
+    "brawlerId": 16000028,
+    "name": "Sandy",
+    "className": "Controller",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/sandy.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "tara",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "8-bit",
+    "brawlerId": 16000027,
+    "name": "8-Bit",
+    "className": "Damage Dealer",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/8-bit.png",
+    "counters": [
+      {
+        "slug": "pierce",
+        "rank": 1
+      },
+      {
+        "slug": "meeple",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "bibi",
+    "brawlerId": 16000026,
+    "name": "Bibi",
+    "className": "Tank",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/bibi.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "colette",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "carl",
+    "brawlerId": 16000025,
+    "name": "Carl",
+    "className": "Damage Dealer",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/carl.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "chester",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "rosa",
+    "brawlerId": 16000024,
+    "name": "Rosa",
+    "className": "Tank",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/rosa.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "leon",
+    "brawlerId": 16000023,
+    "name": "Leon",
+    "className": "Assassin",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/leon.png",
+    "counters": [
+      {
+        "slug": "crow",
+        "rank": 1
+      },
+      {
+        "slug": "tara",
+        "rank": 2
+      },
+      {
+        "slug": "maisie",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "angelo",
+      "byron",
+      "gray",
+      "gus",
+      "jessie",
+      "mandy",
+      "nani",
+      "piper"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "tick",
+    "brawlerId": 16000022,
+    "name": "Tick",
+    "className": "Artillery",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/tick.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "gene",
+    "brawlerId": 16000021,
+    "name": "Gene",
+    "className": "Controller",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/gene.png",
+    "counters": [],
+    "hasCounters": false,
+    "counterFor": [
+      "fang"
+    ],
+    "maps": [
+      {
+        "mapId": "hideout",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "frank",
+    "brawlerId": 16000020,
+    "name": "Frank",
+    "className": "Tank",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/frank.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "shelly",
+        "rank": 2
+      },
+      {
+        "slug": "chester",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "lily"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "penny",
+    "brawlerId": 16000019,
+    "name": "Penny",
+    "className": "Artillery",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/penny.png",
+    "counters": [
+      {
+        "slug": "colt",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "nita"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": [
+      "Peny"
+    ]
+  },
+  {
+    "id": "darryl",
+    "brawlerId": 16000018,
+    "name": "Darryl",
+    "className": "Tank",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/darryl.png",
+    "counters": [
+      {
+        "slug": "shelly",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "el-primo",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "bridge-too-far",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": [
+      "Daryl"
+    ]
+  },
+  {
+    "id": "tara",
+    "brawlerId": 16000017,
+    "name": "Tara",
+    "className": "Damage Dealer",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/tara.png",
+    "counters": [
+      {
+        "slug": "mr-p",
+        "rank": 1
+      },
+      {
+        "slug": "eve",
+        "rank": 2
+      },
+      {
+        "slug": "piper",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "leon",
+      "sandy"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "pam",
+    "brawlerId": 16000016,
+    "name": "Pam",
+    "className": "Support",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/pam.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "piper",
+    "brawlerId": 16000015,
+    "name": "Piper",
+    "className": "Marksman",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/piper.png",
+    "counters": [
+      {
+        "slug": "nani",
+        "rank": 1
+      },
+      {
+        "slug": "max",
+        "rank": 2
+      },
+      {
+        "slug": "leon",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "8-bit",
+      "amber",
+      "angelo",
+      "bea",
+      "belle",
+      "brock",
+      "byron",
+      "charlie",
+      "chester",
+      "clancy",
+      "colette",
+      "colt",
+      "cordelius",
+      "crow",
+      "emz",
+      "eve",
+      "gale",
+      "gray",
+      "griff",
+      "janet",
+      "jessie",
+      "larry-lawrie",
+      "lou",
+      "lumi",
+      "maisie",
+      "mandy",
+      "meeple",
+      "moe",
+      "nani",
+      "ollie",
+      "otis",
+      "pearl",
+      "penny",
+      "pierce",
+      "r-t",
+      "ruffs",
+      "sandy",
+      "spike",
+      "squeak",
+      "stu",
+      "surge",
+      "tara"
+    ],
+    "maps": [
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "bo",
+    "brawlerId": 16000014,
+    "name": "Bo",
+    "className": "Controller",
+    "rarity": "Epic",
+    "rarityColor": "#d850ff",
+    "released": true,
+    "image": "/brawlers/bo.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "amber",
+        "rank": 2
+      },
+      {
+        "slug": "meg",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "poco",
+    "brawlerId": 16000013,
+    "name": "Poco",
+    "className": "Support",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/poco.png",
+    "counters": [
+      {
+        "slug": "crow",
+        "rank": 1
+      },
+      {
+        "slug": "colette",
+        "rank": 2
+      },
+      {
+        "slug": "griff",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Zone Time"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Zone Time"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "crow",
+    "brawlerId": 16000012,
+    "name": "Crow",
+    "className": "Assassin",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/crow.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "leon",
+      "max",
+      "najia",
+      "poco"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Flex — Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Suporte / Dano"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Carregadores de Gemas"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Flex"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Flex"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Flex"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Flex"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Flex"
+      }
+    ],
+    "aliases": [
+      "Corv",
+      "Corvo"
+    ]
+  },
+  {
+    "id": "mortis",
+    "brawlerId": 16000011,
+    "name": "Mortis",
+    "className": "Assassin",
+    "rarity": "Mythic",
+    "rarityColor": "#fe5e72",
+    "released": true,
+    "image": "/brawlers/mortis.png",
+    "counters": [
+      {
+        "slug": "gale",
+        "rank": 1
+      },
+      {
+        "slug": "surge",
+        "rank": 2
+      },
+      {
+        "slug": "bull",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "barley",
+      "bea",
+      "berry",
+      "byron",
+      "dynamike",
+      "emz",
+      "grom",
+      "gus",
+      "juju",
+      "sprout",
+      "squeak",
+      "tick",
+      "wendy",
+      "willow",
+      "ziggy"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "open-business",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "hideout",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Agressivos"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "undermine",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Final do Jogo"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Final do Jogo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "el-primo",
+    "brawlerId": 16000010,
+    "name": "El Primo",
+    "className": "Tank",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/el-primo.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "darryl",
+      "hank"
+    ],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "dynamike",
+    "brawlerId": 16000009,
+    "name": "Dynamike",
+    "className": "Artillery",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/dynamike.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "nita",
+    "brawlerId": 16000008,
+    "name": "Nita",
+    "className": "Damage Dealer",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/nita.png",
+    "counters": [
+      {
+        "slug": "penny",
+        "rank": 1
+      },
+      {
+        "slug": "amber",
+        "rank": 2
+      },
+      {
+        "slug": "colt",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "shelly"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "jessie",
+    "brawlerId": 16000007,
+    "name": "Jessie",
+    "className": "Controller",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/jessie.png",
+    "counters": [
+      {
+        "slug": "amber",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "leon",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [],
+    "aliases": []
+  },
+  {
+    "id": "barley",
+    "brawlerId": 16000006,
+    "name": "Barley",
+    "className": "Artillery",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/barley.png",
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "mico",
+        "rank": 2
+      },
+      {
+        "slug": "edgar",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "spike",
+    "brawlerId": 16000005,
+    "name": "Spike",
+    "className": "Damage Dealer",
+    "rarity": "Legendary",
+    "rarityColor": "#fff11e",
+    "released": true,
+    "image": "/brawlers/spike.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "mandy",
+        "rank": 2
+      },
+      {
+        "slug": "mr-p",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "max"
+    ],
+    "maps": [
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Ambas as Zonas"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "rico",
+    "brawlerId": 16000004,
+    "name": "Rico",
+    "className": "Damage Dealer",
+    "rarity": "Super Rare",
+    "rarityColor": "#5ab3ff",
+    "released": true,
+    "image": "/brawlers/rico.png",
+    "counters": [
+      {
+        "slug": "colt",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "griff",
+        "rank": 3,
+        "note": "destroem as paredes dele"
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "deathcap-trap",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Flex"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "Flex"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Flex"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "brock",
+    "brawlerId": 16000003,
+    "name": "Brock",
+    "className": "Marksman",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/brock.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "mandy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "amber",
+      "charlie",
+      "colt",
+      "crow",
+      "eve",
+      "janet",
+      "moe",
+      "mr-p",
+      "penny",
+      "rico",
+      "ruffs"
+    ],
+    "maps": [
+      {
+        "mapId": "open-business",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "dry-season",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "hideout",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "layer-cake",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "shooting-star",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Flex"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Flex — Controle"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Mid"
+      },
+      {
+        "mapId": "crystal-arcade",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "kaboom-canyon",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "dueling-beetles",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "ring-of-fire",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "1ª Escolha"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "1ª Escolha"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "bull",
+    "brawlerId": 16000002,
+    "name": "Bull",
+    "className": "Tank",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/bull.png",
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "gale",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "edgar",
+      "kit",
+      "lily",
+      "mico",
+      "mortis",
+      "nori"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "center-stage",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "pinball-dreams",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "6ª Escolha"
+      },
+      {
+        "mapId": "triple-dribble",
+        "category": "Pressão"
+      },
+      {
+        "mapId": "double-swoosh",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hard-rock-mine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "gem-fort",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "undermine",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "parallel-plays",
+        "category": "Zone Ofensivo"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "colt",
+    "brawlerId": 16000001,
+    "name": "Colt",
+    "className": "Damage Dealer",
+    "rarity": "Rare",
+    "rarityColor": "#68fd58",
+    "released": true,
+    "image": "/brawlers/colt.png",
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "brock",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "mr-p",
+      "nita",
+      "penny",
+      "rico",
+      "ruffs"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Anti-tank"
+      },
+      {
+        "mapId": "bridge-too-far",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "hot-potato",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "safe-zone",
+        "category": "Safe Dano"
+      },
+      {
+        "mapId": "belles-rock",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "flaring-phoenix",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "new-horizons",
+        "category": "Atiradores"
+      },
+      {
+        "mapId": "out-in-the-open",
+        "category": "Atiradores"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "id": "shelly",
+    "brawlerId": 16000000,
+    "name": "Shelly",
+    "className": "Damage Dealer",
+    "rarity": "Common",
+    "rarityColor": "#b9eaff",
+    "released": true,
+    "image": "/brawlers/shelly.png",
+    "counters": [
+      {
+        "slug": "nita",
+        "rank": 1
+      },
+      {
+        "slug": "meg",
+        "rank": 2
+      }
+    ],
+    "hasCounters": true,
+    "counterFor": [
+      "darryl",
+      "frank"
+    ],
+    "maps": [
+      {
+        "mapId": "center-stage",
+        "category": "Outros Picks"
+      },
+      {
+        "mapId": "sneaky-fields",
+        "category": "Outros Picks"
+      }
+    ],
+    "aliases": []
+  }
+]

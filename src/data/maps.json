@@ -1,0 +1,2462 @@
+[
+  {
+    "id": "open-business",
+    "name": "Open Business",
+    "namePt": "Aberto",
+    "mapApiId": 15000292,
+    "image": "/maps/open-business.png",
+    "environment": "Scrapyard",
+    "link": "https://brawlify.com/maps/15000292",
+    "gameMode": {
+      "name": "Hot Zone",
+      "color": "#ff4343",
+      "bgColor": "#e33b50",
+      "image": "/game-modes/hot-zone.png"
+    },
+    "tips": [
+      "Dicas",
+      "1 Anti tank",
+      "1 Zone time",
+      "1 Longo Alcance / Suporte"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "max",
+          "meg",
+          "lou",
+          "tick"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "cordelius",
+          "bolt",
+          "barley",
+          "edgar",
+          "buzz",
+          "mortis"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "meeple",
+          "crow",
+          "lumi",
+          "brock",
+          "ruffs",
+          "chester",
+          "colette",
+          "pierce",
+          "carl",
+          "penny",
+          "tara"
+        ]
+      },
+      {
+        "key": "zonetime",
+        "label": "Zone Time",
+        "brawlers": [
+          "glowy",
+          "berry",
+          "finx",
+          "emz",
+          "gray",
+          "poco",
+          "amber",
+          "leon",
+          "draco",
+          "lola",
+          "bo",
+          "pam"
+        ]
+      },
+      {
+        "key": "bralwersdepressao",
+        "label": "Pressão",
+        "brawlers": [
+          "kenji",
+          "mortis",
+          "mina",
+          "stu",
+          "damian",
+          "edgar",
+          "fang"
+        ]
+      },
+      {
+        "key": "longoalcancesuporte",
+        "label": "Longo Alcance / Suporte",
+        "brawlers": [
+          "byron",
+          "max",
+          "ruffs"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dry-season",
+    "name": "Dry Season",
+    "namePt": "Estação Seca",
+    "mapApiId": 15000083,
+    "image": "/maps/dry-season.png",
+    "environment": "Bandstand",
+    "link": "https://brawlify.com/maps/15000083",
+    "gameMode": {
+      "name": "Bounty",
+      "color": "#24d6ff",
+      "bgColor": "#00cfff",
+      "image": "/game-modes/bounty.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "meg",
+          "najia"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "nani",
+          "edgar",
+          "kit",
+          "bolt",
+          "mortis",
+          "sprout"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "brock",
+          "belle",
+          "max",
+          "meeple",
+          "piper",
+          "pierce",
+          "byron",
+          "colette",
+          "gus"
+        ]
+      },
+      {
+        "key": "agressivos",
+        "label": "Agressivos",
+        "brawlers": [
+          "mortis",
+          "kaze",
+          "bolt",
+          "kenji",
+          "damian",
+          "leon",
+          "mina",
+          "edgar",
+          "fang",
+          "lily",
+          "kit"
+        ]
+      },
+      {
+        "key": "flexatiradores",
+        "label": "Flex — Atiradores",
+        "brawlers": [
+          "crow",
+          "ruffs",
+          "griff",
+          "squeak",
+          "r-t",
+          "lumi",
+          "gray"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hideout",
+    "name": "Hideout",
+    "namePt": "Esconderijo",
+    "mapApiId": 15000022,
+    "image": "/maps/hideout.png",
+    "environment": "Madevilmanor",
+    "link": "https://brawlify.com/maps/15000022",
+    "gameMode": {
+      "name": "Bounty",
+      "color": "#24d6ff",
+      "bgColor": "#00cfff",
+      "image": "/game-modes/bounty.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "gene",
+          "pearl",
+          "glowy"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "nani",
+          "edgar",
+          "kit",
+          "bolt",
+          "mortis",
+          "sprout"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "brock",
+          "belle",
+          "max",
+          "meeple",
+          "piper",
+          "pierce",
+          "byron",
+          "colette",
+          "gus"
+        ]
+      },
+      {
+        "key": "agressivos",
+        "label": "Agressivos",
+        "brawlers": [
+          "mortis",
+          "kaze",
+          "bolt",
+          "kenji",
+          "damian",
+          "leon",
+          "mina",
+          "edgar",
+          "fang",
+          "lily",
+          "kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "layer-cake",
+    "name": "Layer Cake",
+    "namePt": "Bolo em camadas",
+    "mapApiId": 15000082,
+    "image": "/maps/layer-cake.png",
+    "environment": "Hub",
+    "link": "https://brawlify.com/maps/15000082",
+    "gameMode": {
+      "name": "Bounty",
+      "color": "#24d6ff",
+      "bgColor": "#00cfff",
+      "image": "/game-modes/bounty.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "meg",
+          "meeple"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "shade",
+          "edgar",
+          "kit",
+          "bolt",
+          "mortis",
+          "penny",
+          "alli"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "meeple",
+          "pierce",
+          "brock",
+          "gray",
+          "ruffs",
+          "najia",
+          "belle",
+          "byron"
+        ]
+      },
+      {
+        "key": "agressivos",
+        "label": "Agressivos",
+        "brawlers": [
+          "mortis",
+          "kaze",
+          "bolt",
+          "kenji",
+          "damian",
+          "leon",
+          "mina",
+          "edgar",
+          "fang",
+          "lily",
+          "kit"
+        ]
+      },
+      {
+        "key": "suportedano",
+        "label": "Suporte / Dano",
+        "brawlers": [
+          "crow",
+          "charlie",
+          "berry",
+          "max",
+          "lumi",
+          "emz",
+          "sirius",
+          "chester",
+          "poco",
+          "colette",
+          "doug"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shooting-star",
+    "name": "Shooting Star",
+    "namePt": "Campo de Tiro",
+    "mapApiId": 15000005,
+    "image": "/maps/shooting-star.png",
+    "environment": "Arcade",
+    "link": "https://brawlify.com/maps/15000005",
+    "gameMode": {
+      "name": "Bounty",
+      "color": "#24d6ff",
+      "bgColor": "#00cfff",
+      "image": "/game-modes/bounty.png"
+    },
+    "tips": [
+      "1 Agressivo",
+      "1 Atirador"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "gene",
+          "piper",
+          "max"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "fang",
+          "edgar",
+          "kit",
+          "bolt",
+          "mortis",
+          "sprout"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "brock",
+          "belle",
+          "max",
+          "meeple",
+          "piper",
+          "pierce",
+          "byron",
+          "colette",
+          "gus",
+          "griff"
+        ]
+      },
+      {
+        "key": "agressivos",
+        "label": "Agressivos",
+        "brawlers": [
+          "mortis",
+          "kaze",
+          "bolt",
+          "kenji",
+          "damian",
+          "leon",
+          "mina",
+          "edgar",
+          "fang",
+          "lily",
+          "kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "center-stage",
+    "name": "Center Stage",
+    "namePt": "centro do palco",
+    "mapApiId": 15000132,
+    "image": "/maps/center-stage.png",
+    "environment": "Bbarenakatanakingdomnn2",
+    "link": "https://brawlify.com/maps/15000132",
+    "gameMode": {
+      "name": "Brawl Ball",
+      "color": "#9ab1fd",
+      "bgColor": "#8ca0e0",
+      "image": "/game-modes/brawl-ball.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "griff",
+          "max",
+          "damian",
+          "8-bit"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "shade",
+          "bolt",
+          "bull",
+          "edgar",
+          "buzz",
+          "mortis",
+          "alli"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "otis",
+          "griff",
+          "emz",
+          "rico",
+          "lumi",
+          "8-bit",
+          "chester",
+          "colette",
+          "sirius",
+          "nita",
+          "carl",
+          "colt"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "alli",
+          "bibi",
+          "bull",
+          "edgar",
+          "mortis",
+          "stu",
+          "frank",
+          "mina",
+          "ash",
+          "kenji",
+          "trunk",
+          "kit"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "ruffs",
+          "crow",
+          "max",
+          "otis",
+          "meeple",
+          "poco",
+          "lou",
+          "gale",
+          "rico",
+          "brock",
+          "bea"
+        ]
+      },
+      {
+        "key": "outros",
+        "label": "Outros Picks",
+        "brawlers": [
+          "amber",
+          "moe",
+          "willow",
+          "shelly",
+          "sandy",
+          "grom",
+          "buster"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pinball-dreams",
+    "name": "Pinball Dreams",
+    "namePt": "pintando o Pinball",
+    "mapApiId": 15000118,
+    "image": "/maps/pinball-dreams.png",
+    "environment": "Bbarena",
+    "link": "https://brawlify.com/maps/15000118",
+    "gameMode": {
+      "name": "Brawl Ball",
+      "color": "#9ab1fd",
+      "bgColor": "#8ca0e0",
+      "image": "/game-modes/brawl-ball.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "griff",
+          "max",
+          "damian",
+          "8-bit"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "shade",
+          "bolt",
+          "bull",
+          "edgar",
+          "buzz",
+          "mortis"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "otis",
+          "griff",
+          "moe",
+          "rico",
+          "lumi",
+          "8-bit",
+          "chester",
+          "colette",
+          "sirius",
+          "emz",
+          "cordelius",
+          "lou"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "kenji",
+          "bibi",
+          "bull",
+          "edgar",
+          "mortis",
+          "stu",
+          "frank",
+          "mina",
+          "ash",
+          "hank",
+          "trunk",
+          "kit"
+        ]
+      },
+      {
+        "key": "flexcontrole",
+        "label": "Flex — Controle",
+        "brawlers": [
+          "ruffs",
+          "crow",
+          "meeple",
+          "willow",
+          "berry",
+          "gale",
+          "brock",
+          "glowy",
+          "najia",
+          "spike",
+          "carl"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "amber",
+          "sandy",
+          "squeak",
+          "leon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sneaky-fields",
+    "name": "Sneaky Fields",
+    "namePt": "Campos Ardilosos",
+    "mapApiId": 15000050,
+    "image": "/maps/sneaky-fields.png",
+    "environment": "Bbarena",
+    "link": "https://brawlify.com/maps/15000050",
+    "gameMode": {
+      "name": "Brawl Ball",
+      "color": "#9ab1fd",
+      "bgColor": "#8ca0e0",
+      "image": "/game-modes/brawl-ball.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "griff",
+          "max",
+          "damian",
+          "crow"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "shade",
+          "bolt",
+          "bull",
+          "edgar",
+          "buzz",
+          "mortis",
+          "alli"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "alli",
+          "bibi",
+          "bull",
+          "edgar",
+          "mortis",
+          "stu",
+          "frank",
+          "mina",
+          "ash",
+          "kenji",
+          "trunk",
+          "kit"
+        ]
+      },
+      {
+        "key": "mid",
+        "label": "Mid",
+        "brawlers": [
+          "ruffs",
+          "crow",
+          "max",
+          "otis",
+          "meeple",
+          "poco",
+          "gale",
+          "lou",
+          "rico",
+          "brock",
+          "glowy",
+          "bea"
+        ]
+      },
+      {
+        "key": "outros",
+        "label": "Outros Picks",
+        "brawlers": [
+          "moe",
+          "willow",
+          "shelly",
+          "sandy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "triple-dribble",
+    "name": "Triple Dribble",
+    "namePt": "Drible triplo",
+    "mapApiId": 15000025,
+    "image": "/maps/triple-dribble.png",
+    "environment": "Bbarenakatanakingdomnn2",
+    "link": "https://brawlify.com/maps/15000025",
+    "gameMode": {
+      "name": "Brawl Ball",
+      "color": "#9ab1fd",
+      "bgColor": "#8ca0e0",
+      "image": "/game-modes/brawl-ball.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "griff",
+          "max",
+          "damian",
+          "8-bit"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "shade",
+          "bolt",
+          "bull",
+          "edgar",
+          "buzz",
+          "mortis",
+          "alli"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "otis",
+          "griff",
+          "moe",
+          "rico",
+          "lumi",
+          "8-bit",
+          "chester",
+          "colette",
+          "sirius",
+          "emz",
+          "cordelius",
+          "lou"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "kenji",
+          "bibi",
+          "bull",
+          "edgar",
+          "mortis",
+          "stu",
+          "frank",
+          "mina",
+          "ash",
+          "hank",
+          "trunk",
+          "kit"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "amber",
+          "sandy",
+          "squeak",
+          "leon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crystal-arcade",
+    "name": "Crystal Arcade",
+    "namePt": "Fliperama de Cristal",
+    "mapApiId": 15000008,
+    "image": "/maps/crystal-arcade.png",
+    "environment": "Arcade",
+    "link": "https://brawlify.com/maps/15000008",
+    "gameMode": {
+      "name": "Gem Grab",
+      "color": "#d852ff",
+      "bgColor": "#9a3df3",
+      "image": "/game-modes/gem-grab.png"
+    },
+    "tips": [
+      "1 Anti tank",
+      "1 Brawler de pressão",
+      "1 carregador bom tanque"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "8-bit",
+          "surge",
+          "starr-nova",
+          "damian",
+          "brock",
+          "ruffs"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "mortis",
+          "edgar",
+          "shade",
+          "lily",
+          "buzz",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "sandy",
+          "lumi",
+          "moe",
+          "sirius",
+          "nita",
+          "otis",
+          "colette",
+          "najia",
+          "amber",
+          "leon",
+          "rico"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "lily",
+          "stu",
+          "mortis",
+          "edgar",
+          "buzz",
+          "shade",
+          "kenji",
+          "meeple",
+          "mina",
+          "alli",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "carregadoresdasgemas",
+        "label": "Carregadores de Gemas",
+        "brawlers": [
+          "stu",
+          "max",
+          "meg",
+          "lola",
+          "crow",
+          "pearl",
+          "byron",
+          "lou",
+          "finx",
+          "glowy",
+          "meeple",
+          "janet"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "carl",
+          "gene",
+          "charlie",
+          "fang",
+          "pierce"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "double-swoosh",
+    "name": "Double Swoosh",
+    "namePt": "Arcos Duplos",
+    "mapApiId": 15000115,
+    "image": "/maps/double-swoosh.png",
+    "environment": "Madevilmanor",
+    "link": "https://brawlify.com/maps/15000115",
+    "gameMode": {
+      "name": "Gem Grab",
+      "color": "#d852ff",
+      "bgColor": "#9a3df3",
+      "image": "/game-modes/gem-grab.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "8-bit",
+          "surge",
+          "starr-nova",
+          "damian",
+          "griff",
+          "meg"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "mortis",
+          "edgar",
+          "shade",
+          "lily",
+          "buzz",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "otis",
+          "sandy",
+          "lumi",
+          "chester",
+          "emz",
+          "tara",
+          "nita",
+          "ruffs",
+          "colette",
+          "moe",
+          "rico",
+          "amber"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "lily",
+          "stu",
+          "mortis",
+          "edgar",
+          "buzz",
+          "shade",
+          "kenji",
+          "kit",
+          "mina",
+          "alli",
+          "ash",
+          "cordelius"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "leon",
+          "poco",
+          "penny",
+          "carl",
+          "bull"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hard-rock-mine",
+    "name": "Hard Rock Mine",
+    "namePt": "Mina Rochosa",
+    "mapApiId": 15000007,
+    "image": "/maps/hard-rock-mine.png",
+    "environment": "Katanakingdomnn2",
+    "link": "https://brawlify.com/maps/15000007",
+    "gameMode": {
+      "name": "Gem Grab",
+      "color": "#d852ff",
+      "bgColor": "#9a3df3",
+      "image": "/game-modes/gem-grab.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "8-bit",
+          "surge",
+          "starr-nova",
+          "damian",
+          "ruffs",
+          "rico"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "mortis",
+          "edgar",
+          "shade",
+          "lily",
+          "buzz",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "sandy",
+          "lumi",
+          "nita",
+          "sirius",
+          "brock",
+          "otis",
+          "emz",
+          "colette",
+          "moe",
+          "chester",
+          "cordelius"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "lily",
+          "stu",
+          "mortis",
+          "edgar",
+          "buzz",
+          "shade",
+          "kenji",
+          "kit",
+          "mina",
+          "alli",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "carregadoresdasgemas",
+        "label": "Carregadores de Gemas",
+        "brawlers": [
+          "max",
+          "meg",
+          "lola",
+          "crow",
+          "pearl",
+          "lou",
+          "finx",
+          "glowy",
+          "meeple",
+          "janet"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "pierce",
+          "penny",
+          "carl",
+          "ollie",
+          "bull"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deathcap-trap",
+    "name": "Deathcap Trap",
+    "namePt": "Arapuca mortal",
+    "mapApiId": 15000009,
+    "image": "/maps/deathcap-trap.png",
+    "environment": "Katanakingdomnn",
+    "link": "https://brawlify.com/maps/15000009",
+    "gameMode": {
+      "name": "Gem Grab",
+      "color": "#d852ff",
+      "bgColor": "#9a3df3",
+      "image": "/game-modes/gem-grab.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "8-bit",
+          "surge",
+          "starr-nova",
+          "damian",
+          "ruffs",
+          "rico"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "mortis",
+          "edgar",
+          "shade",
+          "lily",
+          "buzz",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "sandy",
+          "lumi",
+          "moe",
+          "sirius",
+          "nita",
+          "otis",
+          "colette",
+          "chester",
+          "amber",
+          "leon",
+          "rico"
+        ]
+      },
+      {
+        "key": "carregadoresdasgemas",
+        "label": "Carregadores de Gemas",
+        "brawlers": [
+          "stu",
+          "max",
+          "meg",
+          "lola",
+          "crow",
+          "pearl",
+          "penny",
+          "lou",
+          "finx",
+          "glowy",
+          "meeple",
+          "janet"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "pierce",
+          "gene",
+          "charlie",
+          "fang",
+          "carl"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gem-fort",
+    "name": "Gem Fort",
+    "namePt": "Forte de gema",
+    "mapApiId": 15000010,
+    "image": "/maps/gem-fort.png",
+    "environment": "Hub",
+    "link": "https://brawlify.com/maps/15000010",
+    "gameMode": {
+      "name": "Gem Grab",
+      "color": "#d852ff",
+      "bgColor": "#9a3df3",
+      "image": "/game-modes/gem-grab.png"
+    },
+    "tips": [
+      "1 Anti tank",
+      "1 carregador de gemas",
+      "1 brawler de pressão que seja bom contra tanques",
+      "Assassino na ultima escolha"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "8-bit",
+          "surge",
+          "starr-nova",
+          "damian",
+          "ruffs",
+          "rico"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "mortis",
+          "edgar",
+          "shade",
+          "lily",
+          "buzz",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "sandy",
+          "lumi",
+          "moe",
+          "sirius",
+          "nita",
+          "otis",
+          "colette",
+          "chester",
+          "cordelius"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "lily",
+          "bolt",
+          "mortis",
+          "edgar",
+          "buzz",
+          "shade",
+          "kenji",
+          "kit",
+          "mina",
+          "alli",
+          "ash"
+        ]
+      },
+      {
+        "key": "carregadoresdasgemas",
+        "label": "Carregadores de Gemas",
+        "brawlers": [
+          "stu",
+          "max",
+          "meg",
+          "lola",
+          "crow",
+          "pearl",
+          "penny",
+          "lou",
+          "finx",
+          "glowy",
+          "meeple",
+          "janet"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "pierce",
+          "penny",
+          "carl",
+          "ollie",
+          "bull"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "undermine",
+    "name": "Undermine",
+    "namePt": "Ilumina",
+    "mapApiId": 15000011,
+    "image": "/maps/undermine.png",
+    "environment": "Mine",
+    "link": "https://brawlify.com/maps/15000011",
+    "gameMode": {
+      "name": "Gem Grab",
+      "color": "#d852ff",
+      "bgColor": "#9a3df3",
+      "image": "/game-modes/gem-grab.png"
+    },
+    "tips": [
+      "1 anti tank",
+      "1 brawler de pressão e controle",
+      "1 carregador de gemas",
+      "Assassino na ultima escolha"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "8-bit",
+          "surge",
+          "starr-nova",
+          "damian",
+          "griff",
+          "meg"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "mortis",
+          "edgar",
+          "shade",
+          "lily",
+          "buzz",
+          "ash",
+          "bolt"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "otis",
+          "sandy",
+          "lumi",
+          "chester",
+          "emz",
+          "tara",
+          "nita",
+          "ruffs",
+          "colette",
+          "moe",
+          "rico",
+          "amber"
+        ]
+      },
+      {
+        "key": "carregadoresdasgemas",
+        "label": "Carregadores de Gemas",
+        "brawlers": [
+          "max",
+          "meg",
+          "lola",
+          "crow",
+          "pearl",
+          "penny",
+          "lou",
+          "finx",
+          "glowy",
+          "meeple",
+          "janet"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "leon",
+          "poco",
+          "penny",
+          "carl",
+          "bull"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bridge-too-far",
+    "name": "Bridge Too Far",
+    "namePt": "Pontes inalcançável",
+    "mapApiId": 15000072,
+    "image": "/maps/bridge-too-far.png",
+    "environment": "Katanakingdomnn",
+    "link": "https://brawlify.com/maps/15000072",
+    "gameMode": {
+      "name": "Heist",
+      "color": "#d852ff",
+      "bgColor": "#d65cd3",
+      "image": "/game-modes/heist.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "meg",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "edgar",
+          "alli",
+          "lily",
+          "darryl",
+          "mico",
+          "carl"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "crow",
+          "nani",
+          "belle",
+          "amber",
+          "lola",
+          "piper",
+          "najia",
+          "alli",
+          "byron",
+          "glowy",
+          "max"
+        ]
+      },
+      {
+        "key": "safedano",
+        "label": "Safe Dano",
+        "brawlers": [
+          "kaze",
+          "edgar",
+          "melodie",
+          "trunk",
+          "lily",
+          "colt",
+          "mico",
+          "carl",
+          "shade",
+          "bonnie"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hot-potato",
+    "name": "Hot Potato",
+    "namePt": "Batata Quente",
+    "mapApiId": 15000053,
+    "image": "/maps/hot-potato.png",
+    "environment": "Pyramidquest",
+    "link": "https://brawlify.com/maps/15000053",
+    "gameMode": {
+      "name": "Heist",
+      "color": "#d852ff",
+      "bgColor": "#d65cd3",
+      "image": "/game-modes/heist.png"
+    },
+    "tips": [
+      "1 Safe dano",
+      "1 Defensor",
+      "1 Flex",
+      "Dica, um brawler sobre para da dano e outro defende"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "meg",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "cordelius",
+          "bolt",
+          "barley",
+          "edgar",
+          "buzz",
+          "trunk"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "ruffs",
+          "crow",
+          "emz",
+          "rico",
+          "buzz",
+          "amber",
+          "pierce",
+          "glowy",
+          "nita",
+          "shade"
+        ]
+      },
+      {
+        "key": "defensor",
+        "label": "Defensor",
+        "brawlers": [
+          "otis",
+          "lumi",
+          "colette",
+          "meeple",
+          "damian",
+          "lou",
+          "chester",
+          "willow",
+          "gale"
+        ]
+      },
+      {
+        "key": "safedano",
+        "label": "Safe Dano",
+        "brawlers": [
+          "kaze",
+          "berry",
+          "trunk",
+          "colt",
+          "carl",
+          "bibi",
+          "edgar",
+          "mico",
+          "bull",
+          "dynamike"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kaboom-canyon",
+    "name": "Kaboom Canyon",
+    "namePt": "Ravina Kaboom",
+    "mapApiId": 15000018,
+    "image": "/maps/kaboom-canyon.png",
+    "environment": "Default",
+    "link": "https://brawlify.com/maps/15000018",
+    "gameMode": {
+      "name": "Heist",
+      "color": "#d852ff",
+      "bgColor": "#d65cd3",
+      "image": "/game-modes/heist.png"
+    },
+    "tips": [
+      "1 Safe dano",
+      "1 Defensor Atirador",
+      "1 Flex para dano",
+      "Dica, um brawler sobre para da dano e outro defende"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "meg",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "cordelius",
+          "bolt",
+          "barley",
+          "edgar",
+          "buzz",
+          "trunk"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "finx",
+          "crow",
+          "lola",
+          "rico",
+          "colette",
+          "ruffs",
+          "amber",
+          "pierce",
+          "glowy",
+          "berry",
+          "piper",
+          "byron"
+        ]
+      },
+      {
+        "key": "defensor",
+        "label": "Defensor",
+        "brawlers": [
+          "otis",
+          "lumi",
+          "angelo",
+          "lou",
+          "charlie",
+          "damian",
+          "gale",
+          "eve",
+          "belle",
+          "alli"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "safe-zone",
+    "name": "Safe Zone",
+    "namePt": "Zona de segurança",
+    "mapApiId": 15000019,
+    "image": "/maps/safe-zone.png",
+    "environment": "Hub",
+    "link": "https://brawlify.com/maps/15000019",
+    "gameMode": {
+      "name": "Heist",
+      "color": "#d852ff",
+      "bgColor": "#d65cd3",
+      "image": "/game-modes/heist.png"
+    },
+    "tips": [
+      "1 Safe dano",
+      "1 Defensor Atirador",
+      "1 Flex para dano"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "meg",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "cordelius",
+          "bolt",
+          "darryl",
+          "edgar",
+          "buzz",
+          "trunk"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "crow",
+          "lola",
+          "rico",
+          "colette",
+          "ruffs",
+          "pierce",
+          "glowy",
+          "berry",
+          "piper",
+          "byron"
+        ]
+      },
+      {
+        "key": "defensor",
+        "label": "Defensor",
+        "brawlers": [
+          "otis",
+          "lumi",
+          "angelo",
+          "lou",
+          "charlie",
+          "damian",
+          "gale",
+          "amber",
+          "belle",
+          "alli"
+        ]
+      },
+      {
+        "key": "safedano",
+        "label": "Safe Dano",
+        "brawlers": [
+          "kaze",
+          "trunk",
+          "colt",
+          "melodie",
+          "penny",
+          "edgar",
+          "mico",
+          "shade",
+          "carl"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dueling-beetles",
+    "name": "Dueling Beetles",
+    "namePt": "Besouros Brigões",
+    "mapApiId": 15000306,
+    "image": "/maps/dueling-beetles.png",
+    "environment": "Katanakingdomnn",
+    "link": "https://brawlify.com/maps/15000306",
+    "gameMode": {
+      "name": "Hot Zone",
+      "color": "#ff4343",
+      "bgColor": "#e33b50",
+      "image": "/game-modes/hot-zone.png"
+    },
+    "tips": [
+      "1 Anti tank",
+      "1 zone time",
+      "1 suporte ou atirador"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "max",
+          "meg",
+          "lou"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "cordelius",
+          "bolt",
+          "barley",
+          "edgar",
+          "buzz",
+          "mortis"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "meeple",
+          "crow",
+          "lumi",
+          "brock",
+          "ruffs",
+          "chester",
+          "colette",
+          "pierce",
+          "carl",
+          "penny",
+          "tara"
+        ]
+      },
+      {
+        "key": "zonetime",
+        "label": "Zone Time",
+        "brawlers": [
+          "glowy",
+          "berry",
+          "finx",
+          "emz",
+          "gray",
+          "poco",
+          "amber",
+          "leon",
+          "draco",
+          "lola",
+          "bo",
+          "pam"
+        ]
+      },
+      {
+        "key": "bralwersdepressao",
+        "label": "Pressão",
+        "brawlers": [
+          "kenji",
+          "mortis",
+          "mina",
+          "stu",
+          "damian",
+          "edgar",
+          "fang"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "parallel-plays",
+    "name": "Parallel Plays",
+    "namePt": "Jogadas paralelas",
+    "mapApiId": 15000293,
+    "image": "/maps/parallel-plays.png",
+    "environment": "Arcade",
+    "link": "https://brawlify.com/maps/15000293",
+    "gameMode": {
+      "name": "Hot Zone",
+      "color": "#ff4343",
+      "bgColor": "#e33b50",
+      "image": "/game-modes/hot-zone.png"
+    },
+    "tips": [
+      "1 Offensivo ZONE",
+      "1 Defensivo ZONE",
+      "1 AMBAS AS ZONAS"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "meeple",
+          "meg",
+          "lou"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "cordelius",
+          "shade",
+          "bibi",
+          "edgar",
+          "ziggy"
+        ]
+      },
+      {
+        "key": "defensivozone",
+        "label": "Zone Defensivo",
+        "brawlers": [
+          "chester",
+          "emz",
+          "otis",
+          "charlie",
+          "colette",
+          "griff",
+          "r-t",
+          "juju",
+          "willow",
+          "hank",
+          "cordelius",
+          "ruffs"
+        ]
+      },
+      {
+        "key": "offensivozone",
+        "label": "Zone Ofensivo",
+        "brawlers": [
+          "mina",
+          "edgar",
+          "mortis",
+          "draco",
+          "damian",
+          "bibi",
+          "kenji",
+          "bull",
+          "shade",
+          "trunk"
+        ]
+      },
+      {
+        "key": "ambasaszonas",
+        "label": "Ambas as Zonas",
+        "brawlers": [
+          "lumi",
+          "moe",
+          "crow",
+          "sirius",
+          "pierce",
+          "najia",
+          "stu",
+          "glowy",
+          "amber",
+          "berry",
+          "barley",
+          "spike"
+        ]
+      },
+      {
+        "key": "outrospicks",
+        "label": "Outros Picks",
+        "brawlers": [
+          "kaze",
+          "maisie",
+          "lily",
+          "byron",
+          "penny"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ring-of-fire",
+    "name": "Ring Of Fire",
+    "namePt": "Anel de fogo",
+    "mapApiId": 15000300,
+    "image": "/maps/ring-of-fire.png",
+    "environment": "Madevilmanor",
+    "link": "https://brawlify.com/maps/15000300",
+    "gameMode": {
+      "name": "Hot Zone",
+      "color": "#ff4343",
+      "bgColor": "#e33b50",
+      "image": "/game-modes/hot-zone.png"
+    },
+    "tips": [],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "meeple",
+          "meg",
+          "lou"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "alli",
+          "bolt",
+          "sprout",
+          "edgar",
+          "buzz"
+        ]
+      },
+      {
+        "key": "antitank",
+        "label": "Anti-tank",
+        "brawlers": [
+          "griff",
+          "meeple",
+          "crow",
+          "lumi",
+          "brock",
+          "ruffs",
+          "chester",
+          "colette",
+          "pierce",
+          "carl",
+          "penny",
+          "tara"
+        ]
+      },
+      {
+        "key": "zonetime",
+        "label": "Zone Time",
+        "brawlers": [
+          "glowy",
+          "berry",
+          "finx",
+          "emz",
+          "gray",
+          "poco",
+          "amber",
+          "leon",
+          "draco",
+          "lola",
+          "bo",
+          "pam"
+        ]
+      },
+      {
+        "key": "pressao",
+        "label": "Pressão",
+        "brawlers": [
+          "kenji",
+          "mortis",
+          "mina",
+          "stu",
+          "damian",
+          "edgar",
+          "fang"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "belles-rock",
+    "name": "Belles Rock",
+    "namePt": "Rocha da Belle",
+    "mapApiId": 15000368,
+    "image": "/maps/belles-rock.png",
+    "environment": "Windstock",
+    "link": "https://brawlify.com/maps/15000368",
+    "gameMode": {
+      "name": "Knockout",
+      "color": "#fd9b0e",
+      "bgColor": "#f7831c",
+      "image": "/game-modes/knockout.png"
+    },
+    "tips": [
+      "1 bralwer, para o Final do jogo",
+      "1 Flex",
+      "1 atirador"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "griff",
+          "meg",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "edgar",
+          "kit",
+          "darryl",
+          "nani",
+          "bolt",
+          "piper"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "najia",
+          "piper",
+          "pierce",
+          "byron",
+          "angelo",
+          "gus",
+          "r-t",
+          "belle",
+          "colt",
+          "glowy",
+          "sprout"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "pearl",
+          "meeple",
+          "jae-yong",
+          "charlie",
+          "meg",
+          "gray",
+          "squeak",
+          "crow",
+          "ruffs",
+          "8-bit"
+        ]
+      },
+      {
+        "key": "finaldojogo",
+        "label": "Final do Jogo",
+        "brawlers": [
+          "damian",
+          "kit",
+          "edgar",
+          "mina",
+          "ollie",
+          "leon",
+          "mortis",
+          "lily",
+          "buster",
+          "fang",
+          "doug",
+          "darryl",
+          "alli"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "flaring-phoenix",
+    "name": "Flaring Phoenix",
+    "namePt": "Fênix Flamejante",
+    "mapApiId": 15000440,
+    "image": "/maps/flaring-phoenix.png",
+    "environment": "Madevilmanor",
+    "link": "https://brawlify.com/maps/15000440",
+    "gameMode": {
+      "name": "Knockout",
+      "color": "#fd9b0e",
+      "bgColor": "#f7831c",
+      "image": "/game-modes/knockout.png"
+    },
+    "tips": [
+      "1 bralwer, para o Final do jogo",
+      "1 Flex",
+      "1 atirador"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "gene",
+          "max",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "edgar",
+          "kit",
+          "darryl",
+          "nani",
+          "alli",
+          "bolt",
+          "piper"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "najia",
+          "piper",
+          "pierce",
+          "byron",
+          "angelo",
+          "gus",
+          "r-t",
+          "belle",
+          "colt",
+          "glowy",
+          "sprout"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "pearl",
+          "meeple",
+          "jae-yong",
+          "charlie",
+          "meg",
+          "gray",
+          "squeak",
+          "crow",
+          "ruffs"
+        ]
+      },
+      {
+        "key": "finaldojogo",
+        "label": "Final do Jogo",
+        "brawlers": [
+          "damian",
+          "kit",
+          "edgar",
+          "mina",
+          "ollie",
+          "leon",
+          "mortis",
+          "lily",
+          "buster",
+          "fang",
+          "doug",
+          "darryl",
+          "alli"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "new-horizons",
+    "name": "New Horizons",
+    "namePt": "Novos Horizontes",
+    "mapApiId": 15000703,
+    "image": "/maps/new-horizons.png",
+    "environment": "Mine",
+    "link": "https://brawlify.com/maps/15000703",
+    "gameMode": {
+      "name": "Knockout",
+      "color": "#fd9b0e",
+      "bgColor": "#f7831c",
+      "image": "/game-modes/knockout.png"
+    },
+    "tips": [
+      "1 bralwer, para o Final do jogo",
+      "1 Flex",
+      "1 atirador"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "gene",
+          "max",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "edgar",
+          "kit",
+          "darryl",
+          "nani",
+          "alli",
+          "bolt",
+          "piper"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "najia",
+          "piper",
+          "pierce",
+          "byron",
+          "angelo",
+          "gray",
+          "gus",
+          "r-t",
+          "belle",
+          "colt",
+          "glowy"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "pearl",
+          "meeple",
+          "jae-yong",
+          "charlie",
+          "meg",
+          "gray",
+          "squeak",
+          "crow",
+          "ruffs",
+          "emz"
+        ]
+      },
+      {
+        "key": "finaldojogo",
+        "label": "Final do Jogo",
+        "brawlers": [
+          "damian",
+          "kit",
+          "edgar",
+          "mina",
+          "ollie",
+          "leon",
+          "mortis",
+          "lily",
+          "buster",
+          "fang",
+          "doug",
+          "darryl",
+          "alli"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "out-in-the-open",
+    "name": "Out in the open",
+    "namePt": "Descampado",
+    "mapApiId": 15000548,
+    "image": "/maps/out-in-the-open.png",
+    "environment": "Scrapyard",
+    "link": "https://brawlify.com/maps/15000548",
+    "gameMode": {
+      "name": "Knockout",
+      "color": "#fd9b0e",
+      "bgColor": "#f7831c",
+      "image": "/game-modes/knockout.png"
+    },
+    "tips": [
+      "1 bralwer, para o Final do jogo",
+      "1 Flex",
+      "1 atirador"
+    ],
+    "categories": [
+      {
+        "key": "1escolha",
+        "label": "1ª Escolha",
+        "brawlers": [
+          "surge",
+          "starr-nova",
+          "8-bit",
+          "gene",
+          "max",
+          "brock"
+        ]
+      },
+      {
+        "key": "6escolha",
+        "label": "6ª Escolha",
+        "brawlers": [
+          "edgar",
+          "kit",
+          "darryl",
+          "nani",
+          "alli",
+          "bolt",
+          "piper"
+        ]
+      },
+      {
+        "key": "atiradores",
+        "label": "Atiradores",
+        "brawlers": [
+          "najia",
+          "piper",
+          "pierce",
+          "byron",
+          "angelo",
+          "gray",
+          "gus",
+          "r-t",
+          "belle",
+          "colt",
+          "glowy"
+        ]
+      },
+      {
+        "key": "flex",
+        "label": "Flex",
+        "brawlers": [
+          "pearl",
+          "meeple",
+          "jae-yong",
+          "charlie",
+          "meg",
+          "gray",
+          "squeak",
+          "crow",
+          "ruffs",
+          "emz"
+        ]
+      },
+      {
+        "key": "finaldojogo",
+        "label": "Final do Jogo",
+        "brawlers": [
+          "damian",
+          "kit",
+          "edgar",
+          "mina",
+          "ollie",
+          "leon",
+          "mortis",
+          "lily",
+          "buster",
+          "fang",
+          "doug",
+          "darryl",
+          "alli"
+        ]
+      }
+    ]
+  }
+]

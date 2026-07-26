@@ -1,0 +1,3208 @@
+{
+  "open-business": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "max": [
+      "1ª Escolha",
+      "Longo Alcance / Suporte"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "lou": [
+      "1ª Escolha"
+    ],
+    "tick": [
+      "1ª Escolha"
+    ],
+    "cordelius": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "barley": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "griff": [
+      "Anti-tank"
+    ],
+    "meeple": [
+      "Anti-tank"
+    ],
+    "crow": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "brock": [
+      "Anti-tank"
+    ],
+    "ruffs": [
+      "Anti-tank",
+      "Longo Alcance / Suporte"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "pierce": [
+      "Anti-tank"
+    ],
+    "carl": [
+      "Anti-tank"
+    ],
+    "penny": [
+      "Anti-tank"
+    ],
+    "tara": [
+      "Anti-tank"
+    ],
+    "glowy": [
+      "Zone Time"
+    ],
+    "berry": [
+      "Zone Time"
+    ],
+    "finx": [
+      "Zone Time"
+    ],
+    "emz": [
+      "Zone Time"
+    ],
+    "gray": [
+      "Zone Time"
+    ],
+    "poco": [
+      "Zone Time"
+    ],
+    "amber": [
+      "Zone Time"
+    ],
+    "leon": [
+      "Zone Time"
+    ],
+    "draco": [
+      "Zone Time"
+    ],
+    "lola": [
+      "Zone Time"
+    ],
+    "bo": [
+      "Zone Time"
+    ],
+    "pam": [
+      "Zone Time"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "damian": [
+      "Pressão"
+    ],
+    "fang": [
+      "Pressão"
+    ],
+    "byron": [
+      "Longo Alcance / Suporte"
+    ]
+  },
+  "dry-season": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "najia": [
+      "1ª Escolha"
+    ],
+    "nani": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "sprout": [
+      "6ª Escolha"
+    ],
+    "brock": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "max": [
+      "Atiradores"
+    ],
+    "meeple": [
+      "Atiradores"
+    ],
+    "piper": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "colette": [
+      "Atiradores"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "kaze": [
+      "Agressivos"
+    ],
+    "kenji": [
+      "Agressivos"
+    ],
+    "damian": [
+      "Agressivos"
+    ],
+    "leon": [
+      "Agressivos"
+    ],
+    "mina": [
+      "Agressivos"
+    ],
+    "fang": [
+      "Agressivos"
+    ],
+    "lily": [
+      "Agressivos"
+    ],
+    "crow": [
+      "Flex — Atiradores"
+    ],
+    "ruffs": [
+      "Flex — Atiradores"
+    ],
+    "griff": [
+      "Flex — Atiradores"
+    ],
+    "squeak": [
+      "Flex — Atiradores"
+    ],
+    "r-t": [
+      "Flex — Atiradores"
+    ],
+    "lumi": [
+      "Flex — Atiradores"
+    ],
+    "gray": [
+      "Flex — Atiradores"
+    ]
+  },
+  "hideout": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "gene": [
+      "1ª Escolha"
+    ],
+    "pearl": [
+      "1ª Escolha"
+    ],
+    "glowy": [
+      "1ª Escolha"
+    ],
+    "nani": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "sprout": [
+      "6ª Escolha"
+    ],
+    "brock": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "max": [
+      "Atiradores"
+    ],
+    "meeple": [
+      "Atiradores"
+    ],
+    "piper": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "colette": [
+      "Atiradores"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "kaze": [
+      "Agressivos"
+    ],
+    "kenji": [
+      "Agressivos"
+    ],
+    "damian": [
+      "Agressivos"
+    ],
+    "leon": [
+      "Agressivos"
+    ],
+    "mina": [
+      "Agressivos"
+    ],
+    "fang": [
+      "Agressivos"
+    ],
+    "lily": [
+      "Agressivos"
+    ]
+  },
+  "layer-cake": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "meeple": [
+      "1ª Escolha",
+      "Atiradores"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "penny": [
+      "6ª Escolha"
+    ],
+    "alli": [
+      "6ª Escolha"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "brock": [
+      "Atiradores"
+    ],
+    "gray": [
+      "Atiradores"
+    ],
+    "ruffs": [
+      "Atiradores"
+    ],
+    "najia": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "kaze": [
+      "Agressivos"
+    ],
+    "kenji": [
+      "Agressivos"
+    ],
+    "damian": [
+      "Agressivos"
+    ],
+    "leon": [
+      "Agressivos"
+    ],
+    "mina": [
+      "Agressivos"
+    ],
+    "fang": [
+      "Agressivos"
+    ],
+    "lily": [
+      "Agressivos"
+    ],
+    "crow": [
+      "Suporte / Dano"
+    ],
+    "charlie": [
+      "Suporte / Dano"
+    ],
+    "berry": [
+      "Suporte / Dano"
+    ],
+    "max": [
+      "Suporte / Dano"
+    ],
+    "lumi": [
+      "Suporte / Dano"
+    ],
+    "emz": [
+      "Suporte / Dano"
+    ],
+    "sirius": [
+      "Suporte / Dano"
+    ],
+    "chester": [
+      "Suporte / Dano"
+    ],
+    "poco": [
+      "Suporte / Dano"
+    ],
+    "colette": [
+      "Suporte / Dano"
+    ],
+    "doug": [
+      "Suporte / Dano"
+    ]
+  },
+  "shooting-star": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "gene": [
+      "1ª Escolha"
+    ],
+    "piper": [
+      "1ª Escolha",
+      "Atiradores"
+    ],
+    "max": [
+      "1ª Escolha",
+      "Atiradores"
+    ],
+    "fang": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Agressivos"
+    ],
+    "sprout": [
+      "6ª Escolha"
+    ],
+    "brock": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "meeple": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "colette": [
+      "Atiradores"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "griff": [
+      "Atiradores"
+    ],
+    "kaze": [
+      "Agressivos"
+    ],
+    "kenji": [
+      "Agressivos"
+    ],
+    "damian": [
+      "Agressivos"
+    ],
+    "leon": [
+      "Agressivos"
+    ],
+    "mina": [
+      "Agressivos"
+    ],
+    "lily": [
+      "Agressivos"
+    ]
+  },
+  "center-stage": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "max": [
+      "1ª Escolha",
+      "Flex"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "bull": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "alli": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "otis": [
+      "Anti-tank",
+      "Flex"
+    ],
+    "emz": [
+      "Anti-tank"
+    ],
+    "rico": [
+      "Anti-tank",
+      "Flex"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "carl": [
+      "Anti-tank"
+    ],
+    "colt": [
+      "Anti-tank"
+    ],
+    "bibi": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "frank": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "ash": [
+      "Pressão"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "trunk": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "meeple": [
+      "Flex"
+    ],
+    "poco": [
+      "Flex"
+    ],
+    "lou": [
+      "Flex"
+    ],
+    "gale": [
+      "Flex"
+    ],
+    "brock": [
+      "Flex"
+    ],
+    "bea": [
+      "Flex"
+    ],
+    "amber": [
+      "Outros Picks"
+    ],
+    "moe": [
+      "Outros Picks"
+    ],
+    "willow": [
+      "Outros Picks"
+    ],
+    "shelly": [
+      "Outros Picks"
+    ],
+    "sandy": [
+      "Outros Picks"
+    ],
+    "grom": [
+      "Outros Picks"
+    ],
+    "buster": [
+      "Outros Picks"
+    ]
+  },
+  "pinball-dreams": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "max": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "bull": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "rico": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "emz": [
+      "Anti-tank"
+    ],
+    "cordelius": [
+      "Anti-tank"
+    ],
+    "lou": [
+      "Anti-tank"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "bibi": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "frank": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "ash": [
+      "Pressão"
+    ],
+    "hank": [
+      "Pressão"
+    ],
+    "trunk": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "ruffs": [
+      "Flex — Controle"
+    ],
+    "crow": [
+      "Flex — Controle"
+    ],
+    "meeple": [
+      "Flex — Controle"
+    ],
+    "willow": [
+      "Flex — Controle"
+    ],
+    "berry": [
+      "Flex — Controle"
+    ],
+    "gale": [
+      "Flex — Controle"
+    ],
+    "brock": [
+      "Flex — Controle"
+    ],
+    "glowy": [
+      "Flex — Controle"
+    ],
+    "najia": [
+      "Flex — Controle"
+    ],
+    "spike": [
+      "Flex — Controle"
+    ],
+    "carl": [
+      "Flex — Controle"
+    ],
+    "amber": [
+      "Outros Picks"
+    ],
+    "sandy": [
+      "Outros Picks"
+    ],
+    "squeak": [
+      "Outros Picks"
+    ],
+    "leon": [
+      "Outros Picks"
+    ]
+  },
+  "sneaky-fields": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "max": [
+      "1ª Escolha",
+      "Mid"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "crow": [
+      "1ª Escolha",
+      "Mid"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "bull": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "alli": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "bibi": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "frank": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "ash": [
+      "Pressão"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "trunk": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "ruffs": [
+      "Mid"
+    ],
+    "otis": [
+      "Mid"
+    ],
+    "meeple": [
+      "Mid"
+    ],
+    "poco": [
+      "Mid"
+    ],
+    "gale": [
+      "Mid"
+    ],
+    "lou": [
+      "Mid"
+    ],
+    "rico": [
+      "Mid"
+    ],
+    "brock": [
+      "Mid"
+    ],
+    "glowy": [
+      "Mid"
+    ],
+    "bea": [
+      "Mid"
+    ],
+    "moe": [
+      "Outros Picks"
+    ],
+    "willow": [
+      "Outros Picks"
+    ],
+    "shelly": [
+      "Outros Picks"
+    ],
+    "sandy": [
+      "Outros Picks"
+    ]
+  },
+  "triple-dribble": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "max": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "bull": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "alli": [
+      "6ª Escolha"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "rico": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "emz": [
+      "Anti-tank"
+    ],
+    "cordelius": [
+      "Anti-tank"
+    ],
+    "lou": [
+      "Anti-tank"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "bibi": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "frank": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "ash": [
+      "Pressão"
+    ],
+    "hank": [
+      "Pressão"
+    ],
+    "trunk": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "amber": [
+      "Outros Picks"
+    ],
+    "sandy": [
+      "Outros Picks"
+    ],
+    "squeak": [
+      "Outros Picks"
+    ],
+    "leon": [
+      "Outros Picks"
+    ]
+  },
+  "crystal-arcade": {
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "ruffs": [
+      "1ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "shade": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "lily": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "ash": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "griff": [
+      "Anti-tank"
+    ],
+    "sandy": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "najia": [
+      "Anti-tank"
+    ],
+    "amber": [
+      "Anti-tank"
+    ],
+    "leon": [
+      "Anti-tank"
+    ],
+    "rico": [
+      "Anti-tank"
+    ],
+    "stu": [
+      "Pressão",
+      "Carregadores de Gemas"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "meeple": [
+      "Pressão",
+      "Carregadores de Gemas"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "alli": [
+      "Pressão"
+    ],
+    "max": [
+      "Carregadores de Gemas"
+    ],
+    "meg": [
+      "Carregadores de Gemas"
+    ],
+    "lola": [
+      "Carregadores de Gemas"
+    ],
+    "crow": [
+      "Carregadores de Gemas"
+    ],
+    "pearl": [
+      "Carregadores de Gemas"
+    ],
+    "byron": [
+      "Carregadores de Gemas"
+    ],
+    "lou": [
+      "Carregadores de Gemas"
+    ],
+    "finx": [
+      "Carregadores de Gemas"
+    ],
+    "glowy": [
+      "Carregadores de Gemas"
+    ],
+    "janet": [
+      "Carregadores de Gemas"
+    ],
+    "carl": [
+      "Outros Picks"
+    ],
+    "gene": [
+      "Outros Picks"
+    ],
+    "charlie": [
+      "Outros Picks"
+    ],
+    "fang": [
+      "Outros Picks"
+    ],
+    "pierce": [
+      "Outros Picks"
+    ]
+  },
+  "double-swoosh": {
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "shade": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "lily": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "ash": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "sandy": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "emz": [
+      "Anti-tank"
+    ],
+    "tara": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "ruffs": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "rico": [
+      "Anti-tank"
+    ],
+    "amber": [
+      "Anti-tank"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "alli": [
+      "Pressão"
+    ],
+    "cordelius": [
+      "Pressão"
+    ],
+    "leon": [
+      "Outros Picks"
+    ],
+    "poco": [
+      "Outros Picks"
+    ],
+    "penny": [
+      "Outros Picks"
+    ],
+    "carl": [
+      "Outros Picks"
+    ],
+    "bull": [
+      "Outros Picks"
+    ]
+  },
+  "hard-rock-mine": {
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "ruffs": [
+      "1ª Escolha"
+    ],
+    "rico": [
+      "1ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "shade": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "lily": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "ash": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "griff": [
+      "Anti-tank"
+    ],
+    "sandy": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "brock": [
+      "Anti-tank"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "emz": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "cordelius": [
+      "Anti-tank"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "alli": [
+      "Pressão"
+    ],
+    "max": [
+      "Carregadores de Gemas"
+    ],
+    "meg": [
+      "Carregadores de Gemas"
+    ],
+    "lola": [
+      "Carregadores de Gemas"
+    ],
+    "crow": [
+      "Carregadores de Gemas"
+    ],
+    "pearl": [
+      "Carregadores de Gemas"
+    ],
+    "lou": [
+      "Carregadores de Gemas"
+    ],
+    "finx": [
+      "Carregadores de Gemas"
+    ],
+    "glowy": [
+      "Carregadores de Gemas"
+    ],
+    "meeple": [
+      "Carregadores de Gemas"
+    ],
+    "janet": [
+      "Carregadores de Gemas"
+    ],
+    "pierce": [
+      "Outros Picks"
+    ],
+    "penny": [
+      "Outros Picks"
+    ],
+    "carl": [
+      "Outros Picks"
+    ],
+    "ollie": [
+      "Outros Picks"
+    ],
+    "bull": [
+      "Outros Picks"
+    ]
+  },
+  "deathcap-trap": {
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "ruffs": [
+      "1ª Escolha"
+    ],
+    "rico": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "mortis": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "lily": [
+      "6ª Escolha"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "ash": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "griff": [
+      "Anti-tank"
+    ],
+    "sandy": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "amber": [
+      "Anti-tank"
+    ],
+    "leon": [
+      "Anti-tank"
+    ],
+    "stu": [
+      "Carregadores de Gemas"
+    ],
+    "max": [
+      "Carregadores de Gemas"
+    ],
+    "meg": [
+      "Carregadores de Gemas"
+    ],
+    "lola": [
+      "Carregadores de Gemas"
+    ],
+    "crow": [
+      "Carregadores de Gemas"
+    ],
+    "pearl": [
+      "Carregadores de Gemas"
+    ],
+    "penny": [
+      "Carregadores de Gemas"
+    ],
+    "lou": [
+      "Carregadores de Gemas"
+    ],
+    "finx": [
+      "Carregadores de Gemas"
+    ],
+    "glowy": [
+      "Carregadores de Gemas"
+    ],
+    "meeple": [
+      "Carregadores de Gemas"
+    ],
+    "janet": [
+      "Carregadores de Gemas"
+    ],
+    "pierce": [
+      "Outros Picks"
+    ],
+    "gene": [
+      "Outros Picks"
+    ],
+    "charlie": [
+      "Outros Picks"
+    ],
+    "fang": [
+      "Outros Picks"
+    ],
+    "carl": [
+      "Outros Picks"
+    ]
+  },
+  "gem-fort": {
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "ruffs": [
+      "1ª Escolha"
+    ],
+    "rico": [
+      "1ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "shade": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "lily": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "ash": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "bolt": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "griff": [
+      "Anti-tank"
+    ],
+    "sandy": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "sirius": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "cordelius": [
+      "Anti-tank"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "kit": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "alli": [
+      "Pressão"
+    ],
+    "stu": [
+      "Carregadores de Gemas"
+    ],
+    "max": [
+      "Carregadores de Gemas"
+    ],
+    "meg": [
+      "Carregadores de Gemas"
+    ],
+    "lola": [
+      "Carregadores de Gemas"
+    ],
+    "crow": [
+      "Carregadores de Gemas"
+    ],
+    "pearl": [
+      "Carregadores de Gemas"
+    ],
+    "penny": [
+      "Carregadores de Gemas",
+      "Outros Picks"
+    ],
+    "lou": [
+      "Carregadores de Gemas"
+    ],
+    "finx": [
+      "Carregadores de Gemas"
+    ],
+    "glowy": [
+      "Carregadores de Gemas"
+    ],
+    "meeple": [
+      "Carregadores de Gemas"
+    ],
+    "janet": [
+      "Carregadores de Gemas"
+    ],
+    "pierce": [
+      "Outros Picks"
+    ],
+    "carl": [
+      "Outros Picks"
+    ],
+    "ollie": [
+      "Outros Picks"
+    ],
+    "bull": [
+      "Outros Picks"
+    ]
+  },
+  "undermine": {
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "damian": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha",
+      "Carregadores de Gemas"
+    ],
+    "mortis": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha"
+    ],
+    "shade": [
+      "6ª Escolha"
+    ],
+    "lily": [
+      "6ª Escolha"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "ash": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "otis": [
+      "Anti-tank"
+    ],
+    "sandy": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "emz": [
+      "Anti-tank"
+    ],
+    "tara": [
+      "Anti-tank"
+    ],
+    "nita": [
+      "Anti-tank"
+    ],
+    "ruffs": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "moe": [
+      "Anti-tank"
+    ],
+    "rico": [
+      "Anti-tank"
+    ],
+    "amber": [
+      "Anti-tank"
+    ],
+    "max": [
+      "Carregadores de Gemas"
+    ],
+    "lola": [
+      "Carregadores de Gemas"
+    ],
+    "crow": [
+      "Carregadores de Gemas"
+    ],
+    "pearl": [
+      "Carregadores de Gemas"
+    ],
+    "penny": [
+      "Carregadores de Gemas",
+      "Outros Picks"
+    ],
+    "lou": [
+      "Carregadores de Gemas"
+    ],
+    "finx": [
+      "Carregadores de Gemas"
+    ],
+    "glowy": [
+      "Carregadores de Gemas"
+    ],
+    "meeple": [
+      "Carregadores de Gemas"
+    ],
+    "janet": [
+      "Carregadores de Gemas"
+    ],
+    "leon": [
+      "Outros Picks"
+    ],
+    "poco": [
+      "Outros Picks"
+    ],
+    "carl": [
+      "Outros Picks"
+    ],
+    "bull": [
+      "Outros Picks"
+    ]
+  },
+  "bridge-too-far": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "alli": [
+      "6ª Escolha",
+      "Flex"
+    ],
+    "lily": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "darryl": [
+      "6ª Escolha"
+    ],
+    "mico": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "carl": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "nani": [
+      "Flex"
+    ],
+    "belle": [
+      "Flex"
+    ],
+    "amber": [
+      "Flex"
+    ],
+    "lola": [
+      "Flex"
+    ],
+    "piper": [
+      "Flex"
+    ],
+    "najia": [
+      "Flex"
+    ],
+    "byron": [
+      "Flex"
+    ],
+    "glowy": [
+      "Flex"
+    ],
+    "max": [
+      "Flex"
+    ],
+    "kaze": [
+      "Safe Dano"
+    ],
+    "melodie": [
+      "Safe Dano"
+    ],
+    "trunk": [
+      "Safe Dano"
+    ],
+    "colt": [
+      "Safe Dano"
+    ],
+    "shade": [
+      "Safe Dano"
+    ],
+    "bonnie": [
+      "Safe Dano"
+    ]
+  },
+  "hot-potato": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "cordelius": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "barley": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "buzz": [
+      "6ª Escolha",
+      "Flex"
+    ],
+    "trunk": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "emz": [
+      "Flex"
+    ],
+    "rico": [
+      "Flex"
+    ],
+    "amber": [
+      "Flex"
+    ],
+    "pierce": [
+      "Flex"
+    ],
+    "glowy": [
+      "Flex"
+    ],
+    "nita": [
+      "Flex"
+    ],
+    "shade": [
+      "Flex"
+    ],
+    "otis": [
+      "Defensor"
+    ],
+    "lumi": [
+      "Defensor"
+    ],
+    "colette": [
+      "Defensor"
+    ],
+    "meeple": [
+      "Defensor"
+    ],
+    "damian": [
+      "Defensor"
+    ],
+    "lou": [
+      "Defensor"
+    ],
+    "chester": [
+      "Defensor"
+    ],
+    "willow": [
+      "Defensor"
+    ],
+    "gale": [
+      "Defensor"
+    ],
+    "kaze": [
+      "Safe Dano"
+    ],
+    "berry": [
+      "Safe Dano"
+    ],
+    "colt": [
+      "Safe Dano"
+    ],
+    "carl": [
+      "Safe Dano"
+    ],
+    "bibi": [
+      "Safe Dano"
+    ],
+    "mico": [
+      "Safe Dano"
+    ],
+    "bull": [
+      "Safe Dano"
+    ],
+    "dynamike": [
+      "Safe Dano"
+    ]
+  },
+  "kaboom-canyon": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "cordelius": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "barley": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "trunk": [
+      "6ª Escolha"
+    ],
+    "finx": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "lola": [
+      "Flex"
+    ],
+    "rico": [
+      "Flex"
+    ],
+    "colette": [
+      "Flex"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "amber": [
+      "Flex"
+    ],
+    "pierce": [
+      "Flex"
+    ],
+    "glowy": [
+      "Flex"
+    ],
+    "berry": [
+      "Flex"
+    ],
+    "piper": [
+      "Flex"
+    ],
+    "byron": [
+      "Flex"
+    ],
+    "otis": [
+      "Defensor"
+    ],
+    "lumi": [
+      "Defensor"
+    ],
+    "angelo": [
+      "Defensor"
+    ],
+    "lou": [
+      "Defensor"
+    ],
+    "charlie": [
+      "Defensor"
+    ],
+    "damian": [
+      "Defensor"
+    ],
+    "gale": [
+      "Defensor"
+    ],
+    "eve": [
+      "Defensor"
+    ],
+    "belle": [
+      "Defensor"
+    ],
+    "alli": [
+      "Defensor"
+    ]
+  },
+  "safe-zone": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "cordelius": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "darryl": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "trunk": [
+      "6ª Escolha",
+      "Safe Dano"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "lola": [
+      "Flex"
+    ],
+    "rico": [
+      "Flex"
+    ],
+    "colette": [
+      "Flex"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "pierce": [
+      "Flex"
+    ],
+    "glowy": [
+      "Flex"
+    ],
+    "berry": [
+      "Flex"
+    ],
+    "piper": [
+      "Flex"
+    ],
+    "byron": [
+      "Flex"
+    ],
+    "otis": [
+      "Defensor"
+    ],
+    "lumi": [
+      "Defensor"
+    ],
+    "angelo": [
+      "Defensor"
+    ],
+    "lou": [
+      "Defensor"
+    ],
+    "charlie": [
+      "Defensor"
+    ],
+    "damian": [
+      "Defensor"
+    ],
+    "gale": [
+      "Defensor"
+    ],
+    "amber": [
+      "Defensor"
+    ],
+    "belle": [
+      "Defensor"
+    ],
+    "alli": [
+      "Defensor"
+    ],
+    "kaze": [
+      "Safe Dano"
+    ],
+    "colt": [
+      "Safe Dano"
+    ],
+    "melodie": [
+      "Safe Dano"
+    ],
+    "penny": [
+      "Safe Dano"
+    ],
+    "mico": [
+      "Safe Dano"
+    ],
+    "shade": [
+      "Safe Dano"
+    ],
+    "carl": [
+      "Safe Dano"
+    ]
+  },
+  "dueling-beetles": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "griff": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "max": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "lou": [
+      "1ª Escolha"
+    ],
+    "cordelius": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "barley": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "mortis": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "meeple": [
+      "Anti-tank"
+    ],
+    "crow": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "brock": [
+      "Anti-tank"
+    ],
+    "ruffs": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "pierce": [
+      "Anti-tank"
+    ],
+    "carl": [
+      "Anti-tank"
+    ],
+    "penny": [
+      "Anti-tank"
+    ],
+    "tara": [
+      "Anti-tank"
+    ],
+    "glowy": [
+      "Zone Time"
+    ],
+    "berry": [
+      "Zone Time"
+    ],
+    "finx": [
+      "Zone Time"
+    ],
+    "emz": [
+      "Zone Time"
+    ],
+    "gray": [
+      "Zone Time"
+    ],
+    "poco": [
+      "Zone Time"
+    ],
+    "amber": [
+      "Zone Time"
+    ],
+    "leon": [
+      "Zone Time"
+    ],
+    "draco": [
+      "Zone Time"
+    ],
+    "lola": [
+      "Zone Time"
+    ],
+    "bo": [
+      "Zone Time"
+    ],
+    "pam": [
+      "Zone Time"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "damian": [
+      "Pressão"
+    ],
+    "fang": [
+      "Pressão"
+    ]
+  },
+  "parallel-plays": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "meeple": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "lou": [
+      "1ª Escolha"
+    ],
+    "cordelius": [
+      "6ª Escolha",
+      "Zone Defensivo"
+    ],
+    "shade": [
+      "6ª Escolha",
+      "Zone Ofensivo"
+    ],
+    "bibi": [
+      "6ª Escolha",
+      "Zone Ofensivo"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Zone Ofensivo"
+    ],
+    "ziggy": [
+      "6ª Escolha"
+    ],
+    "chester": [
+      "Zone Defensivo"
+    ],
+    "emz": [
+      "Zone Defensivo"
+    ],
+    "otis": [
+      "Zone Defensivo"
+    ],
+    "charlie": [
+      "Zone Defensivo"
+    ],
+    "colette": [
+      "Zone Defensivo"
+    ],
+    "griff": [
+      "Zone Defensivo"
+    ],
+    "r-t": [
+      "Zone Defensivo"
+    ],
+    "juju": [
+      "Zone Defensivo"
+    ],
+    "willow": [
+      "Zone Defensivo"
+    ],
+    "hank": [
+      "Zone Defensivo"
+    ],
+    "ruffs": [
+      "Zone Defensivo"
+    ],
+    "mina": [
+      "Zone Ofensivo"
+    ],
+    "mortis": [
+      "Zone Ofensivo"
+    ],
+    "draco": [
+      "Zone Ofensivo"
+    ],
+    "damian": [
+      "Zone Ofensivo"
+    ],
+    "kenji": [
+      "Zone Ofensivo"
+    ],
+    "bull": [
+      "Zone Ofensivo"
+    ],
+    "trunk": [
+      "Zone Ofensivo"
+    ],
+    "lumi": [
+      "Ambas as Zonas"
+    ],
+    "moe": [
+      "Ambas as Zonas"
+    ],
+    "crow": [
+      "Ambas as Zonas"
+    ],
+    "sirius": [
+      "Ambas as Zonas"
+    ],
+    "pierce": [
+      "Ambas as Zonas"
+    ],
+    "najia": [
+      "Ambas as Zonas"
+    ],
+    "stu": [
+      "Ambas as Zonas"
+    ],
+    "glowy": [
+      "Ambas as Zonas"
+    ],
+    "amber": [
+      "Ambas as Zonas"
+    ],
+    "berry": [
+      "Ambas as Zonas"
+    ],
+    "barley": [
+      "Ambas as Zonas"
+    ],
+    "spike": [
+      "Ambas as Zonas"
+    ],
+    "kaze": [
+      "Outros Picks"
+    ],
+    "maisie": [
+      "Outros Picks"
+    ],
+    "lily": [
+      "Outros Picks"
+    ],
+    "byron": [
+      "Outros Picks"
+    ],
+    "penny": [
+      "Outros Picks"
+    ]
+  },
+  "ring-of-fire": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "meeple": [
+      "1ª Escolha",
+      "Anti-tank"
+    ],
+    "meg": [
+      "1ª Escolha"
+    ],
+    "lou": [
+      "1ª Escolha"
+    ],
+    "alli": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "sprout": [
+      "6ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Pressão"
+    ],
+    "buzz": [
+      "6ª Escolha"
+    ],
+    "griff": [
+      "Anti-tank"
+    ],
+    "crow": [
+      "Anti-tank"
+    ],
+    "lumi": [
+      "Anti-tank"
+    ],
+    "brock": [
+      "Anti-tank"
+    ],
+    "ruffs": [
+      "Anti-tank"
+    ],
+    "chester": [
+      "Anti-tank"
+    ],
+    "colette": [
+      "Anti-tank"
+    ],
+    "pierce": [
+      "Anti-tank"
+    ],
+    "carl": [
+      "Anti-tank"
+    ],
+    "penny": [
+      "Anti-tank"
+    ],
+    "tara": [
+      "Anti-tank"
+    ],
+    "glowy": [
+      "Zone Time"
+    ],
+    "berry": [
+      "Zone Time"
+    ],
+    "finx": [
+      "Zone Time"
+    ],
+    "emz": [
+      "Zone Time"
+    ],
+    "gray": [
+      "Zone Time"
+    ],
+    "poco": [
+      "Zone Time"
+    ],
+    "amber": [
+      "Zone Time"
+    ],
+    "leon": [
+      "Zone Time"
+    ],
+    "draco": [
+      "Zone Time"
+    ],
+    "lola": [
+      "Zone Time"
+    ],
+    "bo": [
+      "Zone Time"
+    ],
+    "pam": [
+      "Zone Time"
+    ],
+    "kenji": [
+      "Pressão"
+    ],
+    "mortis": [
+      "Pressão"
+    ],
+    "mina": [
+      "Pressão"
+    ],
+    "stu": [
+      "Pressão"
+    ],
+    "damian": [
+      "Pressão"
+    ],
+    "fang": [
+      "Pressão"
+    ]
+  },
+  "belles-rock": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha",
+      "Flex"
+    ],
+    "griff": [
+      "1ª Escolha"
+    ],
+    "meg": [
+      "1ª Escolha",
+      "Flex"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "darryl": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "nani": [
+      "6ª Escolha"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "piper": [
+      "6ª Escolha",
+      "Atiradores"
+    ],
+    "najia": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "angelo": [
+      "Atiradores"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "r-t": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "colt": [
+      "Atiradores"
+    ],
+    "glowy": [
+      "Atiradores"
+    ],
+    "sprout": [
+      "Atiradores"
+    ],
+    "pearl": [
+      "Flex"
+    ],
+    "meeple": [
+      "Flex"
+    ],
+    "jae-yong": [
+      "Flex"
+    ],
+    "charlie": [
+      "Flex"
+    ],
+    "gray": [
+      "Flex"
+    ],
+    "squeak": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "damian": [
+      "Final do Jogo"
+    ],
+    "mina": [
+      "Final do Jogo"
+    ],
+    "ollie": [
+      "Final do Jogo"
+    ],
+    "leon": [
+      "Final do Jogo"
+    ],
+    "mortis": [
+      "Final do Jogo"
+    ],
+    "lily": [
+      "Final do Jogo"
+    ],
+    "buster": [
+      "Final do Jogo"
+    ],
+    "fang": [
+      "Final do Jogo"
+    ],
+    "doug": [
+      "Final do Jogo"
+    ],
+    "alli": [
+      "Final do Jogo"
+    ]
+  },
+  "flaring-phoenix": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "gene": [
+      "1ª Escolha"
+    ],
+    "max": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "darryl": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "nani": [
+      "6ª Escolha"
+    ],
+    "alli": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "piper": [
+      "6ª Escolha",
+      "Atiradores"
+    ],
+    "najia": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "angelo": [
+      "Atiradores"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "r-t": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "colt": [
+      "Atiradores"
+    ],
+    "glowy": [
+      "Atiradores"
+    ],
+    "sprout": [
+      "Atiradores"
+    ],
+    "pearl": [
+      "Flex"
+    ],
+    "meeple": [
+      "Flex"
+    ],
+    "jae-yong": [
+      "Flex"
+    ],
+    "charlie": [
+      "Flex"
+    ],
+    "meg": [
+      "Flex"
+    ],
+    "gray": [
+      "Flex"
+    ],
+    "squeak": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "damian": [
+      "Final do Jogo"
+    ],
+    "mina": [
+      "Final do Jogo"
+    ],
+    "ollie": [
+      "Final do Jogo"
+    ],
+    "leon": [
+      "Final do Jogo"
+    ],
+    "mortis": [
+      "Final do Jogo"
+    ],
+    "lily": [
+      "Final do Jogo"
+    ],
+    "buster": [
+      "Final do Jogo"
+    ],
+    "fang": [
+      "Final do Jogo"
+    ],
+    "doug": [
+      "Final do Jogo"
+    ]
+  },
+  "new-horizons": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "gene": [
+      "1ª Escolha"
+    ],
+    "max": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "darryl": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "nani": [
+      "6ª Escolha"
+    ],
+    "alli": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "piper": [
+      "6ª Escolha",
+      "Atiradores"
+    ],
+    "najia": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "angelo": [
+      "Atiradores"
+    ],
+    "gray": [
+      "Atiradores",
+      "Flex"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "r-t": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "colt": [
+      "Atiradores"
+    ],
+    "glowy": [
+      "Atiradores"
+    ],
+    "pearl": [
+      "Flex"
+    ],
+    "meeple": [
+      "Flex"
+    ],
+    "jae-yong": [
+      "Flex"
+    ],
+    "charlie": [
+      "Flex"
+    ],
+    "meg": [
+      "Flex"
+    ],
+    "squeak": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "emz": [
+      "Flex"
+    ],
+    "damian": [
+      "Final do Jogo"
+    ],
+    "mina": [
+      "Final do Jogo"
+    ],
+    "ollie": [
+      "Final do Jogo"
+    ],
+    "leon": [
+      "Final do Jogo"
+    ],
+    "mortis": [
+      "Final do Jogo"
+    ],
+    "lily": [
+      "Final do Jogo"
+    ],
+    "buster": [
+      "Final do Jogo"
+    ],
+    "fang": [
+      "Final do Jogo"
+    ],
+    "doug": [
+      "Final do Jogo"
+    ]
+  },
+  "out-in-the-open": {
+    "surge": [
+      "1ª Escolha"
+    ],
+    "starr-nova": [
+      "1ª Escolha"
+    ],
+    "8-bit": [
+      "1ª Escolha"
+    ],
+    "gene": [
+      "1ª Escolha"
+    ],
+    "max": [
+      "1ª Escolha"
+    ],
+    "brock": [
+      "1ª Escolha"
+    ],
+    "edgar": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "kit": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "darryl": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "nani": [
+      "6ª Escolha"
+    ],
+    "alli": [
+      "6ª Escolha",
+      "Final do Jogo"
+    ],
+    "bolt": [
+      "6ª Escolha"
+    ],
+    "piper": [
+      "6ª Escolha",
+      "Atiradores"
+    ],
+    "najia": [
+      "Atiradores"
+    ],
+    "pierce": [
+      "Atiradores"
+    ],
+    "byron": [
+      "Atiradores"
+    ],
+    "angelo": [
+      "Atiradores"
+    ],
+    "gray": [
+      "Atiradores",
+      "Flex"
+    ],
+    "gus": [
+      "Atiradores"
+    ],
+    "r-t": [
+      "Atiradores"
+    ],
+    "belle": [
+      "Atiradores"
+    ],
+    "colt": [
+      "Atiradores"
+    ],
+    "glowy": [
+      "Atiradores"
+    ],
+    "pearl": [
+      "Flex"
+    ],
+    "meeple": [
+      "Flex"
+    ],
+    "jae-yong": [
+      "Flex"
+    ],
+    "charlie": [
+      "Flex"
+    ],
+    "meg": [
+      "Flex"
+    ],
+    "squeak": [
+      "Flex"
+    ],
+    "crow": [
+      "Flex"
+    ],
+    "ruffs": [
+      "Flex"
+    ],
+    "emz": [
+      "Flex"
+    ],
+    "damian": [
+      "Final do Jogo"
+    ],
+    "mina": [
+      "Final do Jogo"
+    ],
+    "ollie": [
+      "Final do Jogo"
+    ],
+    "leon": [
+      "Final do Jogo"
+    ],
+    "mortis": [
+      "Final do Jogo"
+    ],
+    "lily": [
+      "Final do Jogo"
+    ],
+    "buster": [
+      "Final do Jogo"
+    ],
+    "fang": [
+      "Final do Jogo"
+    ],
+    "doug": [
+      "Final do Jogo"
+    ]
+  }
+}
