@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BrawlerGrid from '@/components/BrawlerGrid.astro';
+import { brawlerIndex, lookup } from '@/lib/brawlers';
+
+export async function getStaticPaths() {
+  const maps = await getCollection('maps');
+  return maps.map((map) => ({ params: { slug: map.id }, props: { map } }));
+}
+
+const { map } = Astro.props;
+const { name, namePt, image, environment, link, gameMode, tips, categories } = map.data;
+
+const index = await brawlerIndex();
+const categoryGroups = categories.map((category) => ({
+  ...category,
+  brawlers: category.brawlers.map((slug) => lookup(index, slug)),
+}));
+---
+
+<BaseLayout
+  title={`${namePt} — BrawDraft`}
+  description={`Dicas de composição e melhores brawlers para o mapa ${namePt} (${name}).`}
+>
+  <article class="mx-auto flex max-w-4xl flex-col gap-6 px-4 pt-6 pb-16">
+    <div class="panel">
+      <div class="panel__body flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+        <img src={image} alt={namePt} width="220" height="220" class="w-48 shrink-0 rounded-2xl" />
+        <div class="flex flex-col items-center gap-2 sm:items-start">
+          <h1 class="title-brawl text-3xl sm:text-4xl">{namePt}</h1>
+          <p class="text-white/60">
+            {name} · {environment}
+          </p>
+          <div class="flex items-center gap-2 rounded-full bg-brawl-navy-deep px-3 py-1.5">
+            <img src={gameMode.image} alt={gameMode.name} width="20" height="20" />
+            <span class="text-sm font-bold" style={{ color: gameMode.color }}>
+              {gameMode.name}
+            </span>
+          </div>
+          <a href={link} target="_blank" rel="noreferrer" class="text-xs text-white/40 hover:text-white/70">
+            Ver no Brawlify ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {
+      tips.length > 0 && (
+        <div class="panel">
+          <h2 class="panel__header text-left">Dicas</h2>
+          <ul class="panel__body flex flex-col gap-2">
+            {tips.map((tip) => (
+              <li class="flex items-start gap-2 text-sm text-white">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brawl-yellow" />
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+
+    {
+      categoryGroups.map((category) => (
+        <div class="panel">
+          <h2 class="panel__header text-left">{category.label}</h2>
+          <div class="panel__body">
+            <BrawlerGrid brawlers={category.brawlers} as="link" />
+          </div>
+        </div>
+      ))
+    }
+  </article>
+</BaseLayout>
