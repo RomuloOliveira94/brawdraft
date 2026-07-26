@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import DraftSlot from '@/components/DraftSlot.astro';
 import BrawlerPicker from '@/components/BrawlerPicker.astro';
+import MapPicker from '@/components/MapPicker.astro';
 import { sortCategories } from '@/lib/mapCategories';
 
 const maps = await getCollection('maps');
@@ -26,93 +27,68 @@ const mapsForClient = maps
 
 // Bans render as a compact strip of small slots above each team panel
 // (rather than their own big panels) — set this to `false` to hide them
-// entirely; the bansAlly/bansEnemy arrays, ba*/be* hash keys, and
-// rankPicks exclude-list wiring in src/scripts/draftBoard.ts all keep
-// working either way.
+// again; the bansAlly/bansEnemy arrays, ba*/be* hash keys, and rankPicks
+// exclude-list wiring in src/scripts/draftBoard.ts all keep working either
+// way.
 const SHOW_BANS = true;
+
+// Same deal for the "who picks first" pill toggle: hidden per product
+// request, but state.firstPick and the `first` hash key in draftBoard.ts
+// keep working (it just always reads as "ally" while this is off). Flip
+// back to `true` to bring the row back.
+const SHOW_FIRST_PICK_TOGGLE = false;
 ---
 
 <section class="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16">
-  <h1 class="title-brawl mt-6 text-center text-3xl sm:text-5xl">Assistente de Draft — Brawl Stars</h1>
+  <h1 class="title-brawl mt-6 text-center text-3xl sm:text-4xl">Assistente de Draft</h1>
 
   <!-- Config panel -->
-  <div class="panel mx-auto w-full max-w-3xl">
+  <div class="panel w-full">
     <div class="panel__body flex flex-col gap-4">
       <div class="flex flex-wrap items-center gap-3">
-        <label class="chip" for="map-input">Nome do mapa:</label>
-        <input
-          type="text"
-          id="map-input"
-          list="map-datalist"
-          placeholder="Digite o nome do mapa..."
-          autocomplete="off"
-          class="input-field min-w-0 flex-1"
-        />
-        <datalist id="map-datalist">
-          {
-            mapsForClient.map((m) => (
-              <>
-                <option value={m.name} />
-                <option value={m.namePt} />
-              </>
-            ))
-          }
-        </datalist>
+        <span class="chip">Mapa:</span>
+        <button
+          type="button"
+          id="map-picker-open"
+          class="input-field min-w-0 flex-1 cursor-pointer items-center justify-between gap-2 text-left"
+        >
+          <span id="map-picker-label" class="truncate text-brawl-navy-deep/50">Selecionar mapa...</span>
+        </button>
+        <button
+          type="button"
+          id="map-picker-clear"
+          aria-label="Limpar mapa selecionado"
+          class="cursor-pointer rounded-full bg-brawl-navy-deep px-2.5 py-1 text-sm font-black text-white/70 transition hover:text-white"
+          hidden
+        >
+          &times;
+        </button>
         <div id="map-mode-badge" class="flex items-center gap-2 rounded-full bg-brawl-navy-deep px-3 py-1.5" hidden>
           <img id="map-mode-icon" src="" alt="" width="20" height="20" />
           <span id="map-mode-name" class="text-sm font-bold"></span>
         </div>
       </div>
 
-      <div class="flex flex-wrap items-center gap-3">
-        <span class="chip">Quem escolhe primeiro?</span>
-        <button type="button" id="first-pick-ally" class="pill-toggle pill-toggle--ally" aria-pressed="true">
-          Nosso Time
-        </button>
-        <button type="button" id="first-pick-enemy" class="pill-toggle pill-toggle--enemy" aria-pressed="false">
-          Time Inimigo
-        </button>
-        <button
-          type="button"
-          id="clear-draft"
-          class="ml-auto rounded-full border-2 border-white/20 px-4 py-1.5 text-sm font-bold text-white/70 transition hover:border-white/40 hover:text-white"
-        >
-          Limpar
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Map picks: recommended brawlers for the selected map, grouped by category. -->
-  <div id="map-picks-panel" class="panel mx-auto w-full max-w-3xl" hidden>
-    <h2 id="map-picks-header" class="panel__header"></h2>
-    <div class="panel__body flex flex-col gap-4">
-      <div class="flex flex-wrap items-center gap-4">
-        <img
-          id="map-picks-image"
-          src=""
-          alt=""
-          width="96"
-          height="96"
-          class="h-24 w-24 shrink-0 rounded-xl border-2 border-white/10 object-cover"
-        />
-        <div class="flex flex-col gap-1.5">
-          <p id="map-picks-environment" class="text-sm text-white/60"></p>
-          <div id="map-picks-mode-badge" class="flex w-fit items-center gap-2 rounded-full bg-brawl-navy-deep px-3 py-1.5">
-            <img id="map-picks-mode-icon" src="" alt="" width="18" height="18" />
-            <span id="map-picks-mode-name" class="text-sm font-bold"></span>
+      {
+        SHOW_FIRST_PICK_TOGGLE && (
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="chip">Quem escolhe primeiro?</span>
+            <button type="button" id="first-pick-ally" class="pill-toggle pill-toggle--ally" aria-pressed="true">
+              Nosso Time
+            </button>
+            <button type="button" id="first-pick-enemy" class="pill-toggle pill-toggle--enemy" aria-pressed="false">
+              Time Inimigo
+            </button>
           </div>
-        </div>
-      </div>
-      <ul id="map-picks-tips" class="flex flex-col gap-2" aria-label="Dicas do mapa" hidden></ul>
-      <div id="map-picks-categories" class="flex flex-col gap-4"></div>
+        )
+      }
     </div>
   </div>
 
   <!-- Teams (each with its own compact ban strip on top, when SHOW_BANS) -->
   <div class="grid gap-4 sm:grid-cols-2">
-    <div class="panel">
-      <h2 class="panel__header text-brawl-blue">Nosso Time</h2>
+    <div class="panel border-brawl-blue/40">
+      <h2 class="panel__header border-b-2 border-brawl-blue/60 text-brawl-blue">Nosso Time</h2>
       <div class="panel__body flex flex-col gap-3">
         {
           SHOW_BANS && (
@@ -126,8 +102,8 @@ const SHOW_BANS = true;
         </div>
       </div>
     </div>
-    <div class="panel">
-      <h2 class="panel__header text-brawl-red">Time Inimigo</h2>
+    <div class="panel border-brawl-red/40">
+      <h2 class="panel__header border-b-2 border-brawl-red/60 text-brawl-red">Time Inimigo</h2>
       <div class="panel__body flex flex-col gap-3">
         {
           SHOW_BANS && (
@@ -158,7 +134,37 @@ const SHOW_BANS = true;
       </ul>
     </div>
   </div>
+
+  <!-- Map picks: recommended brawlers for the selected map, grouped by category. -->
+  <div id="map-picks-panel" class="panel w-full" hidden>
+    <h2 id="map-picks-header" class="panel__header"></h2>
+    <div class="panel__body flex flex-col gap-4">
+      <div class="flex flex-wrap items-center gap-4">
+        <img
+          id="map-picks-image"
+          src=""
+          alt=""
+          width="96"
+          height="96"
+          class="h-24 w-24 shrink-0 rounded-xl border-2 border-white/10 object-cover"
+        />
+        <div class="flex flex-col gap-1.5">
+          <p id="map-picks-environment" class="text-sm text-white/60"></p>
+          <div id="map-picks-mode-badge" class="flex w-fit items-center gap-2 rounded-full bg-brawl-navy-deep px-3 py-1.5">
+            <img id="map-picks-mode-icon" src="" alt="" width="18" height="18" />
+            <span id="map-picks-mode-name" class="text-sm font-bold"></span>
+          </div>
+        </div>
+      </div>
+      <ul id="map-picks-tips" class="flex flex-col gap-2" aria-label="Dicas do mapa" hidden></ul>
+      <div id="map-picks-categories" class="flex flex-col gap-4"></div>
+    </div>
+  </div>
 </section>
+
+<button type="button" id="clear-draft-floating" class="fab-clear" aria-label="Limpar tudo e começar uma nova partida" hidden>
+  Limpar
+</button>
 
 <template id="composition-row-template">
   <li class="flex items-start gap-2 text-sm text-white">
@@ -182,13 +188,16 @@ const SHOW_BANS = true;
 </template>
 
 <template id="map-portrait-template">
-  <li class="flex w-14 flex-col items-center gap-1 text-center">
-    <span class="map-portrait__frame w-12 shrink-0 overflow-hidden rounded-full bg-black/20"></span>
-    <span class="map-portrait__name w-full truncate text-[10px] font-semibold text-white"></span>
+  <li class="flex w-20 flex-col items-center gap-1 text-center">
+    <a href="#" class="map-portrait__link flex cursor-pointer flex-col items-center gap-1 rounded-lg p-1 transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow">
+      <span class="map-portrait__frame w-16 shrink-0 overflow-hidden rounded-full bg-black/20"></span>
+      <span class="map-portrait__name w-full truncate text-xs font-semibold text-white"></span>
+    </a>
   </li>
 </template>
 
 <BrawlerPicker />
+<MapPicker maps={mapsForClient} />
 
 <script type="application/json" id="maps-data" is:inline set:html={JSON.stringify(mapsForClient).replace(/</g, '\\u003c')} />
 

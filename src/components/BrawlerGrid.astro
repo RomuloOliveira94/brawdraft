@@ -22,7 +22,7 @@ const { brawlers, as = 'link' } = Astro.props;
         {as === 'button' ? (
           <button
             type="button"
-            class="brawler-card flex w-full flex-col items-center gap-1 rounded-xl border-2 border-transparent p-2 text-center transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow disabled:cursor-not-allowed disabled:opacity-30 aria-[pressed=true]:border-brawl-yellow aria-[pressed=true]:bg-white/10"
+            class="brawler-card flex w-full cursor-pointer flex-col items-center gap-1 rounded-xl border-2 border-transparent p-2 text-center transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow disabled:cursor-not-allowed disabled:opacity-30 aria-[pressed=true]:border-brawl-yellow aria-[pressed=true]:bg-white/10"
             data-slug={brawler.id}
             data-class-name={brawler.data.className}
             aria-pressed="false"

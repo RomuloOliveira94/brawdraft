@@ -64,7 +64,16 @@ export function initDraftBoard(): void {
   const pickerSearch = byId<HTMLInputElement>('picker-search');
   const pickerEmpty = document.getElementById('picker-empty');
   const pickerClose = document.getElementById('picker-close');
-  const mapInput = byId<HTMLInputElement>('map-input');
+
+  const mapPickerOpen = document.getElementById('map-picker-open');
+  const mapPickerClearBtn = document.getElementById('map-picker-clear');
+  const mapPickerLabel = document.getElementById('map-picker-label');
+  const mapPickerDialog = document.getElementById('map-picker');
+  const mapPickerSearch = document.getElementById('map-picker-search');
+  const mapPickerEmpty = document.getElementById('map-picker-empty');
+  const mapPickerClose = document.getElementById('map-picker-close');
+  const mapPickerGrid = document.getElementById('map-picker-grid');
+
   const mapBadge = document.getElementById('map-mode-badge');
   const mapIcon = document.getElementById('map-mode-icon');
   const mapNameEl = document.getElementById('map-mode-name');
@@ -78,9 +87,10 @@ export function initDraftBoard(): void {
   const mapPicksCategories = document.getElementById('map-picks-categories');
   const mapCategoryTemplate = document.getElementById('map-category-template');
   const mapPortraitTemplate = document.getElementById('map-portrait-template');
+
   const firstAllyBtn = document.getElementById('first-pick-ally');
   const firstEnemyBtn = document.getElementById('first-pick-enemy');
-  const clearBtn = document.getElementById('clear-draft');
+  const clearBtn = document.getElementById('clear-draft-floating');
   const compositionList = byId<HTMLElement>('composition-list');
   const compositionTemplate = byId<HTMLTemplateElement>('composition-row-template');
   const counterList = byId<HTMLElement>('counter-picks-list');
@@ -93,8 +103,15 @@ export function initDraftBoard(): void {
   const cards = Array.from(pickerGrid.querySelectorAll<HTMLButtonElement>('button[data-slug]'));
   const tileIndex = new Map<string, HTMLButtonElement>(cards.map((card) => [card.dataset.slug ?? '', card]));
 
-  const slotEls = Array.from(document.querySelectorAll<HTMLButtonElement>('.draft-slot'));
-  const slotIndex = new Map<string, HTMLButtonElement>();
+  const mapCards = mapPickerGrid
+    ? Array.from(mapPickerGrid.querySelectorAll<HTMLButtonElement>('button[data-map-id]'))
+    : [];
+
+  // Slots are now a non-interactive `.draft-slot` wrapper (carries the
+  // team/kind/index dataset) around two sibling buttons — `.draft-slot__open`
+  // to launch the picker and `.draft-slot__clear` to instantly clear it.
+  const slotEls = Array.from(document.querySelectorAll<HTMLElement>('.draft-slot'));
+  const slotIndex = new Map<string, HTMLElement>();
   for (const el of slotEls) {
     const { team, kind, index } = el.dataset;
     if (team && kind && index !== undefined) slotIndex.set(`${team}-${kind}-${index}`, el);
@@ -120,7 +137,7 @@ export function initDraftBoard(): void {
     return team === 'ally' ? state.ally : state.enemy;
   }
 
-  function getSlotEl(team: Team, kind: Kind, index: number): HTMLButtonElement | undefined {
+  function getSlotEl(team: Team, kind: Kind, index: number): HTMLElement | undefined {
     return slotIndex.get(`${team}-${kind}-${index}`);
   }
 
@@ -137,12 +154,14 @@ export function initDraftBoard(): void {
 
   // --- Slot rendering -------------------------------------------------
 
-  function renderSlot(el: HTMLButtonElement, team: Team, kind: Kind, index: number, slug: string | null): void {
+  function renderSlot(el: HTMLElement, team: Team, kind: Kind, index: number, slug: string | null): void {
+    const openBtn = el.querySelector<HTMLElement>('.draft-slot__open');
+    const clearBtnEl = el.querySelector<HTMLElement>('.draft-slot__clear');
     const frame = el.querySelector<HTMLElement>('.draft-slot__frame');
     const label = el.querySelector<HTMLElement>('.draft-slot__label');
     const nameEl = el.querySelector<HTMLElement>('.draft-slot__name');
     const noteEl = el.querySelector<HTMLElement>('.draft-slot__note');
-    if (!frame || !label || !nameEl || !noteEl) return;
+    if (!openBtn || !clearBtnEl || !frame || !label || !nameEl || !noteEl) return;
 
     frame.replaceChildren();
     frame.removeAttribute('style');
@@ -156,7 +175,9 @@ export function initDraftBoard(): void {
       frame.className = 'draft-slot__frame frame-empty';
       label.hidden = false;
       nameEl.textContent = '';
-      el.setAttribute('aria-label', `${kindLabel}, ${teamLabel}, posição ${index + 1}`);
+      nameEl.classList.remove('draft-slot__name--filled');
+      clearBtnEl.hidden = true;
+      openBtn.setAttribute('aria-label', `${kindLabel}, ${teamLabel}, posição ${index + 1}`);
       return;
     }
 
@@ -175,7 +196,10 @@ export function initDraftBoard(): void {
 
     label.hidden = true;
     nameEl.textContent = name;
-    el.setAttribute(
+    nameEl.classList.add('draft-slot__name--filled');
+    clearBtnEl.hidden = false;
+    clearBtnEl.setAttribute('aria-label', `Remover ${name}, ${teamLabel}, posição ${index + 1}`);
+    openBtn.setAttribute(
       'aria-label',
       `${kind === 'ban' ? 'Banido' : 'Escolhido'}: ${name}, ${teamLabel}, posição ${index + 1}`,
     );
@@ -192,7 +216,7 @@ export function initDraftBoard(): void {
     if (el) renderSlot(el, team, kind, index, slug);
   }
 
-  // --- Picker -----------------------------------------------------------
+  // --- Brawler picker -----------------------------------------------------
 
   function updatePickerState(currentValue: string | null): void {
     const taken = new Set(getAllTaken());
@@ -231,12 +255,19 @@ export function initDraftBoard(): void {
   }
 
   for (const el of slotEls) {
-    el.addEventListener('click', () => {
-      const { team, kind, index } = el.dataset;
-      if (team !== 'ally' && team !== 'enemy') return;
-      if (kind !== 'ban' && kind !== 'pick') return;
-      if (index === undefined) return;
-      openPicker(team, kind, Number(index), el);
+    const { team, kind, index } = el.dataset;
+    if (team !== 'ally' && team !== 'enemy') continue;
+    if (kind !== 'ban' && kind !== 'pick') continue;
+    if (index === undefined) continue;
+    const openBtn = el.querySelector<HTMLElement>('.draft-slot__open');
+    const clearBtnEl = el.querySelector<HTMLElement>('.draft-slot__clear');
+    openBtn?.addEventListener('click', () => {
+      if (openBtn) openPicker(team, kind, Number(index), openBtn);
+    });
+    clearBtnEl?.addEventListener('click', () => {
+      setSlug(team, kind, Number(index), null);
+      recompute();
+      syncHash();
     });
   }
 
@@ -264,16 +295,81 @@ export function initDraftBoard(): void {
     activeSlot = null;
   });
 
-  // --- Map selection ------------------------------------------------------
+  // --- Map picker (same shape as the brawler picker above) -----------------
 
-  function resolveMap(query: string): MapClientData | null {
-    const q = query.trim().toLowerCase();
-    if (!q) return null;
-    return mapsData.find((m) => m.name.toLowerCase() === q || m.namePt.toLowerCase() === q) ?? null;
+  function updateMapPickerState(): void {
+    for (const card of mapCards) {
+      const isCurrent = card.dataset.mapId === state.mapId;
+      card.setAttribute('aria-pressed', String(isCurrent));
+    }
   }
+
+  function filterMapCards(query: string): void {
+    const q = stripAccents(query.trim()).toLowerCase();
+    let anyVisible = false;
+    for (const card of mapCards) {
+      const haystack = stripAccents(card.dataset.search ?? '');
+      const visible = q === '' || haystack.includes(q);
+      const li = card.closest('li');
+      if (li) li.hidden = !visible;
+      if (visible) anyVisible = true;
+    }
+    if (mapPickerEmpty instanceof HTMLElement) mapPickerEmpty.hidden = anyVisible;
+  }
+
+  mapPickerOpen?.addEventListener('click', () => {
+    if (!(mapPickerDialog instanceof HTMLDialogElement) || !(mapPickerSearch instanceof HTMLInputElement)) return;
+    updateMapPickerState();
+    mapPickerSearch.value = '';
+    filterMapCards('');
+    mapPickerDialog.showModal();
+    mapPickerSearch.focus();
+  });
+
+  mapPickerGrid?.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const card = target.closest<HTMLButtonElement>('button[data-map-id]');
+    if (!card) return;
+    const mapId = card.dataset.mapId ?? '';
+    const map = state.mapId === mapId ? null : (mapsById.get(mapId) ?? null);
+    setMap(map);
+    if (mapPickerDialog instanceof HTMLDialogElement) mapPickerDialog.close();
+    recompute();
+    syncHash();
+  });
+
+  mapPickerSearch?.addEventListener('input', () => {
+    if (mapPickerSearch instanceof HTMLInputElement) filterMapCards(mapPickerSearch.value);
+  });
+  mapPickerClose?.addEventListener('click', () => {
+    if (mapPickerDialog instanceof HTMLDialogElement) mapPickerDialog.close();
+  });
+  mapPickerDialog?.addEventListener('click', (event) => {
+    if (event.target === mapPickerDialog && mapPickerDialog instanceof HTMLDialogElement) mapPickerDialog.close();
+  });
+  mapPickerDialog?.addEventListener('close', () => {
+    mapPickerOpen?.focus();
+  });
+  mapPickerClearBtn?.addEventListener('click', () => {
+    setMap(null);
+    recompute();
+    syncHash();
+  });
+
+  // --- Map selection ------------------------------------------------------
 
   function setMap(map: MapClientData | null): void {
     state.mapId = map?.id ?? null;
+
+    if (mapPickerLabel instanceof HTMLElement) {
+      mapPickerLabel.textContent = map ? map.namePt : 'Selecionar mapa...';
+      mapPickerLabel.classList.toggle('text-brawl-navy-deep/50', !map);
+      mapPickerLabel.classList.toggle('font-semibold', Boolean(map));
+      mapPickerLabel.classList.toggle('text-brawl-navy-deep', Boolean(map));
+    }
+    if (mapPickerClearBtn instanceof HTMLElement) mapPickerClearBtn.hidden = !map;
+
     if (map && mapBadge instanceof HTMLElement && mapIcon instanceof HTMLImageElement && mapNameEl instanceof HTMLElement) {
       mapBadge.hidden = false;
       mapIcon.src = map.gameMode.image;
@@ -314,8 +410,8 @@ export function initDraftBoard(): void {
     // treatment as #map-mode-badge above) — gameMode.color and
     // gameMode.bgColor are near-identical hues for every mode in the data,
     // so tinting the badge background with bgColor would wash out text
-    // colored with `color` (unreadable dark-on-dark, the same class of bug
-    // fixed for the form fields).
+    // colored with `color` (unreadable, same bug the contrast fix addressed
+    // elsewhere).
 
     if (mapPicksTips instanceof HTMLElement) {
       mapPicksTips.replaceChildren();
@@ -347,23 +443,20 @@ export function initDraftBoard(): void {
           if (!img || !listEl) continue;
           const portraitNode = mapPortraitTemplate.content.firstElementChild?.cloneNode(true);
           if (!(portraitNode instanceof HTMLElement)) continue;
+          const link = portraitNode.querySelector<HTMLAnchorElement>('.map-portrait__link');
           const frame = portraitNode.querySelector('.map-portrait__frame');
           const nameEl = portraitNode.querySelector('.map-portrait__name');
+          const name = img.dataset.name ?? slug;
+          if (link) link.href = `/brawlers/${slug}/`;
           portraitNode.classList.toggle('banned-portrait', isBanned(slug));
           frame?.appendChild(img.cloneNode(true));
-          if (nameEl) nameEl.textContent = img.dataset.name ?? slug;
+          if (nameEl) nameEl.textContent = name;
           listEl.appendChild(portraitNode);
         }
         mapPicksCategories.appendChild(catNode);
       }
     }
   }
-
-  mapInput.addEventListener('input', () => {
-    setMap(resolveMap(mapInput.value));
-    recompute();
-    syncHash();
-  });
 
   // --- First pick -----------------------------------------------------------
 
@@ -464,6 +557,10 @@ export function initDraftBoard(): void {
       .filter((c): c is BrawlerClassName => c !== undefined);
     renderComposition(analyzeComposition(allyClassNames));
 
+    // The floating "Limpar" button only makes sense once there's something
+    // to clear — a selected map or at least one pick/ban.
+    if (clearBtn instanceof HTMLElement) clearBtn.hidden = state.mapId === null && exclude.length === 0;
+
     // Refresh the map-picks panel's banned-portrait dimming — a ban can
     // happen after a map is already selected, so this can't only run from
     // setMap().
@@ -478,7 +575,6 @@ export function initDraftBoard(): void {
         for (let i = 0; i < 3; i++) setSlug(team, kind, i, null);
       }
     }
-    mapInput.value = '';
     setMap(null);
     applyFirstPick('ally');
     recompute();
@@ -509,11 +605,7 @@ export function initDraftBoard(): void {
 
     const mapId = params.get('map');
     if (mapId && mapsById.has(mapId)) {
-      const map = mapsById.get(mapId) ?? null;
-      if (map) {
-        mapInput.value = map.namePt;
-        setMap(map);
-      }
+      setMap(mapsById.get(mapId) ?? null);
     }
 
     applyFirstPick(params.get('first') === 'enemy' ? 'enemy' : 'ally');

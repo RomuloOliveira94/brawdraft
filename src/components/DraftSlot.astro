@@ -2,6 +2,13 @@
 // A single ban/pick slot on the draft board. Server-rendered empty; the
 // client script (src/scripts/draftBoard.ts) fills it in by cloning a
 // portrait <img> out of the picker's tile index — no markup is rebuilt here.
+//
+// Structured as a non-interactive wrapper (`.draft-slot`, carries the
+// team/kind/index dataset) around two sibling buttons: `.draft-slot__open`
+// (the big clickable area that opens the picker) and `.draft-slot__clear`
+// (the small "x" that instantly clears a filled slot). They're siblings,
+// not nested, because a <button> inside another <button> is invalid HTML
+// and unreliable across browsers.
 interface Props {
   team: 'ally' | 'enemy';
   kind: 'ban' | 'pick';
@@ -15,23 +22,22 @@ const label = kind === 'ban' ? 'Banir' : 'Escolher';
 const teamLabel = team === 'ally' ? 'time aliado' : 'time inimigo';
 ---
 
-<button
-  type="button"
-  class:list={['draft-slot', compact && 'draft-slot--compact']}
-  data-team={team}
-  data-kind={kind}
-  data-index={index}
-  aria-label={`${label}, ${teamLabel}, posição ${index + 1}`}
->
-  <span
-    class:list={[
-      'draft-slot__label w-full rounded-md py-0.5 text-xs font-black uppercase',
-      kind === 'ban' ? 'bg-brawl-red text-white' : 'text-white/50',
-    ]}
+<div class:list={['draft-slot', compact && 'draft-slot--compact']} data-team={team} data-kind={kind} data-index={index}>
+  <button
+    type="button"
+    class="draft-slot__open"
+    aria-label={`${label}, ${teamLabel}, posição ${index + 1}`}
   >
-    {label}
-  </span>
-  <span class="draft-slot__frame frame-empty" aria-hidden="true"></span>
-  <span class="draft-slot__name text-xs font-bold text-white"></span>
-  <span class="draft-slot__note text-[11px] text-white/60 italic" hidden></span>
-</button>
+    <span
+      class:list={['draft-slot__label', kind === 'ban' ? 'draft-slot__label--ban' : 'draft-slot__label--pick']}
+    >
+      {label}
+    </span>
+    <span class="draft-slot__frame frame-empty" aria-hidden="true"></span>
+    <span class="draft-slot__name text-xs font-bold text-white"></span>
+    <span class="draft-slot__note text-[11px] text-white/60 italic" hidden></span>
+  </button>
+  <button type="button" class="draft-slot__clear" aria-label={`Remover, ${teamLabel}, posição ${index + 1}`} hidden>
+    &times;
+  </button>
+</div>

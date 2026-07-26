@@ -4,14 +4,23 @@
  * Brawl Stars-flavored theme tokens. Tailwind v4 auto-generates utilities
  * (bg-brawl-navy, text-brawl-yellow, border-brawl-red, ...) from any
  * --color-* custom property declared inside @theme.
+ *
+ * Purple + black palette, matching the official Brawl Stars store
+ * (store.supercell.com/brawlstars): a rich purple backdrop with near-black
+ * panels/navbar for "detalhes pretos". Ally/enemy blue/red stay as team
+ * accents — independent of the overall background theme.
  */
 @theme {
-  --color-brawl-sky: #59c2ff;
-  --color-brawl-sky-deep: #2fa6f0;
-  --color-brawl-navy: #182747;
-  --color-brawl-navy-light: #24365f;
-  --color-brawl-navy-deep: #0f1a33;
+  --color-brawl-bg: #4a1f8c;
+  --color-brawl-bg-deep: #180a30;
+  --color-brawl-navy: #1a1128;
+  --color-brawl-navy-light: #2b1c40;
+  --color-brawl-navy-deep: #0b0714;
   --color-brawl-yellow: #ffd83d;
+  /* Secondary brand accent (primary is the near-black navy above): the
+     header wordmark and any "selected/active" state use this purple. */
+  --color-brawl-purple: #9b5cff;
+  --color-brawl-purple-deep: #6d2fd1;
   --color-brawl-blue: #2f7bff;
   --color-brawl-blue-deep: #1a54c4;
   --color-brawl-red: #ff4d4d;
@@ -23,17 +32,49 @@
     color-scheme: dark;
   }
 
+  /*
+   * Purple night sky with a fine repeating star sprinkle and a couple of
+   * soft glow blobs, layered over the base purple-to-black gradient. All
+   * generated in CSS (radial-gradients) — no image assets, no webfonts.
+   */
   body {
-    @apply min-h-screen text-white antialiased;
-    background:
-      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 255, 255, 0.25), transparent),
-      linear-gradient(180deg, var(--color-brawl-sky) 0%, var(--color-brawl-sky-deep) 60%, #1f8fd8 100%);
+    @apply relative min-h-screen overflow-x-hidden text-white antialiased;
+    background-image:
+      radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1.6px),
+      radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1.4px),
+      radial-gradient(ellipse 320px 220px at 15% 10%, rgba(216, 130, 255, 0.25), transparent 70%),
+      radial-gradient(ellipse 360px 240px at 85% 6%, rgba(120, 90, 255, 0.22), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 50% -10%, rgba(255, 255, 255, 0.12), transparent),
+      linear-gradient(180deg, var(--color-brawl-bg) 0%, var(--color-brawl-bg-deep) 65%, #0d0620 100%);
+    background-position:
+      6px 14px,
+      34px 44px,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+    background-size:
+      46px 46px,
+      68px 68px,
+      auto,
+      auto,
+      auto,
+      auto;
+    background-repeat:
+      repeat,
+      repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat;
     background-attachment: fixed;
   }
 }
 
 @layer components {
-  /* Chunky, outlined, drop-shadowed title treatment — no webfonts. */
+  /* Page title treatment: plain white text with just a soft drop shadow —
+     no webfonts. Used by every page title, including the draft board's own
+     H1. */
   .title-brawl {
     font-family:
       ui-sans-serif,
@@ -43,22 +84,23 @@
       Roboto,
       Arial,
       sans-serif;
-    font-weight: 900;
-    color: var(--color-brawl-yellow);
-    -webkit-text-stroke: 3px var(--color-brawl-navy-deep);
-    text-shadow:
-      0 4px 0 var(--color-brawl-navy-deep),
-      0 8px 16px rgba(0, 0, 0, 0.4);
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.01em;
   }
 
-  /* Dark navy rounded panel with a lighter header bar. */
+  /* Near-black panel with a lighter header bar — the "detalhes pretos". */
   .panel {
     @apply overflow-hidden rounded-2xl border border-white/10 bg-brawl-navy shadow-[0_6px_0_rgba(0,0,0,0.3),0_16px_28px_rgba(0,0,0,0.35)];
   }
 
+  /* Panel titles: black fill with a soft purple border, echoing the overall
+     purple/black theme. Team panels override the color (blue/red) but keep
+     this same outlined treatment. */
   .panel__header {
-    @apply bg-brawl-navy-light px-4 py-2 text-center text-sm font-extrabold tracking-wide text-brawl-yellow uppercase;
+    @apply bg-brawl-navy-light px-4 py-2 text-center text-sm font-extrabold tracking-wide uppercase text-white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   .panel__body {
@@ -75,10 +117,10 @@
    * self-contained: the page sets `color-scheme: dark` for native dark
    * scrollbars/controls elsewhere, and Tailwind's preflight strips the UA
    * default input background to transparent — without an explicit
-   * background here the dark navy text would sit directly on the dark
-   * panel behind it. `color-scheme: light` is scoped to just this class so
-   * the field's own native chrome (the <datalist> suggestion popup,
-   * autofill UI) renders light too, matching the visible white field.
+   * background here the dark text would sit directly on the dark panel
+   * behind it. `color-scheme: light` is scoped to just this class so the
+   * field's own native chrome (the <datalist> suggestion popup, autofill
+   * UI) renders light too, matching the visible white field.
    */
   .input-field {
     @apply w-full rounded-full border-0 bg-white px-4 py-2 text-sm text-brawl-navy-deep focus:ring-2 focus:ring-brawl-yellow focus:outline-none;
@@ -99,17 +141,46 @@
     caret-color: var(--color-brawl-navy-deep);
   }
 
-  /* Pill toggle buttons ("Nosso Time" / "Time Inimigo"). */
+  /*
+   * Shared <dialog> chrome (brawler picker, map picker). Tailwind's preflight
+   * zeroes `margin` on every element, which quietly breaks the native
+   * dialog's own UA-stylesheet centering (`position: fixed; inset: 0;
+   * margin: auto`) — without this the dialog sticks to a corner instead of
+   * sitting centered. Restoring `margin: auto` here is the actual fix.
+   */
+  .modal {
+    @apply w-full max-w-3xl rounded-2xl border border-white/10 bg-brawl-navy p-0 text-white backdrop:bg-black/60;
+    margin: auto;
+    max-height: 85vh;
+  }
+
+  /*
+   * Pill toggle buttons (e.g. team selectors). Always solid in their team
+   * color; the pressed one is additionally raised (opaque, lifted shadow,
+   * bright border) so the active choice reads at a glance.
+   */
   .pill-toggle {
-    @apply cursor-pointer rounded-full border-2 border-transparent px-4 py-1.5 text-sm font-bold text-white/70 transition;
+    @apply cursor-pointer rounded-full border-2 border-transparent px-4 py-1.5 text-sm font-bold text-white/80 transition;
+  }
+
+  .pill-toggle--ally {
+    @apply bg-brawl-blue/80;
+  }
+
+  .pill-toggle--enemy {
+    @apply bg-brawl-red/80;
+  }
+
+  .pill-toggle[aria-pressed="true"] {
+    @apply text-white shadow-[0_3px_0_rgba(0,0,0,0.35)];
   }
 
   .pill-toggle[aria-pressed="true"].pill-toggle--ally {
-    @apply border-brawl-blue bg-brawl-blue text-white;
+    @apply border-white/50 bg-brawl-blue;
   }
 
   .pill-toggle[aria-pressed="true"].pill-toggle--enemy {
-    @apply border-brawl-red bg-brawl-red text-white;
+    @apply border-white/50 bg-brawl-red;
   }
 
   /* Empty portrait placeholder frame — reserves the 170x170 footprint. */
@@ -140,7 +211,7 @@
   }
 
   .draft-slot {
-    @apply flex w-full cursor-pointer flex-col items-center gap-1.5 rounded-xl p-2 text-center transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow;
+    @apply relative flex w-full flex-col items-center gap-1.5 rounded-xl p-2 text-center;
   }
 
   /* Compact ban strip above a team panel: same slot, much smaller — no
@@ -159,10 +230,57 @@
     @apply hidden;
   }
 
+  .draft-slot--compact .draft-slot__clear {
+    @apply h-4 w-4 text-[10px];
+  }
+
+  .draft-slot__open {
+    @apply flex w-full cursor-pointer flex-col items-center gap-1.5 rounded-xl border-0 bg-transparent p-0 text-center transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow;
+  }
+
+  /* Label bar on top of every slot: red "Banir" when it's a ban slot, a
+     neutral dark bar reading "Escolher" otherwise. */
+  .draft-slot__label {
+    @apply w-full rounded-md py-0.5 text-xs font-black uppercase;
+  }
+
+  .draft-slot__label--pick {
+    @apply bg-black/25 text-white/70;
+  }
+
+  .draft-slot__label--ban {
+    @apply bg-brawl-red text-white;
+  }
+
+  /* Name chip under a filled slot's portrait. */
+  .draft-slot__name--filled {
+    @apply rounded-full bg-black/30 px-2 py-0.5;
+  }
+
+  /* Small "x" clear button on a filled slot — removes the pick without
+     reopening the picker modal. Only shown once a slot is filled. */
+  .draft-slot__clear {
+    @apply absolute top-0.5 right-0.5 z-10 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-black/60 text-xs leading-none font-black text-white/80 transition hover:bg-brawl-red hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brawl-yellow;
+  }
+
+  /* Floating "Limpar" action button — always reachable regardless of scroll. */
+  .fab-clear {
+    @apply fixed right-4 bottom-4 z-20 cursor-pointer rounded-full border-2 border-white/20 bg-brawl-navy-deep px-5 py-3 text-sm font-black text-white shadow-[0_6px_0_rgba(0,0,0,0.4),0_10px_20px_rgba(0,0,0,0.45)] transition hover:border-white/40 hover:bg-brawl-navy-light active:translate-y-0.5 active:shadow-[0_2px_0_rgba(0,0,0,0.4)];
+  }
+
+  /* Tile inside the map picker modal. */
+  .map-picker-tile {
+    @apply flex w-full cursor-pointer flex-col items-center gap-1 rounded-xl border-2 border-transparent p-2 text-center transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow aria-[pressed=true]:border-brawl-yellow aria-[pressed=true]:bg-white/10;
+  }
+
+  .map-picker-tile img {
+    @apply aspect-square w-full rounded-lg object-cover;
+  }
+
   /*
    * Shared "this brawler is banned" treatment — applied to the picker grid
-   * (brawler selection) so a banned brawler reads as unavailable there too,
-   * not just in its own ban slot.
+   * (brawler selection) and to the map-picks recommendation portraits so a
+   * banned brawler reads as unavailable everywhere its portrait shows up.
    */
   .banned-portrait img {
     filter: grayscale(1) brightness(0.6);

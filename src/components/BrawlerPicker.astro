@@ -7,7 +7,7 @@ import { allBrawlers } from '@/lib/brawlers';
 const brawlers = await allBrawlers();
 ---
 
-<dialog id="brawler-picker" class="w-full max-w-3xl rounded-2xl border border-white/10 bg-brawl-navy p-0 text-white backdrop:bg-black/60">
+<dialog id="brawler-picker" class="modal">
   <div class="panel__header flex items-center justify-between gap-2">
     <h2 id="picker-title" class="text-sm font-extrabold tracking-wide uppercase">
       Escolher brawler
@@ -16,7 +16,7 @@ const brawlers = await allBrawlers();
       type="button"
       id="picker-close"
       aria-label="Fechar seleção de brawler"
-      class="rounded-full px-2 py-0.5 text-lg leading-none font-black text-white/70 hover:bg-white/10 hover:text-white"
+      class="cursor-pointer rounded-full px-2 py-0.5 text-lg leading-none font-black text-white/70 hover:bg-white/10 hover:text-white"
     >
       &times;
     </button>
