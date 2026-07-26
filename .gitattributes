@@ -1,0 +1,4 @@
+# Raw scraped source data must be stored byte-for-byte as fetched — parsers
+# rely on exact byte counts/line counts, and CRLF normalization would corrupt
+# maps.txt's line-oriented structure that scripts/parse-maps.mjs depends on.
+data/raw/*.txt -text -diff
