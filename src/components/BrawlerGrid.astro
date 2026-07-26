@@ -1,0 +1,54 @@
+---
+// Reusable grid of brawler cards. `as="link"` is used for browsing pages
+// (roster, map categories, "Bom contra"); `as="button"` is used by
+// BrawlerPicker, where the client script needs `data-slug` for wiring and
+// `data-class-name` for composition analysis (the only two facts that aren't
+// already on the BrawlerTile img itself).
+import type { CollectionEntry } from 'astro:content';
+import BrawlerTile from '@/components/BrawlerTile.astro';
+
+interface Props {
+  brawlers: CollectionEntry<'brawlers'>[];
+  as?: 'link' | 'button';
+}
+
+const { brawlers, as = 'link' } = Astro.props;
+---
+
+<ul class="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8" role="list">
+  {
+    brawlers.map((brawler) => (
+      <li>
+        {as === 'button' ? (
+          <button
+            type="button"
+            class="brawler-card flex w-full flex-col items-center gap-1 rounded-xl border-2 border-transparent p-2 text-center transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow disabled:cursor-not-allowed disabled:opacity-30 aria-[pressed=true]:border-brawl-yellow aria-[pressed=true]:bg-white/10"
+            data-slug={brawler.id}
+            data-class-name={brawler.data.className}
+            aria-pressed="false"
+          >
+            <BrawlerTile brawler={brawler} />
+            <span class="text-xs font-semibold text-white">{brawler.data.name}</span>
+            {!brawler.data.hasCounters && (
+              <span class="text-[10px] tracking-wide text-white/40 uppercase">Sem counters</span>
+            )}
+          </button>
+        ) : (
+          <a
+            href={`/brawlers/${brawler.id}/`}
+            class="flex w-full flex-col items-center gap-1 rounded-xl p-2 text-center transition hover:bg-white/10"
+          >
+            <BrawlerTile brawler={brawler} />
+            <span class="text-xs font-semibold text-white">{brawler.data.name}</span>
+            {!brawler.data.hasCounters && (
+              <span class="text-[10px] tracking-wide text-white/40 uppercase">Sem counters</span>
+            )}
+            {!brawler.data.released && (
+              <span class="text-[10px] tracking-wide text-brawl-yellow/80 uppercase">Não lançado</span>
+            )}
+          </a>
+        )}
+      </li>
+    ))
+  }
+</ul>

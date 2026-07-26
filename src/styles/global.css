@@ -1,7 +1,116 @@
 @import "tailwindcss";
 
+/*
+ * Brawl Stars-flavored theme tokens. Tailwind v4 auto-generates utilities
+ * (bg-brawl-navy, text-brawl-yellow, border-brawl-red, ...) from any
+ * --color-* custom property declared inside @theme.
+ */
+@theme {
+  --color-brawl-sky: #59c2ff;
+  --color-brawl-sky-deep: #2fa6f0;
+  --color-brawl-navy: #182747;
+  --color-brawl-navy-light: #24365f;
+  --color-brawl-navy-deep: #0f1a33;
+  --color-brawl-yellow: #ffd83d;
+  --color-brawl-blue: #2f7bff;
+  --color-brawl-blue-deep: #1a54c4;
+  --color-brawl-red: #ff4d4d;
+  --color-brawl-red-deep: #c42b2b;
+}
+
 @layer base {
+  html {
+    color-scheme: dark;
+  }
+
   body {
-    @apply bg-neutral-950 text-neutral-100 antialiased;
+    @apply min-h-screen text-white antialiased;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 255, 255, 0.25), transparent),
+      linear-gradient(180deg, var(--color-brawl-sky) 0%, var(--color-brawl-sky-deep) 60%, #1f8fd8 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* Chunky, outlined, drop-shadowed title treatment — no webfonts. */
+  .title-brawl {
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      Arial,
+      sans-serif;
+    font-weight: 900;
+    color: var(--color-brawl-yellow);
+    -webkit-text-stroke: 3px var(--color-brawl-navy-deep);
+    text-shadow:
+      0 4px 0 var(--color-brawl-navy-deep),
+      0 8px 16px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.01em;
+  }
+
+  /* Dark navy rounded panel with a lighter header bar. */
+  .panel {
+    @apply overflow-hidden rounded-2xl border border-white/10 bg-brawl-navy shadow-[0_6px_0_rgba(0,0,0,0.3),0_16px_28px_rgba(0,0,0,0.35)];
+  }
+
+  .panel__header {
+    @apply bg-brawl-navy-light px-4 py-2 text-center text-sm font-extrabold tracking-wide text-brawl-yellow uppercase;
+  }
+
+  .panel__body {
+    @apply p-4;
+  }
+
+  /* Chip: small dark pill used for inline labels ("Nome do mapa:"). */
+  .chip {
+    @apply rounded-full bg-brawl-navy-deep px-3 py-1.5 text-sm font-semibold whitespace-nowrap text-white/90;
+  }
+
+  /* Pill toggle buttons ("Nosso Time" / "Time Inimigo"). */
+  .pill-toggle {
+    @apply cursor-pointer rounded-full border-2 border-transparent px-4 py-1.5 text-sm font-bold text-white/70 transition;
+  }
+
+  .pill-toggle[aria-pressed="true"].pill-toggle--ally {
+    @apply border-brawl-blue bg-brawl-blue text-white;
+  }
+
+  .pill-toggle[aria-pressed="true"].pill-toggle--enemy {
+    @apply border-brawl-red bg-brawl-red text-white;
+  }
+
+  /* Empty portrait placeholder frame — reserves the 170x170 footprint. */
+  .frame-empty {
+    @apply flex aspect-square w-full items-center justify-center rounded-xl border-2 border-dashed border-white/25 bg-black/20;
+  }
+
+  /* Filled slot portrait frame, tinted per-instance via inline style. */
+  .frame-filled {
+    @apply flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl border-2 border-white/20;
+  }
+
+  .frame-filled img {
+    @apply h-full w-full object-contain p-1;
+  }
+
+  /*
+   * Banned portraits render desaturated with a red frame. The grayscale
+   * filter must land on the <img> only — putting it on the frame itself
+   * would desaturate its own red border right along with the portrait.
+   */
+  .frame-banned {
+    @apply border-brawl-red;
+  }
+
+  .frame-banned img {
+    filter: grayscale(1) brightness(0.7);
+  }
+
+  .draft-slot {
+    @apply flex w-full cursor-pointer flex-col items-center gap-1.5 rounded-xl p-2 text-center transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow;
   }
 }

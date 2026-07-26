@@ -1,0 +1,29 @@
+---
+// Single visual atom for a brawler portrait. Emits every data-* attribute the
+// client-side draft script needs to index, clone, filter and disable tiles
+// without ever re-typing a name or re-fetching an image in JS.
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  brawler: CollectionEntry<'brawlers'>;
+}
+
+const { brawler } = Astro.props;
+const { name, image, rarityColor, aliases, hasCounters } = brawler.data;
+const search = [name, ...aliases].join(' ').toLowerCase();
+---
+
+<img
+  src={image}
+  alt={name}
+  width="170"
+  height="170"
+  loading="lazy"
+  decoding="async"
+  class="brawler-tile"
+  data-slug={brawler.id}
+  data-name={name}
+  data-search={search}
+  data-rarity-color={rarityColor}
+  data-nodata={!hasCounters}
+/>
