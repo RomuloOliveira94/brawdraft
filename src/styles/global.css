@@ -70,6 +70,35 @@
     @apply rounded-full bg-brawl-navy-deep px-3 py-1.5 text-sm font-semibold whitespace-nowrap text-white/90;
   }
 
+  /*
+   * Light, rounded text field ("Nome do mapa:", picker search). Deliberately
+   * self-contained: the page sets `color-scheme: dark` for native dark
+   * scrollbars/controls elsewhere, and Tailwind's preflight strips the UA
+   * default input background to transparent — without an explicit
+   * background here the dark navy text would sit directly on the dark
+   * panel behind it. `color-scheme: light` is scoped to just this class so
+   * the field's own native chrome (the <datalist> suggestion popup,
+   * autofill UI) renders light too, matching the visible white field.
+   */
+  .input-field {
+    @apply w-full rounded-full border-0 bg-white px-4 py-2 text-sm text-brawl-navy-deep focus:ring-2 focus:ring-brawl-yellow focus:outline-none;
+    color-scheme: light;
+    caret-color: var(--color-brawl-navy-deep);
+  }
+
+  .input-field::placeholder {
+    color: rgba(15, 26, 51, 0.45);
+  }
+
+  .input-field:-webkit-autofill,
+  .input-field:-webkit-autofill:hover,
+  .input-field:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-brawl-navy-deep);
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+    box-shadow: 0 0 0 1000px #fff inset;
+    caret-color: var(--color-brawl-navy-deep);
+  }
+
   /* Pill toggle buttons ("Nosso Time" / "Time Inimigo"). */
   .pill-toggle {
     @apply cursor-pointer rounded-full border-2 border-transparent px-4 py-1.5 text-sm font-bold text-white/70 transition;
