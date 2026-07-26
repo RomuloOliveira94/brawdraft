@@ -1,0 +1,28 @@
+{
+  "name": "brawdraft",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "data:brawlers": "node scripts/fetch-brawlers.mjs",
+    "data:parse": "node scripts/build-data.mjs",
+    "data:verify": "node scripts/verify-data.mjs",
+    "data:all": "npm run data:brawlers && npm run data:parse && npm run data:verify"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.1.3",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3"
+  }
+}
