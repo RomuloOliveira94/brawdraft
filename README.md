@@ -4,9 +4,30 @@ BrawDraft é um assistente de draft para Brawl Stars: seleção de mapa, banimen
 dois times, sugestões de counter-pick e análise de composição, tudo em um site
 estático simples e rápido.
 
-Este repositório contém, por enquanto, apenas a base do projeto (scaffold). As
-funcionalidades de draft (dados dos brawlers, lógica de pick/ban, contadores,
-análise de composição) são adicionadas em etapas futuras.
+🔗 **Site publicado:** https://romulooliveira94.github.io/brawdraft/
+
+## Deploy
+
+O site é publicado no GitHub Pages a partir do branch `main` via GitHub
+Actions (`.github/workflows/deploy.yml`): todo push em `main` roda
+`npm ci && npm run build` e publica o conteúdo de `dist/`. O workflow também
+pode ser disparado manualmente (`workflow_dispatch`) na aba Actions do
+repositório.
+
+O deploy **não** roda `npm run data:all` — esse passo busca dados na API
+pública do Brawlify (`api.brawlapi.com`) e tornaria o build do CI
+não-determinístico (dependente de rede/uptime de terceiros). Por isso todo o
+JSON gerado em `src/data/` e as ~139 imagens em `public/` são versionados no
+repositório: o build de produção roda inteiramente offline a partir deles.
+
+Para atualizar os dados localmente (novos brawlers/mapas, mudanças na API):
+
+```sh
+npm run data:all   # busca, parseia e valida os dados — NÃO roda em CI
+```
+
+Revise e commite as mudanças em `src/data/*.json` e `public/` normalmente; o
+próximo deploy em `main` já sai com os dados atualizados.
 
 ## Stack
 
