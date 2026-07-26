@@ -25,5 +25,5 @@ const search = [name, ...aliases].join(' ').toLowerCase();
   data-name={name}
   data-search={search}
   data-rarity-color={rarityColor}
-  data-nodata={!hasCounters}
+  data-nodata={hasCounters ? undefined : ''}
 />
