@@ -23,6 +23,13 @@ const mapsForClient = maps
     categories: sortCategories(m.data.categories),
   }))
   .sort((a, b) => a.namePt.localeCompare(b.namePt));
+
+// Bans render as a compact strip of small slots above each team panel
+// (rather than their own big panels) — set this to `false` to hide them
+// entirely; the bansAlly/bansEnemy arrays, ba*/be* hash keys, and
+// rankPicks exclude-list wiring in src/scripts/draftBoard.ts all keep
+// working either way.
+const SHOW_BANS = true;
 ---
 
 <section class="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16">
@@ -102,34 +109,36 @@ const mapsForClient = maps
     </div>
   </div>
 
-  <!-- Bans -->
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div class="panel">
-      <h2 class="panel__header">Banimentos do Nosso Time</h2>
-      <div class="panel__body grid grid-cols-3 gap-3">
-        {[0, 1, 2].map((i) => <DraftSlot team="ally" kind="ban" index={i} />)}
-      </div>
-    </div>
-    <div class="panel">
-      <h2 class="panel__header">Banimentos do Time Inimigo</h2>
-      <div class="panel__body grid grid-cols-3 gap-3">
-        {[0, 1, 2].map((i) => <DraftSlot team="enemy" kind="ban" index={i} />)}
-      </div>
-    </div>
-  </div>
-
-  <!-- Teams -->
+  <!-- Teams (each with its own compact ban strip on top, when SHOW_BANS) -->
   <div class="grid gap-4 sm:grid-cols-2">
     <div class="panel">
       <h2 class="panel__header text-brawl-blue">Nosso Time</h2>
-      <div class="panel__body grid grid-cols-3 gap-3">
-        {[0, 1, 2].map((i) => <DraftSlot team="ally" kind="pick" index={i} />)}
+      <div class="panel__body flex flex-col gap-3">
+        {
+          SHOW_BANS && (
+            <div class="flex items-center justify-center gap-2" aria-label="Banimentos do nosso time">
+              {[0, 1, 2].map((i) => <DraftSlot team="ally" kind="ban" index={i} compact />)}
+            </div>
+          )
+        }
+        <div class="grid grid-cols-3 gap-3">
+          {[0, 1, 2].map((i) => <DraftSlot team="ally" kind="pick" index={i} />)}
+        </div>
       </div>
     </div>
     <div class="panel">
       <h2 class="panel__header text-brawl-red">Time Inimigo</h2>
-      <div class="panel__body grid grid-cols-3 gap-3">
-        {[0, 1, 2].map((i) => <DraftSlot team="enemy" kind="pick" index={i} />)}
+      <div class="panel__body flex flex-col gap-3">
+        {
+          SHOW_BANS && (
+            <div class="flex items-center justify-center gap-2" aria-label="Banimentos do time inimigo">
+              {[0, 1, 2].map((i) => <DraftSlot team="enemy" kind="ban" index={i} compact />)}
+            </div>
+          )
+        }
+        <div class="grid grid-cols-3 gap-3">
+          {[0, 1, 2].map((i) => <DraftSlot team="enemy" kind="pick" index={i} />)}
+        </div>
       </div>
     </div>
   </div>

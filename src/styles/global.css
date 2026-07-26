@@ -142,4 +142,29 @@
   .draft-slot {
     @apply flex w-full cursor-pointer flex-col items-center gap-1.5 rounded-xl p-2 text-center transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow;
   }
+
+  /* Compact ban strip above a team panel: same slot, much smaller — no
+     label bar or name text, just a small round frame. */
+  .draft-slot--compact {
+    @apply w-auto gap-0 p-0;
+  }
+
+  .draft-slot--compact .draft-slot__frame {
+    @apply h-10 w-10 rounded-full;
+  }
+
+  .draft-slot--compact .draft-slot__label,
+  .draft-slot--compact .draft-slot__name,
+  .draft-slot--compact .draft-slot__note {
+    @apply hidden;
+  }
+
+  /*
+   * Shared "this brawler is banned" treatment — applied to the picker grid
+   * (brawler selection) so a banned brawler reads as unavailable there too,
+   * not just in its own ban slot.
+   */
+  .banned-portrait img {
+    filter: grayscale(1) brightness(0.6);
+  }
 }

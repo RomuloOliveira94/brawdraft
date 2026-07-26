@@ -130,6 +130,11 @@ export function initDraftBoard(): void {
     );
   }
 
+  /** Whether a brawler is currently banned by either team. */
+  function isBanned(slug: string): boolean {
+    return state.bansAlly.includes(slug) || state.bansEnemy.includes(slug);
+  }
+
   // --- Slot rendering -------------------------------------------------
 
   function renderSlot(el: HTMLButtonElement, team: Team, kind: Kind, index: number, slug: string | null): void {
@@ -196,6 +201,7 @@ export function initDraftBoard(): void {
       const isCurrent = slug === currentValue;
       card.disabled = taken.has(slug) && !isCurrent;
       card.setAttribute('aria-pressed', String(isCurrent));
+      card.classList.toggle('banned-portrait', isBanned(slug) && !isCurrent);
     }
   }
 
@@ -343,6 +349,7 @@ export function initDraftBoard(): void {
           if (!(portraitNode instanceof HTMLElement)) continue;
           const frame = portraitNode.querySelector('.map-portrait__frame');
           const nameEl = portraitNode.querySelector('.map-portrait__name');
+          portraitNode.classList.toggle('banned-portrait', isBanned(slug));
           frame?.appendChild(img.cloneNode(true));
           if (nameEl) nameEl.textContent = img.dataset.name ?? slug;
           listEl.appendChild(portraitNode);
@@ -456,6 +463,11 @@ export function initDraftBoard(): void {
       .map((slug) => tileIndex.get(slug)?.dataset.className)
       .filter((c): c is BrawlerClassName => c !== undefined);
     renderComposition(analyzeComposition(allyClassNames));
+
+    // Refresh the map-picks panel's banned-portrait dimming — a ban can
+    // happen after a map is already selected, so this can't only run from
+    // setMap().
+    if (state.mapId) renderMapPicks(mapsById.get(state.mapId) ?? null);
   }
 
   // --- Clear ------------------------------------------------------------

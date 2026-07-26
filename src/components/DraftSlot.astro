@@ -6,16 +6,18 @@ interface Props {
   team: 'ally' | 'enemy';
   kind: 'ban' | 'pick';
   index: number;
+  /** Small ban-strip variant that sits above a team panel. */
+  compact?: boolean;
 }
 
-const { team, kind, index } = Astro.props;
+const { team, kind, index, compact = false } = Astro.props;
 const label = kind === 'ban' ? 'Banir' : 'Escolher';
 const teamLabel = team === 'ally' ? 'time aliado' : 'time inimigo';
 ---
 
 <button
   type="button"
-  class="draft-slot"
+  class:list={['draft-slot', compact && 'draft-slot--compact']}
   data-team={team}
   data-kind={kind}
   data-index={index}
