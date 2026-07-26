@@ -19,6 +19,8 @@ const TEAM_SIZE = 3;
  * a single "balanced" message instead of an empty list.
  */
 export function analyzeComposition(classNames: BrawlerClassName[]): string[] {
+  if (classNames.length === 0) return [];
+
   const has = (className: BrawlerClassName) => classNames.includes(className);
   const count = (className: BrawlerClassName) =>
     classNames.filter((c) => c === className).length;

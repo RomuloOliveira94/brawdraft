@@ -283,6 +283,13 @@ export function initDraftBoard(): void {
 
   function renderComposition(tips: string[]): void {
     compositionList.replaceChildren();
+    if (tips.length === 0) {
+      const li = document.createElement('li');
+      li.className = 'text-sm text-white/50';
+      li.textContent = 'Escolha brawlers para o seu time para ver a análise.';
+      compositionList.appendChild(li);
+      return;
+    }
     for (const tip of tips) {
       const node = compositionTemplate.content.firstElementChild?.cloneNode(true);
       if (!(node instanceof HTMLElement)) continue;
@@ -375,7 +382,7 @@ export function initDraftBoard(): void {
   function serialize(): string {
     const params = new URLSearchParams();
     if (state.mapId) params.set('map', state.mapId);
-    params.set('first', state.firstPick);
+    if (state.firstPick !== 'ally') params.set('first', state.firstPick);
     state.ally.forEach((s, i) => s && params.set(`a${i}`, s));
     state.enemy.forEach((s, i) => s && params.set(`e${i}`, s));
     state.bansAlly.forEach((s, i) => s && params.set(`ba${i}`, s));
