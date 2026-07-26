@@ -38,7 +38,11 @@ export function rankPicks(
   const { exclude = [], mapBonus = null } = opts;
   const acc = new Map<string, Pick>();
 
-  for (const enemy of enemies) {
+  // Defensive: callers are expected to pass unique enemies (the picker
+  // enforces this), but a duplicate must never double-count a counter's
+  // coverage/score. Set preserves insertion order, so unique input is
+  // unaffected.
+  for (const enemy of new Set(enemies)) {
     const list = counters[enemy] ?? []; // [] for the 14 brawlers with no counter data
     for (let i = 0; i < list.length; i++) {
       const slug = list[i];

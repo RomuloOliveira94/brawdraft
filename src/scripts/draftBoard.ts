@@ -403,16 +403,21 @@ export function initDraftBoard(): void {
 
     applyFirstPick(params.get('first') === 'enemy' ? 'enemy' : 'ally');
 
+    // A shareable URL can be hand-edited (or just stale), so — unlike the
+    // picker, which disables already-taken tiles — this path needs its own
+    // duplicate guard: track every slug already placed and skip repeats.
+    const seen = new Set<string>();
     for (let i = 0; i < 3; i++) {
-      restoreSlug('ally', 'pick', i, params.get(`a${i}`));
-      restoreSlug('enemy', 'pick', i, params.get(`e${i}`));
-      restoreSlug('ally', 'ban', i, params.get(`ba${i}`));
-      restoreSlug('enemy', 'ban', i, params.get(`be${i}`));
+      restoreSlug('ally', 'pick', i, params.get(`a${i}`), seen);
+      restoreSlug('enemy', 'pick', i, params.get(`e${i}`), seen);
+      restoreSlug('ally', 'ban', i, params.get(`ba${i}`), seen);
+      restoreSlug('enemy', 'ban', i, params.get(`be${i}`), seen);
     }
   }
 
-  function restoreSlug(team: Team, kind: Kind, index: number, slug: string | null): void {
-    if (!slug || !tileIndex.has(slug)) return; // discard invalid/unknown slugs silently
+  function restoreSlug(team: Team, kind: Kind, index: number, slug: string | null, seen: Set<string>): void {
+    if (!slug || !tileIndex.has(slug) || seen.has(slug)) return; // discard invalid/unknown/duplicate slugs silently
+    seen.add(slug);
     setSlug(team, kind, index, slug);
   }
 
