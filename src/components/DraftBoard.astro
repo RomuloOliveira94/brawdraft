@@ -2,17 +2,25 @@
 import { getCollection } from 'astro:content';
 import DraftSlot from '@/components/DraftSlot.astro';
 import BrawlerPicker from '@/components/BrawlerPicker.astro';
+import { sortCategories } from '@/lib/mapCategories';
 
 const maps = await getCollection('maps');
 
-// Small, client-friendly projection of the maps collection: just what the
-// draft board needs to resolve a typed map name and show its mode badge.
+// Client-friendly projection of the maps collection: everything the draft
+// board needs to resolve a typed map name, show its mode badge, and render
+// its "best picks" panel (image, tips, categories with brawler slugs —
+// portraits themselves are cloned client-side from the picker's tile index,
+// same as every other portrait on this board).
 const mapsForClient = maps
   .map((m) => ({
     id: m.id,
     name: m.data.name,
     namePt: m.data.namePt,
+    image: m.data.image,
+    environment: m.data.environment,
     gameMode: m.data.gameMode,
+    tips: m.data.tips,
+    categories: sortCategories(m.data.categories),
   }))
   .sort((a, b) => a.namePt.localeCompare(b.namePt));
 ---
@@ -65,6 +73,32 @@ const mapsForClient = maps
           Limpar
         </button>
       </div>
+    </div>
+  </div>
+
+  <!-- Map picks: recommended brawlers for the selected map, grouped by category. -->
+  <div id="map-picks-panel" class="panel mx-auto w-full max-w-3xl" hidden>
+    <h2 id="map-picks-header" class="panel__header"></h2>
+    <div class="panel__body flex flex-col gap-4">
+      <div class="flex flex-wrap items-center gap-4">
+        <img
+          id="map-picks-image"
+          src=""
+          alt=""
+          width="96"
+          height="96"
+          class="h-24 w-24 shrink-0 rounded-xl border-2 border-white/10 object-cover"
+        />
+        <div class="flex flex-col gap-1.5">
+          <p id="map-picks-environment" class="text-sm text-white/60"></p>
+          <div id="map-picks-mode-badge" class="flex w-fit items-center gap-2 rounded-full bg-brawl-navy-deep px-3 py-1.5">
+            <img id="map-picks-mode-icon" src="" alt="" width="18" height="18" />
+            <span id="map-picks-mode-name" class="text-sm font-bold"></span>
+          </div>
+        </div>
+      </div>
+      <ul id="map-picks-tips" class="flex flex-col gap-2" aria-label="Dicas do mapa" hidden></ul>
+      <div id="map-picks-categories" class="flex flex-col gap-4"></div>
     </div>
   </div>
 
@@ -128,6 +162,20 @@ const mapsForClient = maps
   <li class="flex items-center gap-3 rounded-xl bg-white/5 p-2">
     <span class="counter-row__portrait w-12 shrink-0 overflow-hidden rounded-full"></span>
     <p class="counter-row__text text-sm text-white"></p>
+  </li>
+</template>
+
+<template id="map-category-template">
+  <div>
+    <h3 class="map-category__label mb-2 text-xs font-extrabold tracking-wide text-brawl-yellow uppercase"></h3>
+    <ul class="flex flex-wrap gap-3" role="list"></ul>
+  </div>
+</template>
+
+<template id="map-portrait-template">
+  <li class="flex w-14 flex-col items-center gap-1 text-center">
+    <span class="map-portrait__frame w-12 shrink-0 overflow-hidden rounded-full bg-black/20"></span>
+    <span class="map-portrait__name w-full truncate text-[10px] font-semibold text-white"></span>
   </li>
 </template>
 

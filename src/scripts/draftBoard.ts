@@ -25,11 +25,21 @@ interface DraftState {
   firstPick: Team;
 }
 
+interface MapCategoryData {
+  key: string;
+  label: string;
+  brawlers: string[];
+}
+
 interface MapClientData {
   id: string;
   name: string;
   namePt: string;
+  image: string;
+  environment: string;
   gameMode: { name: string; color: string; bgColor: string; image: string };
+  tips: string[];
+  categories: MapCategoryData[];
 }
 
 /**
@@ -58,6 +68,16 @@ export function initDraftBoard(): void {
   const mapBadge = document.getElementById('map-mode-badge');
   const mapIcon = document.getElementById('map-mode-icon');
   const mapNameEl = document.getElementById('map-mode-name');
+  const mapPicksPanel = document.getElementById('map-picks-panel');
+  const mapPicksHeader = document.getElementById('map-picks-header');
+  const mapPicksImage = document.getElementById('map-picks-image');
+  const mapPicksEnvironment = document.getElementById('map-picks-environment');
+  const mapPicksModeIcon = document.getElementById('map-picks-mode-icon');
+  const mapPicksModeName = document.getElementById('map-picks-mode-name');
+  const mapPicksTips = document.getElementById('map-picks-tips');
+  const mapPicksCategories = document.getElementById('map-picks-categories');
+  const mapCategoryTemplate = document.getElementById('map-category-template');
+  const mapPortraitTemplate = document.getElementById('map-portrait-template');
   const firstAllyBtn = document.getElementById('first-pick-ally');
   const firstEnemyBtn = document.getElementById('first-pick-enemy');
   const clearBtn = document.getElementById('clear-draft');
@@ -256,6 +276,79 @@ export function initDraftBoard(): void {
       mapNameEl.style.color = map.gameMode.color;
     } else if (mapBadge instanceof HTMLElement) {
       mapBadge.hidden = true;
+    }
+    renderMapPicks(map);
+  }
+
+  /** Fills (or hides) the "best picks for this map" panel. */
+  function renderMapPicks(map: MapClientData | null): void {
+    if (!(mapPicksPanel instanceof HTMLElement)) return;
+
+    if (!map) {
+      mapPicksPanel.hidden = true;
+      return;
+    }
+    mapPicksPanel.hidden = false;
+
+    if (mapPicksHeader) mapPicksHeader.textContent = `Melhores Picks — ${map.namePt}`;
+    if (mapPicksImage instanceof HTMLImageElement) {
+      mapPicksImage.src = map.image;
+      mapPicksImage.alt = map.namePt;
+    }
+    if (mapPicksEnvironment) mapPicksEnvironment.textContent = `${map.name} · ${map.environment}`;
+    if (mapPicksModeIcon instanceof HTMLImageElement) {
+      mapPicksModeIcon.src = map.gameMode.image;
+      mapPicksModeIcon.alt = map.gameMode.name;
+    }
+    if (mapPicksModeName instanceof HTMLElement) {
+      mapPicksModeName.textContent = map.gameMode.name;
+      mapPicksModeName.style.color = map.gameMode.color;
+    }
+    // Note: the badge keeps its fixed bg-brawl-navy-deep background (same
+    // treatment as #map-mode-badge above) — gameMode.color and
+    // gameMode.bgColor are near-identical hues for every mode in the data,
+    // so tinting the badge background with bgColor would wash out text
+    // colored with `color` (unreadable dark-on-dark, the same class of bug
+    // fixed for the form fields).
+
+    if (mapPicksTips instanceof HTMLElement) {
+      mapPicksTips.replaceChildren();
+      mapPicksTips.hidden = map.tips.length === 0;
+      for (const tip of map.tips) {
+        const node = compositionTemplate.content.firstElementChild?.cloneNode(true);
+        if (!(node instanceof HTMLElement)) continue;
+        const textEl = node.querySelector('.composition-row__text');
+        if (textEl) textEl.textContent = tip;
+        mapPicksTips.appendChild(node);
+      }
+    }
+
+    if (
+      mapPicksCategories instanceof HTMLElement &&
+      mapCategoryTemplate instanceof HTMLTemplateElement &&
+      mapPortraitTemplate instanceof HTMLTemplateElement
+    ) {
+      mapPicksCategories.replaceChildren();
+      for (const category of map.categories) {
+        const catNode = mapCategoryTemplate.content.firstElementChild?.cloneNode(true);
+        if (!(catNode instanceof HTMLElement)) continue;
+        const labelEl = catNode.querySelector('.map-category__label');
+        const listEl = catNode.querySelector('ul');
+        if (labelEl) labelEl.textContent = category.label;
+        for (const slug of category.brawlers) {
+          const card = tileIndex.get(slug);
+          const img = card ? tileImg(card) : null;
+          if (!img || !listEl) continue;
+          const portraitNode = mapPortraitTemplate.content.firstElementChild?.cloneNode(true);
+          if (!(portraitNode instanceof HTMLElement)) continue;
+          const frame = portraitNode.querySelector('.map-portrait__frame');
+          const nameEl = portraitNode.querySelector('.map-portrait__name');
+          frame?.appendChild(img.cloneNode(true));
+          if (nameEl) nameEl.textContent = img.dataset.name ?? slug;
+          listEl.appendChild(portraitNode);
+        }
+        mapPicksCategories.appendChild(catNode);
+      }
     }
   }
 
