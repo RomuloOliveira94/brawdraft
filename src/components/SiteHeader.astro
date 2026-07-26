@@ -1,22 +1,25 @@
 ---
+import { withBase } from '@/lib/basePath';
+
 const navItems = [
-  { href: '/', label: 'Draft' },
-  { href: '/brawlers/', label: 'Brawlers' },
-  { href: '/mapas/', label: 'Mapas' },
+  { href: withBase('/'), label: 'Draft' },
+  { href: withBase('/brawlers/'), label: 'Brawlers' },
+  { href: withBase('/mapas/'), label: 'Mapas' },
 ];
 
+const homeHref = withBase('/');
 const currentPath = Astro.url.pathname;
 
 function isActive(href: string): boolean {
-  if (href === '/') return currentPath === '/';
+  if (href === homeHref) return currentPath === homeHref;
   return currentPath.startsWith(href);
 }
 ---
 
 <header class="sticky top-0 z-10 border-b border-white/10 bg-brawl-navy-deep/90 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-    <a href="/" class="flex items-center gap-2 text-lg font-black tracking-tight text-brawl-purple">
-      <img src="/logo.png" alt="" width="32" height="32" class="h-8 w-8" />
+    <a href={homeHref} class="flex items-center gap-2 text-lg font-black tracking-tight text-brawl-purple">
+      <img src={withBase('/logo.png')} alt="" width="32" height="32" class="h-8 w-8" />
       Braw<span class="text-white">Draft</span>
     </a>
     <nav aria-label="Navegação principal">

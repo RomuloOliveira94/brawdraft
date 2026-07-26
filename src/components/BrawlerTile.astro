@@ -4,6 +4,7 @@
 // without ever re-typing a name or re-fetching an image in JS.
 import type { CollectionEntry } from 'astro:content';
 import { stripAccents } from '@/lib/text';
+import { withBase } from '@/lib/basePath';
 
 interface Props {
   brawler: CollectionEntry<'brawlers'>;
@@ -17,7 +18,7 @@ const search = stripAccents([name, ...aliases].join(' ')).toLowerCase();
 ---
 
 <img
-  src={image}
+  src={withBase(image)}
   alt={name}
   width="170"
   height="170"

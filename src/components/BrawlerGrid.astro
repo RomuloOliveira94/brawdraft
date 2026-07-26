@@ -6,6 +6,7 @@
 // already on the BrawlerTile img itself).
 import type { CollectionEntry } from 'astro:content';
 import BrawlerTile from '@/components/BrawlerTile.astro';
+import { withBase } from '@/lib/basePath';
 
 interface Props {
   brawlers: CollectionEntry<'brawlers'>[];
@@ -35,7 +36,7 @@ const { brawlers, as = 'link' } = Astro.props;
           </button>
         ) : (
           <a
-            href={`/brawlers/${brawler.id}/`}
+            href={withBase(`/brawlers/${brawler.id}/`)}
             class="flex w-full flex-col items-center gap-1 rounded-xl p-2 text-center transition hover:bg-white/10"
           >
             <BrawlerTile brawler={brawler} />

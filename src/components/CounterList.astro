@@ -4,6 +4,7 @@
 // data fails the build loudly instead of silently dropping a row.
 import BrawlerTile from '@/components/BrawlerTile.astro';
 import { lookup, type Brawler } from '@/lib/brawlers';
+import { withBase } from '@/lib/basePath';
 
 interface CounterEntry {
   slug: string;
@@ -29,7 +30,7 @@ const rows = [...counters]
     rows.map(({ rank, note, brawler }) => (
       <li class="flex items-start gap-3 rounded-xl bg-white/5 p-3">
         <span class="rounded-full bg-brawl-navy-deep px-2 py-0.5 text-xs font-black text-brawl-yellow">#{rank}</span>
-        <a href={`/brawlers/${brawler.id}/`} class="flex items-center gap-3 hover:opacity-80">
+        <a href={withBase(`/brawlers/${brawler.id}/`)} class="flex items-center gap-3 hover:opacity-80">
           <span class="w-14 shrink-0">
             <BrawlerTile brawler={brawler} />
           </span>

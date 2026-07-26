@@ -6,6 +6,7 @@ import BrawlerGrid from '@/components/BrawlerGrid.astro';
 import CounterList from '@/components/CounterList.astro';
 import { allBrawlers, brawlerIndex, lookup } from '@/lib/brawlers';
 import { classNameLabel, rarityLabel } from '@/lib/labels';
+import { withBase } from '@/lib/basePath';
 
 export async function getStaticPaths() {
   const brawlers = await allBrawlers();
@@ -93,8 +94,8 @@ const appearances = maps.map((entry) => ({
             <ul class="flex flex-col gap-2">
               {appearances.map(({ map, category }) => (
                 <li class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-2">
-                  <a href={`/mapas/${map.id}/`} class="flex items-center gap-3 hover:opacity-80">
-                    <img src={map.data.image} alt={map.data.namePt} width="40" height="40" class="rounded-lg" />
+                  <a href={withBase(`/mapas/${map.id}/`)} class="flex items-center gap-3 hover:opacity-80">
+                    <img src={withBase(map.data.image)} alt={map.data.namePt} width="40" height="40" class="rounded-lg" />
                     <span class="font-bold text-white">
                       {map.data.namePt} <span class="font-normal text-white/50">({map.data.name})</span>
                     </span>

@@ -7,6 +7,7 @@
 import { rankPicks, type CountersIndex, type MapBonus, type Pick } from '@/lib/rank';
 import { analyzeComposition, type BrawlerClassName } from '@/lib/composition';
 import { stripAccents } from '@/lib/text';
+import { withBase } from '@/lib/basePath';
 import countersJson from '@/data/counters-index.json';
 import mapIndexJson from '@/data/map-index.json';
 
@@ -447,7 +448,7 @@ export function initDraftBoard(): void {
           const frame = portraitNode.querySelector('.map-portrait__frame');
           const nameEl = portraitNode.querySelector('.map-portrait__name');
           const name = img.dataset.name ?? slug;
-          if (link) link.href = `/brawlers/${slug}/`;
+          if (link) link.href = withBase(`/brawlers/${slug}/`);
           portraitNode.classList.toggle('banned-portrait', isBanned(slug));
           frame?.appendChild(img.cloneNode(true));
           if (nameEl) nameEl.textContent = name;

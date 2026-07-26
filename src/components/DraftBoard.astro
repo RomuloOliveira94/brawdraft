@@ -4,6 +4,7 @@ import DraftSlot from '@/components/DraftSlot.astro';
 import BrawlerPicker from '@/components/BrawlerPicker.astro';
 import MapPicker from '@/components/MapPicker.astro';
 import { sortCategories } from '@/lib/mapCategories';
+import { withBase } from '@/lib/basePath';
 
 const maps = await getCollection('maps');
 
@@ -12,14 +13,19 @@ const maps = await getCollection('maps');
 // its "best picks" panel (image, tips, categories with brawler slugs —
 // portraits themselves are cloned client-side from the picker's tile index,
 // same as every other portrait on this board).
+//
+// `image`/`gameMode.image` are based here, once, since this same object
+// feeds both <MapPicker> below and the maps-data JSON blob src/scripts/
+// draftBoard.ts reads at runtime — basing it upstream means neither
+// consumer has to know about the site's base path.
 const mapsForClient = maps
   .map((m) => ({
     id: m.id,
     name: m.data.name,
     namePt: m.data.namePt,
-    image: m.data.image,
+    image: withBase(m.data.image),
     environment: m.data.environment,
-    gameMode: m.data.gameMode,
+    gameMode: { ...m.data.gameMode, image: withBase(m.data.gameMode.image) },
     tips: m.data.tips,
     categories: sortCategories(m.data.categories),
   }))
