@@ -1,0 +1,141 @@
+---
+import { getCollection } from 'astro:content';
+import DraftSlot from '@/components/DraftSlot.astro';
+import BrawlerPicker from '@/components/BrawlerPicker.astro';
+
+const maps = await getCollection('maps');
+
+// Small, client-friendly projection of the maps collection: just what the
+// draft board needs to resolve a typed map name and show its mode badge.
+const mapsForClient = maps
+  .map((m) => ({
+    id: m.id,
+    name: m.data.name,
+    namePt: m.data.namePt,
+    gameMode: m.data.gameMode,
+  }))
+  .sort((a, b) => a.namePt.localeCompare(b.namePt));
+---
+
+<section class="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16">
+  <h1 class="title-brawl mt-6 text-center text-3xl sm:text-5xl">Assistente de Draft — Brawl Stars</h1>
+
+  <!-- Config panel -->
+  <div class="panel mx-auto w-full max-w-3xl">
+    <div class="panel__body flex flex-col gap-4">
+      <div class="flex flex-wrap items-center gap-3">
+        <label class="chip" for="map-input">Nome do mapa:</label>
+        <input
+          type="text"
+          id="map-input"
+          list="map-datalist"
+          placeholder="Digite o nome do mapa..."
+          autocomplete="off"
+          class="min-w-0 flex-1 rounded-full border-0 px-4 py-2 text-sm text-brawl-navy-deep placeholder-black/40 focus:ring-2 focus:ring-brawl-yellow focus:outline-none"
+        />
+        <datalist id="map-datalist">
+          {
+            mapsForClient.map((m) => (
+              <>
+                <option value={m.name} />
+                <option value={m.namePt} />
+              </>
+            ))
+          }
+        </datalist>
+        <div id="map-mode-badge" class="flex items-center gap-2 rounded-full bg-brawl-navy-deep px-3 py-1.5" hidden>
+          <img id="map-mode-icon" src="" alt="" width="20" height="20" />
+          <span id="map-mode-name" class="text-sm font-bold"></span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="chip">Quem escolhe primeiro?</span>
+        <button type="button" id="first-pick-ally" class="pill-toggle pill-toggle--ally" aria-pressed="true">
+          Nosso Time
+        </button>
+        <button type="button" id="first-pick-enemy" class="pill-toggle pill-toggle--enemy" aria-pressed="false">
+          Time Inimigo
+        </button>
+        <button
+          type="button"
+          id="clear-draft"
+          class="ml-auto rounded-full border-2 border-white/20 px-4 py-1.5 text-sm font-bold text-white/70 transition hover:border-white/40 hover:text-white"
+        >
+          Limpar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bans -->
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="panel">
+      <h2 class="panel__header">Banimentos do Nosso Time</h2>
+      <div class="panel__body grid grid-cols-3 gap-3">
+        {[0, 1, 2].map((i) => <DraftSlot team="ally" kind="ban" index={i} />)}
+      </div>
+    </div>
+    <div class="panel">
+      <h2 class="panel__header">Banimentos do Time Inimigo</h2>
+      <div class="panel__body grid grid-cols-3 gap-3">
+        {[0, 1, 2].map((i) => <DraftSlot team="enemy" kind="ban" index={i} />)}
+      </div>
+    </div>
+  </div>
+
+  <!-- Teams -->
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="panel">
+      <h2 class="panel__header text-brawl-blue">Nosso Time</h2>
+      <div class="panel__body grid grid-cols-3 gap-3">
+        {[0, 1, 2].map((i) => <DraftSlot team="ally" kind="pick" index={i} />)}
+      </div>
+    </div>
+    <div class="panel">
+      <h2 class="panel__header text-brawl-red">Time Inimigo</h2>
+      <div class="panel__body grid grid-cols-3 gap-3">
+        {[0, 1, 2].map((i) => <DraftSlot team="enemy" kind="pick" index={i} />)}
+      </div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="panel">
+      <h2 class="panel__header">O que falta no seu time</h2>
+      <ul id="composition-list" class="panel__body flex flex-col gap-2" aria-live="polite">
+        <li class="text-sm text-white/50">Escolha brawlers para o seu time para ver a análise.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2 class="panel__header">Melhores Counter-Picks</h2>
+      <ul id="counter-picks-list" class="panel__body flex flex-col gap-3" aria-live="polite">
+        <li class="text-sm text-white/50">Escolha brawlers do time inimigo para ver sugestões.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<template id="composition-row-template">
+  <li class="flex items-start gap-2 text-sm text-white">
+    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brawl-yellow"></span>
+    <span class="composition-row__text"></span>
+  </li>
+</template>
+
+<template id="counter-row-template">
+  <li class="flex items-center gap-3 rounded-xl bg-white/5 p-2">
+    <span class="counter-row__portrait w-12 shrink-0 overflow-hidden rounded-full"></span>
+    <p class="counter-row__text text-sm text-white"></p>
+  </li>
+</template>
+
+<BrawlerPicker />
+
+<script type="application/json" id="maps-data" is:inline set:html={JSON.stringify(mapsForClient).replace(/</g, '\\u003c')} />
+
+<script>
+  import { initDraftBoard } from '@/scripts/draftBoard';
+  initDraftBoard();
+</script>

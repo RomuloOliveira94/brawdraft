@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import DraftBoard from '@/components/DraftBoard.astro';
 ---
 
-<BaseLayout>
-  <main class="flex min-h-screen flex-col items-center justify-center px-6 text-center">
-    <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">BrawDraft</h1>
-    <p class="mt-4 max-w-md text-neutral-400">
-      Assistente de draft para te ajudar a escolher os brawlers certos.
-    </p>
-  </main>
+<BaseLayout
+  title="BrawDraft — Assistente de Draft"
+  description="Monte o draft do seu time em Brawl Stars: bans, picks e sugestões de counter-pick em tempo real."
+>
+  <DraftBoard />
 </BaseLayout>

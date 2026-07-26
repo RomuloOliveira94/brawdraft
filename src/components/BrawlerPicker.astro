@@ -1,0 +1,40 @@
+---
+// Shared picker dialog: one instance on the page, reused by every slot.
+// Native <dialog> gives us a focus-trapped, Esc-dismissible modal for free.
+import BrawlerGrid from '@/components/BrawlerGrid.astro';
+import { allBrawlers } from '@/lib/brawlers';
+
+const brawlers = await allBrawlers();
+---
+
+<dialog id="brawler-picker" class="w-full max-w-3xl rounded-2xl border border-white/10 bg-brawl-navy p-0 text-white backdrop:bg-black/60">
+  <div class="panel__header flex items-center justify-between gap-2">
+    <h2 id="picker-title" class="text-sm font-extrabold tracking-wide uppercase">
+      Escolher brawler
+    </h2>
+    <button
+      type="button"
+      id="picker-close"
+      aria-label="Fechar seleção de brawler"
+      class="rounded-full px-2 py-0.5 text-lg leading-none font-black text-white/70 hover:bg-white/10 hover:text-white"
+    >
+      &times;
+    </button>
+  </div>
+  <div class="panel__body max-h-[75vh] overflow-y-auto">
+    <input
+      type="search"
+      id="picker-search"
+      placeholder="Buscar brawler..."
+      aria-label="Buscar brawler"
+      autocomplete="off"
+      class="mb-3 w-full rounded-full border-0 px-4 py-2 text-sm text-brawl-navy-deep placeholder-black/40 focus:ring-2 focus:ring-brawl-yellow focus:outline-none"
+    />
+    <p id="picker-empty" class="hidden py-6 text-center text-sm text-white/60">
+      Nenhum brawler encontrado.
+    </p>
+    <div id="picker-grid">
+      <BrawlerGrid brawlers={brawlers} as="button" />
+    </div>
+  </div>
+</dialog>

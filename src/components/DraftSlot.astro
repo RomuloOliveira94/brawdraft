@@ -1,0 +1,35 @@
+---
+// A single ban/pick slot on the draft board. Server-rendered empty; the
+// client script (src/scripts/draftBoard.ts) fills it in by cloning a
+// portrait <img> out of the picker's tile index — no markup is rebuilt here.
+interface Props {
+  team: 'ally' | 'enemy';
+  kind: 'ban' | 'pick';
+  index: number;
+}
+
+const { team, kind, index } = Astro.props;
+const label = kind === 'ban' ? 'Banir' : 'Escolher';
+const teamLabel = team === 'ally' ? 'time aliado' : 'time inimigo';
+---
+
+<button
+  type="button"
+  class="draft-slot"
+  data-team={team}
+  data-kind={kind}
+  data-index={index}
+  aria-label={`${label}, ${teamLabel}, posição ${index + 1}`}
+>
+  <span
+    class:list={[
+      'draft-slot__label w-full rounded-md py-0.5 text-xs font-black uppercase',
+      kind === 'ban' ? 'bg-brawl-red text-white' : 'text-white/50',
+    ]}
+  >
+    {label}
+  </span>
+  <span class="draft-slot__frame frame-empty" aria-hidden="true"></span>
+  <span class="draft-slot__name text-xs font-bold text-white"></span>
+  <span class="draft-slot__note hidden text-[11px] text-white/60 italic" hidden></span>
+</button>
