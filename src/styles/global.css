@@ -285,4 +285,36 @@
   .banned-portrait img {
     filter: grayscale(1) brightness(0.6);
   }
+
+  /*
+   * Counter-suggestion rows (draftBoard.ts) are tap-and-hold targets —
+   * left-click/tap inserts into Nosso Time, right-click/long-press into
+   * Time Inimigo. Scoped to just this class so a long-press reads as
+   * "insert", not the OS's own text-selection callout.
+   */
+  .counter-row {
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+
+  /*
+   * Transient "can't insert" cue for a no-op click on either panel above
+   * (the brawler is already on the board, or that side is already full).
+   * box-shadow only, so it never shifts layout — paired with the same
+   * message going out through #draft-insert-feedback's aria-live region.
+   */
+  @keyframes draft-insert-feedback-pulse {
+    0%,
+    100% {
+      box-shadow: none;
+    }
+    25%,
+    75% {
+      box-shadow: 0 0 0 2px var(--color-brawl-red) inset;
+    }
+  }
+
+  .draft-insert-feedback {
+    animation: draft-insert-feedback-pulse 0.6s ease-in-out;
+  }
 }

@@ -96,6 +96,7 @@ export function initDraftBoard(): void {
   const compositionTemplate = byId<HTMLTemplateElement>('composition-row-template');
   const counterList = byId<HTMLElement>('counter-picks-list');
   const counterTemplate = byId<HTMLTemplateElement>('counter-row-template');
+  const insertFeedback = document.getElementById('draft-insert-feedback');
   const mapsDataEl = document.getElementById('maps-data');
 
   const mapsData: MapClientData[] = mapsDataEl ? (JSON.parse(mapsDataEl.textContent ?? '[]') as MapClientData[]) : [];
@@ -558,16 +559,23 @@ export function initDraftBoard(): void {
 
       const node = counterTemplate.content.firstElementChild?.cloneNode(true);
       if (!(node instanceof HTMLElement)) continue;
+      const row = node.querySelector<HTMLButtonElement>('.counter-row');
       const portrait = node.querySelector('.counter-row__portrait');
       const textEl = node.querySelector('.counter-row__text');
       if (portrait) portrait.appendChild(img.cloneNode(true));
+      const name = img.dataset.name ?? pick.slug;
       if (textEl) {
         textEl.replaceChildren();
         const strong = document.createElement('strong');
         strong.className = 'text-brawl-yellow';
-        strong.textContent = img.dataset.name ?? pick.slug;
+        strong.textContent = name;
         const targets = joinPtBr(pick.against.map(nameOf));
         textEl.append(strong, ` ${verbFor(pick.coverage)} ${targets}`);
+      }
+      if (row) {
+        row.dataset.slug = pick.slug;
+        row.setAttribute('aria-label', `Adicionar ${name} ao nosso time; Shift+Enter para o time inimigo`);
+        row.setAttribute('aria-keyshortcuts', 'Enter Shift+Enter');
       }
       counterList.appendChild(node);
     }
@@ -595,6 +603,207 @@ export function initDraftBoard(): void {
     // setMap().
     if (state.mapId) renderMapPicks(mapsById.get(state.mapId) ?? null);
   }
+
+  // --- Panel inserts (counter-picks & map-picks portraits) ------------------
+  //
+  // Left-click/short-tap on a portrait in either panel → Nosso Time; right-
+  // click/long-press → Time Inimigo. The slot is automatic (bans first,
+  // then picks — findNextEmptySlot above); a brawler already on the board,
+  // or a fully-drafted side, is a non-blocking no-op with visible feedback
+  // instead of a refusal.
+
+  /** Transient, non-blocking "can't insert" cue — a CSS flash (no layout
+   *  shift) on the row plus a message through the dedicated aria-live
+   *  region above, since a no-op never touches the suggestion/map lists
+   *  that would otherwise announce it. */
+  function flashFeedback(el: HTMLElement, message: string): void {
+    el.classList.remove('draft-insert-feedback');
+    void el.offsetWidth; // restart the CSS animation if it's already mid-flash
+    el.classList.add('draft-insert-feedback');
+    el.addEventListener('animationend', () => el.classList.remove('draft-insert-feedback'), { once: true });
+    if (insertFeedback) insertFeedback.textContent = message;
+  }
+
+  /**
+   * Both panels fully rebuild their rows on every recompute() (`replace
+   * Children()` in renderSuggestions/renderMapPicks), so the row that
+   * triggered an insert is always detached afterwards. When that row held
+   * focus, the browser's own focus-fixup has already moved focus to
+   * <body> by the time this runs — hop it into the freshly-rendered list
+   * instead of leaving keyboard users stranded on a removed node.
+   */
+  function restoreFocusIfDetached(wasFocused: boolean, container: HTMLElement): void {
+    if (!wasFocused || document.activeElement !== document.body) return;
+    const next = container.querySelector<HTMLElement>('[data-slug]');
+    (next ?? container).focus();
+  }
+
+  /** Shared insert action for both panels. */
+  function insertBrawler(team: Team, slug: string, sourceEl: HTMLElement, container: HTMLElement): void {
+    const wasFocused = document.activeElement === sourceEl;
+
+    // Suggestions can never list an already-taken slug (recompute() excludes
+    // getAllTaken() from rankPicks), but the map-picks panel lists a map's
+    // brawlers regardless of board state — so it needs this guard for real.
+    if (getAllTaken().includes(slug)) {
+      flashFeedback(sourceEl, `${nameOf(slug)} já está no draft.`);
+      return;
+    }
+    const slot = findNextEmptySlot(team);
+    if (!slot) {
+      flashFeedback(sourceEl, `${team === 'ally' ? 'Nosso Time' : 'Time Inimigo'} já está completo.`);
+      return;
+    }
+    assignSlot(team, slot.kind, slot.index, slug);
+    restoreFocusIfDetached(wasFocused, container);
+  }
+
+  const LONG_PRESS_MS = 500;
+  const LONG_PRESS_MOVE_THRESHOLD_PX = 10;
+
+  /**
+   * Wires "left-click/short-tap → onTap, right-click/long-press →
+   * onLongPress" onto a delegated container whose rows match `rowSelector`.
+   * Desktop keeps native click/contextmenu; touch is driven entirely
+   * through Pointer Events (no touchstart/mousedown mixed in, so nothing
+   * double-fires) so a long-press can be told apart from a scroll.
+   *
+   * `contextmenu` always calls preventDefault() (no repo code did before
+   * this). It also doubles as the mouse right-click trigger for
+   * onLongPress — guarded by the same `fired` flag the touch timer sets,
+   * so on the rare mobile browser that also synthesizes a `contextmenu`
+   * around the same ~500ms mark as a touch-and-hold, whichever path gets
+   * there first fires exactly once and cancels the other.
+   */
+  function bindLongPress(
+    container: HTMLElement,
+    rowSelector: string,
+    onTap: (row: HTMLElement) => void,
+    onLongPress: (row: HTMLElement) => void,
+  ): void {
+    let timer: ReturnType<typeof window.setTimeout> | null = null;
+    let row: HTMLElement | null = null;
+    let startX = 0;
+    let startY = 0;
+    let fired = false;
+    let cancelled = false;
+    let suppressNextClick = false;
+
+    function clearTimer(): void {
+      if (timer !== null) {
+        window.clearTimeout(timer);
+        timer = null;
+      }
+    }
+
+    container.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'touch') {
+        suppressNextClick = false; // mouse/pen: native click/contextmenu handle everything below
+        return;
+      }
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const el = target.closest<HTMLElement>(rowSelector);
+      if (!el) return;
+
+      row = el;
+      fired = false;
+      cancelled = false;
+      suppressNextClick = true;
+      startX = event.clientX;
+      startY = event.clientY;
+      clearTimer();
+      timer = window.setTimeout(() => {
+        timer = null;
+        if (cancelled || !row) return;
+        fired = true;
+        onLongPress(row);
+      }, LONG_PRESS_MS);
+    });
+
+    container.addEventListener('pointermove', (event) => {
+      if (!row || cancelled) return;
+      const dx = event.clientX - startX;
+      const dy = event.clientY - startY;
+      if (Math.hypot(dx, dy) > LONG_PRESS_MOVE_THRESHOLD_PX) {
+        // Moved beyond the threshold (e.g. scrolling past the row): cancel
+        // outright — a press-then-move inserts nothing, it doesn't fall
+        // back to a tap.
+        cancelled = true;
+        clearTimer();
+      }
+    });
+
+    container.addEventListener('pointerup', () => {
+      if (!row) return;
+      if (!fired && !cancelled) onTap(row);
+      clearTimer();
+      row = null;
+    });
+
+    container.addEventListener('pointercancel', () => {
+      cancelled = true;
+      clearTimer();
+      row = null;
+    });
+
+    container.addEventListener('contextmenu', (event) => {
+      event.preventDefault();
+      if (fired) {
+        clearTimer(); // touch long-press already handled this gesture
+        return;
+      }
+      clearTimer();
+      const target = event.target;
+      const el = target instanceof Element ? target.closest<HTMLElement>(rowSelector) : null;
+      if (el) onLongPress(el);
+    });
+
+    container.addEventListener('click', (event) => {
+      if (suppressNextClick) {
+        // Touch already handled this gesture via pointerup/the long-press
+        // timer above — skip the browser's own click-after-touch so it
+        // doesn't insert a second time.
+        suppressNextClick = false;
+        return;
+      }
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const el = target.closest<HTMLElement>(rowSelector);
+      if (el) onTap(el);
+    });
+  }
+
+  /** Shift+Enter → Time Inimigo (plain Enter/Space already reach `onTap`
+   *  above for free, since these rows are real buttons). */
+  function bindEnemyShortcut(container: HTMLElement, rowSelector: string, onEnemy: (row: HTMLElement) => void): void {
+    container.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' || !event.shiftKey) return;
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const row = target.closest<HTMLElement>(rowSelector);
+      if (!row) return;
+      event.preventDefault(); // stop the native Enter→click that would otherwise also fire (→ ally)
+      onEnemy(row);
+    });
+  }
+
+  bindLongPress(
+    counterList,
+    '.counter-row',
+    (row) => {
+      const slug = row.dataset.slug;
+      if (slug) insertBrawler('ally', slug, row, counterList);
+    },
+    (row) => {
+      const slug = row.dataset.slug;
+      if (slug) insertBrawler('enemy', slug, row, counterList);
+    },
+  );
+  bindEnemyShortcut(counterList, '.counter-row', (row) => {
+    const slug = row.dataset.slug;
+    if (slug) insertBrawler('enemy', slug, row, counterList);
+  });
 
   // --- Clear ------------------------------------------------------------
 
