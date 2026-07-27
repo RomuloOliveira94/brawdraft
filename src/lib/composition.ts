@@ -32,6 +32,15 @@ export function analyzeComposition(classNames: BrawlerClassName[]): string[] {
   if (!has('Marksman') && !has('Artillery')) tips.push('Falta alcance longo');
   if (count('Assassin') >= 2) tips.push('Time muito agressivo — considere um pick de controle');
 
+  // Safe even when the team still holds an 'Unknown' pick (e.g. a brawler
+  // BrawlAPI hasn't classified yet): 'Unknown' never satisfies any has()/
+  // count() check above, so it can never earn credit for a category it
+  // isn't actually known to fill. With TEAM_SIZE === 3, reaching this branch
+  // (all 4 gap checks passed) requires 3 pairwise-disjoint category slots —
+  // Tank, Support|Controller, Marksman|Artillery — to each be positively
+  // confirmed, which needs 3 non-Unknown picks. A team with 1+ 'Unknown'
+  // therefore always has an unmet category and some tip above always fires
+  // first; 'Composição equilibrada' is never claimed over data we don't have.
   if (tips.length === 0 && classNames.length >= TEAM_SIZE) {
     tips.push('Composição equilibrada');
   }
