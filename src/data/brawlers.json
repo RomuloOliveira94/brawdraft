@@ -19,8 +19,7 @@
       },
       {
         "slug": "edgar",
-        "rank": 3,
-        "note": "sendo uma lançadora/suporte"
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -40,16 +39,14 @@
     "counters": [
       {
         "slug": "gale",
-        "rank": 1,
-        "note": "para empurrar o salto"
+        "rank": 1
       },
       {
-        "slug": "otis",
-        "rank": 2,
-        "note": "silencia a vara"
+        "slug": "chester",
+        "rank": 2
       },
       {
-        "slug": "bull",
+        "slug": "griff",
         "rank": 3
       }
     ],
@@ -77,9 +74,8 @@
         "rank": 2
       },
       {
-        "slug": "surge",
-        "rank": 3,
-        "note": "para parar a Hipercarga dele"
+        "slug": "gus",
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -223,17 +219,16 @@
     "image": "/brawlers/starr-nova.png",
     "counters": [
       {
-        "slug": "clancy",
+        "slug": "griff",
         "rank": 1
       },
       {
-        "slug": "colette",
+        "slug": "surge",
         "rank": 2
       },
       {
-        "slug": "gale",
-        "rank": 3,
-        "note": "sofre contra alto DPS"
+        "slug": "colette",
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -359,12 +354,16 @@
     "image": "/brawlers/damian.png",
     "counters": [
       {
-        "slug": "surge",
+        "slug": "gale",
         "rank": 1
       },
       {
-        "slug": "edgar",
+        "slug": "surge",
         "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -486,15 +485,15 @@
     "image": "/brawlers/najia.png",
     "counters": [
       {
-        "slug": "gale",
+        "slug": "charlie",
         "rank": 1
       },
       {
-        "slug": "crow",
+        "slug": "edgar",
         "rank": 2
       },
       {
-        "slug": "surge",
+        "slug": "bibi",
         "rank": 3
       }
     ],
@@ -718,17 +717,16 @@
     "image": "/brawlers/pierce.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "mr-p",
         "rank": 1
       },
       {
-        "slug": "mandy",
+        "slug": "nani",
         "rank": 2
       },
       {
-        "slug": "angelo",
-        "rank": 3,
-        "note": "sofre com o longo alcance"
+        "slug": "charlie",
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -836,9 +834,8 @@
         "rank": 2
       },
       {
-        "slug": "kenji",
-        "rank": 3,
-        "note": "sofre contra assassinos agressivos"
+        "slug": "poco",
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -1022,7 +1019,9 @@
     "image": "/brawlers/alli.png",
     "counters": [],
     "hasCounters": false,
-    "counterFor": [],
+    "counterFor": [
+      "lumi"
+    ],
     "maps": [
       {
         "mapId": "layer-cake",
@@ -1262,17 +1261,16 @@
     "image": "/brawlers/lumi.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "lily",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "stu",
         "rank": 2
       },
       {
-        "slug": "mandy",
-        "rank": 3,
-        "note": "brawlers de controle à distância"
+        "slug": "alli",
+        "rank": 3
       }
     ],
     "hasCounters": true,
@@ -1364,15 +1362,15 @@
     "image": "/brawlers/ollie.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "poco",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "frank",
         "rank": 2
       },
       {
-        "slug": "mandy",
+        "slug": "griff",
         "rank": 3
       }
     ],
@@ -1404,9 +1402,7 @@
         "category": "Final do Jogo"
       }
     ],
-    "aliases": [
-      "Odie"
-    ]
+    "aliases": []
   },
   {
     "id": "meeple",
@@ -1419,23 +1415,21 @@
     "image": "/brawlers/meeple.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "stu",
         "rank": 1
       },
       {
-        "slug": "mandy",
+        "slug": "edgar",
         "rank": 2
       },
       {
-        "slug": "nani",
-        "rank": 3,
-        "note": "franco-atiradores longos"
+        "slug": "mortis",
+        "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "8-bit",
-      "meg"
+      "8-bit"
     ],
     "maps": [
       {
@@ -1535,9 +1529,7 @@
         "category": "Flex"
       }
     ],
-    "aliases": [
-      "Miple"
-    ]
+    "aliases": []
   },
   {
     "id": "buzz-lightyear",
@@ -1569,7 +1561,7 @@
         "rank": 1
       },
       {
-        "slug": "mico",
+        "slug": "carl",
         "rank": 2
       },
       {
@@ -1698,7 +1690,7 @@
         "rank": 1
       },
       {
-        "slug": "cordelius",
+        "slug": "surge",
         "rank": 2
       },
       {
@@ -1707,9 +1699,7 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [
-      "ziggy"
-    ],
+    "counterFor": [],
     "maps": [
       {
         "mapId": "open-business",
@@ -1793,11 +1783,11 @@
         "rank": 1
       },
       {
-        "slug": "brock",
+        "slug": "mr-p",
         "rank": 2
       },
       {
-        "slug": "nani",
+        "slug": "eve",
         "rank": 3
       }
     ],
@@ -1849,9 +1839,7 @@
         "category": "Ambas as Zonas"
       }
     ],
-    "aliases": [
-      "Mo"
-    ]
+    "aliases": []
   },
   {
     "id": "clancy",
@@ -1868,11 +1856,11 @@
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "gale",
         "rank": 2
       },
       {
-        "slug": "mandy",
+        "slug": "buster",
         "rank": 3
       }
     ],
@@ -1881,13 +1869,9 @@
       "ash",
       "bibi",
       "bonnie",
-      "bull",
-      "el-primo",
-      "jacky",
-      "pam",
-      "rosa",
-      "sam",
-      "starr-nova"
+      "cordelius",
+      "damian",
+      "el-primo"
     ],
     "maps": [],
     "aliases": []
@@ -1976,12 +1960,14 @@
         "rank": 2
       },
       {
-        "slug": "otis",
+        "slug": "cordelius",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "lumi"
+    ],
     "maps": [
       {
         "mapId": "dry-season",
@@ -2140,7 +2126,9 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "pierce"
+      "crow",
+      "gale",
+      "gray"
     ],
     "maps": [
       {
@@ -2181,11 +2169,11 @@
     "image": "/brawlers/melodie.png",
     "counters": [
       {
-        "slug": "ruffs",
+        "slug": "amber",
         "rank": 1
       },
       {
-        "slug": "gale",
+        "slug": "chester",
         "rank": 2
       },
       {
@@ -2230,7 +2218,7 @@
         "rank": 2
       },
       {
-        "slug": "piper",
+        "slug": "mortis",
         "rank": 3
       }
     ],
@@ -2250,11 +2238,11 @@
     "image": "/brawlers/kit.png",
     "counters": [
       {
-        "slug": "gale",
+        "slug": "lou",
         "rank": 1
       },
       {
-        "slug": "bull",
+        "slug": "charlie",
         "rank": 2
       },
       {
@@ -2371,7 +2359,7 @@
     "image": "/brawlers/mico.png",
     "counters": [
       {
-        "slug": "ruffs",
+        "slug": "shelly",
         "rank": 1
       },
       {
@@ -2388,7 +2376,6 @@
       "barley",
       "dynamike",
       "grom",
-      "juju",
       "larry-lawrie",
       "sprout",
       "tick",
@@ -2430,17 +2417,20 @@
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "sandy",
         "rank": 2
       },
       {
-        "slug": "brock",
+        "slug": "penny",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "max"
+      "kit",
+      "maisie",
+      "najia",
+      "pierce"
     ],
     "maps": [
       {
@@ -2525,15 +2515,15 @@
     "image": "/brawlers/pearl.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "colette",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "lou",
         "rank": 2
       },
       {
-        "slug": "mandy",
+        "slug": "maisie",
         "rank": 3
       }
     ],
@@ -2581,9 +2571,7 @@
         "category": "Flex"
       }
     ],
-    "aliases": [
-      "Pérola"
-    ]
+    "aliases": []
   },
   {
     "id": "doug",
@@ -2632,26 +2620,28 @@
     "image": "/brawlers/cordelius.png",
     "counters": [
       {
-        "slug": "stu",
+        "slug": "gale",
         "rank": 1
       },
       {
-        "slug": "r-t",
+        "slug": "surge",
         "rank": 2
       },
       {
-        "slug": "piper",
+        "slug": "clancy",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
+      "bull",
       "buster",
       "chuck",
       "fang",
-      "kenji",
       "kit",
-      "melodie"
+      "lily",
+      "melodie",
+      "nani"
     ],
     "maps": [
       {
@@ -2757,15 +2747,15 @@
     "image": "/brawlers/maisie.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "stu",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "dynamike",
         "rank": 2
       },
       {
-        "slug": "mandy",
+        "slug": "charlie",
         "rank": 3
       }
     ],
@@ -2773,7 +2763,7 @@
     "counterFor": [
       "buster",
       "hank",
-      "leon"
+      "pearl"
     ],
     "maps": [
       {
@@ -2845,23 +2835,22 @@
     "image": "/brawlers/r-t.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "edgar",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "frank",
         "rank": 2
       },
       {
-        "slug": "mandy",
+        "slug": "piper",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
       "buster",
-      "chuck",
-      "cordelius"
+      "chuck"
     ],
     "maps": [
       {
@@ -2906,11 +2895,11 @@
         "rank": 1
       },
       {
-        "slug": "piper",
+        "slug": "edgar",
         "rank": 2
       },
       {
-        "slug": "leon",
+        "slug": "buster",
         "rank": 3
       }
     ],
@@ -2918,18 +2907,7 @@
     "counterFor": [
       "belle",
       "brock",
-      "clancy",
-      "gale",
-      "griff",
-      "lumi",
-      "maisie",
-      "meeple",
-      "nani",
-      "ollie",
-      "pearl",
-      "pierce",
-      "r-t",
-      "spike"
+      "griff"
     ],
     "maps": [],
     "aliases": []
@@ -2953,7 +2931,7 @@
         "rank": 2
       },
       {
-        "slug": "leon",
+        "slug": "angelo",
         "rank": 3
       }
     ],
@@ -3024,7 +3002,7 @@
         "rank": 1
       },
       {
-        "slug": "belle",
+        "slug": "buster",
         "rank": 2
       },
       {
@@ -3034,8 +3012,9 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "carl",
-      "frank"
+      "frank",
+      "melodie",
+      "nori"
     ],
     "maps": [
       {
@@ -3121,7 +3100,13 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "chester",
+      "clancy",
+      "leon",
+      "mandy",
+      "rico"
+    ],
     "maps": [
       {
         "mapId": "center-stage",
@@ -3170,7 +3155,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "bolt"
+    ],
     "maps": [
       {
         "mapId": "dry-season",
@@ -3222,7 +3209,7 @@
         "rank": 2
       },
       {
-        "slug": "clancy",
+        "slug": "surge",
         "rank": 3
       }
     ],
@@ -3242,15 +3229,15 @@
     "image": "/brawlers/otis.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "poco",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "stu",
         "rank": 2
       },
       {
-        "slug": "belle",
+        "slug": "piper",
         "rank": 3
       }
     ],
@@ -3258,9 +3245,8 @@
     "counterFor": [
       "bolt",
       "buzz",
-      "draco",
-      "lily",
-      "nori"
+      "carl",
+      "draco"
     ],
     "maps": [
       {
@@ -3324,7 +3310,9 @@
         "category": "Zone Defensivo"
       }
     ],
-    "aliases": []
+    "aliases": [
+      "Otiz"
+    ]
   },
   {
     "id": "bonnie",
@@ -3423,7 +3411,7 @@
         "rank": 1
       },
       {
-        "slug": "brock",
+        "slug": "penny",
         "rank": 2
       },
       {
@@ -3433,7 +3421,7 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "tara"
+      "moe"
     ],
     "maps": [
       {
@@ -3458,7 +3446,7 @@
         "rank": 1
       },
       {
-        "slug": "gene",
+        "slug": "surge",
         "rank": 2
       },
       {
@@ -3603,19 +3591,16 @@
         "rank": 1
       },
       {
-        "slug": "gale",
+        "slug": "lou",
         "rank": 2
       },
       {
-        "slug": "meeple",
+        "slug": "griff",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [
-      "bo",
-      "shelly"
-    ],
+    "counterFor": [],
     "maps": [
       {
         "mapId": "open-business",
@@ -3808,7 +3793,7 @@
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "belle",
         "rank": 2
       },
       {
@@ -3818,10 +3803,14 @@
     ],
     "hasCounters": true,
     "counterFor": [
+      "jacky",
       "kenji",
-      "mr-p",
+      "meg",
+      "nori",
+      "ollie",
       "poco",
-      "rico"
+      "rico",
+      "starr-nova"
     ],
     "maps": [
       {
@@ -4088,11 +4077,11 @@
     "image": "/brawlers/squeak.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "edgar",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "mr-p",
         "rank": 2
       },
       {
@@ -4160,12 +4149,9 @@
     "hasCounters": true,
     "counterFor": [
       "amber",
-      "chester",
       "colette",
       "eve",
-      "lou",
-      "otis",
-      "stu",
+      "griff",
       "surge"
     ],
     "maps": [
@@ -4227,21 +4213,28 @@
     "image": "/brawlers/stu.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "gale",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "spike",
         "rank": 2
       },
       {
-        "slug": "belle",
+        "slug": "crow",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "cordelius"
+      "bo",
+      "colt",
+      "lou",
+      "lumi",
+      "maisie",
+      "meeple",
+      "otis",
+      "rico"
     ],
     "maps": [
       {
@@ -4314,7 +4307,7 @@
     "image": "/brawlers/ruffs.png",
     "counters": [
       {
-        "slug": "colt",
+        "slug": "penny",
         "rank": 1
       },
       {
@@ -4322,15 +4315,12 @@
         "rank": 2
       },
       {
-        "slug": "piper",
+        "slug": "mortis",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [
-      "melodie",
-      "mico"
-    ],
+    "counterFor": [],
     "maps": [
       {
         "mapId": "open-business",
@@ -4455,14 +4445,20 @@
     "hasCounters": true,
     "counterFor": [
       "barley",
-      "damian",
       "dynamike",
       "emz",
       "grom",
       "gus",
       "juju",
       "larry-lawrie",
+      "mandy",
+      "meeple",
+      "mr-p",
+      "najia",
+      "nani",
+      "r-t",
       "sprout",
+      "squeak",
       "tick",
       "wendy",
       "willow",
@@ -4683,16 +4679,18 @@
         "rank": 1
       },
       {
-        "slug": "leon",
+        "slug": "piper",
         "rank": 2
       },
       {
-        "slug": "piper",
+        "slug": "crow",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "crow"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -4770,16 +4768,21 @@
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "stu",
         "rank": 2
       },
       {
-        "slug": "belle",
+        "slug": "mortis",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "kit",
+      "meg",
+      "pearl",
+      "rosa"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -4875,8 +4878,7 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "bo",
-      "jessie",
+      "melodie",
       "nita"
     ],
     "maps": [
@@ -4970,10 +4972,8 @@
     "counterFor": [
       "ash",
       "bibi",
-      "bo",
       "bonnie",
       "bull",
-      "carl",
       "chuck",
       "draco",
       "el-primo",
@@ -4982,6 +4982,7 @@
       "jacky",
       "meg",
       "pam",
+      "pearl",
       "poco",
       "rosa",
       "sam",
@@ -5098,12 +5099,15 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "bolt",
       "buzz",
+      "carl",
+      "cordelius",
       "damian",
       "edgar",
-      "mortis",
-      "najia"
+      "fang",
+      "kenji",
+      "sam",
+      "starr-nova"
     ],
     "maps": [
       {
@@ -5264,7 +5268,9 @@
         "category": "Atiradores"
       }
     ],
-    "aliases": []
+    "aliases": [
+      "Sprou"
+    ]
   },
   {
     "id": "nani",
@@ -5277,11 +5283,11 @@
     "image": "/brawlers/nani.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "edgar",
         "rank": 1
       },
       {
-        "slug": "mandy",
+        "slug": "cordelius",
         "rank": 2
       },
       {
@@ -5295,30 +5301,14 @@
       "bea",
       "belle",
       "brock",
-      "charlie",
       "chester",
-      "clancy",
       "colette",
-      "colt",
-      "crow",
       "gale",
       "gray",
-      "griff",
       "janet",
-      "lou",
-      "lumi",
-      "maisie",
       "mandy",
-      "meeple",
-      "moe",
-      "ollie",
-      "otis",
-      "pearl",
+      "pierce",
       "piper",
-      "r-t",
-      "sandy",
-      "squeak",
-      "stu",
       "surge"
     ],
     "maps": [
@@ -5372,7 +5362,7 @@
         "rank": 2
       },
       {
-        "slug": "mandy",
+        "slug": "angelo",
         "rank": 3
       }
     ],
@@ -5385,6 +5375,9 @@
       "bull",
       "buzz",
       "carl",
+      "clancy",
+      "cordelius",
+      "damian",
       "darryl",
       "draco",
       "edgar",
@@ -5392,17 +5385,13 @@
       "fang",
       "jacky",
       "kenji",
-      "kit",
-      "meg",
-      "melodie",
       "mico",
       "mortis",
-      "najia",
       "nori",
-      "pam",
       "rosa",
       "sam",
-      "starr-nova"
+      "shelly",
+      "stu"
     ],
     "maps": [
       {
@@ -5430,9 +5419,7 @@
         "category": "Defensor"
       }
     ],
-    "aliases": [
-      "Gail"
-    ]
+    "aliases": []
   },
   {
     "id": "jacky",
@@ -5453,14 +5440,16 @@
         "rank": 2
       },
       {
-        "slug": "clancy",
+        "slug": "griff",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [],
     "maps": [],
-    "aliases": []
+    "aliases": [
+      "Jackie"
+    ]
   },
   {
     "id": "max",
@@ -5479,15 +5468,11 @@
       {
         "slug": "spike",
         "rank": 2
-      },
-      {
-        "slug": "charlie",
-        "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "piper"
+      "bo"
     ],
     "maps": [
       {
@@ -5596,22 +5581,25 @@
     "image": "/brawlers/mr-p.png",
     "counters": [
       {
-        "slug": "colt",
+        "slug": "mortis",
         "rank": 1
       },
       {
-        "slug": "brock",
+        "slug": "edgar",
         "rank": 2
       },
       {
-        "slug": "griff",
+        "slug": "penny",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "spike",
-      "tara"
+      "moe",
+      "pierce",
+      "piper",
+      "sandy",
+      "squeak"
     ],
     "maps": [],
     "aliases": []
@@ -5640,7 +5628,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "sandy"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -5749,11 +5739,11 @@
     "image": "/brawlers/sandy.png",
     "counters": [
       {
-        "slug": "piper",
+        "slug": "emz",
         "rank": 1
       },
       {
-        "slug": "nani",
+        "slug": "mr-p",
         "rank": 2
       },
       {
@@ -5762,7 +5752,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "charlie"
+    ],
     "maps": [
       {
         "mapId": "center-stage",
@@ -5976,7 +5968,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "najia"
+    ],
     "maps": [
       {
         "mapId": "center-stage",
@@ -6020,20 +6014,22 @@
     "image": "/brawlers/carl.png",
     "counters": [
       {
-        "slug": "colette",
+        "slug": "gale",
         "rank": 1
       },
       {
-        "slug": "gale",
+        "slug": "surge",
         "rank": 2
       },
       {
-        "slug": "chester",
+        "slug": "otis",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "juju"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -6117,7 +6113,7 @@
         "rank": 2
       },
       {
-        "slug": "clancy",
+        "slug": "lou",
         "rank": 3
       }
     ],
@@ -6137,7 +6133,7 @@
     "image": "/brawlers/leon.png",
     "counters": [
       {
-        "slug": "crow",
+        "slug": "buster",
         "rank": 1
       },
       {
@@ -6145,18 +6141,14 @@
         "rank": 2
       },
       {
-        "slug": "maisie",
+        "slug": "gene",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
       "angelo",
-      "byron",
-      "gray",
       "gus",
-      "jessie",
-      "mandy",
       "nani",
       "piper"
     ],
@@ -6256,7 +6248,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "spike"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -6277,7 +6271,7 @@
     "counters": [],
     "hasCounters": false,
     "counterFor": [
-      "fang"
+      "leon"
     ],
     "maps": [
       {
@@ -6336,7 +6330,9 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "lily"
+      "lily",
+      "ollie",
+      "r-t"
     ],
     "maps": [
       {
@@ -6369,7 +6365,7 @@
     "image": "/brawlers/penny.png",
     "counters": [
       {
-        "slug": "colt",
+        "slug": "dynamike",
         "rank": 1
       },
       {
@@ -6383,7 +6379,12 @@
     ],
     "hasCounters": true,
     "counterFor": [
-      "nita"
+      "charlie",
+      "eve",
+      "mr-p",
+      "nita",
+      "pam",
+      "ruffs"
     ],
     "maps": [
       {
@@ -6525,11 +6526,11 @@
     "image": "/brawlers/tara.png",
     "counters": [
       {
-        "slug": "mr-p",
+        "slug": "rico",
         "rank": 1
       },
       {
-        "slug": "eve",
+        "slug": "dynamike",
         "rank": 2
       },
       {
@@ -6581,11 +6582,11 @@
         "rank": 1
       },
       {
-        "slug": "gale",
+        "slug": "penny",
         "rank": 2
       },
       {
-        "slug": "clancy",
+        "slug": "dynamike",
         "rank": 3
       }
     ],
@@ -6622,7 +6623,7 @@
         "rank": 1
       },
       {
-        "slug": "max",
+        "slug": "mr-p",
         "rank": 2
       },
       {
@@ -6644,7 +6645,6 @@
       "clancy",
       "colette",
       "colt",
-      "cordelius",
       "crow",
       "emz",
       "eve",
@@ -6652,26 +6652,13 @@
       "gray",
       "griff",
       "janet",
-      "jessie",
-      "larry-lawrie",
       "lou",
-      "lumi",
-      "maisie",
-      "mandy",
-      "meeple",
       "moe",
-      "nani",
-      "ollie",
       "otis",
-      "pearl",
       "penny",
-      "pierce",
       "r-t",
-      "ruffs",
-      "sandy",
+      "shelly",
       "spike",
-      "squeak",
-      "stu",
       "surge",
       "tara"
     ],
@@ -6737,7 +6724,9 @@
         "category": "Atiradores"
       }
     ],
-    "aliases": []
+    "aliases": [
+      "Pipe"
+    ]
   },
   {
     "id": "bo",
@@ -6750,15 +6739,15 @@
     "image": "/brawlers/bo.png",
     "counters": [
       {
-        "slug": "colette",
+        "slug": "stu",
         "rank": 1
       },
       {
-        "slug": "amber",
+        "slug": "max",
         "rank": 2
       },
       {
-        "slug": "meg",
+        "slug": "mortis",
         "rank": 3
       }
     ],
@@ -6804,7 +6793,11 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "ollie",
+      "otis",
+      "ziggy"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -6856,20 +6849,20 @@
         "rank": 1
       },
       {
-        "slug": "brock",
+        "slug": "angelo",
         "rank": 2
       },
       {
-        "slug": "nani",
+        "slug": "byron",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "leon",
+      "byron",
       "max",
-      "najia",
-      "poco"
+      "poco",
+      "stu"
     ],
     "maps": [
       {
@@ -6985,7 +6978,7 @@
         "rank": 1
       },
       {
-        "slug": "surge",
+        "slug": "shelly",
         "rank": 2
       },
       {
@@ -6998,12 +6991,19 @@
       "barley",
       "bea",
       "berry",
+      "bo",
       "byron",
       "dynamike",
       "emz",
       "grom",
       "gus",
+      "jessie",
       "juju",
+      "larry-lawrie",
+      "lou",
+      "meeple",
+      "mr-p",
+      "ruffs",
       "sprout",
       "squeak",
       "tick",
@@ -7214,7 +7214,13 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "jessie",
+      "maisie",
+      "pam",
+      "penny",
+      "tara"
+    ],
     "maps": [
       {
         "mapId": "hot-potato",
@@ -7234,7 +7240,7 @@
     "image": "/brawlers/nita.png",
     "counters": [
       {
-        "slug": "penny",
+        "slug": "colt",
         "rank": 1
       },
       {
@@ -7242,14 +7248,12 @@
         "rank": 2
       },
       {
-        "slug": "colt",
+        "slug": "penny",
         "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [
-      "shelly"
-    ],
+    "counterFor": [],
     "maps": [
       {
         "mapId": "center-stage",
@@ -7297,22 +7301,24 @@
     "image": "/brawlers/jessie.png",
     "counters": [
       {
-        "slug": "amber",
+        "slug": "mortis",
         "rank": 1
       },
       {
-        "slug": "piper",
+        "slug": "brock",
         "rank": 2
       },
       {
-        "slug": "leon",
+        "slug": "dynamike",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [],
     "maps": [],
-    "aliases": []
+    "aliases": [
+      "Jessi"
+    ]
   },
   {
     "id": "barley",
@@ -7378,17 +7384,19 @@
         "rank": 1
       },
       {
-        "slug": "mandy",
+        "slug": "brock",
         "rank": 2
       },
       {
-        "slug": "mr-p",
+        "slug": "tick",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "max"
+      "max",
+      "shelly",
+      "stu"
     ],
     "maps": [
       {
@@ -7413,21 +7421,22 @@
     "image": "/brawlers/rico.png",
     "counters": [
       {
-        "slug": "colt",
+        "slug": "buster",
         "rank": 1
       },
       {
-        "slug": "brock",
+        "slug": "stu",
         "rank": 2
       },
       {
         "slug": "griff",
-        "rank": 3,
-        "note": "destroem as paredes dele"
+        "rank": 3
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "tara"
+    ],
     "maps": [
       {
         "mapId": "center-stage",
@@ -7518,16 +7527,12 @@
     "hasCounters": true,
     "counterFor": [
       "amber",
-      "charlie",
       "colt",
-      "crow",
-      "eve",
       "janet",
-      "moe",
-      "mr-p",
+      "jessie",
       "penny",
-      "rico",
-      "ruffs"
+      "ruffs",
+      "spike"
     ],
     "maps": [
       {
@@ -7628,22 +7633,20 @@
         "rank": 1
       },
       {
-        "slug": "gale",
+        "slug": "cordelius",
         "rank": 2
       },
       {
-        "slug": "clancy",
+        "slug": "gale",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
       "edgar",
-      "kit",
       "lily",
       "mico",
-      "mortis",
-      "nori"
+      "mortis"
     ],
     "maps": [
       {
@@ -7724,17 +7727,13 @@
         "rank": 2
       },
       {
-        "slug": "nani",
+        "slug": "stu",
         "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
-      "mr-p",
-      "nita",
-      "penny",
-      "rico",
-      "ruffs"
+      "nita"
     ],
     "maps": [
       {
@@ -7783,18 +7782,24 @@
     "image": "/brawlers/shelly.png",
     "counters": [
       {
-        "slug": "nita",
+        "slug": "piper",
         "rank": 1
       },
       {
-        "slug": "meg",
+        "slug": "spike",
         "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3
       }
     ],
     "hasCounters": true,
     "counterFor": [
       "darryl",
-      "frank"
+      "frank",
+      "mico",
+      "mortis"
     ],
     "maps": [
       {

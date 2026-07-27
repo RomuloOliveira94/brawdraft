@@ -6,40 +6,41 @@
   ],
   "nori": [
     "gale",
-    "otis",
-    "bull"
+    "chester",
+    "griff"
   ],
   "bolt": [
     "gale",
     "otis",
-    "surge"
+    "gus"
   ],
   "starr-nova": [
-    "clancy",
-    "colette",
-    "gale"
+    "griff",
+    "surge",
+    "colette"
   ],
   "damian": [
+    "gale",
     "surge",
-    "edgar"
+    "clancy"
   ],
   "najia": [
-    "gale",
-    "crow",
-    "surge"
+    "charlie",
+    "edgar",
+    "bibi"
   ],
   "sirius": [],
   "glowy": [],
   "gigi": [],
   "pierce": [
-    "piper",
-    "mandy",
-    "angelo"
+    "mr-p",
+    "nani",
+    "charlie"
   ],
   "ziggy": [
     "edgar",
     "mortis",
-    "kenji"
+    "poco"
   ],
   "mina": [],
   "trunk": [],
@@ -48,41 +49,41 @@
   "jae-yong": [],
   "finx": [],
   "lumi": [
-    "piper",
-    "nani",
-    "mandy"
+    "lily",
+    "stu",
+    "alli"
   ],
   "ollie": [
-    "piper",
-    "nani",
-    "mandy"
+    "poco",
+    "frank",
+    "griff"
   ],
   "meeple": [
-    "piper",
-    "mandy",
-    "nani"
+    "stu",
+    "edgar",
+    "mortis"
   ],
   "buzz-lightyear": [],
   "juju": [
     "mortis",
-    "mico",
+    "carl",
     "edgar"
   ],
   "shade": [],
   "kenji": [
     "griff",
-    "cordelius",
+    "surge",
     "gale"
   ],
   "moe": [
     "piper",
-    "brock",
-    "nani"
+    "mr-p",
+    "eve"
   ],
   "clancy": [
     "piper",
-    "nani",
-    "mandy"
+    "gale",
+    "buster"
   ],
   "berry": [
     "melodie",
@@ -92,7 +93,7 @@
   "lily": [
     "bull",
     "frank",
-    "otis"
+    "cordelius"
   ],
   "draco": [
     "otis",
@@ -105,29 +106,29 @@
     "leon"
   ],
   "melodie": [
-    "ruffs",
-    "gale",
+    "amber",
+    "chester",
     "cordelius"
   ],
   "larry-lawrie": [
     "edgar",
     "mico",
-    "piper"
+    "mortis"
   ],
   "kit": [
-    "gale",
-    "bull",
+    "lou",
+    "charlie",
     "cordelius"
   ],
   "mico": [
-    "ruffs",
+    "shelly",
     "gale",
     "bull"
   ],
   "charlie": [
     "piper",
-    "nani",
-    "brock"
+    "sandy",
+    "penny"
   ],
   "chuck": [
     "cordelius",
@@ -135,15 +136,15 @@
     "colette"
   ],
   "pearl": [
-    "piper",
-    "nani",
-    "mandy"
+    "colette",
+    "lou",
+    "maisie"
   ],
   "doug": [],
   "cordelius": [
-    "stu",
-    "r-t",
-    "piper"
+    "gale",
+    "surge",
+    "clancy"
   ],
   "hank": [
     "colette",
@@ -151,9 +152,9 @@
     "maisie"
   ],
   "maisie": [
-    "piper",
-    "nani",
-    "mandy"
+    "stu",
+    "dynamike",
+    "charlie"
   ],
   "willow": [
     "mortis",
@@ -161,23 +162,23 @@
     "edgar"
   ],
   "r-t": [
-    "piper",
-    "nani",
-    "mandy"
+    "edgar",
+    "frank",
+    "piper"
   ],
   "mandy": [
     "nani",
-    "piper",
-    "leon"
+    "edgar",
+    "buster"
   ],
   "gray": [
     "piper",
     "nani",
-    "leon"
+    "angelo"
   ],
   "chester": [
     "piper",
-    "belle",
+    "buster",
     "nani"
   ],
   "buster": [
@@ -193,12 +194,12 @@
   "sam": [
     "colette",
     "gale",
-    "clancy"
+    "surge"
   ],
   "otis": [
-    "piper",
-    "nani",
-    "belle"
+    "poco",
+    "stu",
+    "piper"
   ],
   "bonnie": [
     "colette",
@@ -212,19 +213,19 @@
   ],
   "eve": [
     "piper",
-    "brock",
+    "penny",
     "belle"
   ],
   "fang": [
     "gale",
-    "gene",
+    "surge",
     "cordelius"
   ],
   "lola": [],
   "meg": [
     "colette",
-    "gale",
-    "meeple"
+    "lou",
+    "griff"
   ],
   "ash": [
     "colette",
@@ -233,7 +234,7 @@
   ],
   "griff": [
     "piper",
-    "nani",
+    "belle",
     "mandy"
   ],
   "buzz": [
@@ -247,8 +248,8 @@
     "edgar"
   ],
   "squeak": [
-    "piper",
-    "nani",
+    "edgar",
+    "mr-p",
     "mortis"
   ],
   "belle": [
@@ -257,14 +258,14 @@
     "mandy"
   ],
   "stu": [
-    "piper",
-    "nani",
-    "belle"
+    "gale",
+    "spike",
+    "crow"
   ],
   "ruffs": [
-    "colt",
+    "penny",
     "brock",
-    "piper"
+    "mortis"
   ],
   "edgar": [
     "gale",
@@ -273,13 +274,13 @@
   ],
   "byron": [
     "mortis",
-    "leon",
-    "piper"
+    "piper",
+    "crow"
   ],
   "lou": [
     "piper",
-    "nani",
-    "belle"
+    "stu",
+    "mortis"
   ],
   "amber": [
     "piper",
@@ -302,29 +303,28 @@
     "edgar"
   ],
   "nani": [
-    "piper",
-    "mandy",
+    "edgar",
+    "cordelius",
     "leon"
   ],
   "gale": [
     "piper",
     "nani",
-    "mandy"
+    "angelo"
   ],
   "jacky": [
     "colette",
     "gale",
-    "clancy"
+    "griff"
   ],
   "max": [
     "crow",
-    "spike",
-    "charlie"
+    "spike"
   ],
   "mr-p": [
-    "colt",
-    "brock",
-    "griff"
+    "mortis",
+    "edgar",
+    "penny"
   ],
   "emz": [
     "piper",
@@ -337,8 +337,8 @@
     "mortis"
   ],
   "sandy": [
-    "piper",
-    "nani",
+    "emz",
+    "mr-p",
     "tara"
   ],
   "8-bit": [
@@ -352,19 +352,19 @@
     "clancy"
   ],
   "carl": [
-    "colette",
     "gale",
-    "chester"
+    "surge",
+    "otis"
   ],
   "rosa": [
     "colette",
     "gale",
-    "clancy"
+    "lou"
   ],
   "leon": [
-    "crow",
+    "buster",
     "tara",
-    "maisie"
+    "gene"
   ],
   "tick": [
     "mortis",
@@ -378,7 +378,7 @@
     "chester"
   ],
   "penny": [
-    "colt",
+    "dynamike",
     "brock",
     "piper"
   ],
@@ -388,24 +388,24 @@
     "el-primo"
   ],
   "tara": [
-    "mr-p",
-    "eve",
+    "rico",
+    "dynamike",
     "piper"
   ],
   "pam": [
     "colette",
-    "gale",
-    "clancy"
+    "penny",
+    "dynamike"
   ],
   "piper": [
     "nani",
-    "max",
+    "mr-p",
     "leon"
   ],
   "bo": [
-    "colette",
-    "amber",
-    "meg"
+    "stu",
+    "max",
+    "mortis"
   ],
   "poco": [
     "crow",
@@ -414,12 +414,12 @@
   ],
   "crow": [
     "piper",
-    "brock",
-    "nani"
+    "angelo",
+    "byron"
   ],
   "mortis": [
     "gale",
-    "surge",
+    "shelly",
     "bull"
   ],
   "el-primo": [
@@ -433,14 +433,14 @@
     "edgar"
   ],
   "nita": [
-    "penny",
+    "colt",
     "amber",
-    "colt"
+    "penny"
   ],
   "jessie": [
-    "amber",
-    "piper",
-    "leon"
+    "mortis",
+    "brock",
+    "dynamike"
   ],
   "barley": [
     "mortis",
@@ -449,12 +449,12 @@
   ],
   "spike": [
     "piper",
-    "mandy",
-    "mr-p"
+    "brock",
+    "tick"
   ],
   "rico": [
-    "colt",
-    "brock",
+    "buster",
+    "stu",
     "griff"
   ],
   "brock": [
@@ -464,16 +464,17 @@
   ],
   "bull": [
     "colette",
-    "gale",
-    "clancy"
+    "cordelius",
+    "gale"
   ],
   "colt": [
     "piper",
     "brock",
-    "nani"
+    "stu"
   ],
   "shelly": [
-    "nita",
-    "meg"
+    "piper",
+    "spike",
+    "gale"
   ]
 }

@@ -1,0 +1,11644 @@
+{
+  "bridge-too-far": {
+    "8-bit": [
+      "brock",
+      "belle"
+    ],
+    "amber": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "ash": [
+      "colette",
+      "piper",
+      "clancy"
+    ],
+    "barley": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "berry": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "bibi": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "bo": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "bolt": [
+      "charlie",
+      "colette",
+      "piper"
+    ],
+    "bonnie": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "bull": [
+      "colette",
+      "clancy",
+      "spike"
+    ],
+    "buster": [
+      "colette",
+      "clancy",
+      "dynamike"
+    ],
+    "buzz": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "carl": [
+      "piper",
+      "angelo",
+      "colette"
+    ],
+    "charlie": [
+      "piper",
+      "angelo",
+      "amber"
+    ],
+    "chester": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "chuck": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "clancy": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "cordelius": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "crow": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "damian": [
+      "colette",
+      "piper",
+      "clancy"
+    ],
+    "darryl": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "dynamike": [
+      "piper",
+      "angelo",
+      "gray"
+    ],
+    "draco": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "edgar": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "el-primo": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "emz": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "eve": [
+      "piper",
+      "angelo",
+      "belle"
+    ],
+    "fang": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "frank": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "gale": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "gray": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "griff": [
+      "piper",
+      "angelo",
+      "nani"
+    ],
+    "grom": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "gus": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "hank": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "jacky": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "janet": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "jessie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "juju": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "kenji": [
+      "clancy",
+      "griff",
+      "piper"
+    ],
+    "kit": [
+      "cordelius",
+      "piper",
+      "nani"
+    ],
+    "larry-lawrie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "leon": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "lily": [
+      "r-t",
+      "piper",
+      "mandy"
+    ],
+    "lou": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "lumi": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "maisie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "max": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "meg": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "melodie": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "mico": [
+      "clancy",
+      "surge",
+      "piper"
+    ],
+    "meeple": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "moe": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mortis": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "mr-p": [
+      "belle",
+      "piper",
+      "nani"
+    ],
+    "najia": [
+      "piper",
+      "mandy",
+      "byron"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "mr-p"
+    ],
+    "nita": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "nori": [
+      "piper",
+      "mandy",
+      "brock"
+    ],
+    "ollie": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "otis": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "pam": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "penny": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "pearl": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "mr-p"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "angelo"
+    ],
+    "poco": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "r-t": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "rico": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "rosa": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "ruffs": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "sam": [
+      "clancy",
+      "colette",
+      "piper"
+    ],
+    "sandy": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "shelly": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "spike": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "sprout": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "squeak": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "starr-nova": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "stu": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "surge": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "tara": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "tick": [
+      "piper",
+      "angelo",
+      "gray"
+    ],
+    "wendy": [
+      "colette",
+      "piper",
+      "mandy"
+    ],
+    "willow": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "ziggy": [
+      "piper",
+      "mandy",
+      "tick"
+    ]
+  },
+  "hot-potato": {
+    "8-bit": [
+      "barley",
+      "chuck"
+    ],
+    "amber": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "angelo": [
+      "rico",
+      "colt",
+      "dynamike"
+    ],
+    "ash": [
+      "bull",
+      "dynamike",
+      "colette"
+    ],
+    "barley": [
+      "colt",
+      "dynamike",
+      "mortis"
+    ],
+    "bea": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "belle": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "berry": [
+      "colt",
+      "dynamike",
+      "brock"
+    ],
+    "bibi": [
+      "bull",
+      "dynamike",
+      "colette"
+    ],
+    "bo": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "bolt": [
+      "chuck",
+      "colt",
+      "dynamike"
+    ],
+    "bonnie": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "brock": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "bull": [
+      "colette",
+      "clancy",
+      "cordelius"
+    ],
+    "buster": [
+      "dynamike",
+      "colette",
+      "rico"
+    ],
+    "buzz": [
+      "colette",
+      "clancy",
+      "dynamike"
+    ],
+    "byron": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "carl": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "charlie": [
+      "colt",
+      "dynamike",
+      "barley"
+    ],
+    "chester": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "chuck": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "clancy": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "colette": [
+      "colt",
+      "dynamike",
+      "spike"
+    ],
+    "colt": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "cordelius": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "crow": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "damian": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "darryl": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "dynamike": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "draco": [
+      "clancy",
+      "colette",
+      "frank"
+    ],
+    "edgar": [
+      "clancy",
+      "bull",
+      "dynamike"
+    ],
+    "el-primo": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "emz": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "eve": [
+      "colt",
+      "dynamike",
+      "barley"
+    ],
+    "fang": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "frank": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "gale": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "gray": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "griff": [
+      "colt",
+      "dynamike",
+      "barley"
+    ],
+    "grom": [
+      "colt",
+      "dynamike",
+      "mortis"
+    ],
+    "gus": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "hank": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "jacky": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "janet": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "jessie": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "juju": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "kenji": [
+      "clancy",
+      "bull",
+      "dynamike"
+    ],
+    "kit": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "larry-lawrie": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "leon": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "lily": [
+      "bull",
+      "clancy",
+      "dynamike"
+    ],
+    "lou": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "lumi": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "maisie": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "mandy": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "max": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "meg": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "melodie": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "mico": [
+      "clancy",
+      "bull",
+      "dynamike"
+    ],
+    "meeple": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "moe": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "mortis": [
+      "clancy",
+      "bull",
+      "dynamike"
+    ],
+    "mr-p": [
+      "mortis",
+      "edgar",
+      "mico"
+    ],
+    "najia": [
+      "colt",
+      "edgar",
+      "dynamike"
+    ],
+    "nani": [
+      "mortis",
+      "edgar",
+      "mico"
+    ],
+    "nita": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "nori": [
+      "clancy",
+      "chester",
+      "colt"
+    ],
+    "ollie": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "otis": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "pam": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "penny": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "pearl": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "pierce": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "piper": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "poco": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "r-t": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "rico": [
+      "colt",
+      "brock",
+      "dynamike"
+    ],
+    "rosa": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "ruffs": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "sam": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "sandy": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "shelly": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "spike": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "sprout": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "squeak": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "starr-nova": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "stu": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "surge": [
+      "dynamike",
+      "barley",
+      "larry-lawrie"
+    ],
+    "tara": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "tick": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "wendy": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "willow": [
+      "mortis",
+      "mico",
+      "edgar"
+    ],
+    "ziggy": [
+      "mortis",
+      "bibi",
+      "stu"
+    ]
+  },
+  "safe-zone": {
+    "8-bit": [
+      "nani",
+      "brock"
+    ],
+    "amber": [
+      "piper",
+      "angelo",
+      "colt"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "ash": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "barley": [
+      "piper",
+      "brock",
+      "colt"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "berry": [
+      "piper",
+      "colt",
+      "brock"
+    ],
+    "bibi": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "bo": [
+      "piper",
+      "brock",
+      "colt"
+    ],
+    "bolt": [
+      "charlie",
+      "colette",
+      "colt"
+    ],
+    "bonnie": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "belle"
+    ],
+    "bull": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "buster": [
+      "colette",
+      "clancy",
+      "brock"
+    ],
+    "buzz": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "carl": [
+      "piper",
+      "colette",
+      "colt"
+    ],
+    "charlie": [
+      "piper",
+      "angelo",
+      "brock"
+    ],
+    "chester": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "chuck": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "clancy": [
+      "piper",
+      "nani",
+      "belle"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "cordelius": [
+      "piper",
+      "nani",
+      "clancy"
+    ],
+    "crow": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "damian": [
+      "colette",
+      "clancy",
+      "otis"
+    ],
+    "darryl": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "dynamike": [
+      "piper",
+      "brock",
+      "gray"
+    ],
+    "draco": [
+      "clancy",
+      "colette",
+      "otis"
+    ],
+    "edgar": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "el-primo": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "emz": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "eve": [
+      "piper",
+      "brock",
+      "colt"
+    ],
+    "fang": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "frank": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "gale": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "gray": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "griff": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "grom": [
+      "piper",
+      "brock",
+      "colt"
+    ],
+    "gus": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "hank": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "jacky": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "janet": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "jessie": [
+      "piper",
+      "nani",
+      "belle"
+    ],
+    "juju": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "kenji": [
+      "clancy",
+      "griff",
+      "colt"
+    ],
+    "kit": [
+      "cordelius",
+      "colette",
+      "colt"
+    ],
+    "larry-lawrie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "leon": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "lily": [
+      "r-t",
+      "colt",
+      "brock"
+    ],
+    "lou": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "lumi": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "maisie": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "max": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "meg": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "melodie": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "mico": [
+      "clancy",
+      "surge",
+      "colt"
+    ],
+    "meeple": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "moe": [
+      "nani",
+      "piper",
+      "r-t"
+    ],
+    "mortis": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "mr-p": [
+      "belle",
+      "piper",
+      "colt"
+    ],
+    "najia": [
+      "piper",
+      "byron",
+      "r-t"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "gray"
+    ],
+    "nita": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "nori": [
+      "meg",
+      "piper",
+      "otis"
+    ],
+    "ollie": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "otis": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "pam": [
+      "piper",
+      "nani",
+      "belle"
+    ],
+    "penny": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "pearl": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "ruffs"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "brock"
+    ],
+    "poco": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "r-t": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "rico": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "rosa": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "ruffs": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "sam": [
+      "clancy",
+      "colette",
+      "colt"
+    ],
+    "sandy": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "shelly": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "spike": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "sprout": [
+      "piper",
+      "brock",
+      "colt"
+    ],
+    "squeak": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "starr-nova": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "stu": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "surge": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "tara": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "tick": [
+      "piper",
+      "brock",
+      "gray"
+    ],
+    "wendy": [
+      "colette",
+      "brock",
+      "colt"
+    ],
+    "willow": [
+      "piper",
+      "brock",
+      "colt"
+    ],
+    "ziggy": [
+      "piper",
+      "gray",
+      "brock"
+    ]
+  },
+  "dueling-beetles": {
+    "8-bit": [
+      "rico",
+      "lou"
+    ],
+    "amber": [
+      "meg",
+      "lou",
+      "cordelius"
+    ],
+    "angelo": [
+      "meg",
+      "draco",
+      "lou"
+    ],
+    "ash": [
+      "lou",
+      "gale",
+      "chester"
+    ],
+    "barley": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "bea": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "belle": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "berry": [
+      "mico",
+      "lily",
+      "edgar"
+    ],
+    "bibi": [
+      "lou",
+      "gale",
+      "chester"
+    ],
+    "bo": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "bolt": [
+      "damian",
+      "meg",
+      "charlie"
+    ],
+    "bonnie": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "brock": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "bull": [
+      "lou",
+      "gale",
+      "chester"
+    ],
+    "buster": [
+      "lou",
+      "gale",
+      "chester"
+    ],
+    "buzz": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "byron": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "carl": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "charlie": [
+      "meg",
+      "amber",
+      "sandy"
+    ],
+    "chester": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "chuck": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "clancy": [
+      "ash",
+      "charlie",
+      "meg"
+    ],
+    "colette": [
+      "cordelius",
+      "sandy",
+      "meg"
+    ],
+    "colt": [
+      "meg",
+      "cordelius",
+      "stu"
+    ],
+    "cordelius": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "crow": [
+      "meg",
+      "poco",
+      "pam"
+    ],
+    "damian": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "darryl": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "dynamike": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "draco": [
+      "lou",
+      "gale",
+      "frank"
+    ],
+    "edgar": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "el-primo": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "emz": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "eve": [
+      "meg",
+      "amber",
+      "sandy"
+    ],
+    "fang": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "frank": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "gale": [
+      "meg",
+      "sandy",
+      "larry-lawrie"
+    ],
+    "gray": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "griff": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "grom": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "gus": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "hank": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "jacky": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "janet": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "jessie": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "juju": [
+      "gale",
+      "lily",
+      "meg"
+    ],
+    "kenji": [
+      "gale",
+      "meg",
+      "otis"
+    ],
+    "kit": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "leon": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "lily": [
+      "meg",
+      "lou",
+      "otis"
+    ],
+    "lou": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "lumi": [
+      "lily",
+      "edgar",
+      "meg"
+    ],
+    "maisie": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "mandy": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "max": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "meg": [
+      "gale",
+      "lou",
+      "chester"
+    ],
+    "melodie": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "mico": [
+      "gale",
+      "surge",
+      "meg"
+    ],
+    "meeple": [
+      "meg",
+      "cordelius",
+      "edgar"
+    ],
+    "moe": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "mortis": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "mr-p": [
+      "edgar",
+      "mico",
+      "meg"
+    ],
+    "najia": [
+      "meg",
+      "poco",
+      "edgar"
+    ],
+    "nani": [
+      "cordelius",
+      "edgar",
+      "meg"
+    ],
+    "nita": [
+      "lou",
+      "gale",
+      "meg"
+    ],
+    "nori": [
+      "gale",
+      "meg",
+      "lou"
+    ],
+    "ollie": [
+      "cordelius",
+      "gale",
+      "meg"
+    ],
+    "otis": [
+      "meg",
+      "poco",
+      "sandy"
+    ],
+    "pam": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "penny": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "pearl": [
+      "gale",
+      "meg",
+      "lou"
+    ],
+    "pierce": [
+      "meg",
+      "tara",
+      "cordelius"
+    ],
+    "piper": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "poco": [
+      "meg",
+      "cordelius",
+      "clancy"
+    ],
+    "r-t": [
+      "meg",
+      "sandy",
+      "larry-lawrie"
+    ],
+    "rico": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "rosa": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "ruffs": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "sam": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "sandy": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "shelly": [
+      "gale",
+      "meg",
+      "lou"
+    ],
+    "spike": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "sprout": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "squeak": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "starr-nova": [
+      "gale",
+      "meg",
+      "otis"
+    ],
+    "stu": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "surge": [
+      "larry-lawrie",
+      "barley",
+      "meg"
+    ],
+    "tara": [
+      "meg",
+      "cordelius",
+      "sandy"
+    ],
+    "tick": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "wendy": [
+      "cordelius",
+      "lou",
+      "meg"
+    ],
+    "willow": [
+      "mico",
+      "edgar",
+      "stu"
+    ],
+    "ziggy": [
+      "mortis",
+      "bibi",
+      "frank"
+    ]
+  },
+  "parallel-plays": {
+    "8-bit": [
+      "dynamike",
+      "mandy"
+    ],
+    "amber": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "angelo": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "ash": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "barley": [
+      "mico",
+      "dynamike",
+      "mortis"
+    ],
+    "bea": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "belle": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "berry": [
+      "dynamike",
+      "mico",
+      "mortis"
+    ],
+    "bibi": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "bo": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "bolt": [
+      "dynamike",
+      "charlie",
+      "damian"
+    ],
+    "bonnie": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "brock": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "bull": [
+      "dynamike",
+      "colette",
+      "clancy"
+    ],
+    "buster": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "buzz": [
+      "dynamike",
+      "colette",
+      "clancy"
+    ],
+    "byron": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "carl": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "charlie": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "chester": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "chuck": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "clancy": [
+      "dynamike",
+      "larry-lawrie",
+      "berry"
+    ],
+    "colette": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "colt": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "cordelius": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "crow": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "damian": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "darryl": [
+      "dynamike",
+      "colette",
+      "clancy"
+    ],
+    "dynamike": [
+      "mico",
+      "mortis",
+      "edgar"
+    ],
+    "draco": [
+      "dynamike",
+      "barley",
+      "lou"
+    ],
+    "edgar": [
+      "dynamike",
+      "barley",
+      "clancy"
+    ],
+    "el-primo": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "emz": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "eve": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "fang": [
+      "dynamike",
+      "barley",
+      "clancy"
+    ],
+    "frank": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "gale": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "gray": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "griff": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "grom": [
+      "mico",
+      "dynamike",
+      "mortis"
+    ],
+    "gus": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "hank": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "jacky": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "janet": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "jessie": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "juju": [
+      "dynamike",
+      "barley",
+      "mico"
+    ],
+    "kenji": [
+      "dynamike",
+      "barley",
+      "clancy"
+    ],
+    "kit": [
+      "dynamike",
+      "barley",
+      "lou"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "mortis",
+      "dynamike"
+    ],
+    "leon": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "lily": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "lou": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "lumi": [
+      "dynamike",
+      "barley",
+      "mico"
+    ],
+    "maisie": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "mandy": [
+      "mico",
+      "dynamike",
+      "mortis"
+    ],
+    "max": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "meg": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "melodie": [
+      "dynamike",
+      "barley",
+      "clancy"
+    ],
+    "mico": [
+      "clancy",
+      "surge",
+      "dynamike"
+    ],
+    "meeple": [
+      "dynamike",
+      "barley",
+      "mico"
+    ],
+    "moe": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "mortis": [
+      "clancy",
+      "dynamike",
+      "barley"
+    ],
+    "mr-p": [
+      "mico",
+      "mortis",
+      "dynamike"
+    ],
+    "najia": [
+      "dynamike",
+      "barley",
+      "edgar"
+    ],
+    "nani": [
+      "mico",
+      "dynamike",
+      "mortis"
+    ],
+    "nita": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "nori": [
+      "dynamike",
+      "barley",
+      "chester"
+    ],
+    "ollie": [
+      "dynamike",
+      "barley",
+      "cordelius"
+    ],
+    "otis": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "pam": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "penny": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "pearl": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "pierce": [
+      "larry-lawrie",
+      "dynamike",
+      "berry"
+    ],
+    "piper": [
+      "mico",
+      "dynamike",
+      "mortis"
+    ],
+    "poco": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "r-t": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "rico": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "rosa": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "ruffs": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "sam": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "sandy": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "shelly": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "spike": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "sprout": [
+      "mico",
+      "mortis",
+      "edgar"
+    ],
+    "squeak": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "starr-nova": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "stu": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "surge": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "tara": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "tick": [
+      "mico",
+      "mortis",
+      "edgar"
+    ],
+    "wendy": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "willow": [
+      "mico",
+      "mortis",
+      "edgar"
+    ],
+    "ziggy": [
+      "mortis",
+      "dynamike",
+      "edgar"
+    ]
+  },
+  "ring-of-fire": {
+    "8-bit": [
+      "amber",
+      "piper"
+    ],
+    "amber": [
+      "meg",
+      "bo",
+      "piper"
+    ],
+    "angelo": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "ash": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "barley": [
+      "meg",
+      "piper",
+      "gray"
+    ],
+    "bea": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "belle": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "berry": [
+      "meg",
+      "piper",
+      "gray"
+    ],
+    "bibi": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "bo": [
+      "meg",
+      "piper",
+      "nani"
+    ],
+    "bolt": [
+      "meg",
+      "charlie",
+      "colette"
+    ],
+    "bonnie": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "brock": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "bull": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "buster": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "buzz": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "byron": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "carl": [
+      "meg",
+      "gale",
+      "piper"
+    ],
+    "charlie": [
+      "meg",
+      "amber",
+      "piper"
+    ],
+    "chester": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "chuck": [
+      "meg",
+      "lou",
+      "colette"
+    ],
+    "clancy": [
+      "meg",
+      "piper",
+      "nani"
+    ],
+    "colette": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "colt": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "cordelius": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "crow": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "damian": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "darryl": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "dynamike": [
+      "meg",
+      "gray",
+      "mortis"
+    ],
+    "draco": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "edgar": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "el-primo": [
+      "meg",
+      "lou",
+      "colette"
+    ],
+    "emz": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "eve": [
+      "meg",
+      "amber",
+      "piper"
+    ],
+    "fang": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "frank": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "gale": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "gray": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "griff": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "grom": [
+      "meg",
+      "piper",
+      "gray"
+    ],
+    "gus": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "hank": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "jacky": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "janet": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "jessie": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "juju": [
+      "meg",
+      "piper",
+      "lily"
+    ],
+    "kenji": [
+      "meg",
+      "gale",
+      "otis"
+    ],
+    "kit": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "larry-lawrie": [
+      "meg",
+      "piper",
+      "gray"
+    ],
+    "leon": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "lily": [
+      "meg",
+      "r-t",
+      "pearl"
+    ],
+    "lou": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "lumi": [
+      "meg",
+      "piper",
+      "lily"
+    ],
+    "maisie": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "mandy": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "max": [
+      "meg",
+      "nani",
+      "spike"
+    ],
+    "meg": [
+      "colette",
+      "lou",
+      "gale"
+    ],
+    "melodie": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "mico": [
+      "meg",
+      "gale",
+      "surge"
+    ],
+    "meeple": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "moe": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "mortis": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "mr-p": [
+      "meg",
+      "piper",
+      "belle"
+    ],
+    "najia": [
+      "meg",
+      "poco",
+      "piper"
+    ],
+    "nani": [
+      "meg",
+      "piper",
+      "mortis"
+    ],
+    "nita": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "nori": [
+      "meg",
+      "gale",
+      "griff"
+    ],
+    "ollie": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "otis": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "pam": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "penny": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "pearl": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "pierce": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "piper": [
+      "meg",
+      "nani",
+      "mandy"
+    ],
+    "poco": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "r-t": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "rico": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "rosa": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "ruffs": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "sam": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "sandy": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "shelly": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "spike": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "sprout": [
+      "meg",
+      "piper",
+      "gray"
+    ],
+    "squeak": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "starr-nova": [
+      "meg",
+      "gale",
+      "piper"
+    ],
+    "stu": [
+      "meg",
+      "nani",
+      "spike"
+    ],
+    "surge": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "tara": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "tick": [
+      "meg",
+      "gray",
+      "mortis"
+    ],
+    "wendy": [
+      "meg",
+      "colette",
+      "piper"
+    ],
+    "willow": [
+      "meg",
+      "piper",
+      "gray"
+    ],
+    "ziggy": [
+      "meg",
+      "mortis",
+      "gray"
+    ]
+  },
+  "crystal-arcade": {
+    "8-bit": [
+      "rico",
+      "tara"
+    ],
+    "amber": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "angelo": [
+      "tara",
+      "spike",
+      "piper"
+    ],
+    "ash": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "barley": [
+      "gray",
+      "piper",
+      "mortis"
+    ],
+    "bea": [
+      "tara",
+      "spike",
+      "crow"
+    ],
+    "belle": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "berry": [
+      "mortis",
+      "mico",
+      "piper"
+    ],
+    "bibi": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "bo": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "bolt": [
+      "charlie",
+      "colette",
+      "spike"
+    ],
+    "bonnie": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "brock": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "bull": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "buster": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "buzz": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "byron": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "carl": [
+      "spike",
+      "colette",
+      "piper"
+    ],
+    "charlie": [
+      "tara",
+      "spike",
+      "penny"
+    ],
+    "chester": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "chuck": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "clancy": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "colette": [
+      "tara",
+      "spike",
+      "crow"
+    ],
+    "colt": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "cordelius": [
+      "spike",
+      "tara",
+      "chester"
+    ],
+    "crow": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "damian": [
+      "emz",
+      "spike",
+      "colette"
+    ],
+    "darryl": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "dynamike": [
+      "gray",
+      "mortis",
+      "mico"
+    ],
+    "draco": [
+      "spike",
+      "colette",
+      "cordelius"
+    ],
+    "edgar": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "el-primo": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "emz": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "eve": [
+      "spike",
+      "tara",
+      "penny"
+    ],
+    "fang": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "frank": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "gale": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "gray": [
+      "spike",
+      "tara",
+      "crow"
+    ],
+    "griff": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "grom": [
+      "gray",
+      "piper",
+      "mortis"
+    ],
+    "gus": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "hank": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "jacky": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "janet": [
+      "spike",
+      "crow",
+      "piper"
+    ],
+    "jessie": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "juju": [
+      "carl",
+      "piper",
+      "spike"
+    ],
+    "kenji": [
+      "spike",
+      "colette",
+      "cordelius"
+    ],
+    "kit": [
+      "spike",
+      "cordelius",
+      "colette"
+    ],
+    "larry-lawrie": [
+      "gray",
+      "mortis",
+      "piper"
+    ],
+    "leon": [
+      "tara",
+      "spike",
+      "crow"
+    ],
+    "lily": [
+      "spike",
+      "colette",
+      "cordelius"
+    ],
+    "lou": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "lumi": [
+      "spike",
+      "lily",
+      "piper"
+    ],
+    "maisie": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "mandy": [
+      "gray",
+      "mortis",
+      "piper"
+    ],
+    "max": [
+      "spike",
+      "tara",
+      "crow"
+    ],
+    "meg": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "melodie": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "mico": [
+      "spike",
+      "surge",
+      "colette"
+    ],
+    "meeple": [
+      "spike",
+      "tara",
+      "mortis"
+    ],
+    "moe": [
+      "tara",
+      "spike",
+      "piper"
+    ],
+    "mortis": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "mr-p": [
+      "tara",
+      "mortis",
+      "piper"
+    ],
+    "najia": [
+      "spike",
+      "mortis",
+      "tara"
+    ],
+    "nani": [
+      "tara",
+      "mortis",
+      "piper"
+    ],
+    "nita": [
+      "spike",
+      "colette",
+      "jessie"
+    ],
+    "nori": [
+      "spike",
+      "chester",
+      "piper"
+    ],
+    "ollie": [
+      "cordelius",
+      "spike",
+      "clancy"
+    ],
+    "otis": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "pam": [
+      "spike",
+      "tara",
+      "crow"
+    ],
+    "penny": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "pearl": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "pierce": [
+      "tara",
+      "spike",
+      "ruffs"
+    ],
+    "piper": [
+      "gray",
+      "mortis",
+      "mico"
+    ],
+    "poco": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "r-t": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "rico": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "rosa": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "ruffs": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "sam": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "sandy": [
+      "tara",
+      "spike",
+      "crow"
+    ],
+    "shelly": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "spike": [
+      "rico",
+      "piper",
+      "crow"
+    ],
+    "sprout": [
+      "gray",
+      "mortis",
+      "mico"
+    ],
+    "squeak": [
+      "tara",
+      "spike",
+      "crow"
+    ],
+    "starr-nova": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "stu": [
+      "spike",
+      "tara",
+      "crow"
+    ],
+    "surge": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "tara": [
+      "spike",
+      "penny",
+      "piper"
+    ],
+    "tick": [
+      "gray",
+      "mortis",
+      "mico"
+    ],
+    "wendy": [
+      "spike",
+      "tara",
+      "mortis"
+    ],
+    "willow": [
+      "gray",
+      "mortis",
+      "mico"
+    ],
+    "ziggy": [
+      "gray",
+      "mortis",
+      "bibi"
+    ]
+  },
+  "double-swoosh": {
+    "8-bit": [
+      "rosa",
+      "emz"
+    ],
+    "amber": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "angelo": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "ash": [
+      "rosa",
+      "shelly",
+      "buster"
+    ],
+    "barley": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "bea": [
+      "mortis",
+      "edgar",
+      "tara"
+    ],
+    "belle": [
+      "mortis",
+      "buster",
+      "tara"
+    ],
+    "berry": [
+      "mortis",
+      "lily",
+      "buster"
+    ],
+    "bibi": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "bo": [
+      "tara",
+      "buster",
+      "mortis"
+    ],
+    "bolt": [
+      "charlie",
+      "buster",
+      "shelly"
+    ],
+    "bonnie": [
+      "tara",
+      "buster",
+      "rosa"
+    ],
+    "brock": [
+      "mortis",
+      "buster",
+      "tara"
+    ],
+    "bull": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "buster": [
+      "shelly",
+      "tara",
+      "rosa"
+    ],
+    "buzz": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "byron": [
+      "mortis",
+      "buster",
+      "tara"
+    ],
+    "carl": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "charlie": [
+      "tara",
+      "sandy",
+      "buster"
+    ],
+    "chester": [
+      "tara",
+      "buster",
+      "rosa"
+    ],
+    "chuck": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "clancy": [
+      "tara",
+      "rosa",
+      "charlie"
+    ],
+    "colette": [
+      "tara",
+      "sandy",
+      "gene"
+    ],
+    "colt": [
+      "tara",
+      "mortis",
+      "buster"
+    ],
+    "cordelius": [
+      "tara",
+      "buster",
+      "shelly"
+    ],
+    "crow": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "damian": [
+      "shelly",
+      "otis",
+      "buster"
+    ],
+    "darryl": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "dynamike": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "draco": [
+      "frank",
+      "shelly",
+      "tara"
+    ],
+    "edgar": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "el-primo": [
+      "shelly",
+      "tara",
+      "buster"
+    ],
+    "emz": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "eve": [
+      "tara",
+      "buster",
+      "sandy"
+    ],
+    "fang": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "frank": [
+      "shelly",
+      "tara",
+      "buster"
+    ],
+    "gale": [
+      "tara",
+      "gene",
+      "sandy"
+    ],
+    "gray": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "griff": [
+      "tara",
+      "mortis",
+      "buster"
+    ],
+    "grom": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "gus": [
+      "tara",
+      "mortis",
+      "buster"
+    ],
+    "hank": [
+      "shelly",
+      "tara",
+      "buster"
+    ],
+    "jacky": [
+      "shelly",
+      "tara",
+      "buster"
+    ],
+    "janet": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "jessie": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "juju": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "kenji": [
+      "shelly",
+      "frank",
+      "tara"
+    ],
+    "kit": [
+      "bull",
+      "shelly",
+      "buster"
+    ],
+    "larry-lawrie": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "leon": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "lily": [
+      "bull",
+      "buster",
+      "shelly"
+    ],
+    "lou": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "lumi": [
+      "lily",
+      "mortis",
+      "buster"
+    ],
+    "maisie": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "mandy": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "max": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "meg": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "melodie": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "mico": [
+      "shelly",
+      "frank",
+      "tara"
+    ],
+    "meeple": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "moe": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "mortis": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "mr-p": [
+      "tara",
+      "mortis",
+      "edgar"
+    ],
+    "najia": [
+      "bibi",
+      "edgar",
+      "mortis"
+    ],
+    "nani": [
+      "mortis",
+      "edgar",
+      "tara"
+    ],
+    "nita": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "nori": [
+      "bull",
+      "meg",
+      "tara"
+    ],
+    "ollie": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "otis": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "pam": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "penny": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "pearl": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "pierce": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "piper": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "poco": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "r-t": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "rico": [
+      "tara",
+      "mortis",
+      "buster"
+    ],
+    "rosa": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "ruffs": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "sam": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "sandy": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "shelly": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "spike": [
+      "tara",
+      "mortis",
+      "buster"
+    ],
+    "sprout": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "squeak": [
+      "tara",
+      "mortis",
+      "edgar"
+    ],
+    "starr-nova": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "stu": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "surge": [
+      "tara",
+      "rosa",
+      "gene"
+    ],
+    "tara": [
+      "shelly",
+      "buster",
+      "rosa"
+    ],
+    "tick": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "wendy": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "willow": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "ziggy": [
+      "mortis",
+      "bibi",
+      "buster"
+    ]
+  },
+  "hard-rock-mine": {
+    "8-bit": [
+      "gene",
+      "spike"
+    ],
+    "amber": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "angelo": [
+      "gene",
+      "mr-p",
+      "tara"
+    ],
+    "ash": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "barley": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "bea": [
+      "gene",
+      "piper",
+      "tara"
+    ],
+    "belle": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "berry": [
+      "mortis",
+      "mico",
+      "gray"
+    ],
+    "bibi": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "bo": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "bolt": [
+      "damian",
+      "charlie",
+      "gene"
+    ],
+    "bonnie": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "brock": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "bull": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "buster": [
+      "spike",
+      "colette",
+      "dynamike"
+    ],
+    "buzz": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "byron": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "carl": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "charlie": [
+      "spike",
+      "gene",
+      "tara"
+    ],
+    "chester": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "chuck": [
+      "spike",
+      "gene",
+      "colette"
+    ],
+    "clancy": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "colette": [
+      "gene",
+      "tara",
+      "spike"
+    ],
+    "colt": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "cordelius": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "crow": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "damian": [
+      "gene",
+      "gale",
+      "cordelius"
+    ],
+    "darryl": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "dynamike": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "draco": [
+      "cordelius",
+      "gene",
+      "frank"
+    ],
+    "edgar": [
+      "spike",
+      "gene",
+      "gale"
+    ],
+    "el-primo": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "emz": [
+      "gene",
+      "spike",
+      "mortis"
+    ],
+    "eve": [
+      "spike",
+      "gene",
+      "tara"
+    ],
+    "fang": [
+      "spike",
+      "gene",
+      "gale"
+    ],
+    "frank": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "gale": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "gray": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "griff": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "grom": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "gus": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "hank": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "jacky": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "janet": [
+      "gene",
+      "spike",
+      "crow"
+    ],
+    "jessie": [
+      "gene",
+      "spike",
+      "dynamike"
+    ],
+    "juju": [
+      "gene",
+      "carl",
+      "lily"
+    ],
+    "kenji": [
+      "spike",
+      "gene",
+      "gale"
+    ],
+    "kit": [
+      "cordelius",
+      "gene",
+      "gale"
+    ],
+    "larry-lawrie": [
+      "mortis",
+      "mico",
+      "gray"
+    ],
+    "leon": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "lily": [
+      "gene",
+      "spike",
+      "cordelius"
+    ],
+    "lou": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "lumi": [
+      "gene",
+      "spike",
+      "lily"
+    ],
+    "maisie": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "mandy": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "max": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "meg": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "melodie": [
+      "spike",
+      "gene",
+      "gale"
+    ],
+    "mico": [
+      "spike",
+      "gale",
+      "gene"
+    ],
+    "meeple": [
+      "gene",
+      "mortis",
+      "mico"
+    ],
+    "moe": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "mortis": [
+      "spike",
+      "gene",
+      "gale"
+    ],
+    "mr-p": [
+      "mortis",
+      "mico",
+      "gene"
+    ],
+    "najia": [
+      "mortis",
+      "gene",
+      "poco"
+    ],
+    "nani": [
+      "mortis",
+      "gray",
+      "gene"
+    ],
+    "nita": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "nori": [
+      "otis",
+      "gene",
+      "gale"
+    ],
+    "ollie": [
+      "cordelius",
+      "gene",
+      "spike"
+    ],
+    "otis": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "pam": [
+      "gene",
+      "spike",
+      "dynamike"
+    ],
+    "penny": [
+      "gene",
+      "spike",
+      "dynamike"
+    ],
+    "pearl": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "pierce": [
+      "gene",
+      "tara",
+      "ruffs"
+    ],
+    "piper": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "poco": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "r-t": [
+      "gene",
+      "spike",
+      "dynamike"
+    ],
+    "rico": [
+      "mortis",
+      "gene",
+      "spike"
+    ],
+    "rosa": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "ruffs": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "sam": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "sandy": [
+      "tara",
+      "gene",
+      "spike"
+    ],
+    "shelly": [
+      "gene",
+      "spike",
+      "tara"
+    ],
+    "spike": [
+      "gene",
+      "mortis",
+      "gray"
+    ],
+    "sprout": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "squeak": [
+      "gene",
+      "mortis",
+      "mico"
+    ],
+    "starr-nova": [
+      "gene",
+      "spike",
+      "gale"
+    ],
+    "stu": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "surge": [
+      "gene",
+      "spike",
+      "dynamike"
+    ],
+    "tara": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "tick": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "wendy": [
+      "gene",
+      "spike",
+      "mortis"
+    ],
+    "willow": [
+      "mortis",
+      "gray",
+      "mico"
+    ],
+    "ziggy": [
+      "mortis",
+      "gray",
+      "stu"
+    ]
+  },
+  "deathcap-trap": {
+    "8-bit": [
+      "mr-p",
+      "tick"
+    ],
+    "amber": [
+      "spike",
+      "gene",
+      "rico"
+    ],
+    "angelo": [
+      "mr-p",
+      "spike",
+      "rico"
+    ],
+    "ash": [
+      "spike",
+      "rico",
+      "colette"
+    ],
+    "barley": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "bea": [
+      "piper",
+      "rico",
+      "spike"
+    ],
+    "belle": [
+      "rico",
+      "spike"
+    ],
+    "berry": [
+      "mico",
+      "rico",
+      "edgar"
+    ],
+    "bibi": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "bo": [
+      "rico",
+      "spike",
+      "piper"
+    ],
+    "bolt": [
+      "charlie",
+      "rico",
+      "spike"
+    ],
+    "bonnie": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "brock": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "bull": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "buster": [
+      "rico",
+      "spike",
+      "dynamike"
+    ],
+    "buzz": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "byron": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "carl": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "charlie": [
+      "rico",
+      "spike",
+      "penny"
+    ],
+    "chester": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "chuck": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "clancy": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "colette": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "colt": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "cordelius": [
+      "spike",
+      "rico",
+      "tara"
+    ],
+    "crow": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "damian": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "darryl": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "dynamike": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "draco": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "edgar": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "el-primo": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "emz": [
+      "rico",
+      "spike",
+      "mico"
+    ],
+    "eve": [
+      "rico",
+      "spike",
+      "penny"
+    ],
+    "fang": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "frank": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "gale": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "gray": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "griff": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "grom": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "gus": [
+      "rico",
+      "spike",
+      "lily"
+    ],
+    "hank": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "jacky": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "janet": [
+      "rico",
+      "spike",
+      "piper"
+    ],
+    "jessie": [
+      "rico",
+      "spike",
+      "dynamike"
+    ],
+    "juju": [
+      "rico",
+      "spike",
+      "lily"
+    ],
+    "kenji": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "kit": [
+      "rico",
+      "spike",
+      "lou"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "leon": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "lily": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "lou": [
+      "rico",
+      "spike",
+      "bolt"
+    ],
+    "lumi": [
+      "rico",
+      "spike",
+      "lily"
+    ],
+    "maisie": [
+      "rico",
+      "spike",
+      "bolt"
+    ],
+    "mandy": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "max": [
+      "rico",
+      "spike"
+    ],
+    "meg": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "melodie": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "mico": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "meeple": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "moe": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "mortis": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "mr-p": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "najia": [
+      "rico",
+      "spike",
+      "edgar"
+    ],
+    "nani": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "nita": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "nori": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "ollie": [
+      "rico",
+      "spike",
+      "cordelius"
+    ],
+    "otis": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "pam": [
+      "rico",
+      "spike",
+      "dynamike"
+    ],
+    "penny": [
+      "rico",
+      "spike",
+      "dynamike"
+    ],
+    "pearl": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "pierce": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "piper": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "poco": [
+      "rico",
+      "spike",
+      "clancy"
+    ],
+    "r-t": [
+      "rico",
+      "spike",
+      "dynamike"
+    ],
+    "rico": [
+      "mico",
+      "spike",
+      "dynamike"
+    ],
+    "rosa": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "ruffs": [
+      "rico",
+      "spike",
+      "penny"
+    ],
+    "sam": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "sandy": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "shelly": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "spike": [
+      "rico",
+      "mico",
+      "mortis"
+    ],
+    "sprout": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "squeak": [
+      "rico",
+      "spike",
+      "mr-p"
+    ],
+    "starr-nova": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "stu": [
+      "rico",
+      "spike"
+    ],
+    "surge": [
+      "rico",
+      "spike",
+      "dynamike"
+    ],
+    "tara": [
+      "rico",
+      "spike",
+      "clancy"
+    ],
+    "tick": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "wendy": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "willow": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "ziggy": [
+      "tick",
+      "rico",
+      "mortis"
+    ]
+  },
+  "gem-fort": {
+    "8-bit": [
+      "brock",
+      "colt"
+    ],
+    "amber": [
+      "tara",
+      "spike",
+      "gene"
+    ],
+    "angelo": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "ash": [
+      "colette",
+      "rosa",
+      "tara"
+    ],
+    "barley": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "bea": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "belle": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "berry": [
+      "lily",
+      "mortis",
+      "max"
+    ],
+    "bibi": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "bo": [
+      "tara",
+      "gene",
+      "spike"
+    ],
+    "bolt": [
+      "charlie",
+      "tara",
+      "colette"
+    ],
+    "bonnie": [
+      "tara",
+      "gene",
+      "spike"
+    ],
+    "brock": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "bull": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "buster": [
+      "colette",
+      "tara",
+      "spike"
+    ],
+    "buzz": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "byron": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "carl": [
+      "tara",
+      "gene",
+      "spike"
+    ],
+    "charlie": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "chester": [
+      "tara",
+      "gene",
+      "spike"
+    ],
+    "chuck": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "clancy": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "colette": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "colt": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "cordelius": [
+      "tara",
+      "spike",
+      "buster"
+    ],
+    "crow": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "damian": [
+      "colette",
+      "tara",
+      "cordelius"
+    ],
+    "darryl": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "dynamike": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "draco": [
+      "colette",
+      "tara",
+      "cordelius"
+    ],
+    "edgar": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "el-primo": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "emz": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "eve": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "fang": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "frank": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "gale": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "gray": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "griff": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "grom": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "gus": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "hank": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "jacky": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "janet": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "jessie": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "juju": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "kenji": [
+      "colette",
+      "tara",
+      "cordelius"
+    ],
+    "kit": [
+      "cordelius",
+      "tara",
+      "colette"
+    ],
+    "larry-lawrie": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "leon": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "lily": [
+      "colette",
+      "tara",
+      "cordelius"
+    ],
+    "lou": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "lumi": [
+      "tara",
+      "lily",
+      "max"
+    ],
+    "maisie": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "mandy": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "max": [
+      "tara",
+      "spike",
+      "gene"
+    ],
+    "meg": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "melodie": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "mico": [
+      "tara",
+      "surge",
+      "rosa"
+    ],
+    "meeple": [
+      "tara",
+      "mortis",
+      "max"
+    ],
+    "moe": [
+      "tara",
+      "gene",
+      "spike"
+    ],
+    "mortis": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "mr-p": [
+      "tara",
+      "mortis",
+      "max"
+    ],
+    "najia": [
+      "bibi",
+      "mortis",
+      "poco"
+    ],
+    "nani": [
+      "tara",
+      "mortis",
+      "max"
+    ],
+    "nita": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "nori": [
+      "tara",
+      "gale",
+      "chester"
+    ],
+    "ollie": [
+      "cordelius",
+      "colette",
+      "tara"
+    ],
+    "otis": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "pam": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "penny": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "pearl": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "pierce": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "piper": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "poco": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "r-t": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "rico": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "rosa": [
+      "colette",
+      "tara",
+      "buster"
+    ],
+    "ruffs": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "sam": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "sandy": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "shelly": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "spike": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "sprout": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "squeak": [
+      "tara",
+      "mortis",
+      "max"
+    ],
+    "starr-nova": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "stu": [
+      "tara",
+      "spike",
+      "gene"
+    ],
+    "surge": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "tara": [
+      "spike",
+      "larry-lawrie",
+      "max"
+    ],
+    "tick": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "wendy": [
+      "colette",
+      "tara",
+      "max"
+    ],
+    "willow": [
+      "gray",
+      "mortis",
+      "max"
+    ],
+    "ziggy": [
+      "gray",
+      "mortis",
+      "max"
+    ]
+  },
+  "undermine": {
+    "8-bit": [
+      "bo"
+    ],
+    "amber": [
+      "crow",
+      "spike",
+      "gene"
+    ],
+    "angelo": [
+      "mr-p",
+      "nani",
+      "piper"
+    ],
+    "ash": [
+      "spike",
+      "colette",
+      "crow"
+    ],
+    "barley": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "bea": [
+      "piper",
+      "nani",
+      "crow"
+    ],
+    "belle": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "berry": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "bibi": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "bo": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "bolt": [
+      "charlie",
+      "colette",
+      "spike"
+    ],
+    "bonnie": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "brock": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "bull": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "buster": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "buzz": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "byron": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "carl": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "charlie": [
+      "crow",
+      "spike",
+      "penny"
+    ],
+    "chester": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "chuck": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "clancy": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "colette": [
+      "crow",
+      "spike",
+      "gene"
+    ],
+    "colt": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "cordelius": [
+      "crow",
+      "spike",
+      "gene"
+    ],
+    "crow": [
+      "piper",
+      "nani",
+      "gene"
+    ],
+    "damian": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "darryl": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "dynamike": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "draco": [
+      "spike",
+      "gale",
+      "frank"
+    ],
+    "edgar": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "el-primo": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "emz": [
+      "mortis",
+      "crow",
+      "piper"
+    ],
+    "eve": [
+      "crow",
+      "spike",
+      "penny"
+    ],
+    "fang": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "frank": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "gale": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "gray": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "griff": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "grom": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "gus": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "hank": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "jacky": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "janet": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "jessie": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "juju": [
+      "lily",
+      "crow",
+      "piper"
+    ],
+    "kenji": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "kit": [
+      "cordelius",
+      "spike",
+      "gale"
+    ],
+    "larry-lawrie": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "leon": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "lily": [
+      "crow",
+      "spike",
+      "buster"
+    ],
+    "lou": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "lumi": [
+      "lily",
+      "crow",
+      "piper"
+    ],
+    "maisie": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "mandy": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "max": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "meg": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "melodie": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "mico": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "meeple": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "moe": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "mortis": [
+      "spike",
+      "crow",
+      "gale"
+    ],
+    "mr-p": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "najia": [
+      "mortis",
+      "spike",
+      "poco"
+    ],
+    "nani": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "nita": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "nori": [
+      "crow",
+      "spike",
+      "otis"
+    ],
+    "ollie": [
+      "cordelius",
+      "spike",
+      "crow"
+    ],
+    "otis": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "pam": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "penny": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "pearl": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "pierce": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "piper": [
+      "mortis",
+      "gray",
+      "nani"
+    ],
+    "poco": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "r-t": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "rico": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "rosa": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "ruffs": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "sam": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "sandy": [
+      "tara",
+      "crow",
+      "spike"
+    ],
+    "shelly": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "spike": [
+      "crow",
+      "piper",
+      "nani"
+    ],
+    "sprout": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "squeak": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "starr-nova": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "stu": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "surge": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "tara": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "tick": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "wendy": [
+      "mortis",
+      "crow",
+      "spike"
+    ],
+    "willow": [
+      "mortis",
+      "gray",
+      "piper"
+    ],
+    "ziggy": [
+      "mortis",
+      "gray",
+      "piper"
+    ]
+  },
+  "center-stage": {
+    "8-bit": [
+      "jacky",
+      "melodie"
+    ],
+    "amber": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "angelo": [
+      "mico",
+      "melodie",
+      "bolt"
+    ],
+    "ash": [
+      "gale",
+      "shelly",
+      "surge"
+    ],
+    "barley": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "bea": [
+      "mortis",
+      "melodie",
+      "edgar"
+    ],
+    "belle": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "berry": [
+      "mico",
+      "lily",
+      "stu"
+    ],
+    "bibi": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "bo": [
+      "mortis",
+      "stu",
+      "surge"
+    ],
+    "bolt": [
+      "chuck",
+      "surge",
+      "charlie"
+    ],
+    "bonnie": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "brock": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "bull": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "buster": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "buzz": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "byron": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "carl": [
+      "gale",
+      "surge",
+      "stu"
+    ],
+    "charlie": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "chester": [
+      "surge",
+      "gale",
+      "stu"
+    ],
+    "chuck": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "clancy": [
+      "surge",
+      "gale",
+      "ash"
+    ],
+    "colette": [
+      "stu",
+      "mortis",
+      "mico"
+    ],
+    "colt": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "cordelius": [
+      "surge",
+      "gale",
+      "clancy"
+    ],
+    "crow": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "damian": [
+      "surge",
+      "gale",
+      "otis"
+    ],
+    "darryl": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "dynamike": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "draco": [
+      "gale",
+      "surge",
+      "frank"
+    ],
+    "edgar": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "el-primo": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "emz": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "eve": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "fang": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "frank": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "gale": [
+      "emz",
+      "spike",
+      "gene"
+    ],
+    "gray": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "griff": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "grom": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "gus": [
+      "mortis",
+      "leon",
+      "edgar"
+    ],
+    "hank": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "jacky": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "janet": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "jessie": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "juju": [
+      "mico",
+      "lily",
+      "gale"
+    ],
+    "kenji": [
+      "gale",
+      "surge",
+      "otis"
+    ],
+    "kit": [
+      "gale",
+      "surge",
+      "bull"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "leon": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "lily": [
+      "bull",
+      "surge",
+      "gale"
+    ],
+    "lou": [
+      "bolt",
+      "mortis",
+      "surge"
+    ],
+    "lumi": [
+      "lily",
+      "stu",
+      "mico"
+    ],
+    "maisie": [
+      "bolt",
+      "mortis",
+      "surge"
+    ],
+    "mandy": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "max": [
+      "gale",
+      "surge",
+      "spike"
+    ],
+    "meg": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "melodie": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "mico": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "meeple": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "moe": [
+      "gale",
+      "surge",
+      "mortis"
+    ],
+    "mortis": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "mr-p": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "najia": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "nani": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "nita": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "nori": [
+      "gale",
+      "chester",
+      "bull"
+    ],
+    "ollie": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "otis": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "pam": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "penny": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "pearl": [
+      "gale",
+      "surge",
+      "mortis"
+    ],
+    "pierce": [
+      "lily",
+      "kit",
+      "surge"
+    ],
+    "piper": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "poco": [
+      "surge",
+      "gale",
+      "clancy"
+    ],
+    "r-t": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "rico": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "rosa": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "ruffs": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "sam": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "sandy": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "shelly": [
+      "gale",
+      "surge",
+      "otis"
+    ],
+    "spike": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "sprout": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "squeak": [
+      "mortis",
+      "buzz",
+      "kenji"
+    ],
+    "starr-nova": [
+      "gale",
+      "surge",
+      "edgar"
+    ],
+    "stu": [
+      "gale",
+      "surge",
+      "spike"
+    ],
+    "surge": [
+      "emz",
+      "spike",
+      "gene"
+    ],
+    "tara": [
+      "surge",
+      "gale",
+      "clancy"
+    ],
+    "tick": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "wendy": [
+      "gale",
+      "surge",
+      "mortis"
+    ],
+    "willow": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "ziggy": [
+      "mortis",
+      "stu",
+      "mico"
+    ]
+  },
+  "pinball-dreams": {
+    "8-bit": [
+      "rico",
+      "gale"
+    ],
+    "amber": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "angelo": [
+      "surge",
+      "rico",
+      "melodie"
+    ],
+    "ash": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "barley": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "bea": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "belle": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "berry": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "bibi": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "bo": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "bolt": [
+      "chuck",
+      "rico",
+      "surge"
+    ],
+    "bonnie": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "brock": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "bull": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "buster": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "buzz": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "byron": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "carl": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "charlie": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "chester": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "chuck": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "clancy": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "colette": [
+      "surge",
+      "rico",
+      "stu"
+    ],
+    "colt": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "cordelius": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "crow": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "damian": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "darryl": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "dynamike": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "draco": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "edgar": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "el-primo": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "emz": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "eve": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "fang": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "frank": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "gale": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "gray": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "griff": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "grom": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "gus": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "hank": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "jacky": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "janet": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "jessie": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "juju": [
+      "carl",
+      "rico",
+      "gale"
+    ],
+    "kenji": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "kit": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "leon": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "lily": [
+      "surge",
+      "rico",
+      "buster"
+    ],
+    "lou": [
+      "surge",
+      "rico",
+      "bolt"
+    ],
+    "lumi": [
+      "surge",
+      "rico",
+      "stu"
+    ],
+    "maisie": [
+      "surge",
+      "rico",
+      "bolt"
+    ],
+    "mandy": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "max": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "meg": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "melodie": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "mico": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "meeple": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "moe": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "mortis": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "mr-p": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "najia": [
+      "surge",
+      "rico",
+      "edgar"
+    ],
+    "nani": [
+      "mico",
+      "rico",
+      "mortis"
+    ],
+    "nita": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "nori": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "ollie": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "otis": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "pam": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "penny": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "pearl": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "pierce": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "piper": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "poco": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "r-t": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "rico": [
+      "mico",
+      "mortis",
+      "stu"
+    ],
+    "rosa": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "ruffs": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "sam": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "sandy": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "shelly": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "spike": [
+      "rico",
+      "surge",
+      "mortis"
+    ],
+    "sprout": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "squeak": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "starr-nova": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "stu": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "surge": [
+      "rico",
+      "spike",
+      "otis"
+    ],
+    "tara": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "tick": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "wendy": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "willow": [
+      "mico",
+      "rico",
+      "stu"
+    ],
+    "ziggy": [
+      "surge",
+      "rico",
+      "mortis"
+    ]
+  },
+  "sneaky-fields": {
+    "8-bit": [
+      "rosa",
+      "buster"
+    ],
+    "amber": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "angelo": [
+      "mortis",
+      "rosa",
+      "buster"
+    ],
+    "ash": [
+      "rosa",
+      "shelly",
+      "jacky"
+    ],
+    "barley": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "bea": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "belle": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "berry": [
+      "mortis",
+      "lily",
+      "el-primo"
+    ],
+    "bibi": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "bo": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "bolt": [
+      "shelly",
+      "buster",
+      "charlie"
+    ],
+    "bonnie": [
+      "buster",
+      "rosa",
+      "shelly"
+    ],
+    "brock": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "bull": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "buster": [
+      "shelly",
+      "rosa",
+      "el-primo"
+    ],
+    "buzz": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "byron": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "carl": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "charlie": [
+      "rosa",
+      "buster",
+      "sandy"
+    ],
+    "chester": [
+      "buster",
+      "rosa",
+      "shelly"
+    ],
+    "chuck": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "clancy": [
+      "rosa",
+      "buster",
+      "charlie"
+    ],
+    "colette": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "colt": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "cordelius": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "crow": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "damian": [
+      "shelly",
+      "otis",
+      "el-primo"
+    ],
+    "darryl": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "dynamike": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "draco": [
+      "frank",
+      "shelly",
+      "buster"
+    ],
+    "edgar": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "el-primo": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "emz": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "eve": [
+      "rosa",
+      "buster",
+      "sandy"
+    ],
+    "fang": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "frank": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "gale": [
+      "rosa",
+      "buster",
+      "tara"
+    ],
+    "gray": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "griff": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "grom": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "gus": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "hank": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "jacky": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "janet": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "jessie": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "juju": [
+      "mortis",
+      "rosa",
+      "buster"
+    ],
+    "kenji": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "kit": [
+      "shelly",
+      "bull",
+      "buster"
+    ],
+    "larry-lawrie": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "leon": [
+      "rosa",
+      "buster",
+      "tara"
+    ],
+    "lily": [
+      "shelly",
+      "bull",
+      "buster"
+    ],
+    "lou": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "lumi": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "maisie": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "mandy": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "max": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "meg": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "melodie": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "mico": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "meeple": [
+      "mortis",
+      "edgar",
+      "rosa"
+    ],
+    "moe": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "mortis": [
+      "shelly",
+      "rosa",
+      "jacky"
+    ],
+    "mr-p": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "najia": [
+      "bibi",
+      "edgar",
+      "mortis"
+    ],
+    "nani": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "nita": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "nori": [
+      "bull",
+      "meg",
+      "rosa"
+    ],
+    "ollie": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "otis": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "pam": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "penny": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "pearl": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "pierce": [
+      "buster",
+      "rosa",
+      "bull"
+    ],
+    "piper": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "poco": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "r-t": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "rico": [
+      "mortis",
+      "edgar",
+      "buster"
+    ],
+    "rosa": [
+      "shelly",
+      "buster",
+      "jacky"
+    ],
+    "ruffs": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "sam": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "sandy": [
+      "rosa",
+      "buster",
+      "tara"
+    ],
+    "shelly": [
+      "buster",
+      "rosa",
+      "gale"
+    ],
+    "spike": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "sprout": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "squeak": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "starr-nova": [
+      "rosa",
+      "buster",
+      "edgar"
+    ],
+    "stu": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "surge": [
+      "rosa",
+      "buster",
+      "tara"
+    ],
+    "tara": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "tick": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "wendy": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "willow": [
+      "mortis",
+      "edgar",
+      "el-primo"
+    ],
+    "ziggy": [
+      "mortis",
+      "bibi",
+      "rosa"
+    ]
+  },
+  "triple-dribble": {
+    "8-bit": [
+      "emz"
+    ],
+    "amber": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "angelo": [
+      "mico",
+      "melodie",
+      "bolt"
+    ],
+    "ash": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "barley": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "bea": [
+      "mortis",
+      "edgar",
+      "melodie"
+    ],
+    "belle": [
+      "mortis",
+      "stu",
+      "gale"
+    ],
+    "berry": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "bibi": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "bo": [
+      "mortis",
+      "stu",
+      "gale"
+    ],
+    "bolt": [
+      "chuck",
+      "surge",
+      "charlie"
+    ],
+    "bonnie": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "brock": [
+      "mortis",
+      "stu",
+      "gale"
+    ],
+    "bull": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "buster": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "buzz": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "byron": [
+      "mortis",
+      "stu",
+      "gale"
+    ],
+    "carl": [
+      "gale",
+      "surge",
+      "stu"
+    ],
+    "charlie": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "chester": [
+      "surge",
+      "gale",
+      "stu"
+    ],
+    "chuck": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "clancy": [
+      "surge",
+      "gale",
+      "ash"
+    ],
+    "colette": [
+      "stu",
+      "mortis",
+      "melodie"
+    ],
+    "colt": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "cordelius": [
+      "surge",
+      "gale",
+      "clancy"
+    ],
+    "crow": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "damian": [
+      "surge",
+      "gale",
+      "otis"
+    ],
+    "darryl": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "dynamike": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "draco": [
+      "gale",
+      "surge",
+      "frank"
+    ],
+    "edgar": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "el-primo": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "emz": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "eve": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "fang": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "frank": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "gale": [
+      "emz",
+      "spike",
+      "otis"
+    ],
+    "gray": [
+      "surge",
+      "gale",
+      "mortis"
+    ],
+    "griff": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "grom": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "gus": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "hank": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "jacky": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "janet": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "jessie": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "juju": [
+      "mico",
+      "lily",
+      "gale"
+    ],
+    "kenji": [
+      "gale",
+      "surge",
+      "otis"
+    ],
+    "kit": [
+      "gale",
+      "surge",
+      "bull"
+    ],
+    "larry-lawrie": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "leon": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "lily": [
+      "surge",
+      "gale",
+      "bull"
+    ],
+    "lou": [
+      "bolt",
+      "mortis",
+      "gale"
+    ],
+    "lumi": [
+      "lily",
+      "stu",
+      "mico"
+    ],
+    "maisie": [
+      "bolt",
+      "mortis",
+      "gale"
+    ],
+    "mandy": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "max": [
+      "gale",
+      "surge",
+      "spike"
+    ],
+    "meg": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "melodie": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "mico": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "meeple": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "moe": [
+      "gale",
+      "surge",
+      "mortis"
+    ],
+    "mortis": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "mr-p": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "najia": [
+      "edgar",
+      "mortis",
+      "gale"
+    ],
+    "nani": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "nita": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "nori": [
+      "gale",
+      "chester",
+      "bull"
+    ],
+    "ollie": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "otis": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "pam": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "penny": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "pearl": [
+      "gale",
+      "surge",
+      "mortis"
+    ],
+    "pierce": [
+      "lily",
+      "kit",
+      "gale"
+    ],
+    "piper": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "poco": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "r-t": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "rico": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "rosa": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "ruffs": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "sam": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "sandy": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "shelly": [
+      "gale",
+      "surge",
+      "otis"
+    ],
+    "spike": [
+      "mortis",
+      "stu",
+      "gale"
+    ],
+    "sprout": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "squeak": [
+      "mortis",
+      "buzz",
+      "kenji"
+    ],
+    "starr-nova": [
+      "gale",
+      "surge",
+      "leon"
+    ],
+    "stu": [
+      "gale",
+      "surge",
+      "spike"
+    ],
+    "surge": [
+      "emz",
+      "spike",
+      "otis"
+    ],
+    "tara": [
+      "gale",
+      "surge",
+      "clancy"
+    ],
+    "tick": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "wendy": [
+      "gale",
+      "surge",
+      "mortis"
+    ],
+    "willow": [
+      "mortis",
+      "mico",
+      "stu"
+    ],
+    "ziggy": [
+      "mortis",
+      "stu",
+      "bibi"
+    ]
+  },
+  "open-business": {
+    "8-bit": [
+      "piper",
+      "nani"
+    ],
+    "amber": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "angelo": [
+      "meg",
+      "jessie",
+      "mr-p"
+    ],
+    "ash": [
+      "meg",
+      "colette",
+      "jessie"
+    ],
+    "barley": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "bea": [
+      "meg",
+      "jessie",
+      "piper"
+    ],
+    "belle": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "berry": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "bibi": [
+      "meg",
+      "colette",
+      "jessie"
+    ],
+    "bo": [
+      "meg",
+      "sandy",
+      "jessie"
+    ],
+    "bolt": [
+      "meg",
+      "charlie",
+      "jessie"
+    ],
+    "bonnie": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "brock": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "bull": [
+      "meg",
+      "colette",
+      "jessie"
+    ],
+    "buster": [
+      "meg",
+      "colette",
+      "dynamike"
+    ],
+    "buzz": [
+      "meg",
+      "colette",
+      "jessie"
+    ],
+    "byron": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "carl": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "charlie": [
+      "meg",
+      "amber",
+      "jessie"
+    ],
+    "chester": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "chuck": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "clancy": [
+      "meg",
+      "jessie",
+      "mr-p"
+    ],
+    "colette": [
+      "jessie",
+      "mr-p",
+      "meg"
+    ],
+    "colt": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "cordelius": [
+      "meg",
+      "lou",
+      "jessie"
+    ],
+    "crow": [
+      "meg",
+      "jessie",
+      "byron"
+    ],
+    "damian": [
+      "meg",
+      "emz",
+      "lou"
+    ],
+    "darryl": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "dynamike": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "draco": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "edgar": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "el-primo": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "emz": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "eve": [
+      "meg",
+      "amber",
+      "jessie"
+    ],
+    "fang": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "frank": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "gale": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "gray": [
+      "meg",
+      "bo",
+      "jessie"
+    ],
+    "griff": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "grom": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "gus": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "hank": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "jacky": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "janet": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "jessie": [
+      "barley",
+      "dynamike",
+      "mico"
+    ],
+    "juju": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "kenji": [
+      "meg",
+      "griff",
+      "lou"
+    ],
+    "kit": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "leon": [
+      "meg",
+      "jessie",
+      "mr-p"
+    ],
+    "lily": [
+      "meg",
+      "pearl",
+      "lou"
+    ],
+    "lou": [
+      "meg",
+      "jessie",
+      "bo"
+    ],
+    "lumi": [
+      "meg",
+      "jessie",
+      "lily"
+    ],
+    "maisie": [
+      "meg",
+      "jessie",
+      "bo"
+    ],
+    "mandy": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "max": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "meg": [
+      "colette",
+      "lou",
+      "gale"
+    ],
+    "melodie": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "mico": [
+      "meg",
+      "lou",
+      "gale"
+    ],
+    "meeple": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "moe": [
+      "meg",
+      "jessie",
+      "mr-p"
+    ],
+    "mortis": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "mr-p": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "najia": [
+      "meg",
+      "poco",
+      "jessie"
+    ],
+    "nani": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "nita": [
+      "meg",
+      "colette",
+      "jessie"
+    ],
+    "nori": [
+      "meg",
+      "griff",
+      "lou"
+    ],
+    "ollie": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "otis": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "pam": [
+      "barley",
+      "dynamike",
+      "mico"
+    ],
+    "penny": [
+      "barley",
+      "dynamike",
+      "mico"
+    ],
+    "pearl": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "pierce": [
+      "meg",
+      "jessie",
+      "mr-p"
+    ],
+    "piper": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "poco": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "r-t": [
+      "barley",
+      "dynamike",
+      "mico"
+    ],
+    "rico": [
+      "meg",
+      "mico",
+      "barley"
+    ],
+    "rosa": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "ruffs": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "sam": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "sandy": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "shelly": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "spike": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "sprout": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "squeak": [
+      "meg",
+      "jessie",
+      "mr-p"
+    ],
+    "starr-nova": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "stu": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "surge": [
+      "barley",
+      "dynamike",
+      "meg"
+    ],
+    "tara": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "tick": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "wendy": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "willow": [
+      "mico",
+      "meg",
+      "gray"
+    ],
+    "ziggy": [
+      "meg",
+      "gray",
+      "lou"
+    ]
+  },
+  "dry-season": {
+    "8-bit": [
+      "angelo",
+      "mandy"
+    ],
+    "amber": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "ash": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "barley": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "berry": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "bibi": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "bo": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "bolt": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "bonnie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bull": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "buster": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "buzz": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "carl": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "charlie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "chester": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "chuck": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "clancy": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "cordelius": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "crow": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "damian": [
+      "piper",
+      "mandy",
+      "nani"
+    ],
+    "darryl": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "dynamike": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "draco": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "edgar": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "el-primo": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "emz": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "eve": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "fang": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "frank": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "gale": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "gray": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "griff": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "grom": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "gus": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "hank": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "jacky": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "janet": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "jessie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "juju": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "kenji": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "kit": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "larry-lawrie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "leon": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "lily": [
+      "r-t",
+      "piper",
+      "mandy"
+    ],
+    "lou": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "lumi": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "maisie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "max": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "meg": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "melodie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "mico": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "meeple": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "moe": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "mortis": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "mr-p": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "najia": [
+      "piper",
+      "mandy",
+      "byron"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "gray"
+    ],
+    "nita": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "nori": [
+      "piper",
+      "mandy",
+      "brock"
+    ],
+    "ollie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "otis": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "pam": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "penny": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "pearl": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "nani"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "angelo"
+    ],
+    "poco": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "r-t": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "rico": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "rosa": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "ruffs": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "sam": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "sandy": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "shelly": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "spike": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "sprout": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "squeak": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "starr-nova": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "stu": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "surge": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "tara": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "tick": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "wendy": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "willow": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "ziggy": [
+      "piper",
+      "mandy",
+      "nani"
+    ]
+  },
+  "hideout": {
+    "8-bit": [
+      "tick",
+      "sprout"
+    ],
+    "amber": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "ash": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "barley": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "berry": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "bibi": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "bo": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "bolt": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "bonnie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "bull": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "buster": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "buzz": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "carl": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "charlie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "chester": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "chuck": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "clancy": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "cordelius": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "crow": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "damian": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "darryl": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "dynamike": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "draco": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "edgar": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "el-primo": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "emz": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "eve": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "fang": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "frank": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "gale": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "gray": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "griff": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "grom": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "gus": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "hank": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "jacky": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "janet": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "jessie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "juju": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "kenji": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "kit": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "larry-lawrie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "leon": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "lily": [
+      "r-t",
+      "brock",
+      "nani"
+    ],
+    "lou": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "lumi": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "maisie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "max": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "meg": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "melodie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "mico": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "meeple": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "moe": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "mortis": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "mr-p": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "najia": [
+      "piper",
+      "mandy",
+      "brock"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "brock"
+    ],
+    "nita": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "nori": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "ollie": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "otis": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "pam": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "penny": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "pearl": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "brock"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "brock"
+    ],
+    "poco": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "r-t": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "rico": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "rosa": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "ruffs": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "sam": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "sandy": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "shelly": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "spike": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "sprout": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "squeak": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "starr-nova": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "stu": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "surge": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "tara": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "tick": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "wendy": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "willow": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "ziggy": [
+      "piper",
+      "brock",
+      "nani"
+    ]
+  },
+  "layer-cake": {
+    "8-bit": [
+      "tick"
+    ],
+    "amber": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "angelo": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "ash": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "barley": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "bea": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "belle": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "berry": [
+      "mico",
+      "lily",
+      "edgar"
+    ],
+    "bibi": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "bo": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "bolt": [
+      "finx",
+      "charlie",
+      "mico"
+    ],
+    "bonnie": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "brock": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "bull": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "buster": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "buzz": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "byron": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "carl": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "charlie": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "chester": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "chuck": [
+      "tick",
+      "barley",
+      "mico"
+    ],
+    "clancy": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "colette": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "colt": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "cordelius": [
+      "tick",
+      "mico",
+      "piper"
+    ],
+    "crow": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "damian": [
+      "tick",
+      "charlie",
+      "mico"
+    ],
+    "darryl": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "dynamike": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "draco": [
+      "tick",
+      "charlie",
+      "mico"
+    ],
+    "edgar": [
+      "mico",
+      "tick",
+      "piper"
+    ],
+    "el-primo": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "emz": [
+      "tick",
+      "mico",
+      "piper"
+    ],
+    "eve": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "fang": [
+      "mico",
+      "tick",
+      "piper"
+    ],
+    "frank": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "gale": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "gray": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "griff": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "grom": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "gus": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "hank": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "jacky": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "janet": [
+      "tick",
+      "leon",
+      "piper"
+    ],
+    "jessie": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "juju": [
+      "tick",
+      "carl",
+      "mico"
+    ],
+    "kenji": [
+      "tick",
+      "mico",
+      "piper"
+    ],
+    "kit": [
+      "lily",
+      "mico",
+      "tick"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "leon": [
+      "tick",
+      "barley",
+      "piper"
+    ],
+    "lily": [
+      "tick",
+      "barley",
+      "mico"
+    ],
+    "lou": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "lumi": [
+      "mico",
+      "edgar",
+      "piper"
+    ],
+    "maisie": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "mandy": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "max": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "meg": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "melodie": [
+      "mico",
+      "tick",
+      "piper"
+    ],
+    "mico": [
+      "tick",
+      "carl",
+      "mico"
+    ],
+    "meeple": [
+      "tick",
+      "mico",
+      "edgar"
+    ],
+    "moe": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "mortis": [
+      "mico",
+      "tick",
+      "piper"
+    ],
+    "mr-p": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "najia": [
+      "tick",
+      "edgar",
+      "mortis"
+    ],
+    "nani": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "nita": [
+      "tick",
+      "colette",
+      "piper"
+    ],
+    "nori": [
+      "sprout",
+      "tick",
+      "mico"
+    ],
+    "ollie": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "otis": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "pam": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "penny": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "pearl": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "pierce": [
+      "tick",
+      "larry-lawrie",
+      "mico"
+    ],
+    "piper": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "poco": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "r-t": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "rico": [
+      "tick",
+      "barley",
+      "mico"
+    ],
+    "rosa": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "ruffs": [
+      "tick",
+      "barley",
+      "penny"
+    ],
+    "sam": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "sandy": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "shelly": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "spike": [
+      "tick",
+      "mico",
+      "piper"
+    ],
+    "sprout": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "squeak": [
+      "tick",
+      "mico",
+      "mortis"
+    ],
+    "starr-nova": [
+      "tick",
+      "mico",
+      "edgar"
+    ],
+    "stu": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "surge": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "tara": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "tick": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "wendy": [
+      "tick",
+      "mico",
+      "edgar"
+    ],
+    "willow": [
+      "mico",
+      "edgar",
+      "mortis"
+    ],
+    "ziggy": [
+      "tick",
+      "mortis",
+      "piper"
+    ]
+  },
+  "shooting-star": {
+    "8-bit": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "amber": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "ash": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "barley": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "berry": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "bibi": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "bo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bolt": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "bonnie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bull": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "buster": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "buzz": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "carl": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "charlie": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "chester": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "chuck": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "clancy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "cordelius": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "crow": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "damian": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "darryl": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "dynamike": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "draco": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "edgar": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "el-primo": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "emz": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "eve": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "fang": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "frank": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "gale": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "gray": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "griff": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "grom": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "gus": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "hank": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "jacky": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "janet": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "jessie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "juju": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "kenji": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "kit": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "larry-lawrie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "leon": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "lily": [
+      "r-t",
+      "piper",
+      "mandy"
+    ],
+    "lou": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "lumi": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "maisie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "max": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "meg": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "melodie": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "mico": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "meeple": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "moe": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mortis": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "mr-p": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "najia": [
+      "piper",
+      "mandy",
+      "byron"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "angelo"
+    ],
+    "nita": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "nori": [
+      "mandy",
+      "piper",
+      "brock"
+    ],
+    "ollie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "otis": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pam": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "penny": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pearl": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "nani"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "angelo"
+    ],
+    "poco": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "r-t": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "rico": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "rosa": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "ruffs": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "sam": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "sandy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "shelly": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "spike": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "sprout": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "squeak": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "starr-nova": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "stu": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "surge": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "tara": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "tick": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "wendy": [
+      "colette",
+      "piper",
+      "mandy"
+    ],
+    "willow": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "ziggy": [
+      "nani",
+      "piper",
+      "mandy"
+    ]
+  },
+  "belles-rock": {
+    "8-bit": [
+      "sprout"
+    ],
+    "amber": [
+      "piper",
+      "nani",
+      "leon"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mr-p"
+    ],
+    "ash": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "barley": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "berry": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "bibi": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "bo": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "bolt": [
+      "finx",
+      "piper",
+      "nani"
+    ],
+    "bonnie": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "bull": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "buster": [
+      "colette",
+      "piper",
+      "dynamike"
+    ],
+    "buzz": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "carl": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "charlie": [
+      "piper",
+      "nani",
+      "mico"
+    ],
+    "chester": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "chuck": [
+      "nani",
+      "piper",
+      "brock"
+    ],
+    "clancy": [
+      "nani",
+      "piper",
+      "mico"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "cordelius": [
+      "piper",
+      "nani",
+      "mico"
+    ],
+    "crow": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "damian": [
+      "piper",
+      "nani",
+      "colette"
+    ],
+    "darryl": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "dynamike": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "draco": [
+      "nani",
+      "piper",
+      "frank"
+    ],
+    "edgar": [
+      "piper",
+      "nani",
+      "mico"
+    ],
+    "el-primo": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "emz": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "eve": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "fang": [
+      "piper",
+      "nani",
+      "mico"
+    ],
+    "frank": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "gale": [
+      "nani",
+      "piper",
+      "mico"
+    ],
+    "gray": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "griff": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "grom": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "gus": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "hank": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "jacky": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "janet": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "jessie": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "juju": [
+      "carl",
+      "piper",
+      "nani"
+    ],
+    "kenji": [
+      "piper",
+      "nani",
+      "griff"
+    ],
+    "kit": [
+      "piper",
+      "nani",
+      "cordelius"
+    ],
+    "larry-lawrie": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "leon": [
+      "nani",
+      "piper",
+      "tara"
+    ],
+    "lily": [
+      "r-t",
+      "piper",
+      "buster"
+    ],
+    "lou": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "lumi": [
+      "nani",
+      "piper",
+      "mico"
+    ],
+    "maisie": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "mandy": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "max": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "meg": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "melodie": [
+      "piper",
+      "nani",
+      "mico"
+    ],
+    "mico": [
+      "piper",
+      "nani",
+      "buster"
+    ],
+    "meeple": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "moe": [
+      "nani",
+      "piper",
+      "r-t"
+    ],
+    "mortis": [
+      "piper",
+      "nani",
+      "buster"
+    ],
+    "mr-p": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "najia": [
+      "piper",
+      "edgar",
+      "mortis"
+    ],
+    "nani": [
+      "mico",
+      "piper",
+      "leon"
+    ],
+    "nita": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "nori": [
+      "meg",
+      "piper",
+      "nani"
+    ],
+    "ollie": [
+      "nani",
+      "piper",
+      "cordelius"
+    ],
+    "otis": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "pam": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "penny": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "pearl": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "leon"
+    ],
+    "piper": [
+      "mico",
+      "nani",
+      "leon"
+    ],
+    "poco": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "r-t": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "rico": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "rosa": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "ruffs": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "sam": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "sandy": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "shelly": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "spike": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "sprout": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "squeak": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "starr-nova": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "stu": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "surge": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "tara": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "tick": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "wendy": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "willow": [
+      "mico",
+      "piper",
+      "nani"
+    ],
+    "ziggy": [
+      "mortis",
+      "piper",
+      "nani"
+    ]
+  },
+  "flaring-phoenix": {
+    "8-bit": [
+      "brock"
+    ],
+    "amber": [
+      "leon",
+      "piper",
+      "edgar"
+    ],
+    "angelo": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "ash": [
+      "leon",
+      "colette",
+      "crow"
+    ],
+    "barley": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "bea": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "belle": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "berry": [
+      "leon",
+      "lily",
+      "mortis"
+    ],
+    "bibi": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "bo": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "bolt": [
+      "charlie",
+      "leon",
+      "colette"
+    ],
+    "bonnie": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "brock": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "bull": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "buster": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "buzz": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "byron": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "carl": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "charlie": [
+      "leon",
+      "piper",
+      "crow"
+    ],
+    "chester": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "chuck": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "clancy": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "colette": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "colt": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "cordelius": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "crow": [
+      "leon",
+      "nani",
+      "edgar"
+    ],
+    "damian": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "darryl": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "dynamike": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "draco": [
+      "cordelius",
+      "leon",
+      "crow"
+    ],
+    "edgar": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "el-primo": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "emz": [
+      "leon",
+      "nani",
+      "edgar"
+    ],
+    "eve": [
+      "leon",
+      "crow",
+      "piper"
+    ],
+    "fang": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "frank": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "gale": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "gray": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "griff": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "grom": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "gus": [
+      "leon",
+      "nani",
+      "edgar"
+    ],
+    "hank": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "jacky": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "janet": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "jessie": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "juju": [
+      "lily",
+      "leon",
+      "cordelius"
+    ],
+    "kenji": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "kit": [
+      "lily",
+      "cordelius",
+      "leon"
+    ],
+    "larry-lawrie": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "leon": [
+      "cordelius",
+      "crow",
+      "tara"
+    ],
+    "lily": [
+      "cordelius",
+      "leon",
+      "crow"
+    ],
+    "lou": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "lumi": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "maisie": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "mandy": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "max": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "meg": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "melodie": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "mico": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "meeple": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "moe": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "mortis": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "mr-p": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "najia": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "nani": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "nita": [
+      "leon",
+      "crow",
+      "colette"
+    ],
+    "nori": [
+      "leon",
+      "cordelius",
+      "crow"
+    ],
+    "ollie": [
+      "cordelius",
+      "leon",
+      "crow"
+    ],
+    "otis": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "pam": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "penny": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "pearl": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "pierce": [
+      "leon",
+      "crow",
+      "tara"
+    ],
+    "piper": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "poco": [
+      "leon",
+      "nani",
+      "cordelius"
+    ],
+    "r-t": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "rico": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "rosa": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "ruffs": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "sam": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "sandy": [
+      "tara",
+      "leon",
+      "crow"
+    ],
+    "shelly": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "spike": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "sprout": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "squeak": [
+      "leon",
+      "kenji",
+      "buzz"
+    ],
+    "starr-nova": [
+      "leon",
+      "edgar",
+      "crow"
+    ],
+    "stu": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "surge": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "tara": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "tick": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "wendy": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "willow": [
+      "leon",
+      "edgar",
+      "mortis"
+    ],
+    "ziggy": [
+      "leon",
+      "mortis",
+      "edgar"
+    ]
+  },
+  "new-horizons": {
+    "8-bit": [
+      "nani"
+    ],
+    "amber": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "ash": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "barley": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "berry": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "bibi": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "bo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bolt": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "bonnie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bull": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "buster": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "buzz": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "carl": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "charlie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "chester": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "chuck": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "clancy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "cordelius": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "crow": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "damian": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "darryl": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "dynamike": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "draco": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "edgar": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "el-primo": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "emz": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "eve": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "fang": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "frank": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "gale": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "gray": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "griff": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "grom": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "gus": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "hank": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "jacky": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "janet": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "jessie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "juju": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "kenji": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "kit": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "larry-lawrie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "leon": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "lily": [
+      "r-t",
+      "piper",
+      "mandy"
+    ],
+    "lou": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "lumi": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "maisie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "max": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "meg": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "melodie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "mico": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "meeple": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "moe": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mortis": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "mr-p": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "najia": [
+      "piper",
+      "mandy",
+      "byron"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "angelo"
+    ],
+    "nita": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "nori": [
+      "piper",
+      "mandy",
+      "brock"
+    ],
+    "ollie": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "otis": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pam": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "penny": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pearl": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "nani"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "angelo"
+    ],
+    "poco": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "r-t": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "rico": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "rosa": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "ruffs": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "sam": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "sandy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "shelly": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "spike": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "sprout": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "squeak": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "starr-nova": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "stu": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "surge": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "tara": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "tick": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "wendy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "willow": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "ziggy": [
+      "nani",
+      "piper",
+      "mandy"
+    ]
+  },
+  "out-in-the-open": {
+    "8-bit": [
+      "angelo",
+      "piper"
+    ],
+    "amber": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "angelo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "ash": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "barley": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "bea": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "belle": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "berry": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "bibi": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "bo": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bolt": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "bonnie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "brock": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "bull": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "buster": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "buzz": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "byron": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "carl": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "charlie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "chester": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "chuck": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "clancy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "colette": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "colt": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "cordelius": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "crow": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "damian": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "darryl": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "dynamike": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "draco": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "edgar": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "el-primo": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "emz": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "eve": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "fang": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "frank": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "gale": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "gray": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "griff": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "grom": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "gus": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "hank": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "jacky": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "janet": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "jessie": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "juju": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "kenji": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "kit": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "larry-lawrie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "leon": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "lily": [
+      "r-t",
+      "piper",
+      "angelo"
+    ],
+    "lou": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "lumi": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "maisie": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "mandy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "max": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "meg": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "melodie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "mico": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "meeple": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "moe": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "mortis": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "mr-p": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "najia": [
+      "piper",
+      "mandy",
+      "byron"
+    ],
+    "nani": [
+      "mandy",
+      "piper",
+      "angelo"
+    ],
+    "nita": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "nori": [
+      "piper",
+      "mandy",
+      "angelo"
+    ],
+    "ollie": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "otis": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "pam": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "penny": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "pearl": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "pierce": [
+      "mandy",
+      "piper",
+      "angelo"
+    ],
+    "piper": [
+      "nani",
+      "mandy",
+      "angelo"
+    ],
+    "poco": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "r-t": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "rico": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "rosa": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "ruffs": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "sam": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "sandy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "shelly": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "spike": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "sprout": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "squeak": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "starr-nova": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "stu": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "surge": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "tara": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "tick": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "wendy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "willow": [
+      "piper",
+      "nani",
+      "angelo"
+    ],
+    "ziggy": [
+      "nani",
+      "piper",
+      "angelo"
+    ]
+  }
+}

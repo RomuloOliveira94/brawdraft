@@ -1,14 +1,14 @@
 // Orchestrates the data pipeline: reads the fetched roster + raw text files,
-// parses counters and maps, joins everything together, and writes the final
-// committed JSON consumed by src/content.config.ts. Throws (non-zero exit) on
-// any integrity violation instead of silently emitting bad data.
+// parses meta counters and maps, joins everything together, and writes the
+// final committed JSON consumed by src/content.config.ts. Throws (non-zero
+// exit) on any integrity violation instead of silently emitting bad data.
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { makeResolver, normKey } from './lib/normalize.mjs';
-import { MANUAL_ALIASES } from './lib/aliases.mjs';
-import { parseCounters } from './parse-counters.mjs';
+import { MANUAL_ALIASES, META_TYPO_FIXES, META_MAP_OVERRIDES } from './lib/aliases.mjs';
+import { parseMeta } from './parse-meta.mjs';
 import { parseMaps } from './parse-maps.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -16,12 +16,13 @@ const ROOT = path.resolve(__dirname, '..');
 
 const BRAWLERS_JSON = path.join(ROOT, 'src/data/brawlers.json');
 const MAP_METADATA_JSON = path.join(ROOT, 'src/data/_map-metadata.json');
-const COUNTERS_RAW = path.join(ROOT, 'data/raw/counters.txt');
+const META_RAW = path.join(ROOT, 'data/raw/meta.txt');
 const MAPS_RAW = path.join(ROOT, 'data/raw/maps.txt');
 
 const MAPS_JSON = path.join(ROOT, 'src/data/maps.json');
 const COUNTERS_INDEX_JSON = path.join(ROOT, 'src/data/counters-index.json');
 const MAP_INDEX_JSON = path.join(ROOT, 'src/data/map-index.json');
+const MAP_COUNTERS_JSON = path.join(ROOT, 'src/data/map-counters.json');
 const REPORT_JSON = path.join(ROOT, 'src/data/_report.json');
 
 async function readJson(file) {
@@ -38,10 +39,24 @@ async function main() {
 
   const resolve = makeResolver(brawlers);
 
-  // --- Parse counters ---
-  const countersRaw = await readFile(COUNTERS_RAW, 'utf8');
-  const { entries: counterEntries, aliasHits: counterAliasHits, dropped: counterDropped } =
-    parseCounters(countersRaw, resolve);
+  // meta.txt gets its own typo table (META_TYPO_FIXES), tried before falling
+  // back to the shared resolver (roster names + MANUAL_ALIASES +
+  // DROP_TOKENS). Kept out of MANUAL_ALIASES so e.g. "pipe" -> "piper" can
+  // never leak into parse-maps.mjs's token resolution.
+  const usedMetaTypoKeys = new Set();
+  function resolveMeta(rawToken, context) {
+    const key = normKey(String(rawToken).trim());
+    if (Object.prototype.hasOwnProperty.call(META_TYPO_FIXES, key)) {
+      usedMetaTypoKeys.add(key);
+      return [META_TYPO_FIXES[key]];
+    }
+    return resolve(rawToken, context);
+  }
+
+  // --- Parse meta (header counters + per-map counters) ---
+  const metaRaw = await readFile(META_RAW, 'utf8');
+  const { headerCounters, mapCounters: rawMapCounters, aliasHits: metaAliasHits, dropped: metaDropped } =
+    parseMeta(metaRaw, resolveMeta);
 
   // --- Parse maps ---
   const mapsRaw = await readFile(MAPS_RAW, 'utf8');
@@ -72,6 +87,34 @@ async function main() {
   if (enrichedMaps.length !== 26) {
     throw new Error(`integrity: expected 26 maps, parsed ${enrichedMaps.length}`);
   }
+
+  // --- Join meta.txt's raw per-map names to canonical map ids ---
+  // meta.txt's 25 map-line labels are the same 26 canonical maps minus
+  // Kaboom Canyon (absent from the source, accepted as a gap — see
+  // META_MAP_OVERRIDES) minus "Hot Zone", which is a *game-mode* name, not a
+  // map; META_MAP_OVERRIDES maps it to Dueling Beetles (see aliases.mjs).
+  function resolveMapId(rawMapName) {
+    const overridden = META_MAP_OVERRIDES[normKey(rawMapName)];
+    const lookupKey = normKey(overridden ?? rawMapName);
+    const map = enrichedMaps.find((m) => normKey(m.name) === lookupKey);
+    if (!map) {
+      throw new Error(`meta.txt: map name "${rawMapName}" does not match any known map`);
+    }
+    return map.id;
+  }
+
+  const mapCounters = {}; // { mapId: { enemySlug: [counterSlug, ...] } }
+  let mapCountersEntryCount = 0;
+  for (const [rawMapName, perEnemy] of Object.entries(rawMapCounters)) {
+    const mapId = resolveMapId(rawMapName);
+    const bucket = (mapCounters[mapId] ??= {});
+    for (const [enemySlug, counters] of Object.entries(perEnemy)) {
+      bucket[enemySlug] = counters.map((c) => c.slug);
+      mapCountersEntryCount++;
+    }
+  }
+
+  const counterEntries = headerCounters; // { slug, counters: [{slug, rank}] }[]
 
   // --- INTEGRITY GATE: counters ---
   for (const entry of counterEntries) {
@@ -106,6 +149,32 @@ async function main() {
     }
   }
 
+  // --- INTEGRITY GATE: map-counters ---
+  const canonicalMapIds = new Set(enrichedMaps.map((m) => m.id));
+  for (const [mapId, perEnemy] of Object.entries(mapCounters)) {
+    if (!canonicalMapIds.has(mapId)) {
+      throw new Error(`integrity: map-counters references unknown map id "${mapId}"`);
+    }
+    for (const [enemySlug, list] of Object.entries(perEnemy)) {
+      if (!brawlerSlugSet.has(enemySlug)) {
+        throw new Error(`integrity: map-counters["${mapId}"] key "${enemySlug}" is not a known brawler slug`);
+      }
+      if (list.length > 3) {
+        throw new Error(`integrity: map-counters["${mapId}"]["${enemySlug}"] has ${list.length} counters (must be <= 3)`);
+      }
+      const seen = new Set();
+      for (const slug of list) {
+        if (!brawlerSlugSet.has(slug)) {
+          throw new Error(`integrity: map-counters["${mapId}"]["${enemySlug}"] references unknown brawler slug "${slug}"`);
+        }
+        if (seen.has(slug)) {
+          throw new Error(`integrity: map-counters["${mapId}"]["${enemySlug}"] has duplicate counter slug "${slug}"`);
+        }
+        seen.add(slug);
+      }
+    }
+  }
+
   // --- Build per-brawler aliases (raw spellings, excluding the canonical name itself) ---
   const aliasesBySlug = new Map(brawlers.map((b) => [b.id, new Map()])); // slug -> (normKey -> surface form)
   function recordAlias(slug, raw) {
@@ -116,7 +185,7 @@ async function main() {
     const map = aliasesBySlug.get(slug);
     if (!map.has(rawKey)) map.set(rawKey, raw);
   }
-  for (const { slug, raw } of [...counterAliasHits, ...mapAliasHits]) recordAlias(slug, raw);
+  for (const { slug, raw } of [...metaAliasHits, ...mapAliasHits]) recordAlias(slug, raw);
 
   // --- Build per-brawler counters + counterFor (inverse index) ---
   const countersBySlug = new Map(brawlers.map((b) => [b.id, []]));
@@ -169,12 +238,16 @@ async function main() {
   // --- _report.json ---
   const usedAliasKeys = resolve.usedAliasKeys;
   const unusedAliases = Object.keys(MANUAL_ALIASES).filter((k) => !usedAliasKeys.has(k));
+  const unusedMetaTypoFixes = Object.keys(META_TYPO_FIXES).filter((k) => !usedMetaTypoKeys.has(k));
 
   const aliasHitCounts = {};
-  for (const { raw } of [...counterAliasHits, ...mapAliasHits]) {
+  for (const { raw } of [...metaAliasHits, ...mapAliasHits]) {
     const k = normKey(raw);
     aliasHitCounts[k] = (aliasHitCounts[k] ?? 0) + 1;
   }
+
+  const mapsCovered = [...canonicalMapIds].filter((id) => mapCounters[id]).sort();
+  const mapsNotCovered = [...canonicalMapIds].filter((id) => !mapCounters[id]).sort();
 
   const report = {
     counts: {
@@ -183,29 +256,44 @@ async function main() {
       maps: enrichedMaps.length,
       categories: enrichedMaps.reduce((acc, m) => acc + m.categories.length, 0),
       hasCountersFalse: finalBrawlers.filter((b) => !b.hasCounters).length,
+      mapCountersMapsCovered: mapsCovered.length,
+      mapCountersPerMapEntries: mapCountersEntryCount,
     },
     dropped: {
-      keys: counterDropped.keys,
-      values: [...counterDropped.values, ...mapDropped.values],
+      keys: metaDropped.keys,
+      values: [...metaDropped.values, ...mapDropped.values],
     },
     hasCountersFalseSlugs: finalBrawlers.filter((b) => !b.hasCounters).map((b) => b.id).sort(),
     aliasHitCounts,
     unusedManualAliases: unusedAliases,
+    meta: {
+      source: 'data/raw/meta.txt',
+      headerEntries: counterEntries.length,
+      mapsCovered,
+      mapsNotCovered,
+      metaTypoFixesUsed: [...usedMetaTypoKeys].sort(),
+      unusedMetaTypoFixes,
+    },
   };
 
   await writeFile(BRAWLERS_JSON, JSON.stringify(finalBrawlers, null, 2) + '\n');
   await writeFile(MAPS_JSON, JSON.stringify(enrichedMaps, null, 2) + '\n');
   await writeFile(COUNTERS_INDEX_JSON, JSON.stringify(countersIndex, null, 2) + '\n');
   await writeFile(MAP_INDEX_JSON, JSON.stringify(mapIndex, null, 2) + '\n');
+  await writeFile(MAP_COUNTERS_JSON, JSON.stringify(mapCounters, null, 2) + '\n');
   await writeFile(REPORT_JSON, JSON.stringify(report, null, 2) + '\n');
 
   console.log(`Wrote ${BRAWLERS_JSON} (${finalBrawlers.length} brawlers)`);
   console.log(`Wrote ${MAPS_JSON} (${enrichedMaps.length} maps, ${report.counts.categories} categories)`);
   console.log(`Wrote ${COUNTERS_INDEX_JSON} (${counterEntries.length} entries)`);
   console.log(`Wrote ${MAP_INDEX_JSON}`);
+  console.log(`Wrote ${MAP_COUNTERS_JSON} (${mapsCovered.length} maps, ${mapCountersEntryCount} entries)`);
   console.log(`Wrote ${REPORT_JSON}`);
   if (unusedAliases.length) {
     console.log(`Note: unused MANUAL_ALIASES keys: ${unusedAliases.join(', ')}`);
+  }
+  if (unusedMetaTypoFixes.length) {
+    console.log(`Note: unused META_TYPO_FIXES keys: ${unusedMetaTypoFixes.join(', ')}`);
   }
 }
 
