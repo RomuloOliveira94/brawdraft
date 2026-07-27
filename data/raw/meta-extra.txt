@@ -232,3 +232,85 @@ Hideout: Piper, Brock, Nani
 Layer Cake: Tick, Barley, Dynamike
 Shooting Star: Nani, Piper, Mandy
 Belles Rock: Nani, Piper, Leon
+
+Sirius
+
+Bridge Too Far: Piper, Nani, Mandy
+Hot Potato: Colt, Dynamike, Clancy
+Safe Zone: Piper, Nani, Brock
+Hot Zone: Meg, Gale, Lou
+Parallel Plays: Dynamike, Barley, Berry
+Ring of Fire: Meg, Nani, Piper
+Crystal Arcade: Spike, Tara, Crow
+Double Swoosh: Tara, Rosa, Buster
+Hard Rock Mine: Spike, Gene, Crow
+Deathcap Trap: Rico, Spike, Clancy
+Gem Fort: Tara, Spike, Gene
+Undermine: Crow, Spike, Piper
+Center Stage: Gale, Surge, Melodie
+Pinball Dreams: Surge, Rico, Gale
+Sneaky Fields: Shelly, Rosa, Buster
+Triple Dribble: Gale, Surge, Melodie
+Open Business: Meg, Jessi, Lou
+Dry Season: Piper, Nani, Mandy
+Hideout: Piper, Brock, Nani
+Layer Cake: Tick, Piper, Leon
+Shooting Star: Nani, Piper, Mandy
+Belles Rock: Nani, Piper, Leon
+Flaring Phoenix: Leon, Nani, Crow
+New Horizons: Nani, Piper, Mandy
+Out in the Open: Nani, Piper, Angelo
+Glowy
+
+Bridge Too Far: Belle, Piper, Mandy
+Hot Potato: Colt, Dynamike, Mortis
+Safe Zone: Belle, Piper, Colt
+Hot Zone: Crow, Meg, Cordelius
+Parallel Plays: Dynamike, Barley, Berry
+Ring of Fire: Meg, Crow, Piper
+Crystal Arcade: Crow, Spike, Piper
+Double Swoosh: Mortis, Kenji, Tara
+Hard Rock Mine: Gene, Crow, Byron
+Deathcap Trap: Rico, Crow, Mortis
+Gem Fort: Tara, Crow, Byron
+Undermine: Crow, Byron, Piper
+Center Stage: Mortis, Surge, Gale
+Pinball Dreams: Surge, Rico, Mortis
+Sneaky Fields: Kenji, Mortis, Buster
+Triple Dribble: Mortis, Gale, Cordelius
+Open Business: Meg, Jessi, Colt
+Dry Season: Belle, Piper, Mandy
+Hideout: Piper, Brock, Byron
+Layer Cake: Tick, Barley, Mortis
+Shooting Star: Nani, Piper, Mandy
+Belles Rock: Belle, Piper, Crow
+Flaring Phoenix: Leon, Crow, Byron
+New Horizons: Nani, Piper, Mandy
+Out in the Open: Nani, Piper, Angelo
+GIGI
+
+Bridge Too Far: R-T, Piper, Mandy
+Hot Potato: Bull, Clancy, Dynamike
+Safe Zone: R-T, Colt, Piper
+Hot Zone: Cordelius, Meg, Gale
+Parallel Plays: Dynamike, Barley, Berry
+Ring of Fire: Meg, Gale, Otis
+Crystal Arcade: Spike, Colette, Cordelius
+Double Swoosh: Bull, Shelly, Tara
+Hard Rock Mine: Cordelius, Gene, Gale
+Deathcap Trap: Rico, Spike, Otis
+Gem Fort: Colette, Tara, Cordelius
+Undermine: Crow, Spike, Cordelius
+Center Stage: Shelly, Gale, Surge
+Pinball Dreams: Surge, Rico, Gale
+Sneaky Fields: Shelly, Bull, Buster
+Triple Dribble: Gale, Surge, Shelly
+Open Business: Meg, Jessi, Lou
+Dry Season: Piper, Nani, Mandy
+Hideout: Piper, Brock, Nani
+Layer Cake: Tick, Mico, Edgar
+Shooting Star: Nani, Piper, Mandy
+Belles Rock: R-T, Piper, Nani
+Flaring Phoenix: Leon, Cordelius, Crow
+New Horizons: Nani, Piper, Mandy
+Out in the Open: Nani, Piper, Angelo
