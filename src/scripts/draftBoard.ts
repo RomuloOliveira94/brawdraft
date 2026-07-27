@@ -9,9 +9,11 @@ import { analyzeComposition, type BrawlerClassName } from '@/lib/composition';
 import { stripAccents } from '@/lib/text';
 import countersJson from '@/data/counters-index.json';
 import mapIndexJson from '@/data/map-index.json';
+import mapCountersJson from '@/data/map-counters.json';
 
 const COUNTERS = countersJson as CountersIndex;
 const MAP_INDEX = mapIndexJson as unknown as Record<string, MapBonus>;
+const MAP_COUNTERS = mapCountersJson as unknown as Record<string, CountersIndex>;
 
 type Team = 'ally' | 'enemy';
 type Kind = 'ban' | 'pick';
@@ -587,8 +589,12 @@ export function initDraftBoard(): void {
   function recompute(): void {
     const exclude = getAllTaken();
     const mapBonus: MapBonus | null = state.mapId ? (MAP_INDEX[state.mapId] ?? null) : null;
+    // Absent for the selected map (e.g. Kaboom Canyon isn't in the source
+    // data) -> null, and rankPicks falls back to the global COUNTERS list
+    // per enemy — never an all-or-nothing switch for the whole panel.
+    const mapCounters: CountersIndex | null = state.mapId ? (MAP_COUNTERS[state.mapId] ?? null) : null;
     const enemies = state.enemy.filter((s): s is string => s !== null);
-    const suggestions = rankPicks(enemies, COUNTERS, { exclude, mapBonus }).slice(0, 6);
+    const suggestions = rankPicks(enemies, COUNTERS, { exclude, mapBonus, mapCounters }).slice(0, 6);
     renderSuggestions(suggestions);
 
     const allyClassNames = state.ally

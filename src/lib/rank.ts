@@ -21,6 +21,15 @@ export interface RankPicksOptions {
   exclude?: string[];
   /** slug -> truthy value grants +1 score for that pick on the current map. */
   mapBonus?: MapBonus | null;
+  /**
+   * Selected map's counters, keyed by enemy slug — same shape as `counters`
+   * but scoped to one map (`map-counters.json[mapId]`). Checked per enemy
+   * before falling back to the global `counters` list, so an enemy/map
+   * combination the source data doesn't cover (e.g. any enemy on a map
+   * absent from map-counters.json) falls back individually rather than
+   * disabling map-specific counters for the whole pick list.
+   */
+  mapCounters?: CountersIndex | null;
 }
 
 /**
@@ -35,7 +44,7 @@ export function rankPicks(
   counters: CountersIndex,
   opts: RankPicksOptions = {},
 ): Pick[] {
-  const { exclude = [], mapBonus = null } = opts;
+  const { exclude = [], mapBonus = null, mapCounters = null } = opts;
   const acc = new Map<string, Pick>();
 
   // Defensive: callers are expected to pass unique enemies (the picker
@@ -43,7 +52,10 @@ export function rankPicks(
   // coverage/score. Set preserves insertion order, so unique input is
   // unaffected.
   for (const enemy of new Set(enemies)) {
-    const list = counters[enemy] ?? []; // [] for the 14 brawlers with no counter data
+    // Per-enemy fallback: use this map's counters for `enemy` if the source
+    // data covers it, else fall back to the global list — never an
+    // all-or-nothing switch keyed on whether the map itself has any data.
+    const list = mapCounters?.[enemy] ?? counters[enemy] ?? []; // [] for the 14 brawlers with no counter data
     for (let i = 0; i < list.length; i++) {
       const slug = list[i];
       if (enemies.includes(slug) || exclude.includes(slug)) continue;
