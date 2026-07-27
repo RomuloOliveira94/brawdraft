@@ -43,6 +43,66 @@ async function fetchJson(url) {
   return res.json();
 }
 
+/**
+ * BrawlAPI reports `class.name === "Unknown"` for a growing subset of the
+ * roster (20 of 107 as of 2026-07-27) — these are real, released brawlers;
+ * BrawlAPI just hasn't backfilled their class tag. A wrong class here is
+ * worse than "Unknown" (it drives confident, wrong draft advice in
+ * src/lib/composition.ts), so every entry below was hand-verified against a
+ * real fetched source, not recalled from memory, and is applied ONLY when
+ * the API itself says "Unknown" (see fetchBrawlerRoster) — if BrawlAPI ever
+ * starts reporting a real class for one of these, the API's value wins and
+ * this entry simply stops being read.
+ *
+ * Sources tried, in the order the task recommended:
+ *   - brawlify.com (web pages) and api.brawlify.com: Cloudflare 403 from
+ *     this build environment for every URL shape tried (/brawlers/detail/X,
+ *     /brawlers/<id>). Not usable.
+ *   - Brawl Stars Fandom wiki, Liquipedia: also blocked (403, or 402 via the
+ *     fetch tool) from this environment. Not usable.
+ *   - Landed on two independent, reachable, third-party stat trackers that
+ *     each publish a per-brawler class/role field sourced from the game's
+ *     own data: metaforge.app (MF) and brawlmetrics.gg (BM). Every entry
+ *     below was cross-checked on BOTH sites and they agreed in every case;
+ *     both quotes are kept in the comment for auditability. Both fetched
+ *     2026-07-27.
+ *     MF = https://metaforge.app/brawlstars/brawlers/<slug> — page's
+ *          embedded JSON has a literal `class:"<CLASS>"` field.
+ *     BM = https://brawlmetrics.gg/brawlers/<slug> — brawler portrait has
+ *          `alt="<Name> - <Rarity> <Class> brawler in Brawl Stars"`.
+ *   - Cross-checked (not cited as primary) against BrawlAPI's own
+ *     description/stats for internal consistency, e.g. Damian/Trunk/Ollie's
+ *     unusually high `health` figures line up with a Tank tag; Kaze's "deadly
+ *     ninja" flavor text lines up with Assassin. No contradictions found.
+ *
+ * `buzz-lightyear` is deliberately absent from this table: he's a
+ * time-limited Toy Story collab brawler that neither MF nor BM lists at all
+ * (checked their full roster listing pages, not just the direct URL), and
+ * every wiki-style source above was unreachable. No fetchable source to cite
+ * with confidence, so he stays "Unknown" per project policy.
+ */
+const CLASS_OVERRIDES = {
+  wendy: 'Support', // MF class:"SUPPORT"; BM alt="Wendy - Mythic Support brawler in Brawl Stars"
+  nori: 'Assassin', // MF class:"ASSASSIN"; BM alt="Nori - Legendary Assassin brawler in Brawl Stars"
+  bolt: 'Tank', // MF class:"TANK"; BM alt="Bolt - Epic Tank brawler in Brawl Stars"
+  'starr-nova': 'Assassin', // MF class:"ASSASSIN"; BM alt="Starr Nova - Mythic Assassin brawler in Brawl Stars"
+  damian: 'Tank', // MF class:"TANK"; BM alt="Damian - Mythic Tank brawler in Brawl Stars"
+  najia: 'Damage Dealer', // MF class:"DAMAGE DEALER"; BM alt="Najia - Mythic Damage Dealer brawler in Brawl Stars"
+  sirius: 'Controller', // MF class:"CONTROLLER"; BM alt="Sirius - Ultra Legendary Controller brawler in Brawl Stars"
+  glowy: 'Support', // MF class:"SUPPORT"; BM alt="Glowy - Mythic Support brawler in Brawl Stars"
+  gigi: 'Assassin', // MF class:"ASSASSIN"; BM alt="Gigi - Mythic Assassin brawler in Brawl Stars"
+  pierce: 'Marksman', // MF class:"MARKSMAN"; BM alt="Pierce - Legendary Marksman brawler in Brawl Stars"
+  ziggy: 'Controller', // MF class:"CONTROLLER"; BM alt="Ziggy - Mythic Controller brawler in Brawl Stars"
+  mina: 'Damage Dealer', // MF class:"DAMAGE DEALER"; BM alt="Mina - Mythic Damage Dealer brawler in Brawl Stars"
+  trunk: 'Tank', // MF class:"TANK"; BM alt="Trunk - Epic Tank brawler in Brawl Stars"
+  alli: 'Assassin', // MF class:"ASSASSIN"; BM alt="Alli - Mythic Assassin brawler in Brawl Stars"
+  kaze: 'Assassin', // MF class:"ASSASSIN"; BM alt="Kaze - Ultra Legendary Assassin brawler in Brawl Stars"
+  'jae-yong': 'Support', // MF class:"SUPPORT"; BM alt="Jae-Yong - Mythic Support brawler in Brawl Stars"
+  finx: 'Controller', // MF class:"CONTROLLER"; BM alt="Finx - Mythic Controller brawler in Brawl Stars"
+  ollie: 'Tank', // MF class:"TANK"; BM alt="Ollie - Mythic Tank brawler in Brawl Stars"
+  meeple: 'Controller', // MF class:"CONTROLLER"; BM alt="Meeple - Epic Controller brawler in Brawl Stars"
+};
+
 const HEX_COLOR_RE = /^#[0-9a-fA-F]{6}$/;
 
 /**
@@ -173,6 +233,7 @@ async function fetchBrawlerRoster() {
   const brawlers = [];
   const seenSlugs = new Map();
   const seenNormKeys = new Map();
+  let overridesApplied = 0;
 
   for (const b of list) {
     const slug = slugify(b.name);
@@ -187,16 +248,31 @@ async function fetchBrawlerRoster() {
     seenSlugs.set(slug, b.name);
     seenNormKeys.set(key, b.name);
 
+    // Only ever override an API-reported "Unknown" — a real class from the
+    // API always wins, so a future BrawlAPI fix silently retires the entry.
+    let className = b.class.name;
+    if (className === 'Unknown' && Object.prototype.hasOwnProperty.call(CLASS_OVERRIDES, slug)) {
+      className = CLASS_OVERRIDES[slug];
+      overridesApplied++;
+    }
+
     brawlers.push({
       id: slug,
       brawlerId: b.id,
       name: b.name,
-      className: b.class.name,
+      className,
       rarity: b.rarity.name,
       rarityColor: sanitizeHexColor(b.rarity.color, `brawler "${b.name}" rarity "${b.rarity.name}"`),
       released: b.released,
       image: `/brawlers/${slug}.png`,
     });
+  }
+
+  console.log(`[brawlers] ${overridesApplied} CLASS_OVERRIDES applied`);
+
+  const staleOverrideKeys = Object.keys(CLASS_OVERRIDES).filter((slug) => !seenSlugs.has(slug));
+  for (const slug of staleOverrideKeys) {
+    console.warn(`[brawlers] WARNING: CLASS_OVERRIDES key "${slug}" does not match any current roster brawler (renamed or removed?)`);
   }
 
   return brawlers;
