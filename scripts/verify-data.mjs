@@ -56,10 +56,13 @@ async function main() {
 
   // --- 1. Images ---
   console.log('\n[1] Images');
-  check('brawlers.json.length === 107', brawlers.length === 107, `got ${brawlers.length}`);
+  // 106, not 107: fetch-brawlers.mjs's REMOVED_BRAWLERS excludes
+  // buzz-lightyear (time-limited collab, no data anywhere in this project)
+  // from the roster entirely.
+  check('brawlers.json.length === 106', brawlers.length === 106, `got ${brawlers.length}`);
 
   const brawlerFiles = await pngFiles(path.join(ROOT, 'public/brawlers'));
-  let allBrawlerPngsOk = brawlerFiles.length === 107;
+  let allBrawlerPngsOk = brawlerFiles.length === 106;
   for (const b of brawlers) {
     const file = path.join(ROOT, 'public/brawlers', `${b.id}.png`);
     if (!(await isValidPng(file))) allBrawlerPngsOk = false;
@@ -92,9 +95,12 @@ async function main() {
   // pins down exactly which brawlers are still expected to be "Unknown" so
   // a roster change (a new unclassified brawler, or BrawlAPI/an override
   // fixing one) surfaces here instead of silently degrading
-  // src/lib/composition.ts's analysis.
+  // src/lib/composition.ts's analysis. Was ['buzz-lightyear'] — now empty:
+  // he was the only real "Unknown" left (the other 19 are hand-classified
+  // via CLASS_OVERRIDES) and REMOVED_BRAWLERS drops him from the roster
+  // entirely.
   console.log('\n[2] Brawler classes');
-  const expectedUnknown = ['buzz-lightyear'];
+  const expectedUnknown = [];
   const actualUnknown = brawlers.filter((b) => b.className === 'Unknown').map((b) => b.id).sort();
   check(
     `brawlers with className === "Unknown" sorted === ${JSON.stringify(expectedUnknown)}`,
@@ -103,14 +109,20 @@ async function main() {
   );
 
   // analyzeComposition() must stay honest when a real 'Unknown' brawler is
-  // on the team: pairing buzz-lightyear (Unknown) with a real Tank and a
-  // real Support must surface the genuine remaining gap (no Marksman/
-  // Artillery) and must NEVER claim "Composição equilibrada" — that would
-  // assert completeness over a slot whose class we don't actually know.
-  const compositionClasses = ['damian', 'wendy', 'buzz-lightyear'].map((slug) => bySlug[slug]?.className);
+  // on the team: pairing an Unknown pick with a real Tank and a real
+  // Support must surface the genuine remaining gap (no Marksman/Artillery)
+  // and must NEVER claim "Composição equilibrada" — that would assert
+  // completeness over a slot whose class we don't actually know. Previously
+  // exercised via buzz-lightyear (the roster's one real 'Unknown' brawler);
+  // now that he's removed from the roster entirely (see [2] above), no
+  // brawler slug carries className 'Unknown' any more, so this passes a
+  // literal 'Unknown' class value instead of looking one up by slug — the
+  // behavior under test is analyzeComposition()'s handling of the class
+  // string itself, not any particular brawler.
+  const compositionClasses = ['Tank', 'Support', 'Unknown'];
   const compositionTips = analyzeComposition(compositionClasses);
   check(
-    'analyzeComposition([damian:Tank, wendy:Support, buzz-lightyear:Unknown]) === ["Falta alcance longo"] (never "Composição equilibrada")',
+    'analyzeComposition([Tank, Support, Unknown]) === ["Falta alcance longo"] (never "Composição equilibrada")',
     deepEqualArrays(compositionTips, ['Falta alcance longo']),
     JSON.stringify({ classes: compositionClasses, tips: compositionTips }),
   );
@@ -158,7 +170,9 @@ async function main() {
 
   const countersEntryCount = brawlers.filter((b) => b.hasCounters).length;
   console.log(`  -> ${countersEntryCount} counters | ${maps.length} mapas | ${categoryCount} categorias`);
-  check('93 counters | 26 mapas | 133 categorias', countersEntryCount === 93 && maps.length === 26 && categoryCount === 133);
+  // 102, not 93: data/raw/meta-extra.txt added 9 more covered brawlers
+  // (1 explicit header + 8 derived-by-frequency — see [5] below).
+  check('102 counters | 26 mapas | 133 categorias', countersEntryCount === 102 && maps.length === 26 && categoryCount === 133);
 
   // --- 4. All 26 maps carry API metadata ---
   console.log('\n[4] Map API metadata');
@@ -213,16 +227,70 @@ async function main() {
     JSON.stringify(duplicateInSource),
   );
 
-  const expectedNoCounters = [
-    'alli', 'buzz-lightyear', 'doug', 'finx', 'gene', 'gigi', 'glowy',
-    'jae-yong', 'kaze', 'lola', 'mina', 'shade', 'sirius', 'trunk',
-  ].sort();
+  // Was a 14-slug list including buzz-lightyear (now removed from the
+  // roster entirely — [1]/[2] above) plus mina/trunk/kaze/jae-yong/finx/
+  // shade/doug/lola/gene (now covered by data/raw/meta-extra.txt, 1
+  // explicit header + 8 derived-by-frequency — see the metaExtra assertions
+  // below). Only 4 genuinely uncovered brawlers remain.
+  const expectedNoCounters = ['alli', 'gigi', 'glowy', 'sirius'].sort();
   const actualNoCounters = brawlers.filter((b) => !b.hasCounters).map((b) => b.id).sort();
   check(
-    'brawlers with hasCounters === false sorted === the exact 14-slug list',
+    'brawlers with hasCounters === false sorted === the exact 4-slug list',
     deepEqualArrays(actualNoCounters, expectedNoCounters),
     JSON.stringify(actualNoCounters),
   );
+
+  // meta-extra.txt (2026-07-27 supplement): 9 blocks, provenance must stay
+  // visible in _report.json rather than looking indistinguishable from
+  // meta.txt's 93 curated header lines. Mina came with her own header;
+  // the other 8 are derived by per-map counter frequency (top 3, ties
+  // broken by ascending slug localeCompare — see scripts/lib/deriveCounters.mjs).
+  console.log('\n[5b] meta-extra.txt provenance and gaps');
+  const metaExtra = report.metaExtra ?? {};
+  check('metaExtra.blocks === 9', metaExtra.blocks === 9, JSON.stringify(metaExtra.blocks));
+  check(
+    "metaExtra.explicit === ['mina']",
+    deepEqualArrays(metaExtra.explicit ?? [], ['mina']),
+    JSON.stringify(metaExtra.explicit),
+  );
+  const derivedSlugsSorted = Object.keys(metaExtra.derived ?? {}).sort();
+  const expectedDerivedSlugs = ['doug', 'finx', 'gene', 'jae-yong', 'kaze', 'lola', 'shade', 'trunk'].sort();
+  check(
+    'metaExtra.derived keys sorted === the 8 headerless-block slugs',
+    deepEqualArrays(derivedSlugsSorted, expectedDerivedSlugs),
+    JSON.stringify(derivedSlugsSorted),
+  );
+  // Frequency-derived top-3, pinned so a future re-derivation (or a
+  // regression in the tie-break rule) surfaces here. "gale" beats "spike"/
+  // "shelly" for trunk's 3rd slot despite an equal count (4) purely on
+  // ascending slug localeCompare — the concrete case the tie-break rule
+  // exists for.
+  const expectedDerivedTop3 = {
+    trunk: ['colette', 'piper', 'gale'],
+    kaze: ['piper', 'kenji', 'nani'],
+    'jae-yong': ['piper', 'nani', 'gale'],
+    finx: ['mortis', 'piper', 'nani'],
+    shade: ['piper', 'nani', 'jacky'],
+    doug: ['colette', 'piper', 'clancy'],
+    lola: ['piper', 'nani', 'spike'],
+    gene: ['piper', 'nani', 'spike'],
+  };
+  for (const [slug, expectedTop3] of Object.entries(expectedDerivedTop3)) {
+    const actualTop3 = metaExtra.derived?.[slug]?.top3 ?? [];
+    check(`metaExtra.derived["${slug}"].top3 === ${JSON.stringify(expectedTop3)}`, deepEqualArrays(actualTop3, expectedTop3), JSON.stringify(actualTop3));
+  }
+
+  // Doug and Gene are truncated source-side at 22/25 map lines; the exact
+  // 3 missing canonical maps must be recorded, never silently absorbed.
+  const expectedGapMaps = ['Flaring Phoenix', 'New Horizons', 'Out in the Open'];
+  for (const slug of ['doug', 'gene']) {
+    const gap = metaExtra.gaps?.[slug];
+    check(
+      `metaExtra.gaps["${slug}"] === {mapLineCount: 22, missingMaps: ${JSON.stringify(expectedGapMaps)}}`,
+      gap?.mapLineCount === 22 && deepEqualArrays(gap?.missingMaps ?? [], expectedGapMaps),
+      JSON.stringify(gap),
+    );
+  }
 
   // Golden counters below reflect meta.txt (2026 update), not the old
   // counters.txt export — see the before/after table in this change's PR
@@ -251,13 +319,24 @@ async function main() {
 
   // Expected strings below are recomputed against meta.txt's counters (this
   // change's data update) — see the before/after table in the PR
-  // description. The `kaze` case is unaffected: kaze is one of the 14
-  // brawlers meta.txt still doesn't cover (see [5] above).
+  // description. bull/frank/rosa, edgar/mortis/buzz, and piper/brock/nani
+  // are all keyed off enemies meta-extra.txt never touches (mina, trunk,
+  // kaze, jae-yong, finx, shade, doug, lola, gene aren't among them), so
+  // those 3 strings are unchanged by this update.
+  //
+  // The `kaze` empty-ranking case was replaced with `sirius`: kaze now HAS
+  // derived counters (data/raw/meta-extra.txt — see [5b] above), so
+  // rankPicks(['kaze']) is no longer empty; `sirius` is one of the 4
+  // brawlers still genuinely uncovered (see [5] above) and exercises the
+  // same "no counter data -> empty ranking" behavior kaze used to. A new
+  // `trunk` case is added alongside it specifically to prove the opposite:
+  // a brawler this change newly covers now produces real suggestions.
   const goldenRanking = [
     { enemies: ['bull', 'frank', 'rosa'], expected: 'colette:3/9 gale:2/3 cordelius:1/2 shelly:1/2 chester:1/1' },
     { enemies: ['edgar', 'mortis', 'buzz'], expected: 'gale:3/8 surge:2/3 bull:2/2 otis:1/3' },
     { enemies: ['piper', 'brock', 'nani'], expected: 'leon:2/2 edgar:1/3 cordelius:1/2' },
-    { enemies: ['kaze'], expected: '' },
+    { enemies: ['sirius'], expected: '' },
+    { enemies: ['trunk'], expected: 'colette:1/3 piper:1/2 gale:1/1' },
   ];
 
   for (const { enemies, expected } of goldenRanking) {
