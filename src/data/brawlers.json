@@ -552,8 +552,21 @@
     "rarityColor": "#e1fb2a",
     "released": true,
     "image": "/brawlers/sirius.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "spike",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -604,8 +617,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/glowy.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "crow",
+        "rank": 2
+      },
+      {
+        "slug": "mortis",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -700,8 +726,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/gigi.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "cordelius",
+        "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [],
     "aliases": []
@@ -2720,6 +2759,7 @@
       "buster",
       "chuck",
       "fang",
+      "gigi",
       "kit",
       "lily",
       "melodie",
@@ -5412,6 +5452,7 @@
       "pierce",
       "piper",
       "shade",
+      "sirius",
       "surge"
     ],
     "maps": [
@@ -5486,6 +5527,7 @@
       "edgar",
       "el-primo",
       "fang",
+      "gigi",
       "jacky",
       "jae-yong",
       "kenji",
@@ -6773,6 +6815,8 @@
       "finx",
       "gale",
       "gene",
+      "gigi",
+      "glowy",
       "gray",
       "griff",
       "jae-yong",
@@ -6786,6 +6830,7 @@
       "r-t",
       "shade",
       "shelly",
+      "sirius",
       "spike",
       "surge",
       "tara",
@@ -6989,6 +7034,7 @@
     "hasCounters": true,
     "counterFor": [
       "byron",
+      "glowy",
       "max",
       "poco",
       "stu"
@@ -7125,6 +7171,7 @@
       "dynamike",
       "emz",
       "finx",
+      "glowy",
       "grom",
       "gus",
       "jessie",
@@ -7528,6 +7575,7 @@
       "lola",
       "max",
       "shelly",
+      "sirius",
       "stu"
     ],
     "maps": [

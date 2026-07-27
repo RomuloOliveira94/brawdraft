@@ -508,6 +508,21 @@
       "piper",
       "mandy",
       "clancy"
+    ],
+    "sirius": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "glowy": [
+      "belle",
+      "piper",
+      "mandy"
+    ],
+    "gigi": [
+      "r-t",
+      "piper",
+      "mandy"
     ]
   },
   "hot-potato": {
@@ -1019,6 +1034,21 @@
       "colt",
       "dynamike",
       "clancy"
+    ],
+    "sirius": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "glowy": [
+      "colt",
+      "dynamike",
+      "mortis"
+    ],
+    "gigi": [
+      "bull",
+      "clancy",
+      "dynamike"
     ]
   },
   "safe-zone": {
@@ -1530,6 +1560,21 @@
       "piper",
       "nani",
       "brock"
+    ],
+    "sirius": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "glowy": [
+      "belle",
+      "piper",
+      "colt"
+    ],
+    "gigi": [
+      "r-t",
+      "colt",
+      "piper"
     ]
   },
   "dueling-beetles": {
@@ -2041,6 +2086,21 @@
       "meg",
       "sandy",
       "cordelius"
+    ],
+    "sirius": [
+      "meg",
+      "gale",
+      "lou"
+    ],
+    "glowy": [
+      "crow",
+      "meg",
+      "cordelius"
+    ],
+    "gigi": [
+      "cordelius",
+      "meg",
+      "gale"
     ]
   },
   "parallel-plays": {
@@ -2549,6 +2609,21 @@
       "berry"
     ],
     "gene": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "sirius": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "glowy": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "gigi": [
       "dynamike",
       "barley",
       "berry"
@@ -3063,6 +3138,21 @@
       "meg",
       "nani",
       "piper"
+    ],
+    "sirius": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "glowy": [
+      "meg",
+      "crow",
+      "piper"
+    ],
+    "gigi": [
+      "meg",
+      "gale",
+      "otis"
     ]
   },
   "crystal-arcade": {
@@ -3574,6 +3664,21 @@
       "tara",
       "spike",
       "crow"
+    ],
+    "sirius": [
+      "spike",
+      "tara",
+      "crow"
+    ],
+    "glowy": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "gigi": [
+      "spike",
+      "colette",
+      "cordelius"
     ]
   },
   "double-swoosh": {
@@ -4085,6 +4190,21 @@
       "tara",
       "rosa",
       "buster"
+    ],
+    "sirius": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "glowy": [
+      "mortis",
+      "kenji",
+      "tara"
+    ],
+    "gigi": [
+      "bull",
+      "shelly",
+      "tara"
     ]
   },
   "hard-rock-mine": {
@@ -4596,6 +4716,21 @@
       "tara",
       "spike",
       "mr-p"
+    ],
+    "sirius": [
+      "spike",
+      "gene",
+      "crow"
+    ],
+    "glowy": [
+      "gene",
+      "crow",
+      "byron"
+    ],
+    "gigi": [
+      "cordelius",
+      "gene",
+      "gale"
     ]
   },
   "deathcap-trap": {
@@ -5104,6 +5239,21 @@
       "rico",
       "spike",
       "mr-p"
+    ],
+    "sirius": [
+      "rico",
+      "spike",
+      "clancy"
+    ],
+    "glowy": [
+      "rico",
+      "crow",
+      "mortis"
+    ],
+    "gigi": [
+      "rico",
+      "spike",
+      "otis"
     ]
   },
   "gem-fort": {
@@ -5615,6 +5765,21 @@
       "tara",
       "spike",
       "larry-lawrie"
+    ],
+    "sirius": [
+      "tara",
+      "spike",
+      "gene"
+    ],
+    "glowy": [
+      "tara",
+      "crow",
+      "byron"
+    ],
+    "gigi": [
+      "colette",
+      "tara",
+      "cordelius"
     ]
   },
   "undermine": {
@@ -6125,6 +6290,21 @@
       "crow",
       "spike",
       "piper"
+    ],
+    "sirius": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "glowy": [
+      "crow",
+      "byron",
+      "piper"
+    ],
+    "gigi": [
+      "crow",
+      "spike",
+      "cordelius"
     ]
   },
   "center-stage": {
@@ -6636,6 +6816,21 @@
       "gale",
       "surge",
       "clancy"
+    ],
+    "sirius": [
+      "gale",
+      "surge",
+      "melodie"
+    ],
+    "glowy": [
+      "mortis",
+      "surge",
+      "gale"
+    ],
+    "gigi": [
+      "shelly",
+      "gale",
+      "surge"
     ]
   },
   "pinball-dreams": {
@@ -7144,6 +7339,21 @@
       "gale"
     ],
     "gene": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "sirius": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "glowy": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "gigi": [
       "surge",
       "rico",
       "gale"
@@ -7658,6 +7868,21 @@
       "rosa",
       "buster",
       "tara"
+    ],
+    "sirius": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "glowy": [
+      "kenji",
+      "mortis",
+      "buster"
+    ],
+    "gigi": [
+      "shelly",
+      "bull",
+      "buster"
     ]
   },
   "triple-dribble": {
@@ -8168,6 +8393,21 @@
       "gale",
       "surge",
       "clancy"
+    ],
+    "sirius": [
+      "gale",
+      "surge",
+      "melodie"
+    ],
+    "glowy": [
+      "mortis",
+      "gale",
+      "cordelius"
+    ],
+    "gigi": [
+      "gale",
+      "surge",
+      "shelly"
     ]
   },
   "open-business": {
@@ -8679,6 +8919,21 @@
       "meg",
       "jessie",
       "mr-p"
+    ],
+    "sirius": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "glowy": [
+      "meg",
+      "jessie",
+      "colt"
+    ],
+    "gigi": [
+      "meg",
+      "jessie",
+      "lou"
     ]
   },
   "dry-season": {
@@ -9187,6 +9442,21 @@
       "mandy"
     ],
     "gene": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "sirius": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "glowy": [
+      "belle",
+      "piper",
+      "mandy"
+    ],
+    "gigi": [
       "piper",
       "nani",
       "mandy"
@@ -9701,6 +9971,21 @@
       "piper",
       "brock",
       "nani"
+    ],
+    "sirius": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "glowy": [
+      "piper",
+      "brock",
+      "byron"
+    ],
+    "gigi": [
+      "piper",
+      "brock",
+      "nani"
     ]
   },
   "layer-cake": {
@@ -10211,6 +10496,21 @@
       "tick",
       "barley",
       "dynamike"
+    ],
+    "sirius": [
+      "tick",
+      "piper",
+      "leon"
+    ],
+    "glowy": [
+      "tick",
+      "barley",
+      "mortis"
+    ],
+    "gigi": [
+      "tick",
+      "mico",
+      "edgar"
     ]
   },
   "shooting-star": {
@@ -10720,6 +11020,21 @@
       "mandy"
     ],
     "gene": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "sirius": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "glowy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "gigi": [
       "nani",
       "piper",
       "mandy"
@@ -11233,6 +11548,21 @@
       "nani",
       "piper",
       "leon"
+    ],
+    "sirius": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "glowy": [
+      "belle",
+      "piper",
+      "crow"
+    ],
+    "gigi": [
+      "r-t",
+      "piper",
+      "nani"
     ]
   },
   "flaring-phoenix": {
@@ -11732,6 +12062,21 @@
     "lola": [
       "leon",
       "nani",
+      "crow"
+    ],
+    "sirius": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "glowy": [
+      "leon",
+      "crow",
+      "byron"
+    ],
+    "gigi": [
+      "leon",
+      "cordelius",
       "crow"
     ]
   },
@@ -12233,6 +12578,21 @@
       "nani",
       "piper",
       "mandy"
+    ],
+    "sirius": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "glowy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "gigi": [
+      "nani",
+      "piper",
+      "mandy"
     ]
   },
   "out-in-the-open": {
@@ -12731,6 +13091,21 @@
       "angelo"
     ],
     "lola": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "sirius": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "glowy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "gigi": [
       "nani",
       "piper",
       "angelo"
