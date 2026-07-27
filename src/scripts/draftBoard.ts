@@ -153,6 +153,20 @@ export function initDraftBoard(): void {
     return state.bansAlly.includes(slug) || state.bansEnemy.includes(slug);
   }
 
+  /**
+   * Where a panel-driven insert (counter-suggestion or map-pick click) for
+   * `team` should land: its first empty ban slot, else its first empty
+   * pick slot, else `null` once all 3 bans and 3 picks are filled — never
+   * refuses while any slot on that side is still open.
+   */
+  function findNextEmptySlot(team: Team): { kind: Kind; index: number } | null {
+    const banIndex = getArray(team, 'ban').indexOf(null);
+    if (banIndex !== -1) return { kind: 'ban', index: banIndex };
+    const pickIndex = getArray(team, 'pick').indexOf(null);
+    if (pickIndex !== -1) return { kind: 'pick', index: pickIndex };
+    return null;
+  }
+
   // --- Slot rendering -------------------------------------------------
 
   function renderSlot(el: HTMLElement, team: Team, kind: Kind, index: number, slug: string | null): void {
@@ -217,6 +231,24 @@ export function initDraftBoard(): void {
     if (el) renderSlot(el, team, kind, index, slug);
   }
 
+  /**
+   * Single choke point for "write one slot and keep everything else in
+   * sync": `setSlug` plus a `recompute()` + `syncHash()` pair. Every
+   * single-slot mutation (picker choice, per-slot clear, panel-driven
+   * inserts below) should go through this.
+   *
+   * The global clear and hash-restore loops deliberately do NOT use this —
+   * they call `setSlug` directly and batch a single `recompute()`/
+   * `syncHash()` (restore skips `syncHash()` entirely, since it runs once
+   * at init from the hash it just read) after writing every slot, instead
+   * of paying for a full recompute on every iteration.
+   */
+  function assignSlot(team: Team, kind: Kind, index: number, slug: string | null): void {
+    setSlug(team, kind, index, slug);
+    recompute();
+    syncHash();
+  }
+
   // --- Brawler picker -----------------------------------------------------
 
   function updatePickerState(currentValue: string | null): void {
@@ -266,9 +298,7 @@ export function initDraftBoard(): void {
       if (openBtn) openPicker(team, kind, Number(index), openBtn);
     });
     clearBtnEl?.addEventListener('click', () => {
-      setSlug(team, kind, Number(index), null);
-      recompute();
-      syncHash();
+      assignSlot(team, kind, Number(index), null);
     });
   }
 
@@ -280,10 +310,8 @@ export function initDraftBoard(): void {
     const slug = card.dataset.slug ?? '';
     const { team, kind, index } = activeSlot;
     const current = getArray(team, kind)[index];
-    setSlug(team, kind, index, current === slug ? null : slug);
+    assignSlot(team, kind, index, current === slug ? null : slug);
     pickerDialog.close();
-    recompute();
-    syncHash();
   });
 
   pickerSearch.addEventListener('input', () => filterCards(pickerSearch.value));
@@ -571,6 +599,8 @@ export function initDraftBoard(): void {
   // --- Clear ------------------------------------------------------------
 
   clearBtn?.addEventListener('click', () => {
+    // Deliberately setSlug() (not assignSlot()) here — 12 slots cleared,
+    // one batched recompute()/syncHash() below instead of 12.
     for (const team of ['ally', 'enemy'] as const) {
       for (const kind of ['ban', 'pick'] as const) {
         for (let i = 0; i < 3; i++) setSlug(team, kind, i, null);
@@ -626,6 +656,9 @@ export function initDraftBoard(): void {
   function restoreSlug(team: Team, kind: Kind, index: number, slug: string | null, seen: Set<string>): void {
     if (!slug || !tileIndex.has(slug) || seen.has(slug)) return; // discard invalid/unknown/duplicate slugs silently
     seen.add(slug);
+    // setSlug() (not assignSlot()) — restoreFromHash()'s caller runs a
+    // single recompute() after every slot is restored, and deliberately no
+    // syncHash() at all (we just read the hash we'd otherwise be rewriting).
     setSlug(team, kind, index, slug);
   }
 
