@@ -8,6 +8,8 @@ import { fileURLToPath } from 'node:url';
 
 import { rankPicks } from '../src/lib/rank.ts';
 import { analyzeComposition } from '../src/lib/composition.ts';
+import { makeResolver } from './lib/normalize.mjs';
+import { parseMetaExtra } from './parse-meta-extra.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -170,9 +172,10 @@ async function main() {
 
   const countersEntryCount = brawlers.filter((b) => b.hasCounters).length;
   console.log(`  -> ${countersEntryCount} counters | ${maps.length} mapas | ${categoryCount} categorias`);
-  // 102, not 93: data/raw/meta-extra.txt added 9 more covered brawlers
-  // (1 explicit header + 8 derived-by-frequency — see [5] below).
-  check('102 counters | 26 mapas | 133 categorias', countersEntryCount === 102 && maps.length === 26 && categoryCount === 133);
+  // 105, not 102: a 2026-07-27 supplement appended Sirius, Glowy, and Gigi
+  // (3 more derived-by-frequency blocks) to data/raw/meta-extra.txt, on top
+  // of the earlier 9 (1 explicit header + 8 derived — see [5b] below).
+  check('105 counters | 26 mapas | 133 categorias', countersEntryCount === 105 && maps.length === 26 && categoryCount === 133);
 
   // --- 4. All 26 maps carry API metadata ---
   console.log('\n[4] Map API metadata');
@@ -229,34 +232,38 @@ async function main() {
 
   // Was a 14-slug list including buzz-lightyear (now removed from the
   // roster entirely — [1]/[2] above) plus mina/trunk/kaze/jae-yong/finx/
-  // shade/doug/lola/gene (now covered by data/raw/meta-extra.txt, 1
-  // explicit header + 8 derived-by-frequency — see the metaExtra assertions
-  // below). Only 4 genuinely uncovered brawlers remain.
-  const expectedNoCounters = ['alli', 'gigi', 'glowy', 'sirius'].sort();
+  // shade/doug/lola/gene (covered by data/raw/meta-extra.txt's first 9
+  // blocks), then a 4-slug list (alli/gigi/glowy/sirius) until the
+  // 2026-07-27 supplement appended Sirius, Glowy, and Gigi (see the
+  // metaExtra assertions below). Only 1 genuinely uncovered brawler remains.
+  const expectedNoCounters = ['alli'].sort();
   const actualNoCounters = brawlers.filter((b) => !b.hasCounters).map((b) => b.id).sort();
   check(
-    'brawlers with hasCounters === false sorted === the exact 4-slug list',
+    "brawlers with hasCounters === false sorted === ['alli']",
     deepEqualArrays(actualNoCounters, expectedNoCounters),
     JSON.stringify(actualNoCounters),
   );
 
-  // meta-extra.txt (2026-07-27 supplement): 9 blocks, provenance must stay
-  // visible in _report.json rather than looking indistinguishable from
-  // meta.txt's 93 curated header lines. Mina came with her own header;
-  // the other 8 are derived by per-map counter frequency (top 3, ties
-  // broken by ascending slug localeCompare — see scripts/lib/deriveCounters.mjs).
+  // meta-extra.txt: 12 blocks, provenance must stay visible in
+  // _report.json rather than looking indistinguishable from meta.txt's 93
+  // curated header lines. Mina came with her own header; the other 11
+  // (the original 8, plus a 2026-07-27 supplement's Sirius/Glowy/Gigi) are
+  // derived by per-map counter frequency (top 3, ties broken by ascending
+  // slug localeCompare — see scripts/lib/deriveCounters.mjs).
   console.log('\n[5b] meta-extra.txt provenance and gaps');
   const metaExtra = report.metaExtra ?? {};
-  check('metaExtra.blocks === 9', metaExtra.blocks === 9, JSON.stringify(metaExtra.blocks));
+  check('metaExtra.blocks === 12', metaExtra.blocks === 12, JSON.stringify(metaExtra.blocks));
   check(
     "metaExtra.explicit === ['mina']",
     deepEqualArrays(metaExtra.explicit ?? [], ['mina']),
     JSON.stringify(metaExtra.explicit),
   );
   const derivedSlugsSorted = Object.keys(metaExtra.derived ?? {}).sort();
-  const expectedDerivedSlugs = ['doug', 'finx', 'gene', 'jae-yong', 'kaze', 'lola', 'shade', 'trunk'].sort();
+  const expectedDerivedSlugs = [
+    'doug', 'finx', 'gene', 'gigi', 'glowy', 'jae-yong', 'kaze', 'lola', 'shade', 'sirius', 'trunk',
+  ].sort();
   check(
-    'metaExtra.derived keys sorted === the 8 headerless-block slugs',
+    'metaExtra.derived keys sorted === the 11 headerless-block slugs',
     deepEqualArrays(derivedSlugsSorted, expectedDerivedSlugs),
     JSON.stringify(derivedSlugsSorted),
   );
@@ -264,7 +271,10 @@ async function main() {
   // regression in the tie-break rule) surfaces here. "gale" beats "spike"/
   // "shelly" for trunk's 3rd slot despite an equal count (4) purely on
   // ascending slug localeCompare — the concrete case the tie-break rule
-  // exists for.
+  // exists for. "gigi" is the 2026-07-27 supplement's own tie-break case:
+  // cordelius/gale/nani are tied at 6 occurrences each, and ascending slug
+  // localeCompare ('cordelius' < 'gale' < 'nani') picks cordelius and gale
+  // for the 2nd/3rd slots, dropping nani despite the equal count.
   const expectedDerivedTop3 = {
     trunk: ['colette', 'piper', 'gale'],
     kaze: ['piper', 'kenji', 'nani'],
@@ -274,6 +284,9 @@ async function main() {
     doug: ['colette', 'piper', 'clancy'],
     lola: ['piper', 'nani', 'spike'],
     gene: ['piper', 'nani', 'spike'],
+    sirius: ['piper', 'nani', 'spike'],
+    glowy: ['piper', 'crow', 'mortis'],
+    gigi: ['piper', 'cordelius', 'gale'],
   };
   for (const [slug, expectedTop3] of Object.entries(expectedDerivedTop3)) {
     const actualTop3 = metaExtra.derived?.[slug]?.top3 ?? [];
@@ -291,6 +304,129 @@ async function main() {
       JSON.stringify(gap),
     );
   }
+
+  // --- 5c. parse-meta-extra.mjs glued-name guard regression ---
+  // The 2026-07-27 supplement's source paste glued each next block's bare
+  // name onto the previous block's last map line (e.g. "Out in the Open:
+  // Nani, Piper, Angelo  Glowy" — "Glowy" is really its own delimiter line,
+  // not a 4th counter). detectGluedTrailingName() in parse-meta-extra.mjs
+  // guards against this; these cases pin its exact boundary directly
+  // against the parser (independent of data/raw/meta-extra.txt's current
+  // content, so a regression here fails even if no future paste ever
+  // repeats the exact same corruption).
+  console.log('\n[5c] Glued-name guard regression (parse-meta-extra.mjs)');
+  const guardResolve = makeResolver(brawlers);
+  // 24 filler map lines (all 25 canonical labels minus "Out in the Open",
+  // which is appended separately below to carry the glued/edge-case value)
+  // plus a trailing 22-line block so both halves satisfy
+  // EXPECTED_MAP_LINE_COUNTS ({22, 25}) and only the guard's own behavior
+  // is under test, not an unrelated line-count failure.
+  const guardFillerMaps = [
+    'Bridge Too Far', 'Hot Potato', 'Safe Zone', 'Hot Zone', 'Parallel Plays',
+    'Ring of Fire', 'Crystal Arcade', 'Double Swoosh', 'Hard Rock Mine',
+    'Deathcap Trap', 'Gem Fort', 'Undermine', 'Center Stage', 'Pinball Dreams',
+    'Sneaky Fields', 'Triple Dribble', 'Open Business', 'Dry Season',
+    'Hideout', 'Layer Cake', 'Shooting Star', 'Belles Rock',
+    'Flaring Phoenix', 'New Horizons',
+  ];
+  const guardFiller = guardFillerMaps.map((n) => `${n}: Piper, Nani, Mandy`).join('\n');
+  const guardTrailer = guardFillerMaps.slice(1, 22).map((n) => `${n}: Colt, Bull, Rico`).join('\n');
+
+  const guardTrailerBlock = `Bridge Too Far: Belle, Piper, Mandy\n${guardTrailer}\n`;
+
+  // For the glued-name cases: no bare-name line between Sirius's last map
+  // line and the trailing block — the whole point is that it's missing
+  // (glued onto the previous line instead), and the guard must synthesize
+  // the boundary itself.
+  function parseGluedFixture(lastLineValue) {
+    return parseMetaExtra(
+      `Sirius\n\n${guardFiller}\nOut in the Open: ${lastLineValue}\n\n${guardTrailerBlock}`,
+      guardResolve,
+    );
+  }
+
+  // For the non-glued (precision-boundary) cases: a real, literal bare-name
+  // line delimits the trailing block, exactly like well-formed source data.
+  // This isolates what's under test — does Sirius's own block stay a clean
+  // 25 lines? — from the unrelated "not enough map lines" failure a missing
+  // delimiter would otherwise cause.
+  function parsePlainFixture(lastLineValue) {
+    return parseMetaExtra(
+      `Sirius\n\n${guardFiller}\nOut in the Open: ${lastLineValue}\nGlowy\n\n${guardTrailerBlock}`,
+      guardResolve,
+    );
+  }
+
+  // Case A: the exact glued-name shape from the source paste. Must yield 2
+  // blocks (not 1 giant/miscounted block), Sirius's line must keep exactly
+  // 3 counters (not 4 — "Glowy" must not be absorbed as a counter), and the
+  // 2nd block's name must be the glued fragment.
+  const glued = parseGluedFixture('Nani, Piper, Angelo  Glowy');
+  check('glued-name: splits into 2 blocks, not 1', glued.blocks.length === 2, `got ${glued.blocks.length}`);
+  const gluedLastLine = (glued.blocks[0]?.mapCounters['Out in the Open'] ?? []).map((c) => c.slug);
+  check(
+    'glued-name: sirius\'s "Out in the Open" keeps exactly 3 counters (not 4)',
+    deepEqualArrays(gluedLastLine, ['nani', 'piper', 'angelo']),
+    JSON.stringify(gluedLastLine),
+  );
+  check(
+    'glued-name: 2nd block is named from the glued fragment, not merged as a counter',
+    glued.blocks[1]?.rawName === 'Glowy',
+    JSON.stringify(glued.blocks[1]?.rawName),
+  );
+
+  // Case B: uppercase glued name (the real "GIGI" case) resolves via
+  // normKey the same way.
+  const gluedUpper = parseGluedFixture('Nani, Piper, Angelo GIGI');
+  check(
+    'glued-name: uppercase "GIGI" resolves to slug "gigi"',
+    gluedUpper.blocks[1]?.slug === 'gigi',
+    JSON.stringify(gluedUpper.blocks[1]?.slug),
+  );
+
+  // Case C/D: precision boundary — genuine multi-word brawler names as the
+  // LAST token must never be mistaken for a glued name, because they
+  // resolve as a single atom directly and never reach resolve()'s
+  // whitespace-split fallback that this guard keys off of.
+  const larry = parsePlainFixture('Nani, Piper, Larry & Lawrie');
+  check(
+    '"Larry & Lawrie" as the last token is not treated as a block delimiter',
+    larry.blocks.length === 2 && larry.blocks[0]?.rawName === 'Sirius' && deepEqualArrays(
+      (larry.blocks[0]?.mapCounters['Out in the Open'] ?? []).map((c) => c.slug),
+      ['nani', 'piper', 'larry-lawrie'],
+    ),
+    JSON.stringify(larry.blocks.map((b) => b.rawName)),
+  );
+  const mrP = parsePlainFixture('Nani, Piper, Mr. P');
+  check(
+    '"Mr. P" as the last token is not treated as a block delimiter',
+    mrP.blocks.length === 2 && mrP.blocks[0]?.rawName === 'Sirius' && deepEqualArrays(
+      (mrP.blocks[0]?.mapCounters['Out in the Open'] ?? []).map((c) => c.slug),
+      ['nani', 'piper', 'mr-p'],
+    ),
+    JSON.stringify(mrP.blocks.map((b) => b.rawName)),
+  );
+
+  // Case E: the "Damian lou" missing-comma case (the reason resolve()'s
+  // whitespace-split fallback exists at all — see lib/normalize.mjs) must
+  // keep rescuing both atoms when it is NOT the last token of a map line,
+  // proving the guard is scoped to the last-token position only and never
+  // touches this fallback's normal job.
+  const damianLouAtoms = guardResolve('Damian lou', { source: 'test', key: 'test' });
+  check(
+    'resolve("Damian lou") whitespace-fallback still yields [damian, lou]',
+    deepEqualArrays(damianLouAtoms, ['damian', 'lou']),
+    JSON.stringify(damianLouAtoms),
+  );
+  const damianLouMidList = parsePlainFixture('Damian lou, Piper, Angelo');
+  check(
+    '"Damian lou" mid-list (not the last token) still resolves both atoms as counters, unaffected by the guard',
+    damianLouMidList.blocks.length === 2 && damianLouMidList.blocks[0]?.rawName === 'Sirius' && deepEqualArrays(
+      (damianLouMidList.blocks[0]?.mapCounters['Out in the Open'] ?? []).map((c) => c.slug),
+      ['damian', 'lou', 'piper', 'angelo'],
+    ),
+    JSON.stringify(damianLouMidList.blocks[0]?.mapCounters['Out in the Open']),
+  );
 
   // Golden counters below reflect meta.txt (2026 update), not the old
   // counters.txt export — see the before/after table in this change's PR
@@ -321,22 +457,23 @@ async function main() {
   // change's data update) — see the before/after table in the PR
   // description. bull/frank/rosa, edgar/mortis/buzz, and piper/brock/nani
   // are all keyed off enemies meta-extra.txt never touches (mina, trunk,
-  // kaze, jae-yong, finx, shade, doug, lola, gene aren't among them), so
-  // those 3 strings are unchanged by this update.
+  // kaze, jae-yong, finx, shade, doug, lola, gene, sirius, glowy, gigi
+  // aren't among them), so those 3 strings are unchanged by this update.
   //
-  // The `kaze` empty-ranking case was replaced with `sirius`: kaze now HAS
-  // derived counters (data/raw/meta-extra.txt — see [5b] above), so
-  // rankPicks(['kaze']) is no longer empty; `sirius` is one of the 4
-  // brawlers still genuinely uncovered (see [5] above) and exercises the
-  // same "no counter data -> empty ranking" behavior kaze used to. A new
-  // `trunk` case is added alongside it specifically to prove the opposite:
-  // a brawler this change newly covers now produces real suggestions.
+  // The `kaze` empty-ranking case was replaced with `sirius` when kaze
+  // gained derived counters; the 2026-07-27 supplement covers sirius too,
+  // so this case is replaced again with `alli` — now the only brawler still
+  // genuinely uncovered (see [5] above) — to keep exercising the "no
+  // counter data -> empty ranking" behavior. `trunk` (added the same way,
+  // to prove a newly-covered brawler produces real suggestions) is joined
+  // by `gigi`, one of this update's 3 newly-covered brawlers.
   const goldenRanking = [
     { enemies: ['bull', 'frank', 'rosa'], expected: 'colette:3/9 gale:2/3 cordelius:1/2 shelly:1/2 chester:1/1' },
     { enemies: ['edgar', 'mortis', 'buzz'], expected: 'gale:3/8 surge:2/3 bull:2/2 otis:1/3' },
     { enemies: ['piper', 'brock', 'nani'], expected: 'leon:2/2 edgar:1/3 cordelius:1/2' },
-    { enemies: ['sirius'], expected: '' },
+    { enemies: ['alli'], expected: '' },
     { enemies: ['trunk'], expected: 'colette:1/3 piper:1/2 gale:1/1' },
+    { enemies: ['gigi'], expected: 'piper:1/3 cordelius:1/2 gale:1/1' },
   ];
 
   for (const { enemies, expected } of goldenRanking) {
