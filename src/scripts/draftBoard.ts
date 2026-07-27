@@ -7,7 +7,6 @@
 import { rankPicks, type CountersIndex, type MapBonus, type Pick } from '@/lib/rank';
 import { analyzeComposition, type BrawlerClassName } from '@/lib/composition';
 import { stripAccents } from '@/lib/text';
-import { withBase } from '@/lib/basePath';
 import countersJson from '@/data/counters-index.json';
 import mapIndexJson from '@/data/map-index.json';
 
@@ -473,11 +472,15 @@ export function initDraftBoard(): void {
           if (!img || !listEl) continue;
           const portraitNode = mapPortraitTemplate.content.firstElementChild?.cloneNode(true);
           if (!(portraitNode instanceof HTMLElement)) continue;
-          const link = portraitNode.querySelector<HTMLAnchorElement>('.map-portrait__link');
+          const button = portraitNode.querySelector<HTMLButtonElement>('.map-portrait__link');
           const frame = portraitNode.querySelector('.map-portrait__frame');
           const nameEl = portraitNode.querySelector('.map-portrait__name');
           const name = img.dataset.name ?? slug;
-          if (link) link.href = withBase(`/brawlers/${slug}/`);
+          if (button) {
+            button.dataset.slug = slug;
+            button.setAttribute('aria-label', `Adicionar ${name} ao nosso time; Shift+Enter para o time inimigo`);
+            button.setAttribute('aria-keyshortcuts', 'Enter Shift+Enter');
+          }
           portraitNode.classList.toggle('banned-portrait', isBanned(slug));
           frame?.appendChild(img.cloneNode(true));
           if (nameEl) nameEl.textContent = name;
@@ -804,6 +807,25 @@ export function initDraftBoard(): void {
     const slug = row.dataset.slug;
     if (slug) insertBrawler('enemy', slug, row, counterList);
   });
+
+  if (mapPicksCategories instanceof HTMLElement) {
+    bindLongPress(
+      mapPicksCategories,
+      '.map-portrait__link',
+      (row) => {
+        const slug = row.dataset.slug;
+        if (slug) insertBrawler('ally', slug, row, mapPicksCategories);
+      },
+      (row) => {
+        const slug = row.dataset.slug;
+        if (slug) insertBrawler('enemy', slug, row, mapPicksCategories);
+      },
+    );
+    bindEnemyShortcut(mapPicksCategories, '.map-portrait__link', (row) => {
+      const slug = row.dataset.slug;
+      if (slug) insertBrawler('enemy', slug, row, mapPicksCategories);
+    });
+  }
 
   // --- Clear ------------------------------------------------------------
 

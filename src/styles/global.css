@@ -287,12 +287,14 @@
   }
 
   /*
-   * Counter-suggestion rows (draftBoard.ts) are tap-and-hold targets —
-   * left-click/tap inserts into Nosso Time, right-click/long-press into
-   * Time Inimigo. Scoped to just this class so a long-press reads as
-   * "insert", not the OS's own text-selection callout.
+   * Counter-suggestion rows and map-picks portraits (draftBoard.ts) are
+   * both tap-and-hold targets — left-click/tap inserts into Nosso Time,
+   * right-click/long-press into Time Inimigo. Scoped to just these two so
+   * a long-press reads as "insert", not the OS's own text-selection
+   * callout.
    */
-  .counter-row {
+  .counter-row,
+  .map-portrait__link {
     -webkit-touch-callout: none;
     user-select: none;
   }
