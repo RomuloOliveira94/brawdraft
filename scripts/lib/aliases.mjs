@@ -1,5 +1,7 @@
 export const MANUAL_ALIASES = {
-  // counters.txt (5)
+  // formerly counters.txt (5) — that source is retired (see meta.txt below),
+  // kept here since maps.txt/meta.txt could plausibly hit the same typos;
+  // _report.json's unusedManualAliases flags them if they never fire again.
   'miple':    'meeple',      // typo; appears as a key AND as a value (Meg, 8-Bit)
   'gail':     'gale',        // key "Gail (Gale)"; value in 22 entries
   'odie':     'ollie',       // key "Odie (Ollie)"
@@ -17,22 +19,36 @@ export const MANUAL_ALIASES = {
   'zyggy':    'ziggy',
 };
 
+// 'watts' and 'lancadores' (counters.txt's Damian/Shelly class-not-brawler
+// drops) were retired along with counters.txt/parse-counters.mjs — meta.txt
+// fixed both entries upstream (Damian: gale/surge/clancy; Shelly:
+// piper/spike/gale) and never emits either token.
 export const DROP_TOKENS = new Set([
-  'lancadores', // counters.txt Shelly: "Nita, Meg ou Lançadores" — a CLASS (throwers), not a brawler
-  'lol',        // maps.txt L68 — junk token
-  'watts',      // not in the 107-brawler roster — see A.3
+  'lol', // maps.txt L68 — junk token
 ]);
 
-// Stripped literally from counters.txt before parsing. Exactly 4, no separators —
-// each is glued directly to the next brawler key (Damian, Jacky, Najia, Sam).
-export const SECTION_HEADERS = [
-  '🅱️ Letras D, E, F, G e H',
-  '🅲 Letras J, K, L e M',
-  '🅳 Letras N, O, P e R',
-  '🅴 Letras S, T, W, Z e novos adicionados',
-];
-
 export const ORPHAN_CATEGORY_FIXES = { 'undermine': 'Carregadores das gemas' };
+
+// meta.txt (5) — typo fixes scoped to that single source file, kept out of
+// MANUAL_ALIASES on purpose: 'pipe' in particular is a common English word
+// (truncated from "Piper" only in meta.txt's 8-Bit/Out in the Open line) and
+// must never leak into parse-counters.mjs/parse-maps.mjs token resolution.
+export const META_TYPO_FIXES = {
+  'jessi':  'jessie',   // meta.txt: every Open Business line (50 hits)
+  'jackie': 'jacky',    // meta.txt: every Sneaky Fields line (8 hits)
+  'otiz':   'otis',     // meta.txt: Damian/Deathcap Trap line (1 hit)
+  'sprou':  'sprout',   // meta.txt: 8-Bit/Belles Rock line, truncated name (1 hit)
+  'pipe':   'piper',    // meta.txt: 8-Bit/Out in the Open line, truncated name (1 hit)
+};
+
+// meta.txt's 25 per-map line labels are map names, except "Hot Zone" — that's
+// the *game mode* name, not a map. The other three Hot-Zone-mode maps
+// (Parallel Plays, Ring of Fire, Open Business) already appear under their
+// real names; Dueling Beetles is the only Hot-Zone-mode map with no line of
+// its own, so "Hot Zone" is inferred to mean Dueling Beetles here.
+export const META_MAP_OVERRIDES = {
+  'hotzone': 'Dueling Beetles',
+};
 
 // normKey(raw heading) -> display label. Derived from data/raw/maps.txt; any
 // heading whose normKey is missing here must throw in parseMaps rather than

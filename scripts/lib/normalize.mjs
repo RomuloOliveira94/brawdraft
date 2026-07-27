@@ -21,7 +21,7 @@ export const DROP = Symbol('drop');
  * actually glues two brawler names together (missing comma) into two slugs.
  *
  * `context` is only used to build a helpful error message and should
- * describe where the token came from, e.g. `{ source: 'counters.txt', key: 'Damian' }`.
+ * describe where the token came from, e.g. `{ source: 'meta.txt', key: 'Damian' }`.
  */
 export function makeResolver(brawlers) {
   const BY_NORM = new Map();
