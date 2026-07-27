@@ -7,6 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { rankPicks } from '../src/lib/rank.ts';
+import { analyzeComposition } from '../src/lib/composition.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -84,8 +85,38 @@ async function main() {
   const hardCasesOk = hardCases.every((slug) => brawlerFiles.includes(`${slug}.png`));
   check(`hard-case brawler files exist (${hardCases.join(' ')})`, hardCasesOk);
 
-  // --- 2. No unresolved slug anywhere ---
-  console.log('\n[2] Slug resolution');
+  // --- 2. Brawler classes ---
+  // BrawlAPI reports class.name === "Unknown" for brawlers it hasn't
+  // backfilled yet; scripts/fetch-brawlers.mjs's CLASS_OVERRIDES table
+  // hand-corrects the ones we could verify against a real source. This
+  // pins down exactly which brawlers are still expected to be "Unknown" so
+  // a roster change (a new unclassified brawler, or BrawlAPI/an override
+  // fixing one) surfaces here instead of silently degrading
+  // src/lib/composition.ts's analysis.
+  console.log('\n[2] Brawler classes');
+  const expectedUnknown = ['buzz-lightyear'];
+  const actualUnknown = brawlers.filter((b) => b.className === 'Unknown').map((b) => b.id).sort();
+  check(
+    `brawlers with className === "Unknown" sorted === ${JSON.stringify(expectedUnknown)}`,
+    deepEqualArrays(actualUnknown, expectedUnknown),
+    JSON.stringify(actualUnknown),
+  );
+
+  // analyzeComposition() must stay honest when a real 'Unknown' brawler is
+  // on the team: pairing buzz-lightyear (Unknown) with a real Tank and a
+  // real Support must surface the genuine remaining gap (no Marksman/
+  // Artillery) and must NEVER claim "Composição equilibrada" — that would
+  // assert completeness over a slot whose class we don't actually know.
+  const compositionClasses = ['damian', 'wendy', 'buzz-lightyear'].map((slug) => bySlug[slug]?.className);
+  const compositionTips = analyzeComposition(compositionClasses);
+  check(
+    'analyzeComposition([damian:Tank, wendy:Support, buzz-lightyear:Unknown]) === ["Falta alcance longo"] (never "Composição equilibrada")',
+    deepEqualArrays(compositionTips, ['Falta alcance longo']),
+    JSON.stringify({ classes: compositionClasses, tips: compositionTips }),
+  );
+
+  // --- 3. No unresolved slug anywhere ---
+  console.log('\n[3] Slug resolution');
   let countersSlugsOk = true;
   for (const b of brawlers) {
     for (const c of b.counters) if (!slugSet.has(c.slug)) countersSlugsOk = false;
@@ -129,8 +160,8 @@ async function main() {
   console.log(`  -> ${countersEntryCount} counters | ${maps.length} mapas | ${categoryCount} categorias`);
   check('93 counters | 26 mapas | 133 categorias', countersEntryCount === 93 && maps.length === 26 && categoryCount === 133);
 
-  // --- 3. All 26 maps carry API metadata ---
-  console.log('\n[3] Map API metadata');
+  // --- 4. All 26 maps carry API metadata ---
+  console.log('\n[4] Map API metadata');
   let mapMetadataOk = true;
   for (const m of maps) {
     if (!m.mapApiId || !m.gameMode?.name || !m.image) mapMetadataOk = false;
@@ -138,14 +169,14 @@ async function main() {
   }
   check('all 26 maps have mapApiId, gameMode.name, image', mapMetadataOk && maps.length === 26);
 
-  // --- 4. Exact drops and gaps ---
+  // --- 5. Exact drops and gaps ---
   // meta.txt replaced counters.txt as the source of the global counters
   // (see data/raw/meta.txt / scripts/parse-meta.mjs) — 'Watts' and
   // 'Lançadores' were counters.txt-only drops (Damian/Shelly's old
   // class-not-brawler tokens) and no longer occur anywhere; meta.txt fixed
   // both entries upstream instead. 'LOL' is still dropped from maps.txt,
   // which this change did not touch.
-  console.log('\n[4] Exact drops and gaps');
+  console.log('\n[5] Exact drops and gaps');
   const droppedKeysSorted = report.dropped.keys.map((d) => d.raw).sort();
   check(
     'dropped keys sorted === []',
@@ -210,8 +241,8 @@ async function main() {
     check(`${slug} counters === ${JSON.stringify(expected)}`, deepEqualArrays(actual, expected), JSON.stringify(actual));
   }
 
-  // --- 5. Golden ranking cases ---
-  console.log('\n[5] Golden ranking cases');
+  // --- 6. Golden ranking cases ---
+  console.log('\n[6] Golden ranking cases');
   const countersIndexForRank = countersIndex;
 
   function formatTop(picks, n) {
@@ -221,7 +252,7 @@ async function main() {
   // Expected strings below are recomputed against meta.txt's counters (this
   // change's data update) — see the before/after table in the PR
   // description. The `kaze` case is unaffected: kaze is one of the 14
-  // brawlers meta.txt still doesn't cover (see [4] above).
+  // brawlers meta.txt still doesn't cover (see [5] above).
   const goldenRanking = [
     { enemies: ['bull', 'frank', 'rosa'], expected: 'colette:3/9 gale:2/3 cordelius:1/2 shelly:1/2 chester:1/1' },
     { enemies: ['edgar', 'mortis', 'buzz'], expected: 'gale:3/8 surge:2/3 bull:2/2 otis:1/3' },
@@ -236,8 +267,8 @@ async function main() {
     check(`rankPicks(${JSON.stringify(enemies)}) top ${n || 0} === "${expected}"`, actual === expected, `got "${actual}"`);
   }
 
-  // --- 6. Map-specific counters (map-counters.json) ---
-  console.log('\n[6] Map-specific counters');
+  // --- 7. Map-specific counters (map-counters.json) ---
+  console.log('\n[7] Map-specific counters');
   const mapIdSet = new Set(maps.map((m) => m.id));
 
   check('map-counters.json covers exactly 25 of the 26 maps', Object.keys(mapCounters).length === 25, `got ${Object.keys(mapCounters).length}`);
