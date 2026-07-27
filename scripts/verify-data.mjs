@@ -47,6 +47,7 @@ async function main() {
   const maps = await readJson(path.join(ROOT, 'src/data/maps.json'));
   const countersIndex = await readJson(path.join(ROOT, 'src/data/counters-index.json'));
   const mapIndex = await readJson(path.join(ROOT, 'src/data/map-index.json'));
+  const mapCounters = await readJson(path.join(ROOT, 'src/data/map-counters.json'));
   const report = await readJson(path.join(ROOT, 'src/data/_report.json'));
 
   const slugSet = new Set(brawlers.map((b) => b.id));
@@ -138,19 +139,47 @@ async function main() {
   check('all 26 maps have mapApiId, gameMode.name, image', mapMetadataOk && maps.length === 26);
 
   // --- 4. Exact drops and gaps ---
+  // meta.txt replaced counters.txt as the source of the global counters
+  // (see data/raw/meta.txt / scripts/parse-meta.mjs) — 'Watts' and
+  // 'Lançadores' were counters.txt-only drops (Damian/Shelly's old
+  // class-not-brawler tokens) and no longer occur anywhere; meta.txt fixed
+  // both entries upstream instead. 'LOL' is still dropped from maps.txt,
+  // which this change did not touch.
   console.log('\n[4] Exact drops and gaps');
   const droppedKeysSorted = report.dropped.keys.map((d) => d.raw).sort();
   check(
-    "dropped keys sorted === ['Watts']",
-    deepEqualArrays(droppedKeysSorted, ['Watts']),
+    'dropped keys sorted === []',
+    deepEqualArrays(droppedKeysSorted, []),
     JSON.stringify(droppedKeysSorted),
   );
 
-  const droppedValuesSorted = report.dropped.values.map((d) => d.raw).sort();
+  const droppedValuesSorted = report.dropped.values
+    .filter((d) => d.reason !== 'duplicate-in-source')
+    .map((d) => d.raw)
+    .sort();
   check(
-    "dropped values sorted === ['LOL','Lançadores','Watts']",
-    deepEqualArrays(droppedValuesSorted, ['LOL', 'Lançadores', 'Watts']),
+    "dropped values (excluding source-data duplicates) sorted === ['LOL']",
+    deepEqualArrays(droppedValuesSorted, ['LOL']),
     JSON.stringify(droppedValuesSorted),
+  );
+
+  // meta.txt has 4 duplicate-in-source repeats not present in the old
+  // counters.txt data — a genuine data error (e.g. header "Max ➔ ... Crow,
+  // Spike ou Crow.") — logged and deduped by parse-meta.mjs rather than
+  // thrown, since the token itself resolves fine; it's just repeated.
+  const duplicateInSource = report.dropped.values
+    .filter((d) => d.reason === 'duplicate-in-source')
+    .map((d) => `${d.raw}@${d.from}`)
+    .sort();
+  check(
+    "duplicate-in-source drops sorted === ['Crow@header:Max','Spike@Belle / Deathcap Trap','Spike@Max / Deathcap Trap','Spike@Stu / Deathcap Trap']",
+    deepEqualArrays(duplicateInSource, [
+      'Crow@header:Max',
+      'Spike@Belle / Deathcap Trap',
+      'Spike@Max / Deathcap Trap',
+      'Spike@Stu / Deathcap Trap',
+    ]),
+    JSON.stringify(duplicateInSource),
   );
 
   const expectedNoCounters = [
@@ -164,12 +193,17 @@ async function main() {
     JSON.stringify(actualNoCounters),
   );
 
+  // Golden counters below reflect meta.txt (2026 update), not the old
+  // counters.txt export — see the before/after table in this change's PR
+  // description. spike/mortis changed content; shelly/damian went from 2
+  // counters (a dropped token each) to 3 (meta.txt fixed both upstream);
+  // 8-bit is unchanged.
   const goldenCounters = {
-    spike: ['piper', 'mandy', 'mr-p'],
-    shelly: ['nita', 'meg'],
-    damian: ['surge', 'edgar'],
+    spike: ['piper', 'brock', 'tick'],
+    shelly: ['piper', 'spike', 'gale'],
+    damian: ['gale', 'surge', 'clancy'],
     '8-bit': ['pierce', 'meeple', 'piper'],
-    mortis: ['gale', 'surge', 'bull'],
+    mortis: ['gale', 'shelly', 'bull'],
   };
   for (const [slug, expected] of Object.entries(goldenCounters)) {
     const actual = (bySlug[slug]?.counters ?? []).map((c) => c.slug);
@@ -184,10 +218,14 @@ async function main() {
     return picks.slice(0, n).map((p) => `${p.slug}:${p.coverage}/${p.score}`).join(' ');
   }
 
+  // Expected strings below are recomputed against meta.txt's counters (this
+  // change's data update) — see the before/after table in the PR
+  // description. The `kaze` case is unaffected: kaze is one of the 14
+  // brawlers meta.txt still doesn't cover (see [4] above).
   const goldenRanking = [
-    { enemies: ['bull', 'frank', 'rosa'], expected: 'colette:3/9 gale:2/4 clancy:2/2 shelly:1/2 chester:1/1' },
-    { enemies: ['edgar', 'mortis', 'buzz'], expected: 'gale:3/8 surge:3/5 bull:2/2 otis:1/3' },
-    { enemies: ['piper', 'brock', 'nani'], expected: 'mandy:2/3 leon:2/2 max:1/2' },
+    { enemies: ['bull', 'frank', 'rosa'], expected: 'colette:3/9 gale:2/3 cordelius:1/2 shelly:1/2 chester:1/1' },
+    { enemies: ['edgar', 'mortis', 'buzz'], expected: 'gale:3/8 surge:2/3 bull:2/2 otis:1/3' },
+    { enemies: ['piper', 'brock', 'nani'], expected: 'leon:2/2 edgar:1/3 cordelius:1/2' },
     { enemies: ['kaze'], expected: '' },
   ];
 
@@ -197,6 +235,50 @@ async function main() {
     const actual = formatTop(picks, n);
     check(`rankPicks(${JSON.stringify(enemies)}) top ${n || 0} === "${expected}"`, actual === expected, `got "${actual}"`);
   }
+
+  // --- 6. Map-specific counters (map-counters.json) ---
+  console.log('\n[6] Map-specific counters');
+  const mapIdSet = new Set(maps.map((m) => m.id));
+
+  check('map-counters.json covers exactly 25 of the 26 maps', Object.keys(mapCounters).length === 25, `got ${Object.keys(mapCounters).length}`);
+  check('map-counters.json has no "kaboom-canyon" entry (absent from meta.txt)', !('kaboom-canyon' in mapCounters));
+  check('map-counters.json has a "dueling-beetles" entry (meta.txt\'s "Hot Zone" lines)', 'dueling-beetles' in mapCounters);
+
+  let mapCountersSlugsOk = true;
+  for (const [mapId, perEnemy] of Object.entries(mapCounters)) {
+    if (!mapIdSet.has(mapId)) mapCountersSlugsOk = false;
+    for (const [enemy, list] of Object.entries(perEnemy)) {
+      if (!slugSet.has(enemy) || list.length > 3) mapCountersSlugsOk = false;
+      for (const s of list) if (!slugSet.has(s)) mapCountersSlugsOk = false;
+    }
+  }
+  check('every map-counters map id, enemy slug, and counter slug resolves; no list > 3', mapCountersSlugsOk);
+
+  // rankPicks({mapCounters}) must differ from the global list for a map the
+  // data covers, and fall back to the global list (per enemy) for one it
+  // doesn't — never an all-or-nothing switch keyed on the map.
+  const enemiesForMapCase = ['bull', 'frank', 'rosa'];
+  const globalPicks = formatTop(rankPicks(enemiesForMapCase, countersIndexForRank), 6);
+  const bridgeTooFarPicks = formatTop(
+    rankPicks(enemiesForMapCase, countersIndexForRank, { mapCounters: mapCounters['bridge-too-far'] }),
+    4,
+  );
+  check(
+    'rankPicks(["bull","frank","rosa"], {mapCounters: mapCounters["bridge-too-far"]}) top 4 === "clancy:3/8 colette:3/7 piper:2/2 spike:1/1"',
+    bridgeTooFarPicks === 'clancy:3/8 colette:3/7 piper:2/2 spike:1/1',
+    `got "${bridgeTooFarPicks}"`,
+  );
+  check('map-specific ranking differs from the global ranking for a covered map', bridgeTooFarPicks !== globalPicks);
+
+  const kaboomPicks = formatTop(
+    rankPicks(enemiesForMapCase, countersIndexForRank, { mapCounters: mapCounters['kaboom-canyon'] ?? null }),
+    6,
+  );
+  check(
+    'rankPicks(..., {mapCounters: mapCounters["kaboom-canyon"] ?? null}) falls back to the global ranking',
+    kaboomPicks === globalPicks,
+    `global "${globalPicks}" vs kaboom-canyon "${kaboomPicks}"`,
+  );
 
   // --- Summary ---
   console.log(`\n${failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`}`);
