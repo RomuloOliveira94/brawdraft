@@ -103,6 +103,21 @@ const CLASS_OVERRIDES = {
   meeple: 'Controller', // MF class:"CONTROLLER"; BM alt="Meeple - Epic Controller brawler in Brawl Stars"
 };
 
+/**
+ * Brawlers intentionally excluded from this app's roster even though
+ * BrawlAPI still lists them — the single choke point for "this brawler
+ * doesn't exist in BrawDraft" (picker, brawlers list, per-brawler page
+ * generation, images, all read from the roster this function returns).
+ *
+ * `buzz-lightyear`: a time-limited Toy Story collab brawler with zero
+ * counter or map data anywhere in this project's sources (data/raw/meta.txt,
+ * meta-extra.txt, maps.txt all never mention him — see CLASS_OVERRIDES'
+ * comment above for why even his class was never resolvable) and no
+ * realistic path to getting any before the collab rotates out. Roster:
+ * 107 -> 106.
+ */
+const REMOVED_BRAWLERS = new Set(['buzz-lightyear']);
+
 const HEX_COLOR_RE = /^#[0-9a-fA-F]{6}$/;
 
 /**
@@ -234,10 +249,16 @@ async function fetchBrawlerRoster() {
   const seenSlugs = new Map();
   const seenNormKeys = new Map();
   let overridesApplied = 0;
+  let removedCount = 0;
 
   for (const b of list) {
     const slug = slugify(b.name);
     const key = normKey(b.name);
+
+    if (REMOVED_BRAWLERS.has(slug)) {
+      removedCount++;
+      continue;
+    }
 
     if (seenSlugs.has(slug)) {
       throw new Error(`duplicate brawler slug "${slug}" for "${b.name}" and "${seenSlugs.get(slug)}"`);
@@ -269,8 +290,11 @@ async function fetchBrawlerRoster() {
   }
 
   console.log(`[brawlers] ${overridesApplied} CLASS_OVERRIDES applied`);
+  console.log(`[brawlers] ${removedCount} REMOVED_BRAWLERS excluded (${[...REMOVED_BRAWLERS].join(', ')})`);
 
-  const staleOverrideKeys = Object.keys(CLASS_OVERRIDES).filter((slug) => !seenSlugs.has(slug));
+  const staleOverrideKeys = Object.keys(CLASS_OVERRIDES).filter(
+    (slug) => !seenSlugs.has(slug) && !REMOVED_BRAWLERS.has(slug),
+  );
   for (const slug of staleOverrideKeys) {
     console.warn(`[brawlers] WARNING: CLASS_OVERRIDES key "${slug}" does not match any current roster brawler (renamed or removed?)`);
   }

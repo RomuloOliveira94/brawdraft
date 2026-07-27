@@ -8,7 +8,9 @@ import { fileURLToPath } from 'node:url';
 
 import { makeResolver, normKey } from './lib/normalize.mjs';
 import { MANUAL_ALIASES, META_TYPO_FIXES, META_MAP_OVERRIDES } from './lib/aliases.mjs';
+import { deriveTopCounters } from './lib/deriveCounters.mjs';
 import { parseMeta } from './parse-meta.mjs';
+import { parseMetaExtra } from './parse-meta-extra.mjs';
 import { parseMaps } from './parse-maps.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -17,6 +19,7 @@ const ROOT = path.resolve(__dirname, '..');
 const BRAWLERS_JSON = path.join(ROOT, 'src/data/brawlers.json');
 const MAP_METADATA_JSON = path.join(ROOT, 'src/data/_map-metadata.json');
 const META_RAW = path.join(ROOT, 'data/raw/meta.txt');
+const META_EXTRA_RAW = path.join(ROOT, 'data/raw/meta-extra.txt');
 const MAPS_RAW = path.join(ROOT, 'data/raw/maps.txt');
 
 const MAPS_JSON = path.join(ROOT, 'src/data/maps.json');
@@ -31,8 +34,12 @@ async function readJson(file) {
 
 async function main() {
   const brawlers = await readJson(BRAWLERS_JSON);
-  if (brawlers.length < 107) {
-    throw new Error(`integrity: expected >=107 brawlers in ${BRAWLERS_JSON}, got ${brawlers.length}`);
+  // Floor, not an exact match: BrawlAPI's roster can only grow over time.
+  // 106, not 107 — fetch-brawlers.mjs excludes buzz-lightyear (a
+  // time-limited collab brawler with no data anywhere in this project) from
+  // the roster entirely; see REMOVED_BRAWLERS there.
+  if (brawlers.length < 106) {
+    throw new Error(`integrity: expected >=106 brawlers in ${BRAWLERS_JSON}, got ${brawlers.length}`);
   }
   const brawlerById = new Map(brawlers.map((b) => [b.id, b]));
   const brawlerSlugSet = new Set(brawlers.map((b) => b.id));
@@ -57,6 +64,57 @@ async function main() {
   const metaRaw = await readFile(META_RAW, 'utf8');
   const { headerCounters, mapCounters: rawMapCounters, aliasHits: metaAliasHits, dropped: metaDropped } =
     parseMeta(metaRaw, resolveMeta);
+  const metaHeaderEntries = headerCounters.length; // meta.txt's own count, before meta-extra.txt merges in below
+
+  // --- Parse meta-extra (9 later-supplied blocks; see parse-meta-extra.mjs) ---
+  const metaExtraRaw = await readFile(META_EXTRA_RAW, 'utf8');
+  const { blocks: metaExtraBlocks, aliasHits: metaExtraAliasHits, dropped: metaExtraDropped } =
+    parseMetaExtra(metaExtraRaw, resolveMeta);
+
+  // meta-extra.txt's 25 canonical map-line labels, in source order, taken
+  // from the one block (Mina) that has all 25 — used below to name exactly
+  // which maps a truncated block (Doug, Gene) is missing.
+  const metaExtraFullMapOrder = Object.keys(
+    metaExtraBlocks.find((b) => b.mapLineCount === 25)?.mapCounters ?? {},
+  );
+
+  // Only Mina came with an explicit global-counter header; the other 8
+  // blocks are headerless in the source, so their "global" counters are
+  // DERIVED here from their own per-map counter frequency (project
+  // decision, not scraped data) — top 3 by occurrence count, ties broken by
+  // ascending slug `localeCompare` (see deriveTopCounters). Recorded in
+  // _report.json as derived, not curated, so provenance stays visible.
+  const metaExtraReport = { explicit: [], derived: {}, gaps: {} };
+  for (const block of metaExtraBlocks) {
+    // Merge this block's per-map counters into the same rawMapCounters
+    // structure meta.txt's 93 blocks populate, keyed by the same raw map
+    // name strings, so the existing map-id resolution loop below (and
+    // META_MAP_OVERRIDES's "Hot Zone" -> Dueling Beetles rule) applies
+    // uniformly to both sources without knowing they're different files.
+    for (const [rawMapName, counters] of Object.entries(block.mapCounters)) {
+      (rawMapCounters[rawMapName] ??= {})[block.slug] = counters;
+    }
+
+    if (block.explicitCounters) {
+      headerCounters.push({ slug: block.slug, counters: block.explicitCounters });
+      metaExtraReport.explicit.push(block.slug);
+    } else {
+      const { counters, frequencies } = deriveTopCounters(
+        Object.values(block.mapCounters).map((list) => list.map((c) => c.slug)),
+      );
+      headerCounters.push({ slug: block.slug, counters });
+      metaExtraReport.derived[block.slug] = {
+        top3: counters.map((c) => c.slug),
+        frequencies,
+        mapLineCount: block.mapLineCount,
+      };
+    }
+
+    if (block.mapLineCount < 25) {
+      const missingMaps = metaExtraFullMapOrder.filter((name) => !(name in block.mapCounters));
+      metaExtraReport.gaps[block.slug] = { mapLineCount: block.mapLineCount, missingMaps };
+    }
+  }
 
   // --- Parse maps ---
   const mapsRaw = await readFile(MAPS_RAW, 'utf8');
@@ -185,7 +243,7 @@ async function main() {
     const map = aliasesBySlug.get(slug);
     if (!map.has(rawKey)) map.set(rawKey, raw);
   }
-  for (const { slug, raw } of [...metaAliasHits, ...mapAliasHits]) recordAlias(slug, raw);
+  for (const { slug, raw } of [...metaAliasHits, ...metaExtraAliasHits, ...mapAliasHits]) recordAlias(slug, raw);
 
   // --- Build per-brawler counters + counterFor (inverse index) ---
   const countersBySlug = new Map(brawlers.map((b) => [b.id, []]));
@@ -241,7 +299,7 @@ async function main() {
   const unusedMetaTypoFixes = Object.keys(META_TYPO_FIXES).filter((k) => !usedMetaTypoKeys.has(k));
 
   const aliasHitCounts = {};
-  for (const { raw } of [...metaAliasHits, ...mapAliasHits]) {
+  for (const { raw } of [...metaAliasHits, ...metaExtraAliasHits, ...mapAliasHits]) {
     const k = normKey(raw);
     aliasHitCounts[k] = (aliasHitCounts[k] ?? 0) + 1;
   }
@@ -260,19 +318,31 @@ async function main() {
       mapCountersPerMapEntries: mapCountersEntryCount,
     },
     dropped: {
-      keys: metaDropped.keys,
-      values: [...metaDropped.values, ...mapDropped.values],
+      keys: [...metaDropped.keys, ...metaExtraDropped.keys],
+      values: [...metaDropped.values, ...metaExtraDropped.values, ...mapDropped.values],
     },
     hasCountersFalseSlugs: finalBrawlers.filter((b) => !b.hasCounters).map((b) => b.id).sort(),
     aliasHitCounts,
     unusedManualAliases: unusedAliases,
     meta: {
       source: 'data/raw/meta.txt',
-      headerEntries: counterEntries.length,
+      headerEntries: metaHeaderEntries,
       mapsCovered,
       mapsNotCovered,
       metaTypoFixesUsed: [...usedMetaTypoKeys].sort(),
       unusedMetaTypoFixes,
+    },
+    // data/raw/meta-extra.txt: 9 blocks supplied after meta.txt. `explicit`
+    // is Mina (came with its own header); `derived` is the other 8, with
+    // the exact per-slug frequency counts that produced their top-3 (see
+    // scripts/lib/deriveCounters.mjs); `gaps` records the 2 truncated
+    // blocks (Doug, Gene — 22/25 map lines) and exactly which 3 canonical
+    // maps are missing for each, so the gap stays visible instead of
+    // silently looking like full coverage.
+    metaExtra: {
+      source: 'data/raw/meta-extra.txt',
+      blocks: metaExtraBlocks.length,
+      ...metaExtraReport,
     },
   };
 

@@ -463,6 +463,51 @@
       "piper",
       "mandy",
       "tick"
+    ],
+    "mina": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "trunk": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "kaze": [
+      "piper",
+      "mandy",
+      "colette"
+    ],
+    "jae-yong": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "finx": [
+      "piper",
+      "mandy",
+      "darryl"
+    ],
+    "shade": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "doug": [
+      "colette",
+      "clancy",
+      "piper"
+    ],
+    "lola": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "gene": [
+      "piper",
+      "mandy",
+      "clancy"
     ]
   },
   "hot-potato": {
@@ -929,6 +974,51 @@
       "mortis",
       "bibi",
       "stu"
+    ],
+    "mina": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "trunk": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "kaze": [
+      "ash",
+      "colt",
+      "kenji"
+    ],
+    "jae-yong": [
+      "colt",
+      "dynamike",
+      "clancy"
+    ],
+    "finx": [
+      "dynamike",
+      "larry-lawrie",
+      "mortis"
+    ],
+    "shade": [
+      "clancy",
+      "colt",
+      "dynamike"
+    ],
+    "doug": [
+      "clancy",
+      "colette",
+      "dynamike"
+    ],
+    "lola": [
+      "colt",
+      "rico",
+      "dynamike"
+    ],
+    "gene": [
+      "colt",
+      "dynamike",
+      "clancy"
     ]
   },
   "safe-zone": {
@@ -1394,6 +1484,51 @@
     "ziggy": [
       "piper",
       "gray",
+      "brock"
+    ],
+    "mina": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "trunk": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "kaze": [
+      "colette",
+      "meg",
+      "brock"
+    ],
+    "jae-yong": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "finx": [
+      "brock",
+      "colt",
+      "darryl"
+    ],
+    "shade": [
+      "brock",
+      "colt",
+      "clancy"
+    ],
+    "doug": [
+      "colette",
+      "clancy",
+      "colt"
+    ],
+    "lola": [
+      "piper",
+      "nani",
+      "brock"
+    ],
+    "gene": [
+      "piper",
+      "nani",
       "brock"
     ]
   },
@@ -1861,6 +1996,51 @@
       "mortis",
       "bibi",
       "frank"
+    ],
+    "mina": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "trunk": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "kaze": [
+      "stu",
+      "gale",
+      "meg"
+    ],
+    "jae-yong": [
+      "gale",
+      "meg",
+      "lou"
+    ],
+    "finx": [
+      "meg",
+      "cordelius",
+      "larry-lawrie"
+    ],
+    "shade": [
+      "lou",
+      "meg",
+      "cordelius"
+    ],
+    "doug": [
+      "gale",
+      "lou",
+      "meg"
+    ],
+    "lola": [
+      "meg",
+      "sandy",
+      "cordelius"
+    ],
+    "gene": [
+      "meg",
+      "sandy",
+      "cordelius"
     ]
   },
   "parallel-plays": {
@@ -2327,6 +2507,51 @@
       "mortis",
       "dynamike",
       "edgar"
+    ],
+    "mina": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "trunk": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "kaze": [
+      "dynamike",
+      "kenji",
+      "barley"
+    ],
+    "jae-yong": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "finx": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "shade": [
+      "hank",
+      "jacky",
+      "dynamike"
+    ],
+    "doug": [
+      "dynamike",
+      "barley",
+      "colette"
+    ],
+    "lola": [
+      "dynamike",
+      "barley",
+      "berry"
+    ],
+    "gene": [
+      "dynamike",
+      "barley",
+      "berry"
     ]
   },
   "ring-of-fire": {
@@ -2793,6 +3018,51 @@
       "meg",
       "mortis",
       "gray"
+    ],
+    "mina": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "trunk": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "kaze": [
+      "meg",
+      "tara",
+      "gale"
+    ],
+    "jae-yong": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "finx": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "shade": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "doug": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "lola": [
+      "meg",
+      "nani",
+      "piper"
+    ],
+    "gene": [
+      "meg",
+      "nani",
+      "piper"
     ]
   },
   "crystal-arcade": {
@@ -3259,6 +3529,51 @@
       "gray",
       "mortis",
       "bibi"
+    ],
+    "mina": [
+      "charlie",
+      "spike",
+      "piper"
+    ],
+    "trunk": [
+      "spike",
+      "colette",
+      "emz"
+    ],
+    "kaze": [
+      "tara",
+      "spike",
+      "kenji"
+    ],
+    "jae-yong": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "finx": [
+      "spike",
+      "tara",
+      "mortis"
+    ],
+    "shade": [
+      "spike",
+      "tara",
+      "piper"
+    ],
+    "doug": [
+      "spike",
+      "colette",
+      "clancy"
+    ],
+    "lola": [
+      "spike",
+      "penny",
+      "piper"
+    ],
+    "gene": [
+      "tara",
+      "spike",
+      "crow"
     ]
   },
   "double-swoosh": {
@@ -3724,6 +4039,51 @@
     "ziggy": [
       "mortis",
       "bibi",
+      "buster"
+    ],
+    "mina": [
+      "tara",
+      "charlie",
+      "buster"
+    ],
+    "trunk": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "kaze": [
+      "kenji",
+      "tara",
+      "ash"
+    ],
+    "jae-yong": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "finx": [
+      "mortis",
+      "kenji",
+      "rosa"
+    ],
+    "shade": [
+      "shelly",
+      "jacky",
+      "tara"
+    ],
+    "doug": [
+      "shelly",
+      "buster",
+      "tara"
+    ],
+    "lola": [
+      "tara",
+      "rosa",
+      "buster"
+    ],
+    "gene": [
+      "tara",
+      "rosa",
       "buster"
     ]
   },
@@ -4191,6 +4551,51 @@
       "mortis",
       "gray",
       "stu"
+    ],
+    "mina": [
+      "gene",
+      "spike",
+      "charlie"
+    ],
+    "trunk": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "kaze": [
+      "gene",
+      "ash",
+      "tara"
+    ],
+    "jae-yong": [
+      "gene",
+      "spike",
+      "gale"
+    ],
+    "finx": [
+      "gene",
+      "spike",
+      "dynamike"
+    ],
+    "shade": [
+      "hank",
+      "jacky",
+      "frank"
+    ],
+    "doug": [
+      "spike",
+      "colette",
+      "gene"
+    ],
+    "lola": [
+      "gene",
+      "spike",
+      "rico"
+    ],
+    "gene": [
+      "tara",
+      "spike",
+      "mr-p"
     ]
   },
   "deathcap-trap": {
@@ -4654,6 +5059,51 @@
       "tick",
       "rico",
       "mortis"
+    ],
+    "mina": [
+      "rico",
+      "spike",
+      "charlie"
+    ],
+    "trunk": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "kaze": [
+      "rico",
+      "crow",
+      "mortis"
+    ],
+    "jae-yong": [
+      "rico",
+      "spike",
+      "gale"
+    ],
+    "finx": [
+      "rico",
+      "larry-lawrie",
+      "mortis"
+    ],
+    "shade": [
+      "rico",
+      "spike",
+      "lou"
+    ],
+    "doug": [
+      "rico",
+      "spike",
+      "colette"
+    ],
+    "lola": [
+      "rico",
+      "spike",
+      "penny"
+    ],
+    "gene": [
+      "rico",
+      "spike",
+      "mr-p"
     ]
   },
   "gem-fort": {
@@ -5120,6 +5570,51 @@
       "gray",
       "mortis",
       "max"
+    ],
+    "mina": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "trunk": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "kaze": [
+      "tara",
+      "kenji",
+      "cordelius"
+    ],
+    "jae-yong": [
+      "tara",
+      "gene",
+      "max"
+    ],
+    "finx": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "shade": [
+      "tara",
+      "spike",
+      "jacky"
+    ],
+    "doug": [
+      "colette",
+      "tara",
+      "rosa"
+    ],
+    "lola": [
+      "tara",
+      "spike",
+      "larry-lawrie"
+    ],
+    "gene": [
+      "tara",
+      "spike",
+      "larry-lawrie"
     ]
   },
   "undermine": {
@@ -5584,6 +6079,51 @@
     "ziggy": [
       "mortis",
       "gray",
+      "piper"
+    ],
+    "mina": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "trunk": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "kaze": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "jae-yong": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "finx": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "shade": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "doug": [
+      "spike",
+      "crow",
+      "colette"
+    ],
+    "lola": [
+      "crow",
+      "spike",
+      "piper"
+    ],
+    "gene": [
+      "crow",
+      "spike",
       "piper"
     ]
   },
@@ -6051,6 +6591,51 @@
       "mortis",
       "stu",
       "mico"
+    ],
+    "mina": [
+      "frank",
+      "gale",
+      "surge"
+    ],
+    "trunk": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "kaze": [
+      "stu",
+      "surge",
+      "gale"
+    ],
+    "jae-yong": [
+      "gale",
+      "surge",
+      "edgar"
+    ],
+    "finx": [
+      "mortis",
+      "surge",
+      "gale"
+    ],
+    "shade": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "doug": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "lola": [
+      "mortis",
+      "stu",
+      "mico"
+    ],
+    "gene": [
+      "gale",
+      "surge",
+      "clancy"
     ]
   },
   "pinball-dreams": {
@@ -6517,6 +7102,51 @@
       "surge",
       "rico",
       "mortis"
+    ],
+    "mina": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "trunk": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "kaze": [
+      "surge",
+      "rico",
+      "stu"
+    ],
+    "jae-yong": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "finx": [
+      "surge",
+      "rico",
+      "mortis"
+    ],
+    "shade": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "doug": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "lola": [
+      "surge",
+      "rico",
+      "gale"
+    ],
+    "gene": [
+      "surge",
+      "rico",
+      "gale"
     ]
   },
   "sneaky-fields": {
@@ -6983,6 +7613,51 @@
       "mortis",
       "bibi",
       "rosa"
+    ],
+    "mina": [
+      "frank",
+      "buster",
+      "rosa"
+    ],
+    "trunk": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "kaze": [
+      "kenji",
+      "ash",
+      "buster"
+    ],
+    "jae-yong": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "finx": [
+      "kenji",
+      "mortis",
+      "bull"
+    ],
+    "shade": [
+      "jacky",
+      "shelly",
+      "buster"
+    ],
+    "doug": [
+      "shelly",
+      "rosa",
+      "buster"
+    ],
+    "lola": [
+      "mortis",
+      "buster",
+      "rosa"
+    ],
+    "gene": [
+      "rosa",
+      "buster",
+      "tara"
     ]
   },
   "triple-dribble": {
@@ -7448,6 +8123,51 @@
       "mortis",
       "stu",
       "bibi"
+    ],
+    "mina": [
+      "frank",
+      "gale",
+      "surge"
+    ],
+    "trunk": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "kaze": [
+      "stu",
+      "gale",
+      "cordelius"
+    ],
+    "jae-yong": [
+      "gale",
+      "surge",
+      "leon"
+    ],
+    "finx": [
+      "mortis",
+      "gale",
+      "cordelius"
+    ],
+    "shade": [
+      "hank",
+      "jacky",
+      "gale"
+    ],
+    "doug": [
+      "gale",
+      "surge",
+      "shelly"
+    ],
+    "lola": [
+      "mortis",
+      "stu",
+      "melodie"
+    ],
+    "gene": [
+      "gale",
+      "surge",
+      "clancy"
     ]
   },
   "open-business": {
@@ -7914,6 +8634,51 @@
       "meg",
       "gray",
       "lou"
+    ],
+    "mina": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "trunk": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "kaze": [
+      "meg",
+      "jessie",
+      "colt"
+    ],
+    "jae-yong": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "finx": [
+      "meg",
+      "jessie",
+      "barley"
+    ],
+    "shade": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "doug": [
+      "meg",
+      "colette",
+      "lou"
+    ],
+    "lola": [
+      "meg",
+      "jessie",
+      "lou"
+    ],
+    "gene": [
+      "meg",
+      "jessie",
+      "mr-p"
     ]
   },
   "dry-season": {
@@ -8380,6 +9145,51 @@
       "piper",
       "mandy",
       "nani"
+    ],
+    "mina": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "trunk": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "kaze": [
+      "piper",
+      "mandy",
+      "nani"
+    ],
+    "jae-yong": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "finx": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "shade": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "doug": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "lola": [
+      "piper",
+      "nani",
+      "mandy"
+    ],
+    "gene": [
+      "piper",
+      "nani",
+      "mandy"
     ]
   },
   "hideout": {
@@ -8843,6 +9653,51 @@
       "nani"
     ],
     "ziggy": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "mina": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "trunk": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "kaze": [
+      "piper",
+      "brock",
+      "byron"
+    ],
+    "jae-yong": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "finx": [
+      "piper",
+      "brock",
+      "byron"
+    ],
+    "shade": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "doug": [
+      "piper",
+      "colette",
+      "brock"
+    ],
+    "lola": [
+      "piper",
+      "brock",
+      "nani"
+    ],
+    "gene": [
       "piper",
       "brock",
       "nani"
@@ -9311,6 +10166,51 @@
       "tick",
       "mortis",
       "piper"
+    ],
+    "mina": [
+      "tick",
+      "barley",
+      "dynamike"
+    ],
+    "trunk": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "kaze": [
+      "tick",
+      "barley",
+      "mortis"
+    ],
+    "jae-yong": [
+      "tick",
+      "mico",
+      "edgar"
+    ],
+    "finx": [
+      "tick",
+      "barley",
+      "mortis"
+    ],
+    "shade": [
+      "hank",
+      "mico",
+      "edgar"
+    ],
+    "doug": [
+      "tick",
+      "colette",
+      "mico"
+    ],
+    "lola": [
+      "tick",
+      "barley",
+      "penny"
+    ],
+    "gene": [
+      "tick",
+      "barley",
+      "dynamike"
     ]
   },
   "shooting-star": {
@@ -9775,6 +10675,51 @@
       "angelo"
     ],
     "ziggy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mina": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "trunk": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "kaze": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "jae-yong": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "finx": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "shade": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "doug": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "lola": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "gene": [
       "nani",
       "piper",
       "mandy"
@@ -10243,6 +11188,51 @@
       "mortis",
       "piper",
       "nani"
+    ],
+    "mina": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "trunk": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "kaze": [
+      "piper",
+      "nani",
+      "crow"
+    ],
+    "jae-yong": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "finx": [
+      "piper",
+      "nani",
+      "crow"
+    ],
+    "shade": [
+      "brock",
+      "colt",
+      "piper"
+    ],
+    "doug": [
+      "colette",
+      "piper",
+      "nani"
+    ],
+    "lola": [
+      "nani",
+      "piper",
+      "leon"
+    ],
+    "gene": [
+      "nani",
+      "piper",
+      "leon"
     ]
   },
   "flaring-phoenix": {
@@ -10708,6 +11698,41 @@
       "leon",
       "mortis",
       "edgar"
+    ],
+    "mina": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "trunk": [
+      "leon",
+      "crow",
+      "cordelius"
+    ],
+    "kaze": [
+      "leon",
+      "crow",
+      "byron"
+    ],
+    "jae-yong": [
+      "leon",
+      "edgar",
+      "crow"
+    ],
+    "finx": [
+      "leon",
+      "crow",
+      "mortis"
+    ],
+    "shade": [
+      "leon",
+      "nani",
+      "crow"
+    ],
+    "lola": [
+      "leon",
+      "nani",
+      "crow"
     ]
   },
   "new-horizons": {
@@ -11170,6 +12195,41 @@
       "angelo"
     ],
     "ziggy": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "mina": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "trunk": [
+      "piper",
+      "colette",
+      "nani"
+    ],
+    "kaze": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "jae-yong": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "finx": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "shade": [
+      "nani",
+      "piper",
+      "mandy"
+    ],
+    "lola": [
       "nani",
       "piper",
       "mandy"
@@ -11636,6 +12696,41 @@
       "angelo"
     ],
     "ziggy": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "mina": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "trunk": [
+      "piper",
+      "colette",
+      "angelo"
+    ],
+    "kaze": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "jae-yong": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "finx": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "shade": [
+      "nani",
+      "piper",
+      "angelo"
+    ],
+    "lola": [
       "nani",
       "piper",
       "angelo"

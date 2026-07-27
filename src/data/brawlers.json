@@ -859,8 +859,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/mina.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "lumi",
+        "rank": 1
+      },
+      {
+        "slug": "frank",
+        "rank": 2
+      },
+      {
+        "slug": "charlie",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -955,8 +968,21 @@
     "rarityColor": "#d850ff",
     "released": true,
     "image": "/brawlers/trunk.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -1125,8 +1151,21 @@
     "rarityColor": "#e1fb2a",
     "released": true,
     "image": "/brawlers/kaze.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "kenji",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -1173,8 +1212,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/jae-yong.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "gale",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -1207,8 +1259,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/finx.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "mortis",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "nani",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -1274,7 +1339,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "mina"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -1532,21 +1599,6 @@
     "aliases": []
   },
   {
-    "id": "buzz-lightyear",
-    "brawlerId": 16000088,
-    "name": "Buzz Lightyear",
-    "className": "Unknown",
-    "rarity": "Legendary",
-    "rarityColor": "#fff11e",
-    "released": false,
-    "image": "/brawlers/buzz-lightyear.png",
-    "counters": [],
-    "hasCounters": false,
-    "counterFor": [],
-    "maps": [],
-    "aliases": []
-  },
-  {
     "id": "juju",
     "brawlerId": 16000087,
     "name": "Juju",
@@ -1588,8 +1640,21 @@
     "rarityColor": "#d850ff",
     "released": true,
     "image": "/brawlers/shade.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "jacky",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -1699,7 +1764,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "kaze"
+    ],
     "maps": [
       {
         "mapId": "open-business",
@@ -1871,6 +1938,7 @@
       "bonnie",
       "cordelius",
       "damian",
+      "doug",
       "el-primo"
     ],
     "maps": [],
@@ -2429,6 +2497,7 @@
     "counterFor": [
       "kit",
       "maisie",
+      "mina",
       "najia",
       "pierce"
     ],
@@ -2582,8 +2651,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/doug.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "colette",
+        "rank": 1
+      },
+      {
+        "slug": "piper",
+        "rank": 2
+      },
+      {
+        "slug": "clancy",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -3525,8 +3607,21 @@
     "rarityColor": "#d850ff",
     "released": true,
     "image": "/brawlers/lola.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "spike",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [],
     "maps": [
       {
@@ -4975,6 +5070,7 @@
       "bonnie",
       "bull",
       "chuck",
+      "doug",
       "draco",
       "el-primo",
       "frank",
@@ -4986,7 +5082,8 @@
       "poco",
       "rosa",
       "sam",
-      "starr-nova"
+      "starr-nova",
+      "trunk"
     ],
     "maps": [
       {
@@ -5303,12 +5400,18 @@
       "brock",
       "chester",
       "colette",
+      "finx",
       "gale",
+      "gene",
       "gray",
+      "jae-yong",
       "janet",
+      "kaze",
+      "lola",
       "mandy",
       "pierce",
       "piper",
+      "shade",
       "surge"
     ],
     "maps": [
@@ -5384,6 +5487,7 @@
       "el-primo",
       "fang",
       "jacky",
+      "jae-yong",
       "kenji",
       "mico",
       "mortis",
@@ -5391,7 +5495,8 @@
       "rosa",
       "sam",
       "shelly",
-      "stu"
+      "stu",
+      "trunk"
     ],
     "maps": [
       {
@@ -5445,7 +5550,9 @@
       }
     ],
     "hasCounters": true,
-    "counterFor": [],
+    "counterFor": [
+      "shade"
+    ],
     "maps": [],
     "aliases": [
       "Jackie"
@@ -6268,8 +6375,21 @@
     "rarityColor": "#fe5e72",
     "released": true,
     "image": "/brawlers/gene.png",
-    "counters": [],
-    "hasCounters": false,
+    "counters": [
+      {
+        "slug": "piper",
+        "rank": 1
+      },
+      {
+        "slug": "nani",
+        "rank": 2
+      },
+      {
+        "slug": "spike",
+        "rank": 3
+      }
+    ],
+    "hasCounters": true,
     "counterFor": [
       "leon"
     ],
@@ -6331,6 +6451,7 @@
     "hasCounters": true,
     "counterFor": [
       "lily",
+      "mina",
       "ollie",
       "r-t"
     ],
@@ -6646,21 +6767,29 @@
       "colette",
       "colt",
       "crow",
+      "doug",
       "emz",
       "eve",
+      "finx",
       "gale",
+      "gene",
       "gray",
       "griff",
+      "jae-yong",
       "janet",
+      "kaze",
+      "lola",
       "lou",
       "moe",
       "otis",
       "penny",
       "r-t",
+      "shade",
       "shelly",
       "spike",
       "surge",
-      "tara"
+      "tara",
+      "trunk"
     ],
     "maps": [
       {
@@ -6995,6 +7124,7 @@
       "byron",
       "dynamike",
       "emz",
+      "finx",
       "grom",
       "gus",
       "jessie",
@@ -7394,6 +7524,8 @@
     ],
     "hasCounters": true,
     "counterFor": [
+      "gene",
+      "lola",
       "max",
       "shelly",
       "stu"

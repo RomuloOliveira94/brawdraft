@@ -42,12 +42,32 @@
     "mortis",
     "poco"
   ],
-  "mina": [],
-  "trunk": [],
+  "mina": [
+    "lumi",
+    "frank",
+    "charlie"
+  ],
+  "trunk": [
+    "colette",
+    "piper",
+    "gale"
+  ],
   "alli": [],
-  "kaze": [],
-  "jae-yong": [],
-  "finx": [],
+  "kaze": [
+    "piper",
+    "kenji",
+    "nani"
+  ],
+  "jae-yong": [
+    "piper",
+    "nani",
+    "gale"
+  ],
+  "finx": [
+    "mortis",
+    "piper",
+    "nani"
+  ],
   "lumi": [
     "lily",
     "stu",
@@ -63,13 +83,16 @@
     "edgar",
     "mortis"
   ],
-  "buzz-lightyear": [],
   "juju": [
     "mortis",
     "carl",
     "edgar"
   ],
-  "shade": [],
+  "shade": [
+    "piper",
+    "nani",
+    "jacky"
+  ],
   "kenji": [
     "griff",
     "surge",
@@ -140,7 +163,11 @@
     "lou",
     "maisie"
   ],
-  "doug": [],
+  "doug": [
+    "colette",
+    "piper",
+    "clancy"
+  ],
   "cordelius": [
     "gale",
     "surge",
@@ -221,7 +248,11 @@
     "surge",
     "cordelius"
   ],
-  "lola": [],
+  "lola": [
+    "piper",
+    "nani",
+    "spike"
+  ],
   "meg": [
     "colette",
     "lou",
@@ -371,7 +402,11 @@
     "mico",
     "edgar"
   ],
-  "gene": [],
+  "gene": [
+    "piper",
+    "nani",
+    "spike"
+  ],
   "frank": [
     "colette",
     "shelly",
