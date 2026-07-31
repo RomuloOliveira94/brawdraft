@@ -1,9 +1,13 @@
 // Draft composition analysis.
 //
-// `analyzeComposition` is the original ally-only helper (className values in,
-// pt-BR bullet strings out). `analyzeDraft` below is the full-draft engine
-// behind the "Análise de Composição" card — allies, enemies and map in, a
-// structured DraftAnalysis out.
+// `analyzeDraft` is the engine behind the "Análise de Composição" card —
+// allies, enemies and map in, a structured DraftAnalysis out.
+//
+// `analyzeComposition` is the original ally-only helper it superseded
+// (className values in, pt-BR bullet strings out). LEGACY / TEST-ONLY: no
+// production code path calls it any more; it survives because
+// scripts/verify-data.mjs [2] still pins its honesty guarantee. Removing both
+// is a follow-up, not part of this feature.
 //
 // Kept erasable-syntax-only (no enum, namespace, or parameter properties) for
 // the same reason as rank.ts: scripts/verify-data.mjs imports this module
@@ -88,6 +92,17 @@ const ROLE_GAP: Record<Role, string> = {
   frontline: 'linha de frente',
   damage: 'dano',
   support: 'suporte',
+};
+
+/**
+ * Definite article matching each label's gender. Without it the templates read
+ * "a dano" / "a suporte" — the labels aren't all feminine like "linha de
+ * frente" is.
+ */
+const ROLE_ARTICLE: Record<Role, string> = {
+  frontline: 'a',
+  damage: 'o',
+  support: 'o',
 };
 
 export type InsightTone = 'good' | 'warn' | 'info';
@@ -368,8 +383,8 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
         ally_.push({
           code: `ally.role.redundant.${role}`,
           text: who
-            ? `${who} ocupam a ${ROLE_GAP[role]} — composição concentrada demais.`
-            : `Os 3 picks ocupam a ${ROLE_GAP[role]} — composição concentrada demais.`,
+            ? `${who} ocupam ${ROLE_ARTICLE[role]} ${ROLE_GAP[role]} — composição concentrada demais.`
+            : `Os 3 picks ocupam ${ROLE_ARTICLE[role]} ${ROLE_GAP[role]} — composição concentrada demais.`,
           tone: 'warn',
           refs: [...ally],
         });
@@ -415,7 +430,7 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
     const role = className ? ROLE_BY_CLASS[className] : null;
     // Labelled bonus only: no reason, no bonus. Never a bare number.
     return role && missingAllyRoles.includes(role)
-      ? { ...pick, roleReason: `também cobre a ${ROLE_GAP[role]} que falta ao seu time` }
+      ? { ...pick, roleReason: `também cobre ${ROLE_ARTICLE[role]} ${ROLE_GAP[role]} que falta ao seu time` }
       : pick;
   });
 
@@ -482,11 +497,17 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
         const refs: [string, string] =
           x.slug.localeCompare(y.slug) <= 0 ? [x.slug, y.slug] : [y.slug, x.slug];
 
+        // `who` names both brawlers, so the verbs go plural with it and stay
+        // singular under the name-free fallback ("A dupla responde...").
         const who = names(refs);
+        const plural = who ? 'm' : '';
         const subject = who || 'A dupla';
-        const covers = `${subject} responde${who && refs.length > 1 ? 'm' : ''} a ${coverage} ${coverage === 1 ? 'inimigo' : 'inimigos'}`;
+        const covers = `${subject} responde${plural} a ${coverage} ${coverage === 1 ? 'inimigo' : 'inimigos'}`;
+        // No definite article on "dois papéis": the team may be missing three,
+        // and the duo only ever covers two of them.
+        const filled = [...pairRoles].filter((role) => missingAllyRoles.includes(role));
         const reason = roleFill > 0
-          ? `${covers} e cobre ${roleFill === 2 ? 'os dois papéis que faltam' : `a ${ROLE_GAP[[...pairRoles].filter((r) => missingAllyRoles.includes(r))[0]]} que falta`}.`
+          ? `${covers} e cobre${plural} ${roleFill === 2 ? 'dois papéis que faltam' : `${ROLE_ARTICLE[filled[0]]} ${ROLE_GAP[filled[0]]} que falta`}.`
           : `${covers}.`;
 
         combos.push({ refs, coverage, roleFill, mapFit, score: x.score + y.score, reason });
@@ -545,9 +566,14 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
   }
 
   if (turn.phase === 'waiting') {
+    // With a full ally team there is no "until you pick again" — what's left
+    // is the end of the draft (reachable at (3,2) when the ally opens).
+    const allyDone = ally.length >= TEAM_SIZE;
     enemy_.push({
       code: 'enemy.turn.waiting',
-      text: `Vez do inimigo — ${turn.remaining} pick${turn.remaining > 1 ? 's' : ''} até você escolher de novo.`,
+      text: allyDone
+        ? `Vez do inimigo — ${turn.remaining > 1 ? 'os últimos picks do draft são deles' : 'o último pick do draft é deles'}.`
+        : `Vez do inimigo — ${turn.remaining} pick${turn.remaining > 1 ? 's' : ''} até você escolher de novo.`,
       tone: 'info',
     });
   }
@@ -569,7 +595,10 @@ export function picksSectionFor(analysis: DraftAnalysis): PicksSection {
   const { phase } = analysis.turn;
   if (phase === 'waiting' || phase === 'complete') return 'placeholder';
   if (phase === 'opening') return analysis.opening.length > 0 ? 'opening' : 'picks';
-  if (phase === 'double') return 'combos';
+  // A two-pick block still falls back to individual picks when there aren't
+  // two candidates to pair — e.g. every counter of the revealed enemies is
+  // already picked or banned.
+  if (phase === 'double') return analysis.combos.length > 0 ? 'combos' : 'picks';
   // Fallback of spec §2 decision 4: no derivable turn, but the engine only
   // fills `combos` when 2+ ally slots are open — exactly the condition under
   // which duos are the right answer.
