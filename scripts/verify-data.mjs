@@ -881,6 +881,10 @@ async function main() {
     ['opening with a map -> opening', [0, 0, 'ally', { mapId: 'bridge-too-far' }], 'opening'],
     ['opening with no map -> picks', [0, 0, 'ally', {}], 'picks'],
     ['double -> combos', [1, 2, 'ally', {}], 'combos'],
+    // A two-pick block with fewer than 2 candidates left to pair: enemies
+    // mortis+shelly, whose only surviving counter is gale once bull (the ally)
+    // plus piper and spike are off the board.
+    ['double with a pool under 2 -> picks', [1, 2, 'ally', { exclude: ['bull', 'piper', 'spike'] }], 'picks'],
     // Fallback of spec §2 decision 4: no derivable turn, but 2+ ally slots
     // open, so duos are still the right answer.
     ['unknown with 2+ ally slots open -> combos', [0, 2, 'ally', {}], 'combos'],
@@ -895,7 +899,41 @@ async function main() {
       sectionDetail.push(`${label}: got "${actual}"`);
     }
   }
-  check('picksSectionFor routes all 7 phase/fallback combinations', sectionOk, sectionDetail.join('; '));
+  check(`picksSectionFor routes all ${sectionCases.length} phase/fallback combinations`, sectionOk, sectionDetail.join('; '));
+
+  // Cases 26-28 — structural guarantees the earlier cases only asserted for
+  // insights: every rendered string must be non-empty, and a reachable phase
+  // must actually produce a banner (until now only the unreachable ones,
+  // which must NOT, were pinned).
+  const bannerReachable = [
+    ['waiting', turnOf(1, 0, 'ally')],
+    ['opening', turnOf(0, 0, 'ally')],
+    ['double', turnOf(1, 2, 'ally')],
+    ['closing', turnOf(2, 3, 'enemy')],
+    ['complete', turnOf(3, 3, 'ally')],
+  ];
+  check('every reachable phase produces a non-empty banner text',
+    bannerReachable.every(([, t]) => typeof t.text === 'string' && t.text.length > 0),
+    JSON.stringify(bannerReachable.map(([phase, t]) => [phase, t.text])));
+
+  const structuralCombos = combosFor({ mapId: 'bridge-too-far' });
+  check('every combo has a non-empty reason and exactly 2 distinct refs',
+    structuralCombos.length > 0 &&
+      structuralCombos.every((c) => typeof c.reason === 'string' && c.reason.length > 0 && c.refs.length === 2 && c.refs[0] !== c.refs[1]),
+    JSON.stringify(structuralCombos[0]));
+
+  check('every opening entry has a non-empty slug, total > 0, and free within total',
+    bridgeOpening.length > 0 &&
+      bridgeOpening.every((o) => o.slug.length > 0 && o.total > 0 && o.free.length <= o.total && o.refs.length === 1),
+    JSON.stringify(bridgeOpening[0]));
+
+  // A candidate that fills a gap the ally team has must say so — the labelled
+  // bonus is the whole point (no reason, no bonus).
+  const rolePicks = analyzeDraft(draftInput({ ally: ['darryl'], enemy: analysisEnemies, exclude: ['darryl'] })).picks;
+  const withReason = rolePicks.filter((p) => p.roleReason);
+  check('picks that fill a missing ally role carry a non-empty roleReason',
+    withReason.length > 0 && withReason.every((p) => typeof p.roleReason === 'string' && p.roleReason.length > 0),
+    JSON.stringify(rolePicks.map((p) => [p.slug, p.roleReason ?? null])));
 
   // --- Summary ---
   console.log(`\n${failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`}`);
