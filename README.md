@@ -44,9 +44,10 @@ partida.
   os inimigos vale mais que counterar bem só um) e desempate por força do
   counter, sempre excluindo quem já foi escolhido ou banido por qualquer
   time.
-- **Análise de composição** ("O que falta no seu time"): aponta ausência de
-  tanque, suporte/controle ou alcance longo, alerta times muito agressivos e
-  confirma quando a composição está equilibrada.
+- **Card de análise de composição**: lê o draft inteiro (seu time, o time
+  inimigo e o mapa) e mostra, num painel só, as lacunas de papel do seu time,
+  as fraquezas da composição inimiga e os melhores picks para os slots que
+  faltam — cada sugestão com o motivo escrito, nunca um número solto.
 - **107 páginas de brawlers e 26 páginas de mapas**, geradas estaticamente a
   partir do roster completo.
 - **Draft compartilhável pela URL**: mapa, picks e bans de ambos os times
