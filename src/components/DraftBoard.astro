@@ -125,23 +125,42 @@ const SHOW_FIRST_PICK_TOGGLE = false;
     </div>
   </div>
 
-  <!-- Results -->
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div class="panel">
-      <h2 class="panel__header">O que falta no seu time</h2>
-      <ul id="composition-list" class="panel__body flex flex-col gap-2" aria-live="polite">
-        <li class="text-sm text-white/50">Escolha brawlers para o seu time para ver a análise.</li>
-      </ul>
-    </div>
-    <div class="panel">
-      <h2 class="panel__header">Melhores Counter-Picks</h2>
-      <p class="px-4 pt-3 pb-1 text-[11px] text-white/40">
-        Clique para adicionar ao seu time; botão direito ou toque longo para o time inimigo. Teclado: Enter no seu
-        time, Shift+Enter no time inimigo.
-      </p>
-      <ul id="counter-picks-list" class="panel__body flex flex-col gap-3" aria-live="polite" tabindex="-1">
-        <li class="text-sm text-white/50">Escolha brawlers do time inimigo para ver sugestões.</li>
-      </ul>
+  <!-- Results: the "Análise de Composição" card (ally / enemy / picks). Its
+       third section is a relocation of the old counter-picks panel, not a
+       rewrite — #counter-picks-list and #counter-row-template are contract. -->
+  <div class="panel w-full">
+    <h2 class="panel__header">Análise de Composição</h2>
+    <div class="panel__body flex flex-col gap-5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <section class="flex flex-col gap-2" aria-labelledby="analysis-ally-heading">
+          <h3 id="analysis-ally-heading" class="text-xs font-extrabold tracking-wide text-brawl-blue uppercase">
+            Seu time
+          </h3>
+          <ul id="analysis-ally-list" class="flex flex-col gap-2" aria-live="polite">
+            <li class="text-sm text-white/50">Escolha brawlers para o seu time para ver a análise.</li>
+          </ul>
+        </section>
+        <section class="flex flex-col gap-2" aria-labelledby="analysis-enemy-heading">
+          <h3 id="analysis-enemy-heading" class="text-xs font-extrabold tracking-wide text-brawl-red uppercase">
+            Time inimigo
+          </h3>
+          <ul id="analysis-enemy-list" class="flex flex-col gap-2" aria-live="polite">
+            <li class="text-sm text-white/50">Escolha brawlers do time inimigo para ver as fraquezas.</li>
+          </ul>
+        </section>
+      </div>
+      <section class="flex flex-col gap-2" aria-labelledby="analysis-picks-heading">
+        <h3 id="analysis-picks-heading" class="text-xs font-extrabold tracking-wide text-brawl-yellow uppercase">
+          Melhores picks
+        </h3>
+        <p class="text-[11px] text-white/40">
+          Clique para adicionar ao seu time; botão direito ou toque longo para o time inimigo. Teclado: Enter no seu
+          time, Shift+Enter no time inimigo.
+        </p>
+        <ul id="counter-picks-list" class="flex flex-col gap-3" aria-live="polite" tabindex="-1">
+          <li class="text-sm text-white/50">Escolha brawlers do time inimigo para ver sugestões.</li>
+        </ul>
+      </section>
     </div>
   </div>
 
@@ -187,9 +206,13 @@ const SHOW_FIRST_PICK_TOGGLE = false;
      inside) their own re-announcements. -->
 <p id="draft-insert-feedback" class="sr-only" aria-live="polite"></p>
 
+<!-- Insight row for the analysis card's "Seu time" / "Time inimigo" sections.
+     The marker's colour encodes the insight tone; renderAnalysisSection() in
+     draftBoard.ts swaps the bg-* class per tone (default here is the 'good'
+     one, so a row is never left unstyled). -->
 <template id="composition-row-template">
   <li class="flex items-start gap-2 text-sm text-white">
-    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brawl-yellow"></span>
+    <span class="composition-row__marker mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brawl-yellow"></span>
     <span class="composition-row__text"></span>
   </li>
 </template>

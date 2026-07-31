@@ -4,15 +4,18 @@
 // once by Astro; this module indexes them into Map<slug, HTMLElement> and
 // reuses that markup everywhere a portrait needs to appear (draft slots,
 // counter-pick rows) by cloning nodes — no name or image is re-typed here.
-import { rankPicks, type CountersIndex, type MapBonus, type Pick } from '@/lib/rank';
-import { analyzeComposition, type BrawlerClassName } from '@/lib/composition';
+import { type CountersIndex } from '@/lib/rank';
+import { analyzeDraft, type BrawlerClassName, type Insight, type SuggestedPick } from '@/lib/composition';
 import { stripAccents } from '@/lib/text';
 import countersJson from '@/data/counters-index.json';
 import mapIndexJson from '@/data/map-index.json';
 import mapCountersJson from '@/data/map-counters.json';
 
 const COUNTERS = countersJson as CountersIndex;
-const MAP_INDEX = mapIndexJson as unknown as Record<string, MapBonus>;
+// mapId -> slug -> category labels. rankPicks only tests truthiness (its
+// MapBonus type), but the analysis reads the labels themselves, so the real
+// shape is declared here.
+const MAP_INDEX = mapIndexJson as unknown as Record<string, Record<string, string[]>>;
 const MAP_COUNTERS = mapCountersJson as unknown as Record<string, CountersIndex>;
 
 type Team = 'ally' | 'enemy';
@@ -93,7 +96,8 @@ export function initDraftBoard(): void {
   const firstAllyBtn = document.getElementById('first-pick-ally');
   const firstEnemyBtn = document.getElementById('first-pick-enemy');
   const clearBtn = document.getElementById('clear-draft-floating');
-  const compositionList = byId<HTMLElement>('composition-list');
+  const analysisAllyList = byId<HTMLElement>('analysis-ally-list');
+  const analysisEnemyList = byId<HTMLElement>('analysis-enemy-list');
   const compositionTemplate = byId<HTMLTemplateElement>('composition-row-template');
   const counterList = byId<HTMLElement>('counter-picks-list');
   const counterTemplate = byId<HTMLTemplateElement>('counter-row-template');
@@ -105,6 +109,19 @@ export function initDraftBoard(): void {
 
   const cards = Array.from(pickerGrid.querySelectorAll<HTMLButtonElement>('button[data-slug]'));
   const tileIndex = new Map<string, HTMLButtonElement>(cards.map((card) => [card.dataset.slug ?? '', card]));
+
+  // slug -> className, read once from the `data-class-name` the server-rendered
+  // tiles already carry (BrawlerGrid.astro). Deliberately NOT imported from
+  // src/data/brawlers.json: that file is 150 KB and doesn't reach the client
+  // bundle today — pulling it in for one string per brawler would open that
+  // door for nothing.
+  const classOf: ReadonlyMap<string, BrawlerClassName> = new Map(
+    cards.flatMap((card) => {
+      const slug = card.dataset.slug;
+      const className = card.dataset.className as BrawlerClassName | undefined;
+      return slug && className ? [[slug, className] as [string, BrawlerClassName]] : [];
+    }),
+  );
 
   const mapCards = mapPickerGrid
     ? Array.from(mapPickerGrid.querySelectorAll<HTMLButtonElement>('button[data-map-id]'))
@@ -512,21 +529,38 @@ export function initDraftBoard(): void {
 
   // --- Results --------------------------------------------------------------
 
-  function renderComposition(tips: string[]): void {
-    compositionList.replaceChildren();
-    if (tips.length === 0) {
+  /**
+   * Marker colour per insight tone. Written as whole literal class names (not
+   * built by string concatenation) so Tailwind's source scanner can see them.
+   */
+  const TONE_MARKER: Record<Insight['tone'], string> = {
+    good: 'bg-brawl-yellow',
+    warn: 'bg-brawl-red',
+    info: 'bg-white/30',
+  };
+
+  const TONE_CLASSES = Object.values(TONE_MARKER);
+
+  function renderAnalysisSection(list: HTMLElement, insights: Insight[], emptyText: string): void {
+    list.replaceChildren();
+    if (insights.length === 0) {
       const li = document.createElement('li');
       li.className = 'text-sm text-white/50';
-      li.textContent = 'Escolha brawlers para o seu time para ver a análise.';
-      compositionList.appendChild(li);
+      li.textContent = emptyText;
+      list.appendChild(li);
       return;
     }
-    for (const tip of tips) {
+    for (const insight of insights) {
       const node = compositionTemplate.content.firstElementChild?.cloneNode(true);
       if (!(node instanceof HTMLElement)) continue;
       const textEl = node.querySelector('.composition-row__text');
-      if (textEl) textEl.textContent = tip;
-      compositionList.appendChild(node);
+      if (textEl) textEl.textContent = insight.text;
+      const marker = node.querySelector('.composition-row__marker');
+      if (marker) {
+        marker.classList.remove(...TONE_CLASSES);
+        marker.classList.add(TONE_MARKER[insight.tone]);
+      }
+      list.appendChild(node);
     }
   }
 
@@ -548,7 +582,7 @@ export function initDraftBoard(): void {
     return img?.dataset.name ?? slug;
   }
 
-  function renderSuggestions(picks: Pick[]): void {
+  function renderSuggestions(picks: SuggestedPick[]): void {
     counterList.replaceChildren();
     if (picks.length === 0) {
       const li = document.createElement('li');
@@ -576,6 +610,13 @@ export function initDraftBoard(): void {
         strong.textContent = name;
         const targets = joinPtBr(pick.against.map(nameOf));
         textEl.append(strong, ` ${verbFor(pick.coverage)} ${targets}`);
+        // The role bonus is always spelled out — never a bare number.
+        if (pick.roleReason) {
+          const reason = document.createElement('span');
+          reason.className = 'text-white/50';
+          reason.textContent = ` — ${pick.roleReason}`;
+          textEl.append(reason);
+        }
       }
       if (row) {
         row.dataset.slug = pick.slug;
@@ -588,20 +629,39 @@ export function initDraftBoard(): void {
 
   function recompute(): void {
     const exclude = getAllTaken();
-    const mapBonus: MapBonus | null = state.mapId ? (MAP_INDEX[state.mapId] ?? null) : null;
+    // Categories for the selected map. Doubles as rankPicks' `mapBonus` (any
+    // truthy value = +1) and as the source of the map-fit insight's reason.
+    const mapCategories = state.mapId ? (MAP_INDEX[state.mapId] ?? null) : null;
     // Absent for the selected map (e.g. Kaboom Canyon isn't in the source
     // data) -> null, and rankPicks falls back to the global COUNTERS list
-    // per enemy — never an all-or-nothing switch for the whole panel.
+    // per enemy — never an all-or-nothing switch for the whole panel. Note
+    // the fallback covers counters only: a map missing here can still be
+    // present in MAP_INDEX, so the bonus above keeps applying.
     const mapCounters: CountersIndex | null = state.mapId ? (MAP_COUNTERS[state.mapId] ?? null) : null;
-    const enemies = state.enemy.filter((s): s is string => s !== null);
-    const suggestions = rankPicks(enemies, COUNTERS, { exclude, mapBonus, mapCounters }).slice(0, 6);
-    renderSuggestions(suggestions);
 
-    const allyClassNames = state.ally
-      .filter((s): s is string => s !== null)
-      .map((slug) => tileIndex.get(slug)?.dataset.className)
-      .filter((c): c is BrawlerClassName => c !== undefined);
-    renderComposition(analyzeComposition(allyClassNames));
+    const analysis = analyzeDraft({
+      ally: state.ally.filter((s): s is string => s !== null),
+      enemy: state.enemy.filter((s): s is string => s !== null),
+      mapId: state.mapId,
+      classOf,
+      countersIndex: COUNTERS,
+      mapCounters,
+      mapCategories,
+      exclude,
+    });
+
+    // analyzeDraft returns every pick; the display cut belongs here.
+    renderSuggestions(analysis.picks.slice(0, 6));
+    renderAnalysisSection(
+      analysisAllyList,
+      analysis.ally,
+      'Escolha brawlers para o seu time para ver a análise.',
+    );
+    renderAnalysisSection(
+      analysisEnemyList,
+      analysis.enemy,
+      'Escolha brawlers do time inimigo para ver as fraquezas.',
+    );
 
     // The floating "Limpar" button only makes sense once there's something
     // to clear — a selected map or at least one pick/ban.
