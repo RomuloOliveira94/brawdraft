@@ -7,6 +7,7 @@
 import { type CountersIndex } from '@/lib/rank';
 import {
   analyzeDraft,
+  picksSectionFor,
   type BrawlerClassName,
   type DraftAnalysis,
   type Insight,
@@ -717,39 +718,43 @@ export function initDraftBoard(): void {
     }
   }
 
+  /** Every element section 3 can hand focus to, visible or not. */
+  const section3Panes = [counterList, comboList, openingList, picksPlaceholder];
+
   /**
-   * Section 3 swaps identity with the phase. One place decides which of the
-   * three sibling lists is visible, so they can never be shown at once, and
-   * focus is rescued whenever the visible list changes underneath it.
+   * Section 3 swaps identity with the phase, showing exactly one of its panes.
+   * Which one is decided by picksSectionFor (pure, and covered by the data
+   * gate); this function only paints the result and returns the pane that
+   * ended up visible, so the caller can put focus back into it.
    */
-  function renderPicksSection(analysis: DraftAnalysis): void {
-    const { phase } = analysis.turn;
-    const showCombos = phase === 'double';
-    const showOpening = phase === 'opening' && analysis.opening.length > 0;
-    const showPlaceholder = phase === 'waiting' || phase === 'complete';
-    const showPicks = !showCombos && !showOpening && !showPlaceholder;
+  function renderPicksSection(analysis: DraftAnalysis): HTMLElement {
+    const section = picksSectionFor(analysis);
+    const showPlaceholder = section === 'placeholder';
 
-    const visibleBefore = [counterList, comboList, openingList].find((list) => !list.hidden);
-    const hadFocus = visibleBefore instanceof HTMLElement && visibleBefore.contains(document.activeElement);
-
-    picksHeading.textContent = showCombos ? 'Melhores duplas' : showOpening ? 'Aberturas seguras' : 'Melhores picks';
+    picksHeading.textContent =
+      section === 'combos' ? 'Melhores duplas' : section === 'opening' ? 'Aberturas seguras' : 'Melhores picks';
     // Duos can't be inserted in one click (out of scope), so the hint would lie.
-    picksHint.hidden = showCombos || showPlaceholder;
+    picksHint.hidden = section === 'combos' || showPlaceholder;
 
     picksPlaceholder.hidden = !showPlaceholder;
     if (showPlaceholder) {
       picksPlaceholder.textContent =
-        phase === 'complete'
+        analysis.turn.phase === 'complete'
           ? 'Draft completo — nenhum slot restante.'
           : 'Vez do inimigo — aguardando o pick deles. A leitura das composições acima segue valendo.';
     }
 
-    counterList.hidden = !showPicks;
-    comboList.hidden = !showCombos;
-    openingList.hidden = !showOpening;
+    counterList.hidden = section !== 'picks';
+    comboList.hidden = section !== 'combos';
+    openingList.hidden = section !== 'opening';
 
-    const visibleAfter = showCombos ? comboList : showOpening ? openingList : counterList;
-    if (hadFocus && visibleBefore !== visibleAfter) restoreFocusIfDetached(true, visibleAfter);
+    return section === 'combos'
+      ? comboList
+      : section === 'opening'
+        ? openingList
+        : showPlaceholder
+          ? picksPlaceholder
+          : counterList;
   }
 
   function renderTurnBanner(analysis: DraftAnalysis): void {
@@ -783,12 +788,23 @@ export function initDraftBoard(): void {
       firstPick: state.firstPick,
     });
 
+    // Focus has to be read BEFORE the lists are rebuilt: replaceChildren()
+    // detaches the focused row, and the browser has already moved focus to
+    // <body> by the time the new markup exists. Asking afterwards always
+    // answers "no", which is what made the previous rescue dead code.
+    const focusWasInSection3 = section3Panes.some((pane) => pane.contains(document.activeElement));
+
     // analyzeDraft returns every pick/duo/opening; the display cut belongs here.
     renderSuggestions(analysis.picks.slice(0, 6));
     renderCombos(analysis.combos.slice(0, 6));
     renderOpening(analysis.opening.slice(0, 6));
     renderTurnBanner(analysis);
-    renderPicksSection(analysis);
+    const visiblePane = renderPicksSection(analysis);
+
+    // Restore into whichever pane ended up visible — never the original one,
+    // which may now be `hidden` (a browser refuses to focus inside it, so a
+    // rescue aimed there silently leaves focus stranded on <body>).
+    if (focusWasInSection3) restoreFocusIfDetached(true, visiblePane);
     renderAnalysisSection(
       analysisAllyList,
       analysis.ally,

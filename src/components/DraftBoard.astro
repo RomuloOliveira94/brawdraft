@@ -172,7 +172,9 @@ const SHOW_FIRST_PICK_TOGGLE = true;
           Clique para adicionar ao seu time; botão direito ou toque longo para o time inimigo. Teclado: Enter no seu
           time, Shift+Enter no time inimigo.
         </p>
-        <p id="picks-placeholder" class="text-sm text-white/50" hidden></p>
+        <!-- tabindex="-1" so it can receive focus when a phase change hides
+             the list that had it (a <p> is otherwise unfocusable). -->
+        <p id="picks-placeholder" class="text-sm text-white/50" aria-live="polite" tabindex="-1" hidden></p>
         <ul id="counter-picks-list" class="flex flex-col gap-3" aria-live="polite" tabindex="-1">
           <li class="text-sm text-white/50">Escolha brawlers do time inimigo para ver sugestões.</li>
         </ul>
