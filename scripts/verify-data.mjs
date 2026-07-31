@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { rankPicks } from '../src/lib/rank.ts';
-import { analyzeComposition, analyzeDraft } from '../src/lib/composition.ts';
+import { analyzeComposition, analyzeDraft, vulnerabilityOf } from '../src/lib/composition.ts';
 import { makeResolver } from './lib/normalize.mjs';
 import { parseMetaExtra } from './parse-meta-extra.mjs';
 
@@ -706,6 +706,151 @@ async function main() {
     anonymousText.length > 0 && !anonymousText.includes('Colette'),
     `got "${anonymousText}"`,
   );
+
+  // --- 9. Draft turn and duo suggestions ---
+  //
+  // The fixed cases from
+  // docs/superpowers/specs/2026-07-31-draft-turn-combos-design.md §7.
+  // Expected rankings were derived by running src/lib/rank.ts against the
+  // committed data, not estimated. Section [8] above is deliberately left
+  // untouched: analyzeDraft's `firstPick` is optional precisely so its calls
+  // stay valid unchanged.
+  console.log('\n[9] Draft turn and duo suggestions');
+
+  // Distinct real slugs, so a state (a,b) can be built without duplicates.
+  const ALLY_POOL = ['bull', 'poco', 'piper'];
+  const ENEMY_POOL = ['mortis', 'shelly', 'colt'];
+
+  /** DraftInput for a draft holding `a` ally picks and `b` enemy picks. */
+  function turnInput(a, b, firstPick, extra = {}) {
+    const base = draftInput({ ally: ALLY_POOL.slice(0, a), enemy: ENEMY_POOL.slice(0, b), ...extra });
+    return firstPick === undefined ? base : { ...base, firstPick };
+  }
+  const turnOf = (a, b, firstPick, extra) => analyzeDraft(turnInput(a, b, firstPick, extra)).turn;
+
+  // Cases 1-2 — every reachable state produces the table's turn and remaining.
+  const REACHABLE = {
+    ally: [
+      [0, 0, 'ally', 1, 'opening'], [1, 0, 'enemy', 2, 'waiting'], [1, 1, 'enemy', 1, 'waiting'],
+      [1, 2, 'ally', 2, 'double'], [2, 2, 'ally', 1, 'single'], [3, 2, 'enemy', 1, 'waiting'],
+      [3, 3, null, 0, 'complete'],
+    ],
+    enemy: [
+      [0, 0, 'enemy', 1, 'waiting'], [0, 1, 'ally', 2, 'double'], [1, 1, 'ally', 1, 'single'],
+      [2, 1, 'enemy', 2, 'waiting'], [2, 2, 'enemy', 1, 'waiting'], [2, 3, 'ally', 1, 'closing'],
+      [3, 3, null, 0, 'complete'],
+    ],
+  };
+  for (const firstPick of ['ally', 'enemy']) {
+    let ok = true;
+    const detail = [];
+    for (const [a, b, turn, remaining, phase] of REACHABLE[firstPick]) {
+      const t = turnOf(a, b, firstPick);
+      if (t.turn !== turn || t.remaining !== remaining || t.phase !== phase) {
+        ok = false;
+        detail.push(`(${a},${b}) expected ${turn}/${remaining}/${phase}, got ${t.turn}/${t.remaining}/${t.phase}`);
+      }
+    }
+    check(`all 7 reachable states of firstPick="${firstPick}" derive the spec's turn/remaining/phase`, ok, detail.join('; '));
+  }
+
+  // Case 3 — every unreachable state is 'unknown', with no banner.
+  for (const firstPick of ['ally', 'enemy']) {
+    const reachableKeys = new Set(REACHABLE[firstPick].map(([a, b]) => `${a},${b}`));
+    let ok = true;
+    let count = 0;
+    const detail = [];
+    for (let a = 0; a <= 3; a++) {
+      for (let b = 0; b <= 3; b++) {
+        if (reachableKeys.has(`${a},${b}`)) continue;
+        count++;
+        const t = turnOf(a, b, firstPick);
+        if (t.phase !== 'unknown' || t.text !== null) {
+          ok = false;
+          detail.push(`(${a},${b}) -> ${t.phase}/${JSON.stringify(t.text)}`);
+        }
+      }
+    }
+    check(`all ${count} unreachable states of firstPick="${firstPick}" are phase "unknown" with text null`, ok && count === 9, detail.join('; ') || `count ${count}`);
+  }
+
+  // Case 4 — the same (0,0) means opposite things depending on who opens.
+  check('(0,0) is "opening" with firstPick="ally" and "waiting" with "enemy"',
+    turnOf(0, 0, 'ally').phase === 'opening' && turnOf(0, 0, 'enemy').phase === 'waiting',
+    `${turnOf(0, 0, 'ally').phase} / ${turnOf(0, 0, 'enemy').phase}`);
+
+  // Case 5 — "1 pick left" is only `closing` when it's the draft's last pick.
+  check('(2,3)/enemy-first is "closing"; (2,2)/ally-first and (1,1)/enemy-first are "single"',
+    turnOf(2, 3, 'enemy').phase === 'closing' && turnOf(2, 2, 'ally').phase === 'single' && turnOf(1, 1, 'enemy').phase === 'single',
+    `${turnOf(2, 3, 'enemy').phase} / ${turnOf(2, 2, 'ally').phase} / ${turnOf(1, 1, 'enemy').phase}`);
+
+  // Case 6 — no firstPick: no turn to derive, and no exception either. This is
+  // what keeps every section [8] call valid without a single edit.
+  const noFirstPick = turnOf(1, 2, undefined);
+  check('analyzeDraft without firstPick yields phase "unknown", turn null, text null',
+    noFirstPick.phase === 'unknown' && noFirstPick.turn === null && noFirstPick.text === null,
+    JSON.stringify(noFirstPick));
+
+  // Cases 7-11 — duo ranking. Format: refs:coverage/roleFill/mapFit/score.
+  const fmtCombos = (combos, n) =>
+    combos.slice(0, n).map((c) => `${c.refs.join('+')}:${c.coverage}/${c.roleFill}/${c.mapFit}/${c.score}`).join(' ');
+  const combosFor = (opts) => analyzeDraft(draftInput({ enemy: analysisEnemies, ...opts })).combos;
+
+  const comboCases = [
+    ['bridge-too-far', { mapId: 'bridge-too-far' }, 6, 'clancy+piper:3/1/1/11 colette+piper:3/1/1/10 piper+spike:3/1/1/4'],
+    ['no map', {}, 15, 'colette+gale:3/2/0/12 colette+cordelius:3/2/0/11 colette+lou:3/2/0/10'],
+    ['kaboom-canyon', { mapId: 'kaboom-canyon' }, 15, 'colette+gale:3/2/2/14 colette+cordelius:3/2/2/13 colette+lou:3/2/2/12'],
+    // darryl (Tank) covers frontline, so colette+cordelius (Assassin) loses the
+    // podium it held in the "no map" case — the ranking reacts to the ally team.
+    // darryl and not bull: bull is one of this case's enemies.
+    ['ally=[darryl]', { ally: ['darryl'], exclude: ['darryl'] }, 15, 'colette+gale:3/2/0/12 colette+lou:3/2/0/10 gale+shelly:3/2/0/5'],
+  ];
+  for (const [label, opts, total, expected] of comboCases) {
+    const combos = combosFor(opts);
+    const top = fmtCombos(combos, 3);
+    check(`combos(["bull","frank","rosa"], ${label}) === ${total} duos, top 3 "${expected}"`,
+      combos.length === total && top === expected, `got ${combos.length} duos, top "${top}"`);
+  }
+  check('combos({enemy: ["alli"]}) === []', analyzeDraft(draftInput({ enemy: ['alli'] })).combos.length === 0);
+
+  // Cases 12-15 — vulnerabilityOf, called directly (no draft to assemble).
+  const vuln = (slug, mapId, taken = []) =>
+    vulnerabilityOf(slug, { countersIndex, mapCounters: mapId ? (mapCounters[mapId] ?? null) : null, taken });
+  const vulnCases = [
+    ['piper', 'bridge-too-far', [], ['nani', 'mandy', 'angelo'], 3, 'map'],
+    ['piper', 'kaboom-canyon', [], ['nani', 'mr-p', 'leon'], 3, 'global'],
+    ['piper', 'bridge-too-far', ['nani'], ['mandy', 'angelo'], 3, 'map'],
+    ['alli', null, [], [], 0, 'global'],
+  ];
+  for (const [slug, mapId, taken, free, total, source] of vulnCases) {
+    const v = vuln(slug, mapId, taken);
+    check(`vulnerabilityOf("${slug}", ${mapId}, taken=${JSON.stringify(taken)}) === ${free.length}/${total} ${JSON.stringify(free)} (${source})`,
+      deepEqualArrays(v.free, free) && v.total === total && v.source === source,
+      JSON.stringify(v));
+  }
+
+  // Cases 16-20 — the opening list, at (0,0) with firstPick="ally".
+  const fmtOpening = (list, n) => list.slice(0, n).map((o) => `${o.slug}:${o.free.length}/${o.total}`).join(' ');
+  const openingFor = (extra) => analyzeDraft(turnInput(0, 0, 'ally', extra)).opening;
+
+  const bridgeOpening = openingFor({ mapId: 'bridge-too-far' });
+  check('opening(bridge-too-far) === 27 entries, top 5 "8-bit:2/2 carl:3/3 edgar:3/3 lily:3/3 mico:3/3"',
+    bridgeOpening.length === 27 && fmtOpening(bridgeOpening, 5) === '8-bit:2/2 carl:3/3 edgar:3/3 lily:3/3 mico:3/3',
+    `got ${bridgeOpening.length} entries, top "${fmtOpening(bridgeOpening, 5)}"`);
+
+  // alli IS in bridge-too-far's categories but has no counter data — 0/0 is
+  // missing data, not safety, so it must never top a safety ranking.
+  check('opening(bridge-too-far) excludes "alli" despite it being a map recommendation',
+    !bridgeOpening.some((o) => o.slug === 'alli') && Boolean(mapIndex['bridge-too-far']['alli']));
+
+  const bannedOpening = openingFor({ mapId: 'bridge-too-far', exclude: ['nani', 'mandy'] });
+  check('opening(bridge-too-far, nani+mandy banned) === 26 entries, top 5 "belle:1/3 lola:1/3 max:1/3 piper:1/3 shade:1/3"',
+    bannedOpening.length === 26 && fmtOpening(bannedOpening, 5) === 'belle:1/3 lola:1/3 max:1/3 piper:1/3 shade:1/3',
+    `got ${bannedOpening.length} entries, top "${fmtOpening(bannedOpening, 5)}"`);
+
+  check('opening === [] at (0,0) with no map selected', openingFor({}).length === 0);
+  check('opening === [] outside the opening phase ((1,2), ally-first, with a map)',
+    analyzeDraft(turnInput(1, 2, 'ally', { mapId: 'bridge-too-far' })).opening.length === 0);
 
   // --- Summary ---
   console.log(`\n${failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`}`);

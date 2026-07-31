@@ -108,11 +108,75 @@ export interface SuggestedPick extends Pick {
   roleReason?: string;
 }
 
+export type Team = 'ally' | 'enemy';
+
+/** Where the draft is in the canonical 1-2-2-1 pick order, from the ally side. */
+export type DraftPhase =
+  | 'opening' | 'double' | 'single' | 'closing'
+  | 'waiting' | 'complete' | 'unknown';
+
+export interface TurnState {
+  phase: DraftPhase;
+  /** Whose turn it is. null when complete or not derivable. */
+  turn: Team | null;
+  /** Picks left in the current block (1 or 2). 0 when complete/unknown. */
+  remaining: number;
+  /** pt-BR banner text, or null when the banner must not show. */
+  text: string | null;
+}
+
+/** Counters of a candidate still available to the enemy. */
+export interface Vulnerability {
+  /** Counters still free — picked or banned by nobody. */
+  free: string[];
+  /** Known counters in total (0..3). */
+  total: number;
+  /** 'map' when it came from mapCounters, 'global' when it fell back. */
+  source: 'map' | 'global';
+}
+
+/**
+ * An opening candidate: a map recommendation, measured by exposure.
+ * `SuggestedPick` deliberately gains NO vulnerability field — the opening has
+ * its own pool, ordering and meaning (it counters nobody), so it gets its own
+ * type and its own channel, and `picks` stays exactly the v1 contract.
+ */
+export interface SuggestedOpening {
+  slug: string;
+  /** Counters still free to the enemy. Primary sort key (ascending). */
+  free: string[];
+  /** Known counters in total (always > 0 — see the guard in analyzeDraft). */
+  total: number;
+  source: 'map' | 'global';
+  /** `[slug]`, for the portrait. */
+  refs: [string];
+}
+
+export interface SuggestedCombo {
+  /** Both slugs, alphabetical (determinism) — and the portraits. */
+  refs: [string, string];
+  /** Distinct enemies the duo answers (union). */
+  coverage: number;
+  /** DISTINCT missing roles the duo fills (0..2). */
+  roleFill: number;
+  /** How many of the two are in the map's categories (0..2). */
+  mapFit: number;
+  /** Sum of the rankPicks scores — tie-break. */
+  score: number;
+  /** Ready-to-render reason. */
+  reason: string;
+}
+
 export interface DraftAnalysis {
   ally: Insight[];
   enemy: Insight[];
   /** COMPLETE list, in rankPicks order. Display truncation belongs to the renderer. */
   picks: SuggestedPick[];
+  /** COMPLETE duo list. Empty when fewer than 2 ally slots are open. */
+  combos: SuggestedCombo[];
+  /** COMPLETE opening list. Empty outside the opening phase or with no map. */
+  opening: SuggestedOpening[];
+  turn: TurnState;
 }
 
 export interface DraftInput {
@@ -139,6 +203,12 @@ export interface DraftInput {
    * fixture-free and the function stays pure.
    */
   nameOf?: (slug: string) => string;
+  /**
+   * Who picks first. Optional: without it there is no sequence to walk, so the
+   * turn comes back as 'unknown' rather than throwing — which is what lets
+   * every pre-turn caller keep working untouched.
+   */
+  firstPick?: Team;
 }
 
 /** "A", "A e B", "A, B e C" — pt-BR list joining. */
@@ -146,6 +216,93 @@ function joinPtBr(items: string[]): string {
   if (items.length === 0) return '';
   if (items.length === 1) return items[0];
   return `${items.slice(0, -1).join(', ')} e ${items[items.length - 1]}`;
+}
+
+// --- Turn derivation -------------------------------------------------------
+
+const UNKNOWN_TURN: TurnState = { phase: 'unknown', turn: null, remaining: 0, text: null };
+
+/** The canonical 1-2-2-1 blocks, from whoever opens. */
+function blocksFor(firstPick: Team): { team: Team; n: number }[] {
+  const other: Team = firstPick === 'ally' ? 'enemy' : 'ally';
+  return [
+    { team: firstPick, n: 1 }, { team: other, n: 2 },
+    { team: firstPick, n: 2 }, { team: other, n: 1 },
+  ];
+}
+
+/**
+ * Derives whose turn it is from the filled-pick counts, best-effort.
+ *
+ * Walks the canonical sequence accumulating picks; a state matches if it is
+ * reachable — including mid-block. A state the sequence can't produce (the
+ * board allows filling any slot in any order, by design) yields 'unknown',
+ * never an error and never a constraint.
+ */
+function deriveTurn(allyCount: number, enemyCount: number, firstPick: Team | undefined): TurnState {
+  if (!firstPick) return UNKNOWN_TURN;
+
+  const blocks = blocksFor(firstPick);
+  const lastBlock = blocks[blocks.length - 1];
+  let a = 0;
+  let b = 0;
+
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i];
+    for (let k = 0; k < block.n; k++) {
+      if (a === allyCount && b === enemyCount) {
+        const remaining = block.n - k;
+        if (block.team === 'enemy') {
+          return {
+            phase: 'waiting',
+            turn: 'enemy',
+            remaining,
+            text: `Vez do inimigo — aguardando ${remaining} pick${remaining > 1 ? 's' : ''}.`,
+          };
+        }
+        // The ally's own turn: which of the four ally-side phases is it?
+        const isLastPickOfDraft = i === blocks.length - 1 && lastBlock.team === 'ally' && remaining === 1;
+        const phase: DraftPhase =
+          i === 0 ? 'opening' : remaining === 2 ? 'double' : isLastPickOfDraft ? 'closing' : 'single';
+        const text =
+          phase === 'opening'
+            ? 'Sua vez — abertura. O inimigo ainda fecha o draft.'
+            : phase === 'closing'
+              ? 'Sua vez — último pick do draft.'
+              : `Sua vez — escolha ${remaining}.`;
+        return { phase, turn: 'ally', remaining, text };
+      }
+      if (block.team === 'ally') a++;
+      else b++;
+    }
+  }
+
+  if (a === allyCount && b === enemyCount) {
+    return { phase: 'complete', turn: null, remaining: 0, text: 'Draft completo.' };
+  }
+  return UNKNOWN_TURN;
+}
+
+// --- Vulnerability ---------------------------------------------------------
+
+/**
+ * Counters of `slug` still available to the enemy.
+ *
+ * Exported separately so it can be tested directly, without assembling a draft
+ * in the opening phase just to reach it. Uses the same per-enemy fallback as
+ * rank.ts: the map's counters when the data covers this brawler, else global.
+ */
+export function vulnerabilityOf(
+  slug: string,
+  ctx: { countersIndex: CountersIndex; mapCounters: CountersIndex | null; taken: string[] },
+): Vulnerability {
+  const fromMap = ctx.mapCounters?.[slug];
+  const list = fromMap ?? ctx.countersIndex[slug] ?? [];
+  return {
+    free: list.filter((counter) => !ctx.taken.includes(counter)),
+    total: list.length,
+    source: fromMap ? 'map' : 'global',
+  };
 }
 
 /** Counts how many of `slugs` fill each role. Unknown/unmapped slugs count for none. */
@@ -171,7 +328,7 @@ function countRoles(slugs: string[], classOf: ReadonlyMap<string, BrawlerClassNa
  * "is a map selected?" flag here.
  */
 export function analyzeDraft(input: DraftInput): DraftAnalysis {
-  const { ally, enemy, classOf, countersIndex, mapCounters, mapCategories, exclude, nameOf } = input;
+  const { ally, enemy, classOf, countersIndex, mapCounters, mapCategories, exclude, nameOf, firstPick } = input;
 
   /** Names for a slug list, or '' when no name source was supplied. */
   const names = (slugs: string[]): string => (nameOf ? joinPtBr(slugs.map(nameOf)) : '');
@@ -181,7 +338,13 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
 
   // --- Ally synergy ---
   const allyRoles = countRoles(ally, classOf);
-  const missingAllyRoles: Role[] = [];
+
+  // The gaps are a fact about the team, computed unconditionally: an empty
+  // team is missing all three roles. Whether we SURFACE them as insights is a
+  // separate, UI-level decision (an empty team shows `ally.empty` instead of
+  // three redundant "falta X" bullets). Duo ranking reads this list, so it
+  // must reflect reality even when no insight is emitted for it.
+  const missingAllyRoles: Role[] = ROLES.filter((role) => (allyRoles.get(role) ?? 0) === 0);
 
   if (ally.length === 0) {
     ally_.push({
@@ -190,15 +353,12 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
       tone: 'info',
     });
   } else {
-    for (const role of ROLES) {
-      if ((allyRoles.get(role) ?? 0) === 0) {
-        missingAllyRoles.push(role);
-        ally_.push({
-          code: `ally.role.missing.${role}`,
-          text: `Falta ${ROLE_GAP[role]} no seu time.`,
-          tone: 'warn',
-        });
-      }
+    for (const role of missingAllyRoles) {
+      ally_.push({
+        code: `ally.role.missing.${role}`,
+        text: `Falta ${ROLE_GAP[role]} no seu time.`,
+        tone: 'warn',
+      });
     }
 
     // Only at a full team: 3 picks all doing the same job.
@@ -294,5 +454,77 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
     }
   }
 
-  return { ally: ally_, enemy: enemy_, picks };
+  // --- Turn -----------------------------------------------------------------
+  const turn = deriveTurn(ally.length, enemy.length, firstPick);
+
+  // --- Duos -----------------------------------------------------------------
+  //
+  // Pool is the rankPicks output, NOT the roster nor the union with the map
+  // recommendations: a duo whose second member answers nobody isn't a duo,
+  // it's a map recommendation, and the map panel already covers that. (The
+  // union was measured and degenerates into "best counter + anyone".)
+  const combos: SuggestedCombo[] = [];
+  if (TEAM_SIZE - ally.length >= 2) {
+    for (let i = 0; i < picks.length; i++) {
+      for (let k = i + 1; k < picks.length; k++) {
+        const [x, y] = [picks[i], picks[k]];
+        const coverage = new Set([...x.against, ...y.against]).size;
+        const pairRoles = new Set(
+          [x.slug, y.slug]
+            .map((slug) => {
+              const className = classOf.get(slug);
+              return className ? ROLE_BY_CLASS[className] : null;
+            })
+            .filter((role): role is Role => role !== null),
+        );
+        const roleFill = [...pairRoles].filter((role) => missingAllyRoles.includes(role)).length;
+        const mapFit = (mapCategories?.[x.slug] ? 1 : 0) + (mapCategories?.[y.slug] ? 1 : 0);
+        const refs: [string, string] =
+          x.slug.localeCompare(y.slug) <= 0 ? [x.slug, y.slug] : [y.slug, x.slug];
+
+        const who = names(refs);
+        const subject = who || 'A dupla';
+        const covers = `${subject} responde${who && refs.length > 1 ? 'm' : ''} a ${coverage} ${coverage === 1 ? 'inimigo' : 'inimigos'}`;
+        const reason = roleFill > 0
+          ? `${covers} e cobre ${roleFill === 2 ? 'os dois papéis que faltam' : `a ${ROLE_GAP[[...pairRoles].filter((r) => missingAllyRoles.includes(r))[0]]} que falta`}.`
+          : `${covers}.`;
+
+        combos.push({ refs, coverage, roleFill, mapFit, score: x.score + y.score, reason });
+      }
+    }
+    combos.sort(
+      (p, q) =>
+        q.coverage - p.coverage ||
+        q.roleFill - p.roleFill ||
+        q.mapFit - p.mapFit ||
+        q.score - p.score ||
+        p.refs[0].localeCompare(q.refs[0]) ||
+        p.refs[1].localeCompare(q.refs[1]),
+    );
+  }
+
+  // --- Opening --------------------------------------------------------------
+  //
+  // rankPicks([]) is empty — there's nobody to counter yet — so the opening
+  // draws from the map's recommendations instead, ranked by exposure.
+  const opening: SuggestedOpening[] = [];
+  if (turn.phase === 'opening' && mapCategories) {
+    for (const slug of Object.keys(mapCategories)) {
+      if (exclude.includes(slug)) continue;
+      const v = vulnerabilityOf(slug, { countersIndex, mapCounters, taken: exclude });
+      // Guard: 0 counters means missing DATA, not safety. A safety ranking must
+      // never put a brawler it cannot assess on top — same rule that stops
+      // 'Unknown' from filling a role above.
+      if (v.total === 0) continue;
+      opening.push({ slug, free: v.free, total: v.total, source: v.source, refs: [slug] });
+    }
+    opening.sort(
+      (p, q) =>
+        p.free.length - q.free.length ||
+        (mapCategories[q.slug]?.length ?? 0) - (mapCategories[p.slug]?.length ?? 0) ||
+        p.slug.localeCompare(q.slug),
+    );
+  }
+
+  return { ally: ally_, enemy: enemy_, picks, combos, opening, turn };
 }
