@@ -125,8 +125,24 @@ export interface DraftInput {
   mapCategories: Record<string, string[]> | null;
   /** Slugs a nunca sugerir (picks + bans dos dois times). */
   exclude: string[];
+  /** Resolve um slug para o nome de exibição. Opcional — ver abaixo. */
+  nameOf?: (slug: string) => string;
 }
 ```
+
+**`nameOf` é opcional de propósito.** Os textos ilustrados em §4.4
+(`"Colette responde a 2 dos 3 inimigos: Bull e Frank"`) citam nomes, mas o
+resto do `DraftInput` só carrega slugs e classes — não há fonte de nomes.
+`nameOf` fecha essa lacuna sem quebrar a pureza: quando é fornecido, os
+insights que ganham com identificação (`ally.role.redundant.*`,
+`ally.map.fit`, `enemy.counterable`) usam nomes; quando é omitido, cada um
+cai numa formulação equivalente sem nomes.
+
+Isso mantém `scripts/verify-data.mjs` livre de fixture de nomes — os casos de
+§7 assertam `code`, não copy — e permite ao call site passar o `nameOf()` que
+`draftBoard.ts` já tem (resolve pelo `tileIndex`). Insights sobre **ausência**
+(`ally.role.missing.*`, `enemy.role.missing.*`) não citam nomes em nenhum dos
+dois modos: o conteúdo deles é quem **não** está no time.
 
 **Decisão — passar fatias já escopadas por mapa, não os JSONs inteiros.**
 `mapCounters` e `mapCategories` chegam já resolvidos para o `mapId`, exatamente

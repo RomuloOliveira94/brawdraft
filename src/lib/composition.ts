@@ -132,6 +132,20 @@ export interface DraftInput {
   mapCategories: Record<string, string[]> | null;
   /** Slugs to never suggest (picks + bans of both teams). */
   exclude: string[];
+  /**
+   * Resolves a slug to its display name. Optional on purpose: when it's
+   * absent every insight falls back to an equivalent name-free wording, so
+   * callers that don't have a name source (scripts/verify-data.mjs) stay
+   * fixture-free and the function stays pure.
+   */
+  nameOf?: (slug: string) => string;
+}
+
+/** "A", "A e B", "A, B e C" — pt-BR list joining. */
+function joinPtBr(items: string[]): string {
+  if (items.length === 0) return '';
+  if (items.length === 1) return items[0];
+  return `${items.slice(0, -1).join(', ')} e ${items[items.length - 1]}`;
 }
 
 /** Counts how many of `slugs` fill each role. Unknown/unmapped slugs count for none. */
@@ -157,7 +171,10 @@ function countRoles(slugs: string[], classOf: ReadonlyMap<string, BrawlerClassNa
  * "is a map selected?" flag here.
  */
 export function analyzeDraft(input: DraftInput): DraftAnalysis {
-  const { ally, enemy, classOf, countersIndex, mapCounters, mapCategories, exclude } = input;
+  const { ally, enemy, classOf, countersIndex, mapCounters, mapCategories, exclude, nameOf } = input;
+
+  /** Names for a slug list, or '' when no name source was supplied. */
+  const names = (slugs: string[]): string => (nameOf ? joinPtBr(slugs.map(nameOf)) : '');
 
   const ally_: Insight[] = [];
   const enemy_: Insight[] = [];
@@ -187,9 +204,12 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
     // Only at a full team: 3 picks all doing the same job.
     for (const role of ROLES) {
       if (ally.length === TEAM_SIZE && (allyRoles.get(role) ?? 0) === TEAM_SIZE) {
+        const who = names(ally);
         ally_.push({
           code: `ally.role.redundant.${role}`,
-          text: `Os 3 picks ocupam a ${ROLE_GAP[role]} — composição concentrada demais.`,
+          text: who
+            ? `${who} ocupam a ${ROLE_GAP[role]} — composição concentrada demais.`
+            : `Os 3 picks ocupam a ${ROLE_GAP[role]} — composição concentrada demais.`,
           tone: 'warn',
           refs: [...ally],
         });
@@ -199,10 +219,13 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
     // One aggregated insight, not one per brawler — codes are unique per section.
     const fitting = mapCategories ? ally.filter((slug) => mapCategories[slug]) : [];
     if (fitting.length > 0) {
+      const who = names(fitting);
+      const verb = fitting.length === 1 ? 'está' : 'estão';
       ally_.push({
         code: 'ally.map.fit',
-        text:
-          fitting.length === 1
+        text: who
+          ? `${who} ${verb} entre os recomendados deste mapa.`
+          : fitting.length === 1
             ? '1 pick seu está entre os recomendados deste mapa.'
             : `${fitting.length} picks seus estão entre os recomendados deste mapa.`,
         tone: 'good',
@@ -258,9 +281,13 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
 
     const best = picks.find((pick) => pick.coverage >= 2);
     if (best) {
+      const bestName = nameOf ? nameOf(best.slug) : '';
+      const targets = names(best.against);
       enemy_.push({
         code: 'enemy.counterable',
-        text: `O melhor counter responde a ${best.coverage} dos ${enemy.length} inimigos.`,
+        text: bestName
+          ? `${bestName} responde a ${best.coverage} dos ${enemy.length} inimigos: ${targets}.`
+          : `O melhor counter responde a ${best.coverage} dos ${enemy.length} inimigos.`,
         tone: 'good',
         refs: [best.slug],
       });

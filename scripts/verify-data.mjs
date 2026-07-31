@@ -669,6 +669,8 @@ async function main() {
     draftInput({ ally: ['piper', 'bull', 'poco'], enemy: ['bull', 'frank', 'rosa'], mapId: 'bridge-too-far' }),
     draftInput({ enemy: ['alli'], mapId: 'kaboom-canyon' }),
     allyClasses(['Assassin', 'Assassin', 'Tank']),
+    // Same draft with a name source, so the named wording is exercised too.
+    { ...draftInput({ ally: ['bull', 'poco', 'piper'], enemy: ['bull', 'frank', 'rosa'], mapId: 'bridge-too-far' }), nameOf: (slug) => bySlug[slug]?.name ?? slug },
   ];
   for (const input of analysisSamples) {
     const result = analyzeDraft(input);
@@ -683,6 +685,27 @@ async function main() {
   }
   check('every insight has a non-empty code, non-empty text, and a valid tone', insightShapeOk);
   check('insight codes are unique within their section', insightCodesUniqueOk);
+
+  // `nameOf` is optional: supplying it must put real display names in the
+  // text, and omitting it must still produce a complete, name-free sentence.
+  const counterableText = (input) =>
+    analyzeDraft(input).enemy.find((i) => i.code === 'enemy.counterable')?.text ?? '';
+  const namedInput = {
+    ...draftInput({ enemy: analysisEnemies }),
+    nameOf: (slug) => bySlug[slug]?.name ?? slug,
+  };
+  const namedText = counterableText(namedInput);
+  const anonymousText = counterableText(draftInput({ enemy: analysisEnemies }));
+  check(
+    'enemy.counterable names the counter and its targets when nameOf is supplied',
+    namedText.includes('Colette') && namedText.includes('Bull') && namedText.includes('Frank'),
+    `got "${namedText}"`,
+  );
+  check(
+    'enemy.counterable falls back to a name-free sentence without nameOf',
+    anonymousText.length > 0 && !anonymousText.includes('Colette'),
+    `got "${anonymousText}"`,
+  );
 
   // --- Summary ---
   console.log(`\n${failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`}`);

@@ -648,6 +648,7 @@ export function initDraftBoard(): void {
       mapCounters,
       mapCategories,
       exclude,
+      nameOf,
     });
 
     // analyzeDraft returns every pick; the display cut belongs here.
