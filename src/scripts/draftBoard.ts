@@ -5,7 +5,15 @@
 // reuses that markup everywhere a portrait needs to appear (draft slots,
 // counter-pick rows) by cloning nodes — no name or image is re-typed here.
 import { type CountersIndex } from '@/lib/rank';
-import { analyzeDraft, type BrawlerClassName, type Insight, type SuggestedPick } from '@/lib/composition';
+import {
+  analyzeDraft,
+  type BrawlerClassName,
+  type DraftAnalysis,
+  type Insight,
+  type SuggestedCombo,
+  type SuggestedOpening,
+  type SuggestedPick,
+} from '@/lib/composition';
 import { stripAccents } from '@/lib/text';
 import countersJson from '@/data/counters-index.json';
 import mapIndexJson from '@/data/map-index.json';
@@ -100,6 +108,14 @@ export function initDraftBoard(): void {
   const analysisEnemyList = byId<HTMLElement>('analysis-enemy-list');
   const compositionTemplate = byId<HTMLTemplateElement>('composition-row-template');
   const counterList = byId<HTMLElement>('counter-picks-list');
+  const comboList = byId<HTMLElement>('combo-picks-list');
+  const openingList = byId<HTMLElement>('opening-picks-list');
+  const comboTemplate = byId<HTMLTemplateElement>('combo-row-template');
+  const openingTemplate = byId<HTMLTemplateElement>('opening-row-template');
+  const picksHeading = byId<HTMLElement>('analysis-picks-heading');
+  const picksHint = byId<HTMLElement>('picks-insert-hint');
+  const picksPlaceholder = byId<HTMLElement>('picks-placeholder');
+  const turnBanner = byId<HTMLElement>('turn-banner');
   const counterTemplate = byId<HTMLTemplateElement>('counter-row-template');
   const insertFeedback = document.getElementById('draft-insert-feedback');
   const mapsDataEl = document.getElementById('maps-data');
@@ -520,10 +536,16 @@ export function initDraftBoard(): void {
 
   firstAllyBtn?.addEventListener('click', () => {
     applyFirstPick('ally');
+    // firstPick now drives the turn banner and how section 3 is sized, so
+    // flipping it has to recompute — it used to only paint aria-pressed.
+    recompute();
     syncHash();
   });
   firstEnemyBtn?.addEventListener('click', () => {
     applyFirstPick('enemy');
+    // firstPick now drives the turn banner and how section 3 is sized, so
+    // flipping it has to recompute — it used to only paint aria-pressed.
+    recompute();
     syncHash();
   });
 
@@ -627,6 +649,115 @@ export function initDraftBoard(): void {
     }
   }
 
+  function renderCombos(combos: SuggestedCombo[]): void {
+    comboList.replaceChildren();
+    if (combos.length === 0) {
+      const li = document.createElement('li');
+      li.className = 'text-sm text-white/50';
+      li.textContent = 'Escolha brawlers do time inimigo para ver duplas.';
+      comboList.appendChild(li);
+      return;
+    }
+    for (const combo of combos) {
+      const node = comboTemplate.content.firstElementChild?.cloneNode(true);
+      if (!(node instanceof HTMLElement)) continue;
+      const portraits = node.querySelector('.combo-row__portraits');
+      for (const slug of combo.refs) {
+        const card = tileIndex.get(slug);
+        const img = card ? tileImg(card) : null;
+        if (!portraits || !img) continue;
+        const wrap = document.createElement('span');
+        wrap.className = 'w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-brawl-navy';
+        wrap.appendChild(img.cloneNode(true));
+        portraits.appendChild(wrap);
+      }
+      const textEl = node.querySelector('.combo-row__text');
+      if (textEl) textEl.textContent = combo.reason;
+      comboList.appendChild(node);
+    }
+  }
+
+  function renderOpening(openings: SuggestedOpening[]): void {
+    openingList.replaceChildren();
+    if (openings.length === 0) {
+      const li = document.createElement('li');
+      li.className = 'text-sm text-white/50';
+      li.textContent = 'Selecione o mapa para ver aberturas seguras.';
+      openingList.appendChild(li);
+      return;
+    }
+    for (const opening of openings) {
+      const card = tileIndex.get(opening.slug);
+      const img = card ? tileImg(card) : null;
+      if (!img) continue;
+      const node = openingTemplate.content.firstElementChild?.cloneNode(true);
+      if (!(node instanceof HTMLElement)) continue;
+      const row = node.querySelector<HTMLButtonElement>('.counter-row');
+      const portrait = node.querySelector('.counter-row__portrait');
+      const textEl = node.querySelector('.counter-row__text');
+      if (portrait) portrait.appendChild(img.cloneNode(true));
+      const name = img.dataset.name ?? opening.slug;
+      if (textEl) {
+        textEl.replaceChildren();
+        const strong = document.createElement('strong');
+        strong.className = 'text-brawl-yellow';
+        strong.textContent = name;
+        const free = opening.free.length;
+        textEl.append(
+          strong,
+          ` — ${free} de ${opening.total} counter${opening.total > 1 ? 's' : ''} ainda ${free === 1 ? 'livre' : 'livres'} para o inimigo`,
+        );
+      }
+      if (row) {
+        row.dataset.slug = opening.slug;
+        row.setAttribute('aria-label', `Adicionar ${name} ao nosso time; Shift+Enter para o time inimigo`);
+        row.setAttribute('aria-keyshortcuts', 'Enter Shift+Enter');
+      }
+      openingList.appendChild(node);
+    }
+  }
+
+  /**
+   * Section 3 swaps identity with the phase. One place decides which of the
+   * three sibling lists is visible, so they can never be shown at once, and
+   * focus is rescued whenever the visible list changes underneath it.
+   */
+  function renderPicksSection(analysis: DraftAnalysis): void {
+    const { phase } = analysis.turn;
+    const showCombos = phase === 'double';
+    const showOpening = phase === 'opening' && analysis.opening.length > 0;
+    const showPlaceholder = phase === 'waiting' || phase === 'complete';
+    const showPicks = !showCombos && !showOpening && !showPlaceholder;
+
+    const visibleBefore = [counterList, comboList, openingList].find((list) => !list.hidden);
+    const hadFocus = visibleBefore instanceof HTMLElement && visibleBefore.contains(document.activeElement);
+
+    picksHeading.textContent = showCombos ? 'Melhores duplas' : showOpening ? 'Aberturas seguras' : 'Melhores picks';
+    // Duos can't be inserted in one click (out of scope), so the hint would lie.
+    picksHint.hidden = showCombos || showPlaceholder;
+
+    picksPlaceholder.hidden = !showPlaceholder;
+    if (showPlaceholder) {
+      picksPlaceholder.textContent =
+        phase === 'complete'
+          ? 'Draft completo — nenhum slot restante.'
+          : 'Vez do inimigo — aguardando o pick deles. A leitura das composições acima segue valendo.';
+    }
+
+    counterList.hidden = !showPicks;
+    comboList.hidden = !showCombos;
+    openingList.hidden = !showOpening;
+
+    const visibleAfter = showCombos ? comboList : showOpening ? openingList : counterList;
+    if (hadFocus && visibleBefore !== visibleAfter) restoreFocusIfDetached(true, visibleAfter);
+  }
+
+  function renderTurnBanner(analysis: DraftAnalysis): void {
+    const { text } = analysis.turn;
+    turnBanner.hidden = text === null;
+    turnBanner.textContent = text ?? '';
+  }
+
   function recompute(): void {
     const exclude = getAllTaken();
     // Categories for the selected map. Doubles as rankPicks' `mapBonus` (any
@@ -649,10 +780,15 @@ export function initDraftBoard(): void {
       mapCategories,
       exclude,
       nameOf,
+      firstPick: state.firstPick,
     });
 
-    // analyzeDraft returns every pick; the display cut belongs here.
+    // analyzeDraft returns every pick/duo/opening; the display cut belongs here.
     renderSuggestions(analysis.picks.slice(0, 6));
+    renderCombos(analysis.combos.slice(0, 6));
+    renderOpening(analysis.opening.slice(0, 6));
+    renderTurnBanner(analysis);
+    renderPicksSection(analysis);
     renderAnalysisSection(
       analysisAllyList,
       analysis.ally,
@@ -873,6 +1009,26 @@ export function initDraftBoard(): void {
   bindEnemyShortcut(counterList, '.counter-row', (row) => {
     const slug = row.dataset.slug;
     if (slug) insertBrawler('enemy', slug, row, counterList);
+  });
+
+  // The opening list carries one slug per row, so it gets exactly the same
+  // insert interaction as the counter-picks list. (The duo list doesn't: two
+  // slugs per row, and one-click duo insertion is out of scope.)
+  bindLongPress(
+    openingList,
+    '.counter-row',
+    (row) => {
+      const slug = row.dataset.slug;
+      if (slug) insertBrawler('ally', slug, row, openingList);
+    },
+    (row) => {
+      const slug = row.dataset.slug;
+      if (slug) insertBrawler('enemy', slug, row, openingList);
+    },
+  );
+  bindEnemyShortcut(openingList, '.counter-row', (row) => {
+    const slug = row.dataset.slug;
+    if (slug) insertBrawler('enemy', slug, row, openingList);
   });
 
   if (mapPicksCategories instanceof HTMLElement) {

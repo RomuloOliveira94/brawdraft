@@ -38,11 +38,12 @@ const mapsForClient = maps
 // way.
 const SHOW_BANS = true;
 
-// Same deal for the "who picks first" pill toggle: hidden per product
-// request, but state.firstPick and the `first` hash key in draftBoard.ts
-// keep working (it just always reads as "ally" while this is off). Flip
-// back to `true` to bring the row back.
-const SHOW_FIRST_PICK_TOGGLE = false;
+// The "who picks first" pill toggle. Was hidden per product request, and is
+// back on because the 1-2-2-1 turn banner needs it: without a way to say who
+// opens, the turn would silently assume "ally" and be wrong in half the
+// matches. Turn and toggle go together — one without the other is worse than
+// neither (see §11 of the increment-2 spec).
+const SHOW_FIRST_PICK_TOGGLE = true;
 ---
 
 <section class="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16">
@@ -131,6 +132,13 @@ const SHOW_FIRST_PICK_TOGGLE = false;
   <div class="panel w-full">
     <h2 class="panel__header">Análise de Composição</h2>
     <div class="panel__body flex flex-col gap-5">
+      <p
+        id="turn-banner"
+        class="rounded-xl bg-brawl-navy-deep px-3 py-2 text-center text-sm font-bold text-brawl-yellow"
+        aria-live="polite"
+        hidden
+      >
+      </p>
       <div class="grid gap-5 sm:grid-cols-2">
         <section class="flex flex-col gap-2" aria-labelledby="analysis-ally-heading">
           <h3 id="analysis-ally-heading" class="text-xs font-extrabold tracking-wide text-brawl-blue uppercase">
@@ -149,17 +157,27 @@ const SHOW_FIRST_PICK_TOGGLE = false;
           </ul>
         </section>
       </div>
+      <!--
+        Section 3 swaps identity with the draft phase: duos when two ally slots
+        are up at once, safe openings on the first pick, a placeholder while the
+        enemy picks, and the counter-picks list otherwise. The three lists are
+        siblings toggled by `hidden` from a single point in the renderer;
+        #counter-picks-list and #counter-row-template stay contract.
+      -->
       <section class="flex flex-col gap-2" aria-labelledby="analysis-picks-heading">
         <h3 id="analysis-picks-heading" class="text-xs font-extrabold tracking-wide text-brawl-yellow uppercase">
           Melhores picks
         </h3>
-        <p class="text-[11px] text-white/40">
+        <p id="picks-insert-hint" class="text-[11px] text-white/40">
           Clique para adicionar ao seu time; botão direito ou toque longo para o time inimigo. Teclado: Enter no seu
           time, Shift+Enter no time inimigo.
         </p>
+        <p id="picks-placeholder" class="text-sm text-white/50" hidden></p>
         <ul id="counter-picks-list" class="flex flex-col gap-3" aria-live="polite" tabindex="-1">
           <li class="text-sm text-white/50">Escolha brawlers do time inimigo para ver sugestões.</li>
         </ul>
+        <ul id="combo-picks-list" class="flex flex-col gap-3" aria-live="polite" tabindex="-1" hidden></ul>
+        <ul id="opening-picks-list" class="flex flex-col gap-3" aria-live="polite" tabindex="-1" hidden></ul>
       </section>
     </div>
   </div>
@@ -218,6 +236,31 @@ const SHOW_FIRST_PICK_TOGGLE = false;
 </template>
 
 <template id="counter-row-template">
+  <li>
+    <button
+      type="button"
+      class="counter-row flex w-full cursor-pointer items-center gap-3 rounded-xl border-0 bg-white/5 p-2 text-left transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brawl-yellow"
+      data-slug=""
+    >
+      <span class="counter-row__portrait w-12 shrink-0 overflow-hidden rounded-full"></span>
+      <span class="counter-row__text text-sm text-white"></span>
+    </button>
+  </li>
+</template>
+
+<!-- Duo row: two portraits, so deliberately NOT the counter-row template — that
+     one's insert handlers assume exactly one slug per row. No insert action
+     here; picking a duo in one click is out of scope for this increment. -->
+<template id="combo-row-template">
+  <li class="flex items-center gap-3 rounded-xl bg-white/5 p-2">
+    <span class="combo-row__portraits flex shrink-0 -space-x-3"></span>
+    <span class="combo-row__text text-sm text-white"></span>
+  </li>
+</template>
+
+<!-- Opening row: one slug per row, so it carries the same insert interaction
+     as the counter-picks list. -->
+<template id="opening-row-template">
   <li>
     <button
       type="button"
