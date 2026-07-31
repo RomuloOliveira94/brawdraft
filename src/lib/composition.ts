@@ -526,5 +526,53 @@ export function analyzeDraft(input: DraftInput): DraftAnalysis {
     );
   }
 
+  // --- Phase insights (spec §5.1) ------------------------------------------
+  //
+  // Only ever emitted when a turn was actually derived: without firstPick
+  // there is no phase to comment on, so no phase insight exists either.
+  if (turn.phase === 'opening') {
+    ally_.push({
+      code: 'ally.opening.risk',
+      text: 'Abertura: o inimigo ainda fecha o draft e pode counterar este pick de graça — prefira algo seguro.',
+      tone: 'warn',
+    });
+  } else if (turn.phase === 'closing') {
+    ally_.push({
+      code: 'ally.closing.freeroll',
+      text: 'Último pick do draft: nada pode responder depois. Pode ir no counter mais agressivo.',
+      tone: 'good',
+    });
+  }
+
+  if (turn.phase === 'waiting') {
+    enemy_.push({
+      code: 'enemy.turn.waiting',
+      text: `Vez do inimigo — ${turn.remaining} pick${turn.remaining > 1 ? 's' : ''} até você escolher de novo.`,
+      tone: 'info',
+    });
+  }
+
   return { ally: ally_, enemy: enemy_, picks, combos, opening, turn };
+}
+
+/** Which of section 3's mutually exclusive lists the renderer must show. */
+export type PicksSection = 'picks' | 'combos' | 'opening' | 'placeholder';
+
+/**
+ * Decides what section 3 shows, from the analysis alone.
+ *
+ * Pure and exported so the routing rule is covered by the data gate even
+ * though the DOM isn't. Order matters: it is a precedence list, not a set of
+ * independent conditions.
+ */
+export function picksSectionFor(analysis: DraftAnalysis): PicksSection {
+  const { phase } = analysis.turn;
+  if (phase === 'waiting' || phase === 'complete') return 'placeholder';
+  if (phase === 'opening') return analysis.opening.length > 0 ? 'opening' : 'picks';
+  if (phase === 'double') return 'combos';
+  // Fallback of spec §2 decision 4: no derivable turn, but the engine only
+  // fills `combos` when 2+ ally slots are open — exactly the condition under
+  // which duos are the right answer.
+  if (phase === 'unknown' && analysis.combos.length > 0) return 'combos';
+  return 'picks';
 }

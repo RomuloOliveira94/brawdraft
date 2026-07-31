@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { rankPicks } from '../src/lib/rank.ts';
-import { analyzeComposition, analyzeDraft, vulnerabilityOf } from '../src/lib/composition.ts';
+import { analyzeComposition, analyzeDraft, picksSectionFor, vulnerabilityOf } from '../src/lib/composition.ts';
 import { makeResolver } from './lib/normalize.mjs';
 import { parseMetaExtra } from './parse-meta-extra.mjs';
 
@@ -851,6 +851,51 @@ async function main() {
   check('opening === [] at (0,0) with no map selected', openingFor({}).length === 0);
   check('opening === [] outside the opening phase ((1,2), ally-first, with a map)',
     analyzeDraft(turnInput(1, 2, 'ally', { mapId: 'bridge-too-far' })).opening.length === 0);
+
+  // Cases 21-24 — the phase-driven insights of spec §5.1.
+  const codesFor = (a, b, firstPick, section) =>
+    codesOf(analyzeDraft(turnInput(a, b, firstPick))[section]);
+
+  check('phase "opening" emits ally.opening.risk',
+    codesFor(0, 0, 'ally', 'ally').includes('ally.opening.risk'),
+    JSON.stringify(codesFor(0, 0, 'ally', 'ally')));
+  check('phase "closing" emits ally.closing.freeroll',
+    codesFor(2, 3, 'enemy', 'ally').includes('ally.closing.freeroll'),
+    JSON.stringify(codesFor(2, 3, 'enemy', 'ally')));
+  check('phase "waiting" emits enemy.turn.waiting',
+    codesFor(1, 0, 'ally', 'enemy').includes('enemy.turn.waiting'),
+    JSON.stringify(codesFor(1, 0, 'ally', 'enemy')));
+  // Without a turn there is no phase to comment on — and this is what keeps
+  // section [8]'s exact-set assertions green.
+  const phaseCodes = ['ally.opening.risk', 'ally.closing.freeroll', 'enemy.turn.waiting'];
+  const noTurnCodes = [...codesFor(1, 2, undefined, 'ally'), ...codesFor(1, 2, undefined, 'enemy')];
+  check('no phase insight is emitted without firstPick',
+    !noTurnCodes.some((code) => phaseCodes.includes(code)),
+    JSON.stringify(noTurnCodes));
+
+  // Case 25 — which of section 3's lists the renderer must show. Pure, so the
+  // routing rule is covered by the gate even though the DOM isn't.
+  const sectionCases = [
+    ['waiting -> placeholder', [1, 0, 'ally', {}], 'placeholder'],
+    ['complete -> placeholder', [3, 3, 'ally', {}], 'placeholder'],
+    ['opening with a map -> opening', [0, 0, 'ally', { mapId: 'bridge-too-far' }], 'opening'],
+    ['opening with no map -> picks', [0, 0, 'ally', {}], 'picks'],
+    ['double -> combos', [1, 2, 'ally', {}], 'combos'],
+    // Fallback of spec §2 decision 4: no derivable turn, but 2+ ally slots
+    // open, so duos are still the right answer.
+    ['unknown with 2+ ally slots open -> combos', [0, 2, 'ally', {}], 'combos'],
+    ['unknown with 1 ally slot open -> picks', [2, 0, 'ally', {}], 'picks'],
+  ];
+  let sectionOk = true;
+  const sectionDetail = [];
+  for (const [label, [a, b, firstPick, extra], expected] of sectionCases) {
+    const actual = picksSectionFor(analyzeDraft(turnInput(a, b, firstPick, extra)));
+    if (actual !== expected) {
+      sectionOk = false;
+      sectionDetail.push(`${label}: got "${actual}"`);
+    }
+  }
+  check('picksSectionFor routes all 7 phase/fallback combinations', sectionOk, sectionDetail.join('; '));
 
   // --- Summary ---
   console.log(`\n${failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`}`);
