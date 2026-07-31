@@ -350,8 +350,10 @@ Casos fixos mínimos:
 >   estar numa categoria de `map-index.json` em `bridge-too-far`.
 > - **Caso 7:** `kaboom-canyon` **não** reproduz o ranking global. O mapa está
 >   ausente de `map-counters.json` (fallback de counters) mas **presente** em
->   `map-index.json`, então o bônus continua valendo: todo mundo sobe +1 e
->   `lou` (`1/1` → `1/2`) passa à frente de `shelly`/`chester` no desempate.
+>   `map-index.json`, então o bônus continua valendo: quem está nas categorias
+>   do mapa sobe +1 (`colette`, `gale`, `cordelius`, `lou` — `shelly` e
+>   `chester` não), e `lou` (`1/1` → `1/2`) empata com `shelly` e passa à
+>   frente no desempate por slug.
 >
 > Os goldens de `rankPicks` em `:509-527` **permanecem válidos como estão** —
 > testam outra função, com outros argumentos. Não "corrigir" um pelo outro.
