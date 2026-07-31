@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { rankPicks } from '../src/lib/rank.ts';
-import { analyzeComposition } from '../src/lib/composition.ts';
+import { analyzeComposition, analyzeDraft } from '../src/lib/composition.ts';
 import { makeResolver } from './lib/normalize.mjs';
 import { parseMetaExtra } from './parse-meta-extra.mjs';
 
@@ -526,6 +526,163 @@ async function main() {
     kaboomPicks === globalPicks,
     `global "${globalPicks}" vs kaboom-canyon "${kaboomPicks}"`,
   );
+
+  // --- 8. Composition analysis (analyzeDraft) ---
+  //
+  // The fixed cases from the design spec
+  // (docs/superpowers/specs/2026-07-30-composition-analysis-design.md §7).
+  //
+  // These assert insight CODES, never UI copy — the code is the stable
+  // contract, so rewording a pt-BR string can't break the gate.
+  //
+  // IMPORTANT: the expected rankings below include the map bonus, because
+  // analyzeDraft calls rankPicks with `mapBonus` (spec §4.4). The golden
+  // cases in [7] above exercise rankPicks directly, WITHOUT `mapBonus`, and
+  // are deliberately left untouched — the two differ on purpose. Do not
+  // "fix" one against the other.
+  console.log('\n[8] Composition analysis');
+
+  const classOfRoster = new Map(brawlers.map((b) => [b.id, b.className]));
+
+  /**
+   * Builds a DraftInput, scoping the per-map slices exactly the way
+   * draftBoard.ts's recompute() does (spec §4.2: analyzeDraft receives
+   * already-scoped slices, not the whole JSONs).
+   */
+  function draftInput({ ally = [], enemy = [], mapId = null, exclude = [], classOf = classOfRoster } = {}) {
+    return {
+      ally,
+      enemy,
+      mapId,
+      classOf,
+      countersIndex,
+      mapCounters: mapId ? (mapCounters[mapId] ?? null) : null,
+      mapCategories: mapId ? (mapIndex[mapId] ?? null) : null,
+      exclude,
+    };
+  }
+
+  /**
+   * Class-driven ally case: synthetic slugs let a class combination be
+   * expressed directly, and keep 'Unknown' testable now that no real brawler
+   * carries it — same reasoning as the analyzeComposition case in [2] above.
+   */
+  function allyClasses(classNames) {
+    const slugs = classNames.map((_, i) => `test-ally-${i}`);
+    return draftInput({ ally: slugs, classOf: new Map(slugs.map((s, i) => [s, classNames[i]])) });
+  }
+
+  const codesOf = (insights) => insights.map((i) => i.code);
+  const sameSet = (actual, expected) =>
+    deepEqualArrays([...actual].sort(), [...expected].sort());
+
+  // Case 1 — empty draft.
+  const emptyDraft = analyzeDraft(draftInput());
+  check(
+    'analyzeDraft({}) ally codes === ["ally.empty"]',
+    sameSet(codesOf(emptyDraft.ally), ['ally.empty']),
+    JSON.stringify(codesOf(emptyDraft.ally)),
+  );
+  check(
+    'analyzeDraft({}) enemy codes === ["enemy.empty"]',
+    sameSet(codesOf(emptyDraft.enemy), ['enemy.empty']),
+    JSON.stringify(codesOf(emptyDraft.enemy)),
+  );
+  check('analyzeDraft({}) picks === []', emptyDraft.picks.length === 0, `got ${emptyDraft.picks.length}`);
+
+  // Case 2 — one role each, nothing missing, nothing redundant.
+  const balanced = codesOf(analyzeDraft(allyClasses(['Tank', 'Support', 'Marksman'])).ally);
+  check(
+    'analyzeDraft([Tank, Support, Marksman]) ally codes === ["ally.balanced"]',
+    sameSet(balanced, ['ally.balanced']),
+    JSON.stringify(balanced),
+  );
+
+  // Case 3 — three frontlines: redundant, and BOTH other roles missing.
+  const allFrontline = codesOf(analyzeDraft(allyClasses(['Assassin', 'Assassin', 'Tank'])).ally);
+  check(
+    'analyzeDraft([Assassin, Assassin, Tank]) ally codes === redundant.frontline + missing.damage + missing.support',
+    sameSet(allFrontline, [
+      'ally.role.redundant.frontline',
+      'ally.role.missing.damage',
+      'ally.role.missing.support',
+    ]),
+    JSON.stringify(allFrontline),
+  );
+
+  // Case 4 — an 'Unknown' pick never fills a role and never earns "balanced"
+  // (same honesty guarantee asserted for analyzeComposition in [2] above).
+  const withUnknown = codesOf(analyzeDraft(allyClasses(['Tank', 'Support', 'Unknown'])).ally);
+  check(
+    'analyzeDraft([Tank, Support, Unknown]) ally codes === ["ally.role.missing.damage"] (never "ally.balanced")',
+    sameSet(withUnknown, ['ally.role.missing.damage']),
+    JSON.stringify(withUnknown),
+  );
+
+  // Cases 5-7 — picks, with the map bonus applied (see the note above).
+  const analysisEnemies = ['bull', 'frank', 'rosa'];
+  const picksFor = (mapId, n) =>
+    formatTop(analyzeDraft(draftInput({ enemy: analysisEnemies, mapId })).picks, n);
+
+  const noMapPicks = picksFor(null, 6);
+  const noMapExpected = 'colette:3/9 gale:2/3 cordelius:1/2 shelly:1/2 chester:1/1 lou:1/1';
+  check(
+    `analyzeDraft(["bull","frank","rosa"], no map) top 6 === "${noMapExpected}"`,
+    noMapPicks === noMapExpected,
+    `got "${noMapPicks}"`,
+  );
+
+  const bridgePicks = picksFor('bridge-too-far', 4);
+  const bridgeExpected = 'clancy:3/8 colette:3/7 piper:2/3 spike:1/1';
+  check(
+    `analyzeDraft(..., "bridge-too-far") top 4 === "${bridgeExpected}" (piper 2/3, not the bonus-free 2/2 of [7])`,
+    bridgePicks === bridgeExpected,
+    `got "${bridgePicks}"`,
+  );
+
+  // kaboom-canyon is absent from map-counters.json (counters fall back to the
+  // global list) but PRESENT in map-index.json, so the bonus still applies —
+  // the ranking is NOT the global one, and lou (1/1 -> 1/2) overtakes shelly
+  // on the slug tie-break.
+  const kaboomAnalysisPicks = picksFor('kaboom-canyon', 6);
+  const kaboomExpected = 'colette:3/10 gale:2/4 cordelius:1/3 lou:1/2 shelly:1/2 chester:1/1';
+  check(
+    `analyzeDraft(..., "kaboom-canyon") top 6 === "${kaboomExpected}" (bonus survives the counters fallback)`,
+    kaboomAnalysisPicks === kaboomExpected,
+    `got "${kaboomAnalysisPicks}"`,
+  );
+  check(
+    'analyzeDraft(..., "kaboom-canyon") differs from its own no-map ranking',
+    kaboomAnalysisPicks !== noMapPicks,
+  );
+
+  // Case 8 — the one brawler with no counter data must not throw.
+  const alliAnalysis = analyzeDraft(draftInput({ enemy: ['alli'] }));
+  check('analyzeDraft({enemy: ["alli"]}) picks === []', alliAnalysis.picks.length === 0, `got ${alliAnalysis.picks.length}`);
+
+  // Case 9 — structural invariants across a spread of inputs.
+  let insightShapeOk = true;
+  let insightCodesUniqueOk = true;
+  const analysisSamples = [
+    draftInput(),
+    draftInput({ ally: ['piper', 'bull'], enemy: ['mortis'], mapId: 'shooting-star' }),
+    draftInput({ ally: ['piper', 'bull', 'poco'], enemy: ['bull', 'frank', 'rosa'], mapId: 'bridge-too-far' }),
+    draftInput({ enemy: ['alli'], mapId: 'kaboom-canyon' }),
+    allyClasses(['Assassin', 'Assassin', 'Tank']),
+  ];
+  for (const input of analysisSamples) {
+    const result = analyzeDraft(input);
+    for (const section of [result.ally, result.enemy]) {
+      for (const insight of section) {
+        if (!insight.code || !insight.text) insightShapeOk = false;
+        if (!['good', 'warn', 'info'].includes(insight.tone)) insightShapeOk = false;
+      }
+      const codes = codesOf(section);
+      if (new Set(codes).size !== codes.length) insightCodesUniqueOk = false;
+    }
+  }
+  check('every insight has a non-empty code, non-empty text, and a valid tone', insightShapeOk);
+  check('insight codes are unique within their section', insightCodesUniqueOk);
 
   // --- Summary ---
   console.log(`\n${failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`}`);
