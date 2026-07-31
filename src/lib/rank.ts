@@ -55,7 +55,7 @@ export function rankPicks(
     // Per-enemy fallback: use this map's counters for `enemy` if the source
     // data covers it, else fall back to the global list — never an
     // all-or-nothing switch keyed on whether the map itself has any data.
-    const list = mapCounters?.[enemy] ?? counters[enemy] ?? []; // [] for the 14 brawlers with no counter data
+    const list = mapCounters?.[enemy] ?? counters[enemy] ?? []; // [] for the 1 brawler with no counter data (alli)
     for (let i = 0; i < list.length; i++) {
       const slug = list[i];
       if (enemies.includes(slug) || exclude.includes(slug)) continue;
